@@ -1,0 +1,317 @@
+{
+  "$description": "Font families, weights and the size scale actually used (>=1 literal use in src or a measured role in CLONE_SPEC). Line-heights live with the semantic type roles in tokens/10-semantic.",
+  "typography": {
+    "fontFamily": {
+      "haas": {
+        "$type": "fontFamily",
+        "$value": [
+          "Haas",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif"
+        ],
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:74",
+            "anchor": "haas: ['Haas', ...systemStack]"
+          },
+          {
+            "ref": "src/index.css:4",
+            "anchor": "font-family: Haas;"
+          }
+        ],
+        "note": "Neue Haas Grotesk Text Round 400/500/700 -- COMMERCIAL font files (see README licensing)"
+      },
+      "haas-groot-disp": {
+        "$type": "fontFamily",
+        "$value": [
+          "Haas Groot Disp",
+          "Haas",
+          "sans-serif"
+        ],
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:75",
+            "anchor": "display: ['\"Haas Groot Disp\"'"
+          },
+          {
+            "ref": "src/index.css:25",
+            "anchor": "font-family: 'Haas Groot Disp';"
+          }
+        ],
+        "note": "500 = Haas-Grot-Disp-R-55-Roman; /templates maps 600/700 to Haas-Grot-Text-R-65-Medium / R-75-Bold -- COMMERCIAL"
+      },
+      "at-season-sans": {
+        "$type": "fontFamily",
+        "$value": [
+          "ATSeasonSans",
+          "Haas",
+          "sans-serif"
+        ],
+        "evidence": [
+          {
+            "ref": "src/season/season.css:6",
+            "anchor": "font-family: ATSeasonSans;"
+          },
+          {
+            "ref": "src/season/season.css:137",
+            "anchor": "--ff: ATSeasonSans, Haas, sans-serif;"
+          }
+        ],
+        "note": "variable 100-900 -- COMMERCIAL"
+      },
+      "inter-display": {
+        "$type": "fontFamily",
+        "$value": [
+          "Inter Display",
+          "Haas",
+          "sans-serif"
+        ],
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:4",
+            "anchor": "font-family: 'Inter Display';"
+          },
+          {
+            "ref": "src/standalone/pricing/pricing.css:16",
+            "anchor": "font-family: 'Inter Display', Haas, sans-serif;"
+          }
+        ],
+        "note": "public/fonts/InterVariable.woff2 -- SIL OFL 1.1 (public/fonts/Inter-LICENSE.txt)"
+      }
+    },
+    "fontWeight": {
+      "400": {
+        "$type": "fontWeight",
+        "$value": 400,
+        "evidence": [
+          {
+            "ref": "src/index.css:7",
+            "anchor": "font-weight: 400;"
+          }
+        ],
+        "literalUsageCount": 31
+      },
+      "500": {
+        "$type": "fontWeight",
+        "$value": 500,
+        "evidence": [
+          {
+            "ref": "src/index.css:14",
+            "anchor": "font-weight: 500;"
+          },
+          {
+            "ref": "src/season/season.css:119",
+            "anchor": "--wr: 500;"
+          }
+        ],
+        "literalUsageCount": 33
+      },
+      "550": {
+        "$type": "fontWeight",
+        "$value": 550,
+        "evidence": [
+          {
+            "ref": "src/season/season.css:140",
+            "anchor": "--wr: 550;"
+          }
+        ],
+        "literalUsageCount": 3,
+        "note": "Season heavy (/platform) and skin e regular"
+      },
+      "600": {
+        "$type": "fontWeight",
+        "$value": 600,
+        "evidence": [
+          {
+            "ref": "src/season/season.css:120",
+            "anchor": "--ws: 600;"
+          }
+        ],
+        "literalUsageCount": 12
+      },
+      "650": {
+        "$type": "fontWeight",
+        "$value": 650,
+        "evidence": [
+          {
+            "ref": "src/season/season.css:141",
+            "anchor": "--ws: 650;"
+          }
+        ],
+        "literalUsageCount": 3
+      },
+      "700": {
+        "$type": "fontWeight",
+        "$value": 700,
+        "evidence": [
+          {
+            "ref": "src/index.css:21",
+            "anchor": "font-weight: 700;"
+          }
+        ],
+        "literalUsageCount": 8
+      },
+      "475": {
+        "$type": "fontWeight",
+        "$value": 475,
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:39",
+            "anchor": "font-weight: 475"
+          }
+        ],
+        "literalUsageCount": 18,
+        "note": "pricing (Inter Display) only"
+      },
+      "575": {
+        "$type": "fontWeight",
+        "$value": 575,
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:53",
+            "anchor": "font-weight: 575"
+          }
+        ],
+        "literalUsageCount": 5,
+        "note": "pricing (Inter Display) only"
+      }
+    },
+    "fontSize": {
+      "12": {
+        "$type": "dimension",
+        "$value": "12px",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:100",
+            "anchor": "**Type sizes:** 4xs 12"
+          }
+        ],
+        "literalUsageCount": 18
+      },
+      "14": {
+        "$type": "dimension",
+        "$value": "14px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:56",
+            "anchor": "| Promo bar text | Haas | 14 / 17.5"
+          }
+        ],
+        "literalUsageCount": 52
+      },
+      "16": {
+        "$type": "dimension",
+        "$value": "16px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:62",
+            "anchor": "| Hero subheading | Haas | 16 / 21.6"
+          }
+        ],
+        "literalUsageCount": 70
+      },
+      "18": {
+        "$type": "dimension",
+        "$value": "18px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:66",
+            "anchor": "| Tab menu item | Haas | 18 / 24.3"
+          }
+        ],
+        "literalUsageCount": 26
+      },
+      "20": {
+        "$type": "dimension",
+        "$value": "20px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:85",
+            "anchor": "| Drawer link title | Haas | 20 / 26"
+          }
+        ],
+        "literalUsageCount": 34
+      },
+      "24": {
+        "$type": "dimension",
+        "$value": "24px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:67",
+            "anchor": "| Card headline (tab cards) | Haas | 24 / 39"
+          }
+        ],
+        "literalUsageCount": 19
+      },
+      "32": {
+        "$type": "dimension",
+        "$value": "32px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:78",
+            "anchor": "| CTA section h2 | Haas | 32 / 40"
+          }
+        ],
+        "literalUsageCount": 29
+      },
+      "40": {
+        "$type": "dimension",
+        "$value": "40px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:61",
+            "anchor": "| **h1** hero | Haas | **40 / 48**"
+          }
+        ],
+        "literalUsageCount": 8
+      },
+      "48": {
+        "$type": "dimension",
+        "$value": "48px",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:87",
+            "anchor": "| Drawer promo heading | Haas | 48 / 55.2"
+          }
+        ],
+        "literalUsageCount": 13
+      },
+      "64": {
+        "$type": "dimension",
+        "$value": "64px",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:1489",
+            "anchor": "font-size: 64px;"
+          }
+        ],
+        "literalUsageCount": 3
+      },
+      "80": {
+        "$type": "dimension",
+        "$value": "80px",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:1485",
+            "anchor": "font-size: 80px;"
+          }
+        ],
+        "literalUsageCount": 1
+      },
+      "96": {
+        "$type": "dimension",
+        "$value": "96px",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:1482",
+            "anchor": "font-size: 96px;"
+          }
+        ],
+        "literalUsageCount": 1
+      }
+    }
+  }
+}

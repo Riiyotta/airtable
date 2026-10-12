@@ -1,0 +1,21 @@
+{
+  "id": "marquee-track",
+  "layer": "component",
+  "purpose": "rAF marquee behaviour (28s per half track, drag + momentum, pause) shared by carousel and integrations.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/useMarquee.js:7",
+      "anchor": "export function useMarquee({ axis = 'x', dir = 'start', durationMs = 28000, paused = false, reduced = false })"
+    }
+  ],
+  "composes": [
+    "pause-button"
+  ],
+  "variants": [
+    "x",
+    "y"
+  ],
+  "tokens": [
+    "motion.duration.marquee-half-track-28s"
+  ]
+}

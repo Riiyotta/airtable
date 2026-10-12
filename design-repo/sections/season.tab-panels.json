@@ -1,0 +1,100 @@
+{
+  "id": "season.tab-panels",
+  "system": "season",
+  "category": "feature-tabs",
+  "purpose": "B3 vertical accordion-tabs with large tinted media (/platform).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:6",
+      "anchor": "export function TabPanels({ headline, tabs })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/platform"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.tab-panels",
+    "copyBudgets": {
+      "headline": {
+        "maxWords": 7,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/platform"
+        ]
+      },
+      "tabs[].body": {
+        "maxWords": 42,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform"
+        ]
+      },
+      "tabs[].label": {
+        "maxWords": 2,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform"
+        ]
+      },
+      "tabs[].title": {
+        "maxWords": 11,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-tabpanels-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "expand copy grid-rows .4s, copy opacity .35s, media crossfade .4s, cubic-bezier(.76,0,.24,1)",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:789",
+            "anchor": "| B3 TabPanels | click"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "accordion"
+      ],
+      "detail": "media renders inside the expanded item instead of the right column",
+      "evidence": [
+        {
+          "ref": "src/season/components/platformB.jsx:35",
+          "anchor": "{!desk && a === i && media(t, i)}"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.logos"
+    ],
+    "observedBefore": [
+      "season.integrations"
+    ]
+  }
+}

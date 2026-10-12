@@ -1,0 +1,160 @@
+{
+  "id": "pricing.plan-cards",
+  "system": "pricing",
+  "category": "pricing",
+  "purpose": "C2/C2m four plan cards (desktop row grid / mobile stacked cards).",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/pricing/Pricing.jsx:141",
+      "anchor": "function PlanCardsDesktop()"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/pricing"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.pricing.plan-cards",
+    "copyBudgets": {
+      "plans[].addOns[]": {
+        "maxWords": 7,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].cta.label": {
+        "maxWords": 3,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].description": {
+        "maxWords": 12,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].features[]": {
+        "maxWords": 11,
+        "observedInstances": 37,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].features[].link": {
+        "maxWords": 2,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].features[].text": {
+        "maxWords": 3,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].lead": {
+        "maxWords": 4,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].monthly": {
+        "maxWords": 1,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].name": {
+        "maxWords": 1,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].price.amount": {
+        "maxWords": 1,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].price.label": {
+        "maxWords": 2,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "plans[].secondary.label": {
+        "maxWords": 2,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "pricing-pill-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "filled pill bg #166EE1 -> #0D52AC .15s cubic-bezier(.2,.1,.2,1)",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:794",
+            "anchor": "| Pricing pill (filled) | hover"
+          },
+          {
+            "ref": "src/standalone/pricing/pricing.css:589",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "stack-columns"
+      ],
+      "detail": "C2m mobile cards",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:709",
+          "anchor": "### C2m. PlanCards mobile (<1024)"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "pricing.title"
+    ],
+    "observedBefore": [
+      "pricing.see-all-link"
+    ]
+  }
+}

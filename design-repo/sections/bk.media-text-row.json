@@ -1,0 +1,101 @@
+{
+  "id": "bk.media-text-row",
+  "system": "bk",
+  "category": "media-text",
+  "purpose": "Bifold row: text (h2, p, large arrow link) beside a square media slot (placeholder box + original generated UI illustration, kind from the row title); alternates sides.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/MediaTextRow.jsx:8",
+      "anchor": "export default function MediaTextRow("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 6,
+    "observedRoutes": [
+      "/solutions"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.media-text-row",
+    "copyBudgets": {
+      "body": {
+        "maxWords": 18,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "link.label": {
+        "maxWords": 3,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "title": {
+        "maxWords": 4,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 6
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "arrow translateX(4px) .15s ease-in",
+        "evidence": [
+          {
+            "ref": "src/bk/BkLink.jsx:18",
+            "anchor": "group-hover:translate-x-[4px] motion-reduce:transition-none"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1145",
+            "anchor": "| BK-2 / BK-3 links | hover"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "stack-columns"
+      ],
+      "detail": "text always first, media 342x342 below",
+      "evidence": [
+        {
+          "ref": "src/bk/MediaTextRow.jsx:7",
+          "anchor": "Mobile: 6 cols gap 24, padding 96/0"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "generated.ui-illustration"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "bk.icon-card-grid",
+      "bk.media-text-row"
+    ],
+    "observedBefore": [
+      "bk.cta-row",
+      "bk.media-text-row"
+    ]
+  }
+}

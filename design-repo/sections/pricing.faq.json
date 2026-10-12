@@ -1,0 +1,79 @@
+{
+  "id": "pricing.faq",
+  "system": "pricing",
+  "category": "faq",
+  "purpose": "C7 pricing FAQ (differs from Season A14).",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/pricing/Pricing.jsx:311",
+      "anchor": "function FaqItem({ item })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/pricing"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.pricing.faq",
+    "copyBudgets": {
+      "items[].a[]": {
+        "maxWords": 24,
+        "observedInstances": 15,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "items[].q": {
+        "maxWords": 19,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "title": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "pricing-faq-chevron",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "chevron rotate 180deg .2s",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:795",
+            "anchor": "| Pricing FAQ chevron | click"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "pricing.help-links"
+    ],
+    "observedBefore": [
+      "shell.footer"
+    ]
+  }
+}

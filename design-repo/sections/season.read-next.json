@@ -1,0 +1,140 @@
+{
+  "id": "season.read-next",
+  "system": "season",
+  "category": "resources",
+  "purpose": "A12/S-8/B7 read-next row of dark article cards.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:70",
+      "anchor": "export function ReadNext({ variant = 'a', headline, cards })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "a",
+      "evidence": [
+        {
+          "ref": "src/season/components/blocks.jsx:68",
+          "anchor": "// A12 ReadNextDark / S-8 SeasonReadNext / B7 (variant 'b')"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:52",
+          "anchor": "type: 'readNext',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 7,
+    "observedRoutes": [
+      "/platform",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/portals",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.read-next",
+    "copyBudgets": {
+      "cards[].eyebrow": {
+        "maxWords": 2,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/platform",
+          "/platform/app-building"
+        ]
+      },
+      "cards[].title": {
+        "maxWords": 11,
+        "observedInstances": 20,
+        "observedRoutes": [
+          "/platform",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 6,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/platform",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "a",
+          "b"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "stack-columns"
+      ],
+      "detail": "card row is a column below 900",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:1582",
+          "anchor": ".ss-rn__row { flex-direction: row; align-items: stretch; }"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.cta",
+      "season.stories",
+      "season.tabber"
+    ],
+    "observedBefore": [
+      "season.cta",
+      "shell.footer"
+    ]
+  }
+}

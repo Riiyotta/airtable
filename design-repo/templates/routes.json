@@ -1,0 +1,220 @@
+{
+  "$description": "Every built route of the clone (src/App.jsx index + src/routes/{season,bk,standalone}.jsx) bound to exactly one template. Any other path renders src/pages/StubPage.jsx (shared placeholder) and is intentionally NOT a template.",
+  "routeCount": 25,
+  "routes": {
+    "/": {
+      "template": "template.home",
+      "registeredAt": {
+        "ref": "src/App.jsx:16",
+        "anchor": "<Route index element={<Home />} />"
+      },
+      "fixture": "schema/fixtures/home.pagespec.json"
+    },
+    "/solutions": {
+      "template": "template.bk-solutions-hub",
+      "registeredAt": {
+        "ref": "src/routes/bk.jsx:11",
+        "anchor": "{ path: '/solutions',"
+      },
+      "fixture": "schema/fixtures/solutions.pagespec.json"
+    },
+    "/integrations": {
+      "template": "template.bk-filter-listing",
+      "registeredAt": {
+        "ref": "src/routes/bk.jsx:12",
+        "anchor": "{ path: '/integrations',"
+      },
+      "fixture": "schema/fixtures/integrations.pagespec.json"
+    },
+    "/ai-plays": {
+      "template": "template.bk-filter-listing",
+      "registeredAt": {
+        "ref": "src/routes/bk.jsx:13",
+        "anchor": "{ path: '/ai-plays',"
+      },
+      "fixture": "schema/fixtures/ai-plays.pagespec.json"
+    },
+    "/customer-stories": {
+      "template": "template.bk-story-index",
+      "registeredAt": {
+        "ref": "src/routes/bk.jsx:14",
+        "anchor": "{ path: '/customer-stories',"
+      },
+      "fixture": "schema/fixtures/customer-stories.pagespec.json"
+    },
+    "/guides": {
+      "template": "template.bk-guides-hub",
+      "registeredAt": {
+        "ref": "src/routes/bk.jsx:15",
+        "anchor": "{ path: '/guides',"
+      },
+      "fixture": "schema/fixtures/guides.pagespec.json"
+    },
+    "/contact-sales": {
+      "template": "template.bk-contact-sales",
+      "registeredAt": {
+        "ref": "src/routes/bk.jsx:16",
+        "anchor": "{ path: '/contact-sales',"
+      },
+      "fixture": "schema/fixtures/contact-sales.pagespec.json"
+    },
+    "/platform/automations": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:27",
+        "anchor": "'/platform/automations':"
+      },
+      "fixture": "schema/fixtures/platform__automations.pagespec.json"
+    },
+    "/platform/connected-data": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:28",
+        "anchor": "'/platform/connected-data':"
+      },
+      "fixture": "schema/fixtures/platform__connected-data.pagespec.json"
+    },
+    "/platform/governance": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:29",
+        "anchor": "'/platform/governance':"
+      },
+      "fixture": "schema/fixtures/platform__governance.pagespec.json"
+    },
+    "/platform/hyperdb": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:30",
+        "anchor": "'/platform/hyperdb':"
+      },
+      "fixture": "schema/fixtures/platform__hyperdb.pagespec.json"
+    },
+    "/platform/interface-designer": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:31",
+        "anchor": "'/platform/interface-designer':"
+      },
+      "fixture": "schema/fixtures/platform__interface-designer.pagespec.json"
+    },
+    "/platform/portals": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:32",
+        "anchor": "'/platform/portals':"
+      },
+      "fixture": "schema/fixtures/platform__portals.pagespec.json"
+    },
+    "/platform/reporting": {
+      "template": "template.season-feature-stack",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:33",
+        "anchor": "'/platform/reporting':"
+      },
+      "fixture": "schema/fixtures/platform__reporting.pagespec.json"
+    },
+    "/platform/ai": {
+      "template": "template.season-ai-product",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:24",
+        "anchor": "'/platform/ai':"
+      },
+      "fixture": "schema/fixtures/platform__ai.pagespec.json"
+    },
+    "/platform/ai-agents": {
+      "template": "template.season-ai-product",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:25",
+        "anchor": "'/platform/ai-agents':"
+      },
+      "fixture": "schema/fixtures/platform__ai-agents.pagespec.json"
+    },
+    "/platform/app-building": {
+      "template": "template.season-ai-product",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:26",
+        "anchor": "'/platform/app-building':"
+      },
+      "fixture": "schema/fixtures/platform__app-building.pagespec.json"
+    },
+    "/solutions/marketing": {
+      "template": "template.season-solution",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:34",
+        "anchor": "'/solutions/marketing':"
+      },
+      "fixture": "schema/fixtures/solutions__marketing.pagespec.json"
+    },
+    "/solutions/product": {
+      "template": "template.season-solution",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:35",
+        "anchor": "'/solutions/product':"
+      },
+      "fixture": "schema/fixtures/solutions__product.pagespec.json"
+    },
+    "/solutions/operations": {
+      "template": "template.season-solution",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:36",
+        "anchor": "'/solutions/operations':"
+      },
+      "fixture": "schema/fixtures/solutions__operations.pagespec.json"
+    },
+    "/platform": {
+      "template": "template.season-platform-landing",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:23",
+        "anchor": "'/platform':"
+      },
+      "fixture": "schema/fixtures/platform.pagespec.json"
+    },
+    "/solutions/enterprise": {
+      "template": "template.season-enterprise",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:37",
+        "anchor": "'/solutions/enterprise':"
+      },
+      "fixture": "schema/fixtures/solutions__enterprise.pagespec.json"
+    },
+    "/about": {
+      "template": "template.season-about",
+      "registeredAt": {
+        "ref": "src/routes/season.jsx:38",
+        "anchor": "'/about':"
+      },
+      "fixture": "schema/fixtures/about.pagespec.json"
+    },
+    "/pricing": {
+      "template": "template.pricing",
+      "registeredAt": {
+        "ref": "src/routes/standalone.jsx:7",
+        "anchor": "{ path: '/pricing',"
+      },
+      "fixture": "schema/fixtures/pricing.pagespec.json"
+    },
+    "/templates": {
+      "template": "template.templates-gallery",
+      "registeredAt": {
+        "ref": "src/routes/standalone.jsx:8",
+        "anchor": "{ path: '/templates',"
+      },
+      "fixture": "schema/fixtures/templates.pagespec.json"
+    }
+  },
+  "stubFallback": {
+    "component": "src/pages/StubPage.jsx",
+    "evidence": [
+      {
+        "ref": "src/App.jsx:20",
+        "anchor": "<Route path=\"*\" element={<StubPage />} />"
+      },
+      {
+        "ref": "src/pages/StubPage.jsx:4",
+        "anchor": "// Shared placeholder for routes that aren't built out yet."
+      }
+    ],
+    "note": "Homepage/header/footer link to many paths that are not built (e.g. /signup, /login, /lp/*). They render the stub; do not invent templates for them."
+  }
+}

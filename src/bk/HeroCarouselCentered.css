@@ -1,0 +1,301 @@
+/* BK-6 HeroCarouselCentered — SECTION_TYPES_solutions §3 BK-6 */
+.hcc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0 0; /* live 390: 32/0/0; ≥1024: 72/0/48 */
+  background: #f8fafc;
+  overflow: hidden;
+}
+.hcc-title {
+  width: 100%;
+  max-width: 766.4px;
+  padding: 0 40px; /* live 390: wrapper 24 + title padding 16 → h1 x 40, 310 wide */
+  box-sizing: border-box;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .hcc {
+    padding: 72px 0 48px;
+  }
+  .hcc-title {
+    padding: 0;
+  }
+}
+.hcc-eyebrow {
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 31.2px;
+  letter-spacing: 0.12px;
+  font-weight: 400;
+  color: #41454d;
+}
+.hcc-h2 {
+  margin: 0 0 24px; /* 48 at ≥1024 */
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #181d26;
+}
+@media (min-width: 1024px) {
+  .hcc-eyebrow {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: normal;
+  }
+  .hcc-h2 {
+    margin-bottom: 48px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+/* Slider 70% of the viewport at ≥1024 (1008 @1440, 896 @1280), 100% below; list padding 0 50 with
+   overflow visible → neighbours peek. */
+.hcc-slider {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .hcc-slider {
+    width: 70%;
+  }
+}
+.hcc-list {
+  padding: 0 50px;
+  overflow: visible;
+}
+.hcc-track {
+  display: flex;
+}
+.hcc-slide {
+  flex: 0 0 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .hcc-slide {
+    padding: 0 16px;
+  }
+}
+/* Slide item: media then (below 1024) the meta/h3/button block. The center item scales 1.03 on hover. */
+.hcc-item {
+  transition: transform 0.15s ease-in;
+}
+.hcc-item--center:hover {
+  transform: scale(1.03);
+}
+.hcc-media {
+  position: relative;
+}
+.hcc-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* live scrim over the media: bottom fade + 30% black */
+.hcc-scrim {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 71.99%, rgba(24, 29, 38, 0.9) 100%, rgba(0, 0, 0, 0.9) 100%),
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+.hcc-overlay {
+  display: none;
+}
+.hcc-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 16px 12px;
+  color: #333840;
+}
+.hcc-meta-label {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: rgba(4, 14, 32, 0.69);
+}
+.hcc-meta--light {
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+.hcc-meta--light .hcc-meta-label {
+  font-size: 14px;
+  line-height: 18.9px;
+  letter-spacing: 0.28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+/* Below-media block (mobile): margin 16/0/24; h3 20/27 500 ls .1 #333840, margin 0 16 24 */
+.hcc-below {
+  margin: 16px 0 24px;
+}
+.hcc-below-h3 {
+  margin: 0 16px 24px;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: #333840;
+}
+.hcc-below > a {
+  display: inline-flex;
+}
+@media (min-width: 1024px) {
+  /* live: slide wrapper is inline-block in a 20/30 line box → 7px under the media */
+  .hcc-slide {
+    padding-bottom: 7px;
+  }
+  .hcc-below {
+    display: none;
+  }
+  .hcc-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 48px;
+    pointer-events: none;
+  }
+  .hcc-overlay-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding-right: 24px;
+  }
+  .hcc-overlay-h3 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .hcc-overlay-btn {
+    flex: 0 0 auto;
+    padding: 16px 24px;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 21.6px;
+    font-weight: 500;
+    letter-spacing: 0.08px;
+    text-decoration: none;
+    pointer-events: auto;
+    transition: all 0.2s linear;
+  }
+  .hcc-overlay-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* Dots row: 48 tall (margin-top 32 at ≥1024, 0 below); arrows 56×48 (padding 0 4, 48px circle icon);
+   desktop: a centered 456 group (padding 0 16, gap 24); dots gap 12, each 80×48 holding an 80×4 bar */
+.hcc-dots-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 360px;
+  height: 48px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .hcc-dots-row {
+    justify-content: center;
+    gap: 24px;
+    max-width: none;
+    margin-top: 32px;
+    padding: 0 16px;
+  }
+}
+.hcc-arrow-path {
+  fill: rgba(1, 20, 53, 0.12);
+  transition: fill 0.15s;
+}
+.hcc-arrow:hover .hcc-arrow-path {
+  fill: #181d26;
+}
+.hcc-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 48px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.hcc-dots {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hcc-dot {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+/* Mobile: the dots row is 360 wide with the arrows at the ends; dots are 48 wide (live ul 168 for 3). */
+@media (max-width: 1023px) {
+  .hcc-dot {
+    width: 48px;
+  }
+}
+.hcc-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 6px;
+  background: rgba(1, 20, 53, 0.12);
+  overflow: hidden;
+}
+.hcc-bar--active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: #181d26;
+  transform: translateX(-100%);
+  animation: hcc-fill 4s linear forwards;
+}
+.hcc-bar--paused::after {
+  animation-play-state: paused;
+}
+@keyframes hcc-fill {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hcc-item,
+  .hcc-card,
+  .hcc-arrow {
+    transition: none;
+  }
+  .hcc-track {
+    transition: none !important;
+  }
+  .hcc-bar--active::after {
+    animation: none;
+    transform: none;
+  }
+}

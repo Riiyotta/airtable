@@ -1,0 +1,23 @@
+{
+  "id": "form-field",
+  "layer": "component",
+  "purpose": "Visual-only form field (text/select/textarea) with required star label.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/ContactSalesSplit.jsx:20",
+      "anchor": "function TextField({ id, label, type = 'text', h = 56, autoComplete })"
+    },
+    {
+      "ref": "src/bk/ContactSalesSplit.jsx:29",
+      "anchor": "function SelectField({ id, label, options })"
+    }
+  ],
+  "composes": [],
+  "variants": [
+    "text",
+    "select",
+    "textarea",
+    "phone"
+  ],
+  "tokens": []
+}

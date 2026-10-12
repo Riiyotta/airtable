@@ -1,0 +1,23 @@
+{
+  "id": "season-title-module",
+  "layer": "component",
+  "purpose": "Season title stack: badge, h1/h2, sub, actions (center/left, hero/section size, band padding).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:156",
+      "anchor": "export function Title({ align = 'center'"
+    }
+  ],
+  "composes": [
+    "season-badge",
+    "season-button"
+  ],
+  "variants": [
+    "center",
+    "left",
+    "band"
+  ],
+  "tokens": [
+    "typography.fontFamily.at-season-sans"
+  ]
+}

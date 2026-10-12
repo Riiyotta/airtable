@@ -1,0 +1,21 @@
+{
+  "id": "card-eyebrow",
+  "layer": "primitive",
+  "purpose": "ResourceCard eyebrow: colour pill, fictional logo wordmark, or meta row (icon + labels with dots).",
+  "implementedBy": [
+    {
+      "ref": "src/components/ResourceCard.jsx:48",
+      "anchor": "function Eyebrow({ type, label, bg, color, icon, items = [] })"
+    }
+  ],
+  "variants": [
+    "pill",
+    "logo",
+    "meta"
+  ],
+  "tokens": [
+    "color.content.*"
+  ],
+  "states": [],
+  "a11y": "logo eyebrow role=img aria-label"
+}

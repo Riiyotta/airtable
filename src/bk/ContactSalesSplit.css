@@ -1,0 +1,301 @@
+/* BK-9 ContactSalesSplit — SECTION_TYPES_solutions §3 BK-9 */
+.bkcs {
+  max-width: 1536px;
+  padding: 40px 24px; /* live 390: 40/24; ≥1024: 64/24 */
+}
+.bkcs-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px; /* live 390: 40 between the columns */
+  align-items: start;
+}
+/* live: the right column pads the card by 24 at every width */
+.bkcs-right {
+  padding: 24px;
+}
+/* live classes: md:grid-cols-12, md:col-span-5 md:sticky, top = --mainNavHeight + 24 (144.98 @1440) */
+@media (min-width: 768px) {
+  .bkcs-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 64px;
+  }
+  .bkcs-left {
+    grid-column: span 7;
+  }
+  .bkcs-right {
+    grid-column: span 5;
+    position: sticky;
+    top: calc(var(--mainNavHeight, 121px) + 24px);
+  }
+}
+@media (min-width: 1024px) {
+  .bkcs {
+    padding: 64px 24px;
+  }
+}
+
+/* Left column: flex column, gap 24 */
+.bkcs-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #333333;
+}
+.bkcs-h1 {
+  margin: 0 0 24px; /* + column gap 24 → intro 48 below the h1 */
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #333333;
+}
+@media (min-width: 1024px) {
+  .bkcs-h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+}
+.bkcs-rich {
+  font-size: 20px;
+  line-height: 32.5px;
+}
+.bkcs-rich p {
+  margin: 0 0 16px;
+}
+.bkcs-rich ul {
+  margin: 0 0 16px; /* (collapses with the last li's 4) + gap 24 → trust line 40 below the last bullet */
+  padding-left: 32px;
+  list-style: disc;
+}
+.bkcs-rich li {
+  margin-bottom: 4px;
+}
+.bkcs-trust {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.bkcs-trust p {
+  margin: 0 0 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.bkcs-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-left: 32px;
+  margin-bottom: 16px; /* live: support line 40 below the logos */
+}
+.bkcs-logo {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+  filter: contrast(0.3);
+}
+.bkcs-support {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 26px;
+}
+.bkcs-support a {
+  color: #0768f8;
+  text-decoration: underline;
+}
+
+/* Right card: bg #FFF, radius 16, shadow, padding 32 (24 mobile) */
+.bkcs-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 30px 50px rgba(26, 29, 38, 0.1);
+}
+@media (min-width: 1024px) {
+  .bkcs-card {
+    padding: 32px;
+  }
+}
+.bkcs-h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  line-height: 28.57px;
+  font-weight: 600;
+  color: #333333;
+}
+/* live: fields stack one per row below 1024 (8 apart); ≥1024 the name/company pairs sit 2-up, column gap 8 */
+.bkcs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bkcs-row--2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+}
+@media (min-width: 1024px) {
+  .bkcs-row--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* Field: border 1px rgba(0,14,38,.23), radius 8; label inset top-left (static, no float) */
+.bkcs-field {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 14, 38, 0.23);
+  border-radius: 8px;
+  background: #fff;
+}
+.bkcs-label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  right: 12px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #333840;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.bkcs-req {
+  margin-right: 2px;
+  font-weight: 500;
+  color: #c2214c;
+}
+.bkcs-control {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 27px 12px 6px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: #181d26;
+  outline: none;
+}
+.bkcs-field:focus-within {
+  border-color: #181d26;
+}
+.bkcs-select {
+  appearance: none;
+  padding-right: 32px;
+  cursor: pointer;
+}
+.bkcs-chevron {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.bkcs-field--area {
+  background: #f8fafc;
+}
+.bkcs-textarea {
+  resize: none;
+}
+
+/* Phone: label 12/14.4; flag + caret button 30 wide, then "+1" input */
+.bkcs-phone .bkcs-label {
+  line-height: 14.4px;
+}
+.bkcs-phone-row {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bkcs-flag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 30px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.bkcs-flag-box {
+  width: 20px;
+  height: 14px;
+  border-radius: 2px;
+  background: #e0e2e6;
+}
+.bkcs-phone-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21.6px;
+  color: #181d26;
+  outline: none;
+}
+
+/* live: consent 24 below the textarea and 32 above the button (flex gap 8 already sits on each side) */
+.bkcs-consent {
+  margin: 16px 0 24px;
+  font-size: 14px;
+  line-height: 18.9px;
+  color: #757575;
+}
+.bkcs-consent a {
+  color: #3366ff;
+  text-decoration: underline;
+}
+.bkcs-submit {
+  width: 100%;
+  letter-spacing: 0.08px;
+  cursor: pointer;
+}
+
+/* live mobile field heights: text/select 52.6, phone 67.6 (label 12/18) — desktop heights come from inline styles.
+   Kept last so it overrides the base field rules. */
+@media (max-width: 1023px) {
+  .bkcs-field:not(.bkcs-field--area):not(.bkcs-phone) {
+    height: 52.6px !important;
+  }
+  .bkcs-phone {
+    height: 67.6px !important;
+  }
+  .bkcs-phone .bkcs-label {
+    line-height: 18px;
+  }
+  .bkcs-label {
+    top: 5px;
+    left: 9px;
+    right: 9px;
+  }
+  .bkcs-control,
+  .bkcs-select {
+    padding: 24px 9px 5px;
+  }
+  .bkcs-phone-row {
+    left: 9px;
+    right: 9px;
+  }
+}
+@media (max-width: 1023px) {
+  /* live 390: consent 16 below the textarea, 24 above the button */
+  .bkcs-consent {
+    margin: 8px 0 16px;
+  }
+}

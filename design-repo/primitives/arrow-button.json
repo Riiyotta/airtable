@@ -1,0 +1,25 @@
+{
+  "id": "arrow-button",
+  "layer": "primitive",
+  "purpose": "Prev/next icon button for carousels.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:108",
+      "anchor": "export function ArrowButton({ dir = 'next', onClick, variant = 'darkSecondary', label })"
+    },
+    {
+      "ref": "src/bk/HeroCarouselCentered.jsx:162",
+      "anchor": "function ArrowIcon({ left = false })"
+    }
+  ],
+  "variants": [
+    "darkSecondary",
+    "b",
+    "bk-circle"
+  ],
+  "tokens": [],
+  "states": [
+    "hover"
+  ],
+  "a11y": "aria-label Previous/Next slide"
+}

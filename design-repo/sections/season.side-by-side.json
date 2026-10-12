@@ -1,0 +1,183 @@
+{
+  "id": "season.side-by-side",
+  "system": "season",
+  "category": "media-text",
+  "purpose": "A4/S-5 feature row: badge/h2/body/bullets/actions beside (or above) a media frame (placeholder box + original generated UI illustration; kind from badge/headline).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/SideBySide.jsx:6",
+      "anchor": "export default function SideBySide("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "display",
+      "evidence": [
+        {
+          "ref": "src/season/components/SideBySide.jsx:3",
+          "anchor": "// A4 FeatureSideBySide (h2 48/1.25)"
+        }
+      ]
+    },
+    {
+      "id": "section",
+      "evidence": [
+        {
+          "ref": "src/season/pages/about.js:30",
+          "anchor": "headlineSize: 'section',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 34,
+    "observedRoutes": [
+      "/about",
+      "/platform/ai",
+      "/platform/app-building",
+      "/platform/automations",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/platform/reporting"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.side-by-side",
+    "copyBudgets": {
+      "actions[].label": {
+        "maxWords": 4,
+        "observedInstances": 11,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/reporting"
+        ]
+      },
+      "badge": {
+        "maxWords": 2,
+        "observedInstances": 5,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/app-building",
+          "/platform/connected-data"
+        ]
+      },
+      "body": {
+        "maxWords": 50,
+        "observedInstances": 28,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/app-building",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/platform/reporting"
+        ]
+      },
+      "bullets[]": {
+        "maxWords": 14,
+        "observedInstances": 23,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/governance",
+          "/platform/portals"
+        ]
+      },
+      "headline": {
+        "maxWords": 10,
+        "observedInstances": 33,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/app-building",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/platform/reporting"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 5
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "display",
+          "section"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "stack-columns"
+      ],
+      "detail": "row/row-reverse becomes a column; centre keyline removed",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:995",
+          "anchor": ".ss-mb--left { flex-direction: row-reverse; }"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "generated.ui-illustration"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.carousel",
+      "season.hero",
+      "season.integrations",
+      "season.logos",
+      "season.side-by-side",
+      "season.stats",
+      "season.tabber"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.carousel",
+      "season.integrations",
+      "season.logos",
+      "season.side-by-side",
+      "season.tabber",
+      "season.templates",
+      "shell.footer"
+    ]
+  }
+}

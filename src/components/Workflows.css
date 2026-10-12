@@ -1,0 +1,548 @@
+/* Section 4 — "Sophisticated workflows in minutes, not months" (CLONE_SPEC §4, §10, §11) */
+
+.wf {
+  --wf-font-text: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --wf-font-display: "Haas Groot Disp", Haas, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--wf-font-text);
+  color: #333840;
+}
+
+.wf-wrap {
+  margin: 0 32px;
+  max-width: 1536px;
+}
+
+.wf-h2 {
+  font-family: var(--wf-font-display);
+  font-size: 32px;
+  line-height: 36.8px;
+  font-weight: 400;
+  color: #181D26;
+  padding-top: 40px; /* 48px at >=1024 */
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.wf-body {
+  padding: 48px 0 64px;
+}
+
+.wf-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ---- Left sticky menu ---- */
+.wf-menu {
+  position: sticky;
+  top: calc(var(--mainNavHeight, 120.98px) + 16px);
+  align-self: flex-start;
+  width: 243px;
+  max-width: 312px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  z-index: 2;
+}
+
+.wf-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.wf-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #F8FAFC;
+  transition: transform .3s;
+  font-size: 18px;
+  line-height: 24.3px;
+  font-weight: 400;
+  letter-spacing: 0.18px;
+  color: #41454D;
+  text-decoration: none;
+  min-width: 0;
+}
+.wf-item[data-active="true"] {
+  color: #181D26;
+}
+
+.wf-indicator {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.wf-item[data-active="true"] .wf-indicator {
+  opacity: 1;
+}
+
+.wf-label {
+  flex: 1 1 0%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+/* ---- Right column ---- */
+.wf-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.wf-card {
+  border: 1px solid #E0E2E6;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Card typography */
+.wf-card-title {
+  font-size: 24px;
+  line-height: 39px;
+  font-weight: 400;
+  letter-spacing: normal;
+  margin-bottom: 16px;
+}
+.wf-card-body {
+  opacity: 0.7;
+}
+.wf-card-body p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  letter-spacing: 0.08px;
+}
+
+/* BkButton (§10) */
+.wf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid;
+  font-family: var(--wf-font-text);
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all .2s linear;
+}
+.wf-btn--primary {
+  background: #181D26;
+  color: #FFFFFF;
+  border-color: #181D26;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .32), 0 0 2px 0 rgba(0, 0, 0, .08), 0 1px 3px 0 rgba(45, 127, 249, .28), inset 0 0 0 .5px rgba(0, 0, 0, .06);
+}
+/* State rules mirror the original's blackBtnTheme order: hover < active < focus. */
+.wf-btn--primary:hover {
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .wf-btn--primary:hover {
+    background: rgba(4, 14, 32, 0.69);
+    border-color: rgba(4, 14, 32, 0.69);
+  }
+}
+.wf-btn--primary:active {
+  background: rgba(7, 12, 20, 0.82);
+  border-color: rgba(7, 12, 20, 0.82);
+}
+.wf-btn--primary:focus {
+  background: #181D26;
+  box-shadow: 0 0 0 4px rgba(153, 160, 174, 0.16), 0 0 0 2px #FFFFFF;
+}
+.wf-btn--white {
+  background: #FFFFFF;
+  color: #181D26;
+  border-color: #FFFFFF;
+}
+.wf-btn--white:hover {
+  background: rgba(242, 244, 247, 0.92);
+  border-color: rgba(242, 244, 247, 0.92);
+}
+.wf-btn--white:active {
+  background: rgba(225, 228, 234, 0.86);
+  border-color: rgba(225, 228, 234, 0.86);
+}
+.wf-btn--white:focus {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16), 0 0 0 2px #FFFFFF;
+}
+
+/* Card 1 — animated media */
+.wf-card1 {
+  background: #912E1F;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wf-card1 .wf-card-title {
+  color: #FFFFFF;
+  letter-spacing: 0.12px;
+}
+.wf-card1 .wf-card-body p {
+  color: #FFFFFF;
+}
+.wf-headrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wf-card1 .wf-headrow {
+  margin-top: 48px;
+  padding: 0 48px;
+}
+.wf-headtext {
+  flex: 1 0 50%;
+}
+/* Button column shares the free space with the text column (orig: flex 1 0 auto, 320px at 1440). */
+.wf-btnwrap {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.wf-card2 .wf-btnwrap {
+  align-items: flex-end;
+}
+.wf-media1 {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+/* Absolutely-positioned flex children take their static position from
+   justify-content/align-items: horizontally centered, bottom-aligned. */
+.wf-fan-item {
+  position: absolute;
+  height: 90%;
+  width: auto;
+  opacity: 0.1;
+  will-change: transform, opacity;
+}
+.wf-fan-item img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: none;
+}
+
+/* Card 2 — text + media */
+.wf-card2 {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.wf-media2 {
+  flex: 1 1 0;
+  overflow: hidden;
+  position: relative;
+}
+/* Original: width-driven 16:9 video, top-aligned and clipped at the bottom by the container. */
+.wf-media2 video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+.wf-card2 .wf-headrow {
+  margin: 40px 0;
+  padding: 0 48px;
+  align-items: flex-end;
+}
+.wf-card2 .wf-card-title {
+  color: #181D26;
+}
+.wf-card2 .wf-card-body p {
+  color: rgba(4, 14, 32, 0.7);
+}
+
+/* Card 3 — background image */
+.wf-card3 {
+  background: url(/assets/3385c0df6528302ab335b5c6344945583712d9df-2000x1600.png) center / cover no-repeat;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px;
+}
+.wf-card3-inner {
+  grid-column: 1 / span 5;
+}
+.wf-omni-icon {
+  display: block;
+  width: 226px;
+  height: 226px;
+  padding-bottom: 40px;
+  box-sizing: content-box;
+}
+.wf-card3-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wf-card3-block .wf-btn {
+  align-self: flex-start;
+}
+.wf-card3 .wf-card-title {
+  color: #254FAD;
+}
+.wf-card3 .wf-card-body {
+  margin-bottom: 16px;
+}
+.wf-card3 .wf-card-body p {
+  color: #254FAD;
+}
+
+/* Card 4 — list card */
+.wf-card4 {
+  background: #FAF5E8;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: 32px; /* row-gap stays normal (0) like the original */
+}
+.wf-card4-left {
+  grid-column: 1 / span 5;
+}
+.wf-card4-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+}
+.wf-card4 .wf-card-title {
+  color: #214224;
+  padding-top: 40px;
+  margin-bottom: 16px;
+}
+.wf-card4-right {
+  grid-column: 7 / span 6;
+  /* original ends the list with an empty <p> (12px padding-top + 16px margin) */
+  padding-bottom: 28px;
+}
+.wf-group-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 32.5px;
+  letter-spacing: 0.1px;
+}
+.wf-group + .wf-group .wf-group-title {
+  padding-top: 12px;
+}
+.wf-group-title strong {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  color: #214224;
+}
+.wf-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wf-list li {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 22.75px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: #41454D;
+}
+.wf-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url(/assets/0834b04934b4e12d875dd7b721f8ed6482676149-24x25.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+}
+
+/* ---- ≥1024: row layout, fixed-height cards ---- */
+@media (min-width: 1024px) {
+  .wf-h2 {
+    padding-top: 48px;
+  }
+  .wf-content {
+    flex-direction: row;
+  }
+  .wf-card {
+    height: 75vh;
+    max-height: 800px;
+  }
+  .wf-card4 {
+    height: unset;
+    max-height: none;
+  }
+}
+
+/* ---- <1024: stacked; menu becomes a horizontal scrollable row ---- */
+@media (max-width: 1023.98px) {
+  .wf-menu {
+    top: var(--mainNavHeight, 120.98px);
+    width: auto;
+    max-width: none;
+    align-self: stretch;
+    margin: 0 -32px; /* full-bleed across the page gutter */
+  }
+  .wf-nav {
+    flex-direction: row;
+    gap: 24px;
+    padding: 0 16px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .wf-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .wf-item {
+    flex-shrink: 0;
+  }
+  .wf-item:first-child {
+    border-top: 0;
+  }
+  .wf-cards {
+    gap: 32px;
+  }
+  .wf-card1 {
+    height: 520px;
+    max-height: 520px;
+  }
+  .wf-card4 {
+    column-gap: 24px;
+  }
+  .wf-media2 {
+    flex: none;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ---- <768 (measured at 390) ---- */
+@media (max-width: 767.98px) {
+  .wf-wrap {
+    margin: 0 24px;
+  }
+  .wf-h2 {
+    font-size: 24px;
+    line-height: 27.6px;
+  }
+  .wf-body {
+    padding: 48px 0 40px;
+  }
+  .wf-menu {
+    top: var(--mainNavHeight, 144px);
+    margin: 0 -24px;
+  }
+  .wf-item:first-child {
+    margin-left: 16px;
+  }
+  .wf-card-title {
+    font-size: 18px;
+    line-height: 29.25px;
+    letter-spacing: 0.09px;
+  }
+  .wf-card1 .wf-card-title {
+    letter-spacing: 0.18px;
+    margin-bottom: 24px;
+  }
+  .wf-card-body p {
+    font-size: 14px;
+    line-height: 22.75px;
+    letter-spacing: 0.14px;
+  }
+  .wf-headrow {
+    flex-direction: column;
+  }
+  .wf-btnwrap,
+  .wf-card2 .wf-btnwrap {
+    margin-top: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .wf-headtext {
+    flex: none;
+  }
+  .wf-card1 .wf-headrow {
+    margin-top: 32px;
+    padding: 0 32px;
+  }
+  .wf-media1 {
+    flex: 1 1 auto;
+    margin-top: 32px;
+  }
+  .wf-fan-item {
+    height: auto;
+  }
+  .wf-fan-item img {
+    height: 160px;
+    max-width: 150px;
+  }
+  .wf-card2 {
+    gap: 32px;
+  }
+  .wf-card2 .wf-headrow {
+    margin: 0 0 40px;
+    padding: 0 32px;
+    align-items: stretch;
+  }
+  .wf-card3 {
+    padding: 32px 32px 128px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .wf-card3-inner {
+    grid-column: 1 / -1;
+  }
+  .wf-card4 {
+    padding: 32px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+  .wf-card4-left,
+  .wf-card4-right {
+    grid-column: 1 / -1;
+  }
+  .wf-group-title {
+    font-size: 18px;
+    line-height: 29.25px;
+    letter-spacing: 0.18px;
+  }
+  .wf-group-title strong {
+    font-size: 18px;
+    line-height: 29.25px;
+    letter-spacing: 0.18px;
+  }
+  .wf-list li {
+    letter-spacing: 0.18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wf-item,
+  .wf-indicator,
+  .wf-btn {
+    transition: none;
+  }
+}

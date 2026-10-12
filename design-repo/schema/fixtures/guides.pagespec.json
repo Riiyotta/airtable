@@ -1,0 +1,244 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.bk-guides-hub",
+  "route": "/guides",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Guides"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.guides-banner",
+      "content": {
+        "title": "Build new skills at your own pace",
+        "subtitle": "Short, practical guides walk you through core features, common setups and habits that help teams.",
+        "topics": [
+          {
+            "label": "Getting started fast",
+            "href": "#"
+          },
+          {
+            "label": "Base basics",
+            "href": "#"
+          },
+          {
+            "label": "Structuring bases that scale",
+            "href": "#"
+          },
+          {
+            "label": "Automation fundamentals",
+            "href": "#"
+          },
+          {
+            "label": "Views, filters and groups",
+            "href": "#"
+          },
+          {
+            "label": "Sharing and access",
+            "href": "#"
+          },
+          {
+            "label": "Reporting and dashboard tips",
+            "href": "#"
+          },
+          {
+            "label": "Using AI features",
+            "href": "#"
+          }
+        ],
+        "items": [
+          {
+            "title": "Planning your first base",
+            "href": "#"
+          },
+          {
+            "title": "Designing a clear interface",
+            "href": "#"
+          },
+          {
+            "title": "Automating routine team updates",
+            "href": "#"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "guides-expanding-strip",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.sidebar-nav-grid",
+      "content": {
+        "topics": [
+          {
+            "label": "Getting started",
+            "href": "#"
+          },
+          {
+            "label": "Building bases",
+            "href": "#"
+          },
+          {
+            "label": "Views, filters and saved layouts",
+            "href": "#"
+          },
+          {
+            "label": "Automation basics",
+            "href": "#"
+          },
+          {
+            "label": "Interfaces 101",
+            "href": "#"
+          },
+          {
+            "label": "Sharing and permissions",
+            "href": "#"
+          },
+          {
+            "label": "Reporting with dashboards",
+            "href": "#"
+          },
+          {
+            "label": "AI features",
+            "href": "#"
+          }
+        ],
+        "cards": [
+          {
+            "title": "Getting started",
+            "desc": "Learn the building blocks of a workspace, from tables and fields to records, and set up your first project.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "6 articles"
+            ]
+          },
+          {
+            "title": "Building bases",
+            "desc": "Structure information so it scales, with tips on linking tables, picking field types and keeping data tidy as your work grows.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "9 articles"
+            ]
+          },
+          {
+            "title": "Views, filters and saved layouts",
+            "desc": "See the same records in different ways using grids, boards, calendars and filters for each audience.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "7 articles"
+            ]
+          },
+          {
+            "title": "Automation basics",
+            "desc": "Set up triggers and actions that handle repetitive steps and keep records updated for you.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "8 articles"
+            ]
+          },
+          {
+            "title": "Interfaces 101",
+            "desc": "Design focused pages that show every teammate only the information and controls needed.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "5 articles"
+            ]
+          },
+          {
+            "title": "Sharing and permissions",
+            "desc": "Decide who can view, comment on or edit your work, and share it safely with collaborators both inside and outside your organization.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "4 articles"
+            ]
+          },
+          {
+            "title": "Reporting with dashboards",
+            "desc": "Turn records into charts and summaries so that leaders can follow progress, recognize emerging trends and decide confidently.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "6 articles"
+            ]
+          },
+          {
+            "title": "AI features",
+            "desc": "Explore ways to draft content, summarize long fields and categorize records with AI, then review every result.",
+            "href": "#",
+            "meta": [
+              "Guide",
+              "5 articles"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.cta-row",
+      "variant": "callout",
+      "content": {
+        "title": "Start building today",
+        "button": {
+          "label": "Get started",
+          "href": "/signup"
+        }
+      },
+      "motion": {
+        "pattern": "bk-cta-row-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

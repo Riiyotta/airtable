@@ -1,0 +1,268 @@
+/* Section 5 — AI Plays bento (CLONE_SPEC §5, §10, §11) */
+
+.aip {
+  --aip-font-text: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --aip-font-display: "Haas Groot Disp", Haas, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --aip-ease: cubic-bezier(.4, 0, .2, 1);
+  font-family: var(--aip-font-text);
+  color: #333840;
+}
+
+.aip-wrap {
+  margin: 0 32px;
+  max-width: 1536px;
+}
+
+/* Heading row */
+.aip-head {
+  padding-top: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.aip-head-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.aip-h2 {
+  font-family: var(--aip-font-display);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #181D26;
+}
+.aip-sub {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #040E20;
+  opacity: 0.7;
+}
+
+/* BkButton primary (§10) */
+.aip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid #181D26;
+  background: #181D26;
+  color: #FFFFFF;
+  font-family: var(--aip-font-text);
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.32), 0 0 2px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(45, 127, 249, 0.28), inset 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  transition: all .2s linear;
+}
+.aip-btn:hover {
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .aip-btn:hover {
+    background: rgba(4, 14, 32, 0.69);
+    border-color: rgba(4, 14, 32, 0.69);
+  }
+}
+/* blackBtnTheme rule order on the original: hover < active < focus (same specificity),
+   so while pressed the focus bg + ring win and only the active border shows. */
+.aip-btn:active {
+  background: rgba(7, 12, 20, 0.82);
+  border-color: rgba(7, 12, 20, 0.82);
+}
+.aip-btn:focus {
+  background: #181D26;
+  box-shadow: 0 0 0 4px rgba(153, 160, 174, 0.16), 0 0 0 2px #fff;
+  outline: none;
+}
+
+/* Wrapper + inner grid → cards start 128px below the heading */
+.aip-body {
+  padding: 64px 0;
+}
+.aip-inner {
+  padding: 64px 0;
+}
+.aip-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* Card */
+.aip-card {
+  position: relative;
+  display: block;
+  height: 427px;
+  padding-top: 24px;
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--aip-bg);
+  color: var(--aip-fg);
+}
+.aip-card--8 { grid-column: span 8; }
+.aip-card--4 { grid-column: span 4; }
+.aip-card--6 { grid-column: span 6; }
+
+.aip-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: all .6s var(--aip-ease);
+}
+
+.aip-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.aip-prompt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: var(--aip-fg);
+  opacity: 0;
+  transition: all .6s var(--aip-ease);
+}
+.aip-pill {
+  padding: 12px 24px;
+  border-radius: 32px;
+  background: var(--aip-fg);
+  color: var(--aip-bg);
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  letter-spacing: normal;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all .6s var(--aip-ease);
+}
+
+/* Desktop hover / focus-within reveal */
+@media (min-width: 1024px) {
+  .aip-card:hover .aip-img,
+  .aip-card:focus-within .aip-img,
+  .aip-card:focus-visible .aip-img {
+    opacity: 0;
+  }
+  .aip-card:hover .aip-prompt,
+  .aip-card:hover .aip-pill,
+  .aip-card:focus-within .aip-prompt,
+  .aip-card:focus-within .aip-pill,
+  .aip-card:focus-visible .aip-prompt,
+  .aip-card:focus-visible .aip-pill {
+    opacity: 1;
+  }
+}
+
+/* <1024: images hidden, text always visible */
+@media (max-width: 1023.98px) {
+  .aip-img {
+    opacity: 0;
+  }
+  .aip-prompt,
+  .aip-pill {
+    opacity: 1;
+  }
+  .aip-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .aip-btn {
+    align-self: flex-start;
+  }
+  .aip-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .aip-card--8,
+  .aip-card--4,
+  .aip-card--6 {
+    grid-column: 1 / -1;
+  }
+  .aip-content {
+    gap: 48px;
+  }
+  .aip-body {
+    padding: 48px 0;
+  }
+}
+
+/* <768 (measured at 390) */
+@media (max-width: 767.98px) {
+  .aip-wrap {
+    margin: 0 24px;
+  }
+  .aip-head {
+    padding-top: 48px;
+  }
+  .aip-h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .aip-sub {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .aip-body {
+    padding: 40px 0;
+  }
+  .aip-inner {
+    padding: 48px 0;
+  }
+  .aip-grid {
+    gap: 16px;
+  }
+  .aip-card {
+    height: 207px;
+  }
+  .aip-content {
+    padding: 24px;
+    gap: 24px;
+  }
+  .aip-prompt {
+    font-size: 14px;
+    line-height: 18.9px;
+    letter-spacing: 0.07px;
+  }
+  .aip-pill {
+    padding: 14.5px 24px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aip-img,
+  .aip-prompt,
+  .aip-pill,
+  .aip-btn {
+    transition: none;
+  }
+}

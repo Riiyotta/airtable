@@ -1,0 +1,202 @@
+{
+  "system": "bk",
+  "tokens": {
+    "$description": "BK system: homepage + /solutions, /integrations, /ai-plays, /customer-stories, /guides, /contact-sales (Haas).",
+    "text.strong": {
+      "$value": "{color.ink.900}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:94",
+          "anchor": "strong / primary: `#181D26`"
+        }
+      ]
+    },
+    "text.default": {
+      "$value": "{color.ink.800}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:95",
+          "anchor": "default: `#333840`"
+        }
+      ]
+    },
+    "text.secondary": {
+      "$value": "{color.ink.700}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:96",
+          "anchor": "secondary: `#41454D`"
+        }
+      ]
+    },
+    "text.weak": {
+      "$value": "{color.ink.alpha-69}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:97",
+          "anchor": "weak: `#040E20B0`"
+        }
+      ]
+    },
+    "text.link": {
+      "$value": "{color.link.bk}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:98",
+          "anchor": "link/info: `#254FAD`"
+        }
+      ]
+    },
+    "text.link-arrow": {
+      "$value": "{color.link.primary}",
+      "evidence": [
+        {
+          "ref": "src/bk/BkLink.jsx:8",
+          "anchor": "text-[#0768F8]"
+        }
+      ]
+    },
+    "text.link-arrow-lg": {
+      "$value": "{color.link.secondary}",
+      "evidence": [
+        {
+          "ref": "src/bk/BkLink.jsx:7",
+          "anchor": "text-[#1B61C9]"
+        }
+      ]
+    },
+    "surface.page": {
+      "$value": "{color.white}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:101",
+          "anchor": "page: `#FFFFFF`"
+        }
+      ]
+    },
+    "surface.subtle": {
+      "$value": "{color.surface.subtle}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:102",
+          "anchor": "subtle: `#F8FAFC`"
+        }
+      ]
+    },
+    "surface.callout": {
+      "$value": "{color.surface.promo}",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Guides.jsx:45",
+          "anchor": "bg=\"#F0F6FF\""
+        }
+      ]
+    },
+    "surface.hero-dark": {
+      "$value": "{color.surface.hero-dark}",
+      "evidence": [
+        {
+          "ref": "src/bk/PageHeroSplit.jsx:6",
+          "anchor": "dark: { bg: '#1F0C3B'"
+        }
+      ]
+    },
+    "surface.placeholder": {
+      "$value": "{color.surface.strong}",
+      "evidence": [
+        {
+          "ref": "src/bk/Placeholder.jsx:5",
+          "anchor": "PH_LIGHT = '#E0E2E6'"
+        }
+      ]
+    },
+    "surface.placeholder-dark": {
+      "$value": "{color.surface.placeholder-dark}",
+      "evidence": [
+        {
+          "ref": "src/bk/Placeholder.jsx:6",
+          "anchor": "PH_DARK = '#2A2F38'"
+        }
+      ]
+    },
+    "border.card": {
+      "$value": "{color.surface.strong}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:106",
+          "anchor": "`#E0E2E6` (cards, CTA box)"
+        }
+      ]
+    },
+    "border.separator": {
+      "$value": "{color.border.alpha-12}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:107",
+          "anchor": "`rgba(1,20,53,0.12)` = `#0114351F`"
+        }
+      ]
+    },
+    "type.hero-h1": {
+      "$value": {
+        "family": "{typography.fontFamily.haas}",
+        "size": "40px",
+        "lineHeight": "48px",
+        "weight": 400,
+        "mobile": "32px/40px"
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:61",
+          "anchor": "| **h1** hero | Haas | **40 / 48**"
+        }
+      ]
+    },
+    "type.section-h2": {
+      "$value": {
+        "family": "{typography.fontFamily.haas-groot-disp}",
+        "size": "32px",
+        "lineHeight": "40px",
+        "weight": 400,
+        "mobile": "24px/30px"
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:64",
+          "anchor": "| **Section h2 (HeadingGroup)**"
+        }
+      ]
+    },
+    "type.body": {
+      "$value": {
+        "family": "{typography.fontFamily.haas}",
+        "size": "16px",
+        "lineHeight": "21.6px",
+        "weight": 400,
+        "letterSpacing": "0.16px",
+        "mobile": "14px/18.9px"
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:62",
+          "anchor": "| Hero subheading | Haas | 16 / 21.6"
+        }
+      ]
+    },
+    "type.button": {
+      "$value": {
+        "family": "{typography.fontFamily.haas}",
+        "size": "16px",
+        "lineHeight": "21.6px",
+        "weight": 500,
+        "letterSpacing": "0.16px"
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:80",
+          "anchor": "| **Button label** (all BkButtons)"
+        }
+      ]
+    }
+  }
+}

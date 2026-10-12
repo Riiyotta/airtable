@@ -1,0 +1,90 @@
+{
+  "id": "bk.guides-banner",
+  "system": "bk",
+  "category": "hero",
+  "purpose": "Guides hero: h1, subtitle, Quick Start outline buttons + an expanding strip of featured articles (original abstract gradient/story/bars illustrations, dark theme).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/GuidesBanner.jsx:12",
+      "anchor": "export default function GuidesBanner("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/guides"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.guides-banner",
+    "copyBudgets": {
+      "items[].title": {
+        "maxWords": 4,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/guides"
+        ]
+      },
+      "subtitle": {
+        "maxWords": 15,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/guides"
+        ]
+      },
+      "title": {
+        "maxWords": 7,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/guides"
+        ]
+      },
+      "topics[].label": {
+        "maxWords": 4,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/guides"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "guides-expanding-strip",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "flex 1<->5 1s ease-in-out; caption reveal 1.5s ease-in; overlay .5s",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1141",
+            "anchor": "| BK-7 GuidesBanner | click"
+          },
+          {
+            "ref": "src/bk/GuidesBanner.css:251",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.breadcrumb"
+    ],
+    "observedBefore": [
+      "bk.sidebar-nav-grid"
+    ]
+  }
+}

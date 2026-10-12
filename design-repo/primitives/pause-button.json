@@ -1,0 +1,35 @@
+{
+  "id": "pause-button",
+  "layer": "primitive",
+  "purpose": "40px circular pause/play toggle for autoplay media (homepage hero video, marquees, carousels). Season 'video' media slots still render it, but since the md- scenes replaced the sweep those slots are static (nothing to pause).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:91",
+      "anchor": "export function PauseButton({ paused, onToggle })"
+    },
+    {
+      "ref": "src/components/Hero.jsx:80",
+      "anchor": "aria-label={paused ? 'Play video' : 'Pause video'}"
+    }
+  ],
+  "variants": [
+    "bk",
+    "season"
+  ],
+  "tokens": [
+    "color.ink.900",
+    "color.ink.alpha-69"
+  ],
+  "states": [
+    "hover",
+    "active",
+    "paused"
+  ],
+  "a11y": "aria-label toggles Play/Pause; aria-pressed on the homepage button",
+  "evidence": [
+    {
+      "ref": "src/season/components/SideBySide.jsx:44",
+      "anchor": "{media.video && <PauseButton paused={paused} onToggle={toggle} />}"
+    }
+  ]
+}

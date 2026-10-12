@@ -1,0 +1,185 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-feature-stack",
+  "route": "/platform/reporting",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "Reporting"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Reports that keep pace with your work",
+        "sub": "Roll out changes gradually and measure their impact before going wide. Feedback lands in the right queue and reaches.",
+        "actions": [
+          {
+            "label": "Watch demo",
+            "href": "#",
+            "variant": "primary"
+          },
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1280/426"
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "bottom",
+        "headline": "Turn requests into tracked work",
+        "body": "Feedback lands in the right queue and reaches the right owner automatically. Clear ownership means fewer meetings and faster follow-through.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1260/428",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "A shared workspace for planning and delivery",
+        "body": "Set up structured workflows without writing any code. Search across records, files and comments to find answers quickly.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/434"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Templates and building blocks for your next project",
+        "body": "Leaders get a clear picture of what is moving and what is stuck. Bring scattered requests into one place.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/452"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Scale processes across every team",
+        "body": "Search across records, files and comments to find answers quickly. Teams move faster together. Data stays trusted.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Guardrails that keep everyone aligned",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1280/827"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

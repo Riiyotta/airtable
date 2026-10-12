@@ -1,0 +1,275 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-about",
+  "route": "/about",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "badge": "Our story",
+        "headline": "Ideas become lasting infrastructure",
+        "sub": "Workflows stay consistent across regions, teams and time zones. Search across records, files and comments to find answers quickly. Reports update automatically as the underlying records change across the business. Give every team a shared foundation to build on. Everyone sees the same source of truth at once.",
+        "actions": [
+          {
+            "label": "Start building free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "View careers",
+            "href": "#",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "section",
+      "content": {
+        "position": "left",
+        "badge": "Our purpose",
+        "headline": "We exist to help people build the software they need",
+        "body": "Small teams can start simple and add structure as their needs grow over time. Workflows stay consistent across regions, teams and time zones. Everyone sees the same source of truth at once. Connect the tools your teams already rely on. Your data model grows alongside your organization without painful migrations.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/5"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "season",
+      "content": {
+        "heading": "Trusted by",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Lumen",
+            "Arcadia",
+            "Brightline",
+            "Kestrel",
+            "Halcyon",
+            "Meridian"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-season",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "Trusted by teams everywhere today",
+        "cards": [
+          {
+            "title": "40M+",
+            "body": "People using workspaces"
+          },
+          {
+            "title": "500K+",
+            "body": "Organizations"
+          },
+          {
+            "title": "80%",
+            "body": "Of large enterprises represented"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "Organizations building with us every day",
+        "cards": [
+          {
+            "icon": true,
+            "title": "Vantage",
+            "body": "Launch faster with building blocks designed for real business processes. Start in minutes."
+          },
+          {
+            "icon": true,
+            "title": "Juniper",
+            "body": "Reports update automatically as the underlying records change across the business. Everything stays connected."
+          },
+          {
+            "icon": true,
+            "title": "Copperleaf",
+            "body": "Clear ownership means fewer meetings and faster follow-through. Dashboards refresh on their own."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels",
+      "content": {
+        "badge": "Where we work",
+        "headline": "Meet the people and places behind us",
+        "sub": "Set up structured workflows without writing any code. Connect the tools your teams already rely on. Reports update automatically as the underlying records change across the business. Dashboards refresh on their own.",
+        "tabs": [
+          {
+            "label": "San Francisco",
+            "subhead": "San Francisco",
+            "groups": [
+              {
+                "strong": "100 Example Street, Suite 200",
+                "text": "San Francisco, CA 94100"
+              }
+            ],
+            "action": {
+              "label": "View open roles",
+              "href": "#"
+            }
+          },
+          {
+            "label": "New York",
+            "subhead": "New York",
+            "groups": [
+              {
+                "strong": "25 Sample Avenue, Floor 9",
+                "text": "New York, NY 10001"
+              }
+            ],
+            "action": {
+              "label": "View open roles",
+              "href": "#"
+            }
+          },
+          {
+            "label": "London",
+            "subhead": "London",
+            "groups": [
+              {
+                "strong": "12 Placeholder Lane, Level 3",
+                "text": "London, United Kingdom EC1"
+              }
+            ],
+            "action": {
+              "label": "View open roles",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Mexico City",
+            "subhead": "Mexico City",
+            "groups": [
+              {
+                "strong": "48 Ejemplo Boulevard, Office 5",
+                "text": "Mexico City, CDMX 06600"
+              }
+            ],
+            "action": {
+              "label": "View open roles",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Remote",
+            "subhead": "Remote",
+            "groups": [
+              {
+                "strong": "Distributed team across many regions",
+                "text": "Working from anywhere, together"
+              }
+            ],
+            "action": {
+              "label": "View open roles",
+              "href": "#"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "a",
+      "content": {
+        "headline": "Our recognition",
+        "sub": "Structured data makes it easy to spot trends and act on them early. Permissions keep sensitive records visible only to the people who.",
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 4
+        }
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Join the teams turning their best ideas into working software today",
+        "actions": [
+          {
+            "label": "Start building free",
+            "href": "/signup",
+            "variant": "primary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

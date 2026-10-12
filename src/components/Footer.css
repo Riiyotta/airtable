@@ -1,0 +1,480 @@
+/* §9 Footer — structure mirrors airtable.com marketingFooterV2 (measured live) */
+.ft {
+  background: #ffffff;
+  /* BkLink base: every link box sits in a 20px/30px line box, which sets the
+     li heights (30px link rows, 30.9px utility rows) measured on the original. */
+  font-family: "Haas Groot Disp", Haas, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #181d26;
+}
+/* Links (BkLink) switch to Haas text face */
+.ft a,
+.ft-more {
+  font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.1px;
+}
+.ft ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ft p {
+  margin: 0;
+}
+.ft a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ft-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ft-wrap {
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (min-width: 1024px) {
+  .ft-wrap {
+    padding: 0 48px;
+  }
+}
+
+/* ---- Nav grid: logo | primary | social, separator, columns ---- */
+.ft-nav {
+  display: grid;
+  grid-template-columns: 68px 1fr 204px;
+}
+.ft-logo {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+}
+.ft-primary {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+}
+.ft-social {
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+}
+.ft-sep {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: end;
+  height: 2px;
+  background: rgba(1, 20, 53, 0.12);
+}
+.ft-cols {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+@media (min-width: 768px) {
+  .ft-primary {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .ft-cols {
+    margin-top: 48px;
+  }
+}
+
+.ft-logo-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  border: 2px solid transparent;
+}
+.ft-logo-link img {
+  display: block;
+  width: 32px;
+  height: 27px;
+}
+
+.ft-primary ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .ft-primary ul {
+    flex-direction: row;
+  }
+}
+.ft-plink {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid transparent;
+}
+.ft-plink span {
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: #181d26;
+}
+
+.ft-social ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.ft-slink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid transparent;
+}
+.ft-slink img {
+  display: block;
+}
+
+/* ---- Link columns ---- */
+@media (min-width: 768px) {
+  .ft-cols > ul {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .ft-cols > ul {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 48px;
+  }
+}
+
+.ft-col-heading {
+  display: none;
+  font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  margin: 0 0 8px !important;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: #333333;
+}
+
+/* Mobile accordion header */
+.ft-acc-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  margin: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: "Haas Groot Disp", Haas, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  letter-spacing: normal;
+  color: #333333;
+}
+.ft-acc-btn span {
+  font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+}
+.ft-acc-icon {
+  display: block;
+  flex: none;
+  transition: 0.25s; /* original: transition .25s (all, ease) */
+}
+.ft-acc-icon:hover {
+  opacity: 0.75;
+}
+.ft-acc-btn[aria-expanded="true"] .ft-acc-icon {
+  transform: rotate(90deg);
+}
+
+/* Original accordionItemPanel: grid-rows 0fr→1fr, opacity 0→1, visibility hidden→visible,
+   overflow hidden, transition .15s ease-in (visibility is in the "all" transition, so the
+   closing panel stays visible while it collapses/fades). */
+.ft-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.15s ease-in;
+}
+.ft-panel[data-open="true"] {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+}
+.ft-panel > .ft-list {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ft-col-hr {
+  display: block;
+  height: 2px;
+  margin: 0;
+  border: 0;
+  background: rgba(1, 20, 53, 0.12);
+}
+
+.ft-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Mobile: every link shown, no See more / Show less */
+.ft-more-item {
+  display: none;
+}
+/* Mobile open panel ends with a 24px spacer (ul::after on the original) */
+@media (max-width: 767.98px) {
+  .ft-list::after {
+    content: "";
+    display: block;
+    height: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ft-col-heading {
+    display: block;
+  }
+  .ft-acc-btn,
+  .ft-col-hr {
+    display: none;
+  }
+  .ft-panel,
+  .ft-panel[data-open="false"] {
+    grid-template-rows: auto;
+    opacity: 1;
+    transition: none;
+  }
+  .ft-panel,
+  .ft-panel > .ft-list {
+    overflow: visible;
+    visibility: visible;
+  }
+  .ft-col[data-expanded="false"] .ft-extra,
+  .ft-col[data-expanded="true"] .ft-see-more {
+    display: none;
+  }
+  .ft-col[data-expanded="false"] .ft-see-more,
+  .ft-col[data-expanded="true"] .ft-show-less {
+    display: list-item;
+  }
+}
+
+.ft-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 2px solid transparent;
+  color: #333840;
+}
+.ft-link span {
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  color: #333840;
+}
+
+/* <1024 the toggle is inline-flex (30px row); >=1024 it is block (25.6px row) */
+.ft-more {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #333840;
+}
+@media (min-width: 1024px) {
+  .ft-more {
+    display: block;
+  }
+}
+.ft-more span {
+  display: block;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: #333840;
+}
+
+/* ---- Utility bar (full bleed) ---- */
+.ft-util {
+  background: #f8fafc;
+}
+@media (min-width: 768px) {
+  .ft-util {
+    margin-top: 72px;
+  }
+}
+.ft-util-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+}
+@media (min-width: 768px) {
+  .ft-util-row {
+    padding: 16px 0;
+  }
+}
+@media (min-width: 1184px) {
+  .ft-util-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.ft-util-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.ft-util-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px 2px 0;
+  border: 2px solid transparent;
+  color: #41454d;
+}
+.ft-util-links span {
+  font-size: 14px;
+  line-height: 18.9px;
+  font-weight: 500;
+  letter-spacing: 0.28px;
+  color: #41454d;
+}
+
+.ft-badges {
+  display: flex;
+  gap: 4px;
+}
+.ft-badges a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  border: 2px solid transparent;
+}
+.ft-badges img {
+  display: block;
+}
+
+/* Link states (measured, BkLink in marketingFooterV2):
+   - every link: :hover/:active underline; :focus = 3px rgba(0,0,0,.5) ring, radius 6, no outline
+   - column links: the underline is on the inner text (hover + focus), not the anchor
+   - socials (prependedIcon): no underline, opacity .75 on hover/focus
+   No transitions (state changes are instant). */
+.ft-logo-link:hover,
+.ft-logo-link:active,
+.ft-plink:hover,
+.ft-plink:active,
+.ft-more:hover,
+.ft-more:active,
+.ft-util-links a:hover,
+.ft-util-links a:active,
+.ft-badges a:hover,
+.ft-badges a:active,
+.ft-link:hover span,
+.ft-link:focus span {
+  text-decoration: underline;
+}
+.ft-logo-link:focus,
+.ft-plink:focus,
+.ft-slink:focus,
+.ft-link:focus,
+.ft-more:focus,
+.ft-util-links a:focus,
+.ft-badges a:focus,
+.ft-acc-btn:focus-visible {
+  border-radius: 6px;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.ft-acc-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+.ft-slink:hover,
+.ft-slink:focus {
+  opacity: 0.75;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ft-panel,
+  .ft-acc-icon {
+    transition: none;
+  }
+}
+
+/* ---- variant="pricing" (Footer.jsx): live /pricing footer, measured at 390/768/1024/1440/1920.
+   The pricing app never loads Haas, so every footer text falls back to the system stack, and the footer
+   inherits its body 12.8px/16px: link rows are 25.6 (not 30), utility rows 26.9 (not 30.9), the mobile
+   accordion button keeps the UA 2px transparent border (57.6 tall), and the utility bar never switches
+   to a row (links above badges, 115.9 tall at >=768). Footer 595.6 at 1440 / 880.2 at 390. ---- */
+.ft.ft--pricing,
+.ft.ft--pricing * {
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+.ft.ft--pricing {
+  font-size: 12.8px;
+  line-height: 16px;
+}
+.ft.ft--pricing a,
+.ft.ft--pricing .ft-more {
+  letter-spacing: 0.064px;
+}
+.ft.ft--pricing .ft-more {
+  font-size: 12.8px;
+  line-height: 16px;
+}
+.ft.ft--pricing .ft-acc-btn {
+  border: 2px solid transparent;
+  font-size: 13.3333px;
+  line-height: normal;
+}
+@media (min-width: 1184px) {
+  .ft.ft--pricing .ft-util-row {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

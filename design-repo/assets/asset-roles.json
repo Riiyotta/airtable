@@ -1,0 +1,329 @@
+{
+  "$description": "Closed assetRole vocabulary (schema definitions.assetRole). Every media/logo field in a PageSpec carries one of these. generationPolicy values: may-generate-new | reference-existing-only | must-not-generate. generated.ui-illustration (original generated UI illustration) is the only role for media slots off the homepage; its mustNotDepict list is PINNED in verify_all. Roles prefixed home.* carry real Airtable/customer trademarks, likeness or proprietary media and are PINNED (verify_all fails if their policy changes).",
+  "generationPolicies": {
+    "may-generate-new": "AI may generate new, original, brand-neutral placeholder content for this role.",
+    "reference-existing-only": "Only the existing local file may be referenced (home route only); nothing may be generated, re-encoded or imitated.",
+    "must-not-generate": "Never generate, trace, redraw or name; only the existing local file may be shown on the home route."
+  },
+  "globalRules": [
+    "Never generate or reproduce real Airtable logos/wordmarks, real customer or partner logos, photos or likenesses of real people, real product screenshots, or real Airtable marketing copy.",
+    "Media slots off the homepage use generated.ui-illustration: original generated illustration only; mustNotDepict (real Airtable logos, real customer/partner logos, real product screenshots, real people, real company/product names) is pinned and machine-checked.",
+    "All generated PageSpecs use ORIGINAL placeholder copy within the copy budgets and contentPolicy.copy = 'original-placeholder'.",
+    "Person names in quotes/testimonials must be fictional (as in the clone's /platform and /solutions/enterprise stories).",
+    "This repository and its assets are for local reference only: do not publish the repo, the clone or its media."
+  ],
+  "pinnedPolicies": {
+    "home.product-video": "reference-existing-only",
+    "home.customer-video": "reference-existing-only",
+    "home.customer-logo": "must-not-generate",
+    "home.product-screenshot": "must-not-generate",
+    "home.brand-illustration": "must-not-generate"
+  },
+  "roles": {
+    "generated.ui-illustration": {
+      "generationPolicy": "may-generate-new",
+      "allowedOn": "any-template",
+      "originalWorkOnly": true,
+      "mustNotDepict": [
+        "real-airtable-logo-or-wordmark",
+        "real-customer-or-partner-logo",
+        "real-product-screenshot",
+        "real-person-photo-or-likeness",
+        "real-company-or-product-name"
+      ],
+      "description": "Media slot = the measured placeholder box (ratio from the closed ratio enum; fill #E0E2E6 / #F8F6F6 light, #2A2F38 dark) covered by an ORIGINAL, deterministic, static inline-SVG product-UI scene (<MockMedia>, primitive mock-media, md- CSS prefix). The scene is absolutely positioned (inset 0) so it never changes the slot's layout.",
+      "kinds": [
+        "grid",
+        "kanban",
+        "calendar",
+        "gallery",
+        "timeline",
+        "dashboard",
+        "form",
+        "interface",
+        "automation",
+        "ai",
+        "hub",
+        "gradient",
+        "bars",
+        "story",
+        "glyph"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "kindSelection": "kind is NOT a PageSpec field. The renderer derives it from the slot's own copy (hint = badge/headline/title) with pickKind's ordered keyword rules, else a seeded rotation over the 8 UI kinds; Season slots mix the route into the seed. Some call sites force a kind in code (story, glyph, ai, hub, gradient/bars). To steer the scene, write the slot's copy; never add a kind/src field.",
+      "aiGuidance": "Generate ORIGINAL abstract product-UI illustrations only (generic grid/board/calendar/chart/form/flow vocabulary, generic labels such as 'Launch checklist' or 'Weekly report', fictional data). Never a real Airtable logo/wordmark, never a real customer/partner logo, never a real product screenshot (or a trace/reconstruction of one), never a photo, avatar or likeness of a real person, never a real company or product name. Static only: no motion.",
+      "observedOn": "every built route except '/' (the homepage keeps its real media under the pinned home.* roles)",
+      "pageSpecFields": [
+        "content.bk.media-text-row.media",
+        "content.season.hero.media",
+        "content.season.side-by-side.media",
+        "content.season.cards.cards[].media"
+      ],
+      "implicitSlots": [
+        {
+          "section": "season.carousel",
+          "ref": "src/season/components/FeatureCarousel.jsx:32",
+          "anchor": "<Ph className=\"ss-car__media\" ratio=\"448/300\" seed={i % base.length} hint={c.title} />"
+        },
+        {
+          "section": "season.scroll-tabber",
+          "ref": "src/season/components/ScrollTabber.jsx:120",
+          "anchor": "<Ph className=\"ss-st__media\" ratio=\"1000/560\" seed={i} hint={p.title} />"
+        },
+        {
+          "section": "season.tabber",
+          "ref": "src/season/components/Tabber.jsx:34",
+          "anchor": "<Ph seed={i} video={t.video} kind={t.quote ? 'story' : undefined} hint={[t.label, t.subhead]} />"
+        },
+        {
+          "section": "season.read-next",
+          "ref": "src/season/components/blocks.jsx:98",
+          "anchor": "<Ph dark seed={k} kind={READ_NEXT_KINDS[k % 3]} />"
+        },
+        {
+          "section": "season.platform-hero",
+          "ref": "src/season/components/heroes.jsx:106",
+          "anchor": "<Ph ratio=\"16/9\" video hint={[eyebrow, lines]} />"
+        },
+        {
+          "section": "season.tab-panels",
+          "ref": "src/season/components/platformB.jsx:13",
+          "anchor": "<Ph seed={i} video={t.video} hint={[t.label, t.title]} />"
+        },
+        {
+          "section": "season.stories",
+          "ref": "src/season/components/platformB.jsx:101",
+          "anchor": "<Ph dark seed={k} kind=\"story\" />"
+        },
+        {
+          "section": "season.templates",
+          "ref": "src/season/components/platformB.jsx:278",
+          "anchor": "<Ph hint={headline} />"
+        },
+        {
+          "section": "bk.hero-carousel-centered",
+          "ref": "src/bk/HeroCarouselCentered.jsx:94",
+          "anchor": "<PlaceholderBlock dark className=\"h-full w-full\" kind=\"story\" seed={i % n} />"
+        },
+        {
+          "section": "bk.icon-card-grid",
+          "ref": "src/bk/IconCardGrid.jsx:25",
+          "anchor": "kind=\"glyph\""
+        },
+        {
+          "section": "bk.guides-banner",
+          "ref": "src/bk/GuidesBanner.jsx:6",
+          "anchor": "const BANNER_KINDS = ['gradient', 'story', 'bars']"
+        },
+        {
+          "section": "bk.filter-listing",
+          "ref": "src/bk/pages/AiPlays.jsx:71",
+          "anchor": "card={{ layout: 'imageBottom', desc: true, mediaKind: 'ai' }}"
+        },
+        {
+          "section": "bk.filter-listing",
+          "ref": "src/bk/pages/Integrations.jsx:42",
+          "anchor": "card={{ layout: 'imageTop', desc: false, mediaKind: 'hub' }}"
+        },
+        {
+          "section": "bk.card-grid-load-more",
+          "ref": "src/bk/CardGridLoadMore.jsx:16",
+          "anchor": "mediaKind=\"story\""
+        },
+        {
+          "section": "tpl.gallery",
+          "ref": "src/standalone/templates/Templates.jsx:29",
+          "anchor": "<MockMedia hint={title} seed={seed} bare />"
+        }
+      ],
+      "evidence": [
+        {
+          "ref": "src/media/MockMedia.jsx:8",
+          "anchor": "// <MockMedia kind seed theme hint ratio bare />"
+        },
+        {
+          "ref": "src/media/MockMedia.jsx:40",
+          "anchor": "export default function MockMedia({ kind, seed = 0, theme = 'light', hint, ratio, bare = false, className = '' })"
+        },
+        {
+          "ref": "src/media/scenes.jsx:1153",
+          "anchor": "export const SCENES = { grid, kanban, calendar, gallery, timeline, dashboard, form, interface: iface, automation, ai, hub, gradient, bars, story, glyph }"
+        },
+        {
+          "ref": "src/media/MockMedia.jsx:66",
+          "anchor": "const k = SCENES[kind] ? kind : pickKind(hint, seed)"
+        },
+        {
+          "ref": "src/media/MockMedia.jsx:10",
+          "anchor": "// own measured size, radius and background; this layer is absolutely positioned so it never"
+        },
+        {
+          "ref": "src/media/MockMedia.jsx:19",
+          "anchor": "// Static: no animation, so prefers-reduced-motion needs nothing extra."
+        },
+        {
+          "ref": "src/media/rng.js:1",
+          "anchor": "// Deterministic pseudo-random helpers: same seed -> same scene (no Math.random at render)."
+        },
+        {
+          "ref": "src/season/components/atoms.jsx:124",
+          "anchor": "export function Ph({ ratio, dark, video, style, className = '', seed = 0, kind, hint })"
+        },
+        {
+          "ref": "src/season/components/atoms.jsx:133",
+          "anchor": "<MockMedia kind={kind} hint={text} seed={`${pathname}|${text}|${seed}`} theme={dark ? 'dark' : 'light'} ratio={ratio} />"
+        },
+        {
+          "ref": "src/bk/Placeholder.jsx:8",
+          "anchor": "export function PlaceholderBlock({ className = '', dark = false, style, kind, seed = 0, hint })"
+        },
+        {
+          "ref": "src/bk/Placeholder.jsx:15",
+          "anchor": "<MockMedia kind={kind} seed={seed} hint={hint} theme={dark ? 'dark' : 'light'} />"
+        },
+        {
+          "ref": "src/components/ResourceCard.jsx:28",
+          "anchor": "<MockMedia kind={mediaKind} hint={title} seed={title} />"
+        }
+      ]
+    },
+    "placeholder.wordmark": {
+      "generationPolicy": "may-generate-new",
+      "allowedOn": "any-template",
+      "description": "Fictional company wordmark rendered as text + simple geometric mark (Logo / BkLogoStrip / pricing strip).",
+      "aiGuidance": "Invent fictional company names only (pattern of the existing set: Northwind, Lumen, Kestrel...). Must not be, or resemble, a real company, customer or partner name or logo.",
+      "evidence": [
+        {
+          "ref": "src/season/copy.js:238",
+          "anchor": "// Neutral fictional wordmarks for logo placeholders"
+        },
+        {
+          "ref": "src/season/components/atoms.jsx:138",
+          "anchor": "// Generic wordmark placeholder for logo rows."
+        }
+      ]
+    },
+    "placeholder.integration-tile": {
+      "generationPolicy": "may-generate-new",
+      "allowedOn": "any-template",
+      "description": "Abstract 80px rounded tile with a neutral glyph standing in for an integration logo.",
+      "aiGuidance": "Abstract glyph tiles only; never a real third-party app icon.",
+      "evidence": [
+        {
+          "ref": "src/season/components/atoms.jsx:149",
+          "anchor": "export const Tile = ({ i = 0 }) => ("
+        }
+      ]
+    },
+    "home.product-video": {
+      "generationPolicy": "reference-existing-only",
+      "allowedOn": "template.home",
+      "description": "Real Airtable product video (HEVC-only .mp4, no H.264/WebM fallback, no poster) saved locally from the user's own copy of the homepage.",
+      "aiGuidance": "Reference the existing local file only, only on route '/'. Never generate, re-encode, imitate or describe a substitute product video.",
+      "licensing": "Airtable proprietary media -- local reference only; must not be redistributed or published.",
+      "evidence": [
+        {
+          "ref": "src/components/Hero.jsx:66",
+          "anchor": "{/* HEVC source only; no H.264/webm fallback or poster exists in ASSET_MANIFEST. */}"
+        },
+        {
+          "ref": "CLONE_SPEC.md:589",
+          "anchor": "headless Chromium can't decode the HEVC hero and story videos"
+        }
+      ]
+    },
+    "home.customer-video": {
+      "generationPolicy": "reference-existing-only",
+      "allowedOn": "template.home",
+      "description": "Real customer-story background video (HEVC-only).",
+      "aiGuidance": "Reference the existing local file only, only on route '/'. Never generate footage of real people or customers.",
+      "licensing": "Airtable / customer proprietary media -- local reference only.",
+      "evidence": [
+        {
+          "ref": "src/components/CustomerStory.jsx:10",
+          "anchor": "src=\"/assets/642f0aab4cecfadb17e538dfb03ec1e47a09d549.mp4#t=0.5\""
+        }
+      ]
+    },
+    "home.customer-logo": {
+      "generationPolicy": "must-not-generate",
+      "allowedOn": "template.home",
+      "description": "Real third-party customer logos (16 marquee logos + the white story logo) from the saved homepage.",
+      "aiGuidance": "Never generate, redraw, trace or name real customer/partner logos. Off the homepage use placeholder.wordmark with fictional names.",
+      "licensing": "Third-party trademarks -- no licence; local reference only on '/'.",
+      "evidence": [
+        {
+          "ref": "src/components/LogoBar.jsx:22",
+          "anchor": "// 16 logos rendered twice"
+        },
+        {
+          "ref": "ASSET_MANIFEST.md:45",
+          "anchor": "Logo 12 (no \"Logo 11\" in CMS)"
+        }
+      ]
+    },
+    "home.product-screenshot": {
+      "generationPolicy": "must-not-generate",
+      "allowedOn": "template.home",
+      "description": "Real Airtable product screenshots/illustrations (workflow fan images, AI-plays bento images, resource card images).",
+      "aiGuidance": "Never fabricate Airtable UI screenshots. Off the homepage use placeholder.media.",
+      "licensing": "Airtable proprietary imagery -- local reference only.",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:8",
+          "anchor": "img: '/assets/23b71faac9fefb209abee4d86dace2e43424985b-1770x854.png'"
+        },
+        {
+          "ref": "src/components/Resources.jsx:9",
+          "anchor": "img: '/assets/45d538de0379cda686e8cb0955ff093c4a622396-1280x720.png'"
+        }
+      ]
+    },
+    "home.brand-illustration": {
+      "generationPolicy": "must-not-generate",
+      "allowedOn": "template.home",
+      "description": "Real Airtable brand illustrations/icons on the homepage workflow cards (Omni animation, enterprise icon).",
+      "aiGuidance": "Never recreate Airtable brand marks or mascots.",
+      "licensing": "Airtable trademarks/brand assets -- local reference only.",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:315",
+          "anchor": "src=\"/assets/e1ae4b7878c18828b1817f51d0a7c214061d8a3d-1000x1000.gif\""
+        }
+      ]
+    }
+  },
+  "retiredRoles": {
+    "placeholder.media": {
+      "retiredIn": "1.1.0",
+      "replacedBy": "generated.ui-illustration",
+      "reason": "Every placeholder media slot (season Ph, BK PlaceholderBlock, ResourceCard fallback, /templates Mock) now renders an original <MockMedia> scene inside the box; a bare neutral block no longer exists in the clone.",
+      "evidence": [
+        {
+          "ref": "src/season/components/atoms.jsx:133",
+          "anchor": "<MockMedia kind={kind} hint={text} seed={`${pathname}|${text}|${seed}`} theme={dark ? 'dark' : 'light'} ratio={ratio} />"
+        },
+        {
+          "ref": "src/bk/Placeholder.jsx:15",
+          "anchor": "<MockMedia kind={kind} seed={seed} hint={hint} theme={dark ? 'dark' : 'light'} />"
+        }
+      ]
+    }
+  },
+  "pinnedRestrictions": {
+    "generated.ui-illustration": {
+      "generationPolicy": "may-generate-new",
+      "originalWorkOnly": true,
+      "mustNotDepict": [
+        "real-airtable-logo-or-wordmark",
+        "real-customer-or-partner-logo",
+        "real-product-screenshot",
+        "real-person-photo-or-likeness",
+        "real-company-or-product-name"
+      ]
+    }
+  }
+}

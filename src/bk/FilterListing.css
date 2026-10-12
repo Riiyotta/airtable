@@ -1,0 +1,221 @@
+/* BK-4 FilterListing — SECTION_TYPES_solutions §3 BK-4 */
+.fl-featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-top: 24px;
+  margin-bottom: 48px; /* live: featured section margin 0 0 48 on /integrations and /ai-plays */
+}
+.fl-featured--spacious {
+  gap: 24px; /* live /ai-plays 390: featured cards 24 apart */
+}
+@media (min-width: 1024px) {
+  .fl-featured {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .fl-featured--spacious {
+    row-gap: 48px;
+  }
+}
+
+/* gridWrap margin 0 32 → 12 cols (81.33), gap 32; sidebar cols 1–3, main cols 4–12.
+   No bottom padding: the 48px gap sits under the featured grid (live featured section margin-bottom 48). */
+.fl-area {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 1024px) {
+  .fl-area {
+    margin: 0 32px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 32px;
+    align-items: start;
+  }
+  .fl-sidebar {
+    grid-column: 1 / span 3;
+  }
+  .fl-main {
+    grid-column: 4 / -1;
+  }
+}
+.fl-sidebar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .fl-sidebar {
+    display: block;
+  }
+  .fl-mobile {
+    display: none;
+  }
+}
+
+/* live 390: main column is inset 0 24 on both /integrations and /ai-plays (cards 294 wide) */
+.fl-main {
+  padding: 0 24px;
+}
+@media (min-width: 1024px) {
+  .fl-main {
+    padding: 0;
+  }
+}
+
+.fl-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-top: 24px;
+}
+.fl-main--spacious .fl-grid {
+  gap: 24px;
+}
+.fl-main--spacious {
+  padding-bottom: 48px; /* live /ai-plays: 48 below the last row (not on /integrations) */
+}
+@media (min-width: 1024px) {
+  .fl-grid,
+  .fl-main--spacious .fl-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .fl-main--spacious .fl-grid {
+    row-gap: 48px;
+  }
+}
+
+/* Filter group */
+.fl-group {
+  margin: 24px 0;
+}
+.fl-hr {
+  height: 2px;
+  margin: 0;
+  border: 0;
+  background: #f8fafc;
+}
+.fl-group-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 37.6px;
+  cursor: pointer;
+}
+.fl-group-title {
+  margin: 0 0 16px;
+  font-family: 'Haas Groot Disp', Haas, sans-serif;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  color: #181d26;
+}
+.fl-chevron {
+  transition: all 0.1s linear;
+}
+.fl-chevron--open {
+  transform: rotate(180deg);
+}
+.fl-options {
+  padding-left: 4px;
+  margin: 4px 0 32px;
+  overflow: auto;
+}
+/* live: label row 33.2 tall (21.2 field + 12 gap); checkbox sits 3.2 down, label text 2.1 down */
+.fl-option {
+  display: flex;
+  align-items: flex-start;
+  height: 33.2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.fl-option > svg {
+  margin-top: 3.2px;
+}
+.fl-option-label {
+  margin: 2.1px 8px 0;
+  font-family: 'Haas Groot Disp', Haas, sans-serif;
+  font-size: 14px;
+  line-height: 18.9px;
+  letter-spacing: 0.28px;
+  color: #181d26;
+}
+.fl-option:has(input:focus-visible) svg {
+  outline: 2px solid #181d26;
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+/* Clear all */
+.fl-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border: 1px solid #181d26;
+  border-radius: 12px;
+  background: transparent;
+  color: #181d26;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  cursor: pointer;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.32), 0 0 2px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(1, 20, 53, 0.12);
+  transition: all 0.2s linear;
+}
+.fl-clear:hover:not(:disabled) {
+  background: rgba(1, 20, 53, 0.12);
+  border-color: #c4c7cd;
+  color: #040e20b0;
+  box-shadow: none;
+}
+.fl-clear:disabled {
+  background: #f8fafc;
+  border-color: #c4c7cd;
+  color: #020d206e;
+  box-shadow: none;
+  cursor: default;
+}
+.fl-clear:disabled .fl-clear-icon {
+  opacity: 0.5;
+}
+
+/* Mobile: live wraps "Filter" header + "Filters" button in the 0 24 inset; button wrap is 90 tall
+   (58 button + two empty 16-gap rows) then margin-bottom 32. BkButton outline, radius 12, 14×11 icon. */
+.fl-mobile {
+  margin-bottom: 32px;
+  padding: 0 24px;
+}
+.fl-mobile-btn {
+  margin-bottom: 32px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 58px;
+  padding: 16px 24px;
+  border: 1px solid #181d26;
+  border-radius: 12px;
+  background: transparent;
+  color: #181d26;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  cursor: pointer;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.32), 0 0 2px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(1, 20, 53, 0.12);
+  transition: all 0.2s linear;
+}
+.fl-mobile-btn:hover {
+  color: #040e20b0;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fl-chevron,
+  .fl-clear,
+  .fl-mobile-btn {
+    transition: none;
+  }
+}

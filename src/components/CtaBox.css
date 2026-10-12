@@ -1,0 +1,173 @@
+/* §8 CTA box — "Start building with Airtable" */
+.cta-section {
+  padding: 48px 0;
+}
+
+.cta-wrap {
+  margin: 0 24px;
+}
+@media (min-width: 768px) {
+  .cta-wrap {
+    margin: 0 32px;
+  }
+}
+
+.cta-box {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+  align-items: baseline;
+  padding: 40px;
+  border: 1px solid #e0e2e6;
+  border-radius: 16px;
+  font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .cta-box {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+.cta-text,
+.cta-actions {
+  grid-column: 1 / -1;
+}
+
+.cta-h2 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 31.2px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  color: #333840;
+}
+@media (min-width: 768px) {
+  .cta-h2 {
+    font-size: 32px;
+    line-height: 41.6px;
+    letter-spacing: 0.16px;
+  }
+}
+@media (min-width: 1024px) {
+  .cta-h2 {
+    line-height: 40px;
+    letter-spacing: normal;
+  }
+}
+
+.cta-p {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  color: #333840;
+}
+@media (min-width: 768px) {
+  .cta-p {
+    letter-spacing: 0.16px;
+  }
+}
+@media (min-width: 1024px) {
+  .cta-p {
+    line-height: 20px;
+    letter-spacing: normal;
+  }
+}
+
+/* BkButton — primary variant with CTA primary shadow */
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid #181d26;
+  background: #181d26;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.32), 0 0 2px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(45, 127, 249, 0.28), inset 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s linear;
+}
+@media (min-width: 768px) {
+  .cta-btn {
+    width: fit-content;
+  }
+}
+.cta-btn:hover {
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .cta-btn:hover {
+    background: rgba(4, 14, 32, 0.69);
+    border-color: rgba(4, 14, 32, 0.69);
+  }
+}
+/* blackBtnTheme order on the original: hover < active < focus (press = focus bg/ring + active border) */
+.cta-btn:active {
+  background: rgba(7, 12, 20, 0.82);
+  border-color: rgba(7, 12, 20, 0.82);
+}
+.cta-btn:focus {
+  background: #181d26;
+  box-shadow: 0 0 0 4px rgba(153, 160, 174, 0.16), 0 0 0 2px #fff;
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-btn {
+    transition: none;
+  }
+}
+
+/* variant="row" — live CTASection (/solutions, /customer-stories), measured 390 / 1440:
+   no border/radius; inner grid padding 24/0 (<768), 32/0 (768–1023), 48/0 (>=1024), gap 24; h2 cols 1–8
+   (type from .cta-h2: 24/31.2 ls .12, 32/41.6 ls .16 from 768, 32/40 from 1024); actions cols 10–12, flex-end, gap 12/16; the button fills its cell — full width
+   on mobile, capped at 200 from 768. Height 286 mobile / 247.6 desktop with a 2-line/1-line heading. */
+.cta-box--row {
+  padding: 24px 0;
+  border: 0;
+  border-radius: 0;
+}
+.cta-row-h2,
+.cta-row-actions {
+  grid-column: 1 / -1;
+}
+.cta-row-actions {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.cta-btn.cta-row-btn {
+  flex: 1 1 0;
+  width: auto;
+  min-width: fit-content;
+}
+@media (min-width: 768px) {
+  .cta-box--row {
+    padding: 32px 0;
+  }
+  .cta-row-h2 {
+    grid-column: 1 / span 8;
+  }
+  .cta-row-actions {
+    grid-column: 10 / span 3;
+    gap: 16px;
+  }
+  .cta-btn.cta-row-btn {
+    max-width: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .cta-box--row {
+    padding: 48px 0;
+  }
+}

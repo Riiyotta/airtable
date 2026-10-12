@@ -1,0 +1,106 @@
+{
+  "id": "season.stories",
+  "system": "season",
+  "category": "testimonial",
+  "purpose": "B6/E-8 autoplay customer-stories slider with progress bars (fictional brands/people).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:58",
+      "anchor": "export function Stories({ stories, fill = '#F884EE', cta, borderColor })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 2,
+    "observedRoutes": [
+      "/platform",
+      "/solutions/enterprise"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.stories",
+    "copyBudgets": {
+      "cta.label": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "stories[].brand.name": {
+        "maxWords": 1,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "stories[].name": {
+        "maxWords": 2,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "stories[].quote": {
+        "maxWords": 27,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "stories[].role": {
+        "maxWords": 10,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-stories-autoplay",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped",
+        "timing": "10s per slide, progress scaleX 0->1 linear, .9s crossfade, loops",
+        "evidence": [
+          {
+            "ref": "src/season/components/platformB.jsx:55",
+            "anchor": "// Autoplay: 10s per slide"
+          },
+          {
+            "ref": "src/season/components/platformB.jsx:67",
+            "anchor": "if (reduced) return"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.integrations"
+    ],
+    "observedBefore": [
+      "season.cta",
+      "season.read-next"
+    ]
+  }
+}

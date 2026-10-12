@@ -1,0 +1,117 @@
+{
+  "id": "season.scroll-tabber",
+  "system": "season",
+  "category": "feature-tabs",
+  "purpose": "A7 scroll tabber: sticky title + numbered tab nav, scroll-spied panels with media.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/ScrollTabber.jsx:8",
+      "anchor": "export default function ScrollTabber("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 2,
+    "observedRoutes": [
+      "/platform/ai-agents",
+      "/platform/app-building"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.scroll-tabber",
+    "copyBudgets": {
+      "headline": {
+        "maxWords": 8,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/platform/ai-agents",
+          "/platform/app-building"
+        ]
+      },
+      "panels[].action.label": {
+        "maxWords": 3,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/platform/ai-agents",
+          "/platform/app-building"
+        ]
+      },
+      "panels[].body": {
+        "maxWords": 29,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/platform/ai-agents",
+          "/platform/app-building"
+        ]
+      },
+      "panels[].label": {
+        "maxWords": 4,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/platform/ai-agents",
+          "/platform/app-building"
+        ]
+      },
+      "panels[].title": {
+        "maxWords": 11,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/platform/ai-agents",
+          "/platform/app-building"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-scroll-spy",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "IO rootMargin -35% 0 -45% 0, thresholds 0/.25/.5; click -> smooth scrollIntoView, observer muted 600ms",
+        "evidence": [
+          {
+            "ref": "src/season/components/ScrollTabber.jsx:50",
+            "anchor": "{ rootMargin: '-35% 0px -45% 0px', threshold: [0, 0.25, 0.5] }"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:784",
+            "anchor": "| A7 scroll tabber | IntersectionObserver"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "horizontal-scroll-tabs"
+      ],
+      "detail": "sticky horizontal tab row with edge fades",
+      "evidence": [
+        {
+          "ref": "src/season/components/ScrollTabber.jsx:4",
+          "anchor": "// A7 ScrollTabber — sticky title + sticky nav (>=900) / sticky horizontal tab row (<900)."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.hero"
+    ],
+    "observedBefore": [
+      "season.carousel"
+    ]
+  }
+}

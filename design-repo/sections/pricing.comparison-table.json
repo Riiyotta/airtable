@@ -1,0 +1,111 @@
+{
+  "id": "pricing.comparison-table",
+  "system": "pricing",
+  "category": "pricing",
+  "purpose": "C5 16-group comparison table (desktop >=1024 only).",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/pricing/Pricing.jsx:259",
+      "anchor": "function ComparisonTable()"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/pricing"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.pricing.comparison-table",
+    "copyBudgets": {
+      "footnotes[]": {
+        "maxWords": 24,
+        "observedInstances": 5,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "groups[].rows[].cells[]": {
+        "maxWords": 2,
+        "observedInstances": 382,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "groups[].rows[].cells[].t": {
+        "maxWords": 7,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "groups[].rows[].name": {
+        "maxWords": 4,
+        "observedInstances": 98,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "groups[].title": {
+        "maxWords": 2,
+        "observedInstances": 16,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "hide-element"
+      ],
+      "detail": "table not rendered on mobile",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:735",
+          "anchor": "### C5. ComparisonTable (desktop ≥1024 only; new)"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "pricing.logo-strip"
+    ],
+    "observedBefore": [
+      "pricing.help-links"
+    ]
+  }
+}

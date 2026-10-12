@@ -1,0 +1,496 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-solution",
+  "route": "/solutions/product",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Solutions",
+            "href": "/solutions"
+          },
+          {
+            "label": "Product"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "badge": "For product teams",
+        "headline": "A shared operating model for building and shipping products",
+        "sub": "Set up structured workflows without writing any code. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Everything stays connected.",
+        "actions": [
+          {
+            "label": "Get started free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "16/9",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "season",
+      "content": {
+        "heading": "Trusted by",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Brightline",
+            "Kestrel",
+            "Halcyon",
+            "Meridian",
+            "Ostara",
+            "Pinecrest"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-season",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "badge": "Product operations",
+        "headline": "Connect strategy to everyday delivery",
+        "sub": "Capture ideas, assign owners and track progress in a single workspace. Customize fields, layouts and rules to match how you operate. Everything stays connected.",
+        "cards": [
+          {
+            "title": "Reliable data at scale",
+            "body": "Spend less time chasing status updates. Connect the tools your teams already rely on. Teams move faster together. Flexible views.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          },
+          {
+            "title": "Automate the busywork away",
+            "body": "Templates help new projects launch with proven structure from the very first day. Small teams can start simple and add.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          },
+          {
+            "title": "One place for everything",
+            "body": "Plans turn into progress. Everyone sees the same source of truth at once. Teams move faster together. Permissions keep sensitive records.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels",
+      "content": {
+        "badge": "Product lifecycle",
+        "headline": "Bring every part of product work into one connected workspace",
+        "sub": "Connect the tools your teams already rely on. Roll out changes gradually and measure their impact before going wide. Every update stays visible.",
+        "tabs": [
+          {
+            "label": "Strategy and goals",
+            "subhead": "Keep projects moving without the chaos",
+            "groups": [
+              {
+                "strong": "One place for everything",
+                "text": "Structured data makes it easy to spot trends and act on them early. Spend less time chasing."
+              },
+              {
+                "strong": "Turn requests into tracked work",
+                "text": "Roll out changes gradually and measure their impact before going wide. Customize fields, layouts and rules to match how you operate."
+              },
+              {
+                "strong": "Secure sharing",
+                "text": "Flexible views let each person see the work in the format that suits them best. Automate the handoffs that."
+              }
+            ],
+            "action": {
+              "label": "Start planning now",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Roadmap planning",
+            "subhead": "Keep projects moving without the chaos",
+            "groups": [
+              {
+                "strong": "Connected team workflows",
+                "text": "Roll out changes gradually and measure their impact before going wide. Small teams can start."
+              },
+              {
+                "strong": "Flexible views for every role",
+                "text": "Every change is logged. Approvals move without email chains. From intake to delivery, every step is tracked in one place. Roll."
+              },
+              {
+                "strong": "Faster handoffs",
+                "text": "Every update stays visible. Customize fields, layouts and rules to match how you operate. Launch faster."
+              }
+            ],
+            "action": {
+              "label": "Start planning now",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Feedback and research",
+            "subhead": "Keep projects moving without the chaos",
+            "groups": [
+              {
+                "strong": "One place for everything",
+                "text": "Permissions keep sensitive records visible only to the people who need them. Search across."
+              },
+              {
+                "strong": "Turn requests into tracked work",
+                "text": "From intake to delivery, every step is tracked in one place. Templates help new projects launch with proven structure from the."
+              },
+              {
+                "strong": "Secure sharing",
+                "text": "Everyone sees the same source of truth at once. Turn repeatable processes into reliable systems that scale."
+              }
+            ],
+            "action": {
+              "label": "Start planning now",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Release management",
+            "subhead": "Keep projects moving without the chaos",
+            "groups": [
+              {
+                "strong": "Connected team workflows",
+                "text": "Context travels with the work. Connect the tools your teams already rely on. Roll out changes."
+              },
+              {
+                "strong": "Flexible views for every role",
+                "text": "Search across records, files and comments to find answers quickly. Turn repeatable processes into reliable systems that scale."
+              },
+              {
+                "strong": "Faster handoffs",
+                "text": "Context travels with the work. Permissions keep sensitive records visible only to the people who need them."
+              }
+            ],
+            "action": {
+              "label": "Start planning now",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Launch coordination",
+            "subhead": "Keep projects moving without the chaos",
+            "groups": [
+              {
+                "strong": "One place for everything",
+                "text": "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas."
+              },
+              {
+                "strong": "Turn requests into tracked work",
+                "text": "Agents handle the busywork in the background. Assistants summarize long threads so reviewers can focus on the decisions that."
+              },
+              {
+                "strong": "Secure sharing",
+                "text": "Spend less time chasing status updates. Every change is logged. Keep every stakeholder on track. Forecasts."
+              }
+            ],
+            "action": {
+              "label": "Start planning now",
+              "href": "/signup"
+            },
+            "video": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.templates",
+      "content": {
+        "badge": "Templates for product teams",
+        "headline": "Ship faster with templates built for product",
+        "sub": "Everyone sees the same source of truth at once.",
+        "slides": [
+          {
+            "title": "Turn requests into tracked work",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Flexible views for every role",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Simple tools for complex operations",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Scale processes across every team",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Guardrails that keep everyone aligned",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-crossfade-click",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "a",
+      "content": {
+        "headline": "Connect your stack",
+        "sub": "Your data model grows alongside your organization without painful migrations. Workflows stay consistent across regions, teams and time zones. Give every team a shared foundation to build on.",
+        "action": {
+          "label": "Explore all integrations",
+          "href": "/integrations"
+        },
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 4
+        }
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "logos",
+      "content": {
+        "headline": "Product teams building better products with shared context",
+        "tabs": [
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Meridian"
+            },
+            "quote": "Small teams can start simple and add structure as their needs grow over time. Workflows stay consistent across regions, teams and time zones. Changes sync across every view instantly.",
+            "attribution": "Set up structured workflows without writing any code.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Ostara"
+            },
+            "quote": "Give every team a shared foundation to build on. Customize fields, layouts and rules to match how you operate. Turn repeatable processes into reliable systems that scale with you.",
+            "attribution": "Connect the tools your teams already rely on.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Pinecrest"
+            },
+            "quote": "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Give every team a shared foundation to build on. Build once and reuse it everywhere.",
+            "attribution": "Set up structured workflows without writing any code.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.read-next",
+      "variant": "a",
+      "content": {
+        "headline": "More resources for product teams",
+        "cards": [
+          {
+            "title": "A shared workspace for planning and delivery and shared data"
+          },
+          {
+            "title": "Build custom apps around the way you already work"
+          },
+          {
+            "title": "Bring planning, execution and reporting together in one workspace and fewer"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Build what customers need",
+        "actions": [
+          {
+            "label": "Start building free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Contact sales",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Frequently asked questions",
+        "items": [
+          {
+            "q": "Can different teams customize their own views without affecting others?",
+            "a": [
+              "Permissions keep sensitive records visible only to the people who need them. Permissions keep sensitive records visible only to the people who need them. Set up structured workflows without writing any code. Agents handle the busywork in the background. Search across records, files and comments to find answers quickly. Agents handle the busywork in the background. Turn repeatable processes into.",
+              "Turn repeatable processes into reliable systems that scale with you. Set up structured workflows without writing any code. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Feedback lands in the right queue and reaches the right owner automatically. Roll out changes gradually and measure their impact before going wide. Start in minutes.",
+              "Templates help new projects launch with proven structure from the very first day. Clear ownership means fewer meetings and faster follow-through."
+            ]
+          },
+          {
+            "q": "How long does it take to get started?",
+            "a": [
+              "Permissions keep sensitive records visible only to the people who need them. Permissions keep sensitive records visible only to the people who need them. Clear ownership means fewer meetings and faster follow-through."
+            ]
+          },
+          {
+            "q": "How do admins manage access, policies and usage across a large organization?",
+            "a": [
+              "Give every team a shared foundation to build on. Permissions keep sensitive records visible only to the people who need them. Start in minutes. Everything stays connected."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Set up structured workflows without writing any code. Templates help new projects launch with proven structure from the very first day. Launch faster with building blocks designed for real business processes. Work flows naturally. Every update stays visible."
+            ]
+          },
+          {
+            "q": "Is it possible to roll out changes gradually to a few teams first?",
+            "a": [
+              "Roll out changes gradually and measure their impact before going wide. Clear ownership means fewer meetings and faster follow-through. Decisions happen with full context."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

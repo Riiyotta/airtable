@@ -1,0 +1,98 @@
+/* BkCtaRow — see BkCtaRow.jsx for measurements */
+.bkcta {
+  padding: 48px 0;
+  font-family: Haas, sans-serif;
+}
+.bkcta-wrap {
+  max-width: 1536px;
+  margin: 0 24px;
+}
+.bkcta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+  align-items: baseline;
+  padding: 24px 0;
+}
+.bkcta-h {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 24px;
+  line-height: 31.2px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+}
+.bkcta-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.bkcta-btn {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+  padding: 16px 24px;
+  border: 1px solid #181d26;
+  border-radius: 12px;
+  background: #181d26;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.32), 0 0 2px 0 rgba(0, 0, 0, 0.08), 0 1px 3px 0 rgba(45, 127, 249, 0.28), inset 0 0 0 0.5px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s linear;
+}
+.bkcta-btn:hover {
+  box-shadow: none;
+}
+.bkcta-btn:active {
+  background: rgba(7, 12, 20, 0.82);
+  border-color: rgba(7, 12, 20, 0.82);
+}
+.bkcta-btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(153, 160, 174, 0.16), 0 0 0 2px #fff;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .bkcta-wrap {
+    margin: 0 32px;
+  }
+  .bkcta-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: 48px 0;
+  }
+  .bkcta-h {
+    grid-column: 1 / span 8;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: normal;
+  }
+  .bkcta-actions {
+    grid-column: 10 / span 3;
+    gap: 16px;
+  }
+  .bkcta-btn {
+    max-width: 200px;
+  }
+  .bkcta-btn:hover {
+    background: rgba(4, 14, 32, 0.69);
+    border-color: rgba(4, 14, 32, 0.69);
+  }
+}
+@media (min-width: 1600px) {
+  .bkcta-wrap {
+    margin: 0 auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bkcta-btn {
+    transition: none;
+  }
+}

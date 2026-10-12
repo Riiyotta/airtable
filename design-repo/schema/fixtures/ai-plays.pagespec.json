@@ -1,0 +1,259 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.bk-filter-listing",
+  "route": "/ai-plays",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "AI Plays"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.page-hero-split",
+      "variant": "dark",
+      "content": {
+        "title": "Put AI plays to work: High-impact workflows to try now",
+        "description": "Browse ready-made plays that pair AI with the processes you already run."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.filter-listing",
+      "variant": "image-bottom-spacious",
+      "content": {
+        "featured": [
+          {
+            "title": "Summarize vendor updates into weekly status notes",
+            "desc": "Collect incoming vendor messages, condense the key points with AI, and route a short weekly digest to every owner.",
+            "category": "Operations",
+            "feature": "Field Summaries",
+            "href": "#",
+            "pill": {
+              "bg": "#FFE0CC",
+              "color": "#AF3803",
+              "label": "Operations",
+              "icon": true
+            }
+          },
+          {
+            "title": "Draft campaign briefs from a few inputs",
+            "desc": "Turn goals, audience notes and timelines into a structured first draft that your team can refine together.",
+            "category": "Marketing & Creative",
+            "feature": "Content Drafting",
+            "href": "#",
+            "pill": {
+              "bg": "#FCCCF0",
+              "color": "#AB0A83",
+              "label": "Marketing & Creative",
+              "icon": true
+            }
+          },
+          {
+            "title": "Sort incoming feedback into clear product themes",
+            "desc": "Tag each piece of user feedback by theme and urgency so planning sessions start from organized, searchable evidence rather than notes.",
+            "category": "Digital Product",
+            "feature": "Record Categorization",
+            "href": "#",
+            "pill": {
+              "bg": "#C7E5F2",
+              "color": "#0076A8",
+              "label": "Digital Product",
+              "icon": true
+            }
+          }
+        ],
+        "gridTitle": "AI Plays",
+        "items": [
+          {
+            "title": "Classify incoming service requests by team",
+            "desc": "Read each new request, assign a category and priority, and send it to the right queue automatically for follow-up.",
+            "category": "Operations",
+            "feature": "Record Categorization",
+            "href": "#",
+            "pill": {
+              "bg": "#FFE0CC",
+              "color": "#AF3803",
+              "label": "Operations",
+              "icon": true
+            }
+          },
+          {
+            "title": "Extract key details from supplier invoices",
+            "desc": "Pull totals, dates and supplier names out of uploaded documents and fill every matching field without manual typing.",
+            "category": "Operations",
+            "feature": "Data Extraction",
+            "href": "#",
+            "pill": {
+              "bg": "#FFE0CC",
+              "color": "#AF3803",
+              "label": "Operations",
+              "icon": true
+            }
+          },
+          {
+            "title": "Write social post variations for launches",
+            "desc": "Generate several short post options from one approved message so each is ready for review before scheduling.",
+            "category": "Marketing & Creative",
+            "feature": "Content Drafting",
+            "href": "#",
+            "pill": {
+              "bg": "#FCCCF0",
+              "color": "#AB0A83",
+              "label": "Marketing & Creative",
+              "icon": true
+            }
+          },
+          {
+            "title": "Tag creative assets by theme and mood",
+            "desc": "Label images in your asset library by subject and mood so designers can find the right visual for each brief faster.",
+            "category": "Marketing & Creative",
+            "feature": "Image Tagging",
+            "href": "#",
+            "pill": {
+              "bg": "#FCCCF0",
+              "color": "#AB0A83",
+              "label": "Marketing & Creative",
+              "icon": true
+            }
+          },
+          {
+            "title": "Summarize user research notes quickly",
+            "desc": "Condense long interview notes into a few key findings that link back to source records.",
+            "category": "Digital Product",
+            "feature": "Field Summaries",
+            "href": "#",
+            "pill": {
+              "bg": "#C7E5F2",
+              "color": "#0076A8",
+              "label": "Digital Product",
+              "icon": true
+            }
+          },
+          {
+            "title": "Gauge customer sentiment across product reviews",
+            "desc": "Score each review as positive, neutral or negative and surface recurring complaints for the whole team to discuss each week.",
+            "category": "Digital Product",
+            "feature": "Sentiment Analysis",
+            "href": "#",
+            "pill": {
+              "bg": "#C7E5F2",
+              "color": "#0076A8",
+              "label": "Digital Product",
+              "icon": true
+            }
+          },
+          {
+            "title": "Draft summaries of supplier requests",
+            "desc": "Prepare a concise summary of each supplier request, including quantities and deadlines, before it reaches procurement for approval.",
+            "category": "Physical Product",
+            "feature": "Field Summaries",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Physical Product",
+              "icon": true
+            }
+          },
+          {
+            "title": "Categorize quality inspection notes by defect type and severity level",
+            "desc": "Group inspection findings by defect type so recurring issues are easy to spot across runs.",
+            "category": "Physical Product",
+            "feature": "Record Categorization",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Physical Product",
+              "icon": true
+            }
+          },
+          {
+            "title": "Generate onboarding checklists for every new hire",
+            "desc": "Create a tailored checklist for each new hire based on role, location, team and start date, then assign each task to the right owner in seconds.",
+            "category": "Operations",
+            "feature": "Content Drafting",
+            "href": "#",
+            "pill": {
+              "bg": "#FFE0CC",
+              "color": "#AF3803",
+              "label": "Operations",
+              "icon": true
+            }
+          }
+        ],
+        "groups": [
+          {
+            "key": "category",
+            "title": "Category",
+            "options": [
+              "Operations",
+              "Marketing & Creative",
+              "Digital Product",
+              "Physical Product"
+            ]
+          },
+          {
+            "key": "feature",
+            "title": "AI Feature",
+            "options": [
+              "Content Drafting",
+              "Field Summaries",
+              "Record Categorization",
+              "Data Extraction",
+              "Sentiment Analysis",
+              "Image Tagging"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "bk-filter-chevron",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "bk.hero-carousel-centered",
+  "system": "bk",
+  "category": "hero",
+  "purpose": "Eyebrow h1 + h2 over a centre-mode autoplay carousel of dark story slides (original 'story'-kind illustrations).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/HeroCarouselCentered.jsx:17",
+      "anchor": "export default function HeroCarouselCentered("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/customer-stories"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.hero-carousel-centered",
+    "copyBudgets": {
+      "eyebrow": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      },
+      "slides[].cta": {
+        "maxWords": 2,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      },
+      "slides[].label": {
+        "maxWords": 3,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      },
+      "slides[].title": {
+        "maxWords": 8,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      },
+      "title": {
+        "maxWords": 6,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "hcc-autoplay-centermode",
+        "trigger": "timer",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "advance every 4000ms, slide tween 500ms ease (slick default, not measured), hover pauses, centre card hover scale 1.03",
+        "gapNote": "autoplay keeps advancing under reduce; only the tween is removed (slides swap instantly).",
+        "evidence": [
+          {
+            "ref": "src/bk/HeroCarouselCentered.jsx:13",
+            "anchor": "const AUTOPLAY_MS = 4000"
+          },
+          {
+            "ref": "src/bk/HeroCarouselCentered.css:288",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "caption-below-media"
+      ],
+      "detail": "meta/h3/button sit under the media instead of overlaying it",
+      "evidence": [
+        {
+          "ref": "src/bk/HeroCarouselCentered.jsx:12",
+          "anchor": "below 1024 they sit under the media"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.breadcrumb"
+    ],
+    "observedBefore": [
+      "bk.logo-strip"
+    ]
+  }
+}

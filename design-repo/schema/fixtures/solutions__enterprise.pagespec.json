@@ -1,0 +1,375 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-enterprise",
+  "route": "/solutions/enterprise",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.platform-hero",
+      "variant": "copy-above-video",
+      "content": {
+        "eyebrow": "Airtable for Enterprise",
+        "lines": [
+          "One system of record for",
+          "every team and agent"
+        ],
+        "sub": "Customize fields, layouts and rules to match how you operate. Turn repeatable processes into reliable systems that scale with you.",
+        "actions": [
+          {
+            "label": "Get a demo",
+            "href": "/contact-sales"
+          },
+          {
+            "label": "Contact sales",
+            "href": "/contact-sales"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "b-cycle",
+      "content": {
+        "heading": "Fewer status meetings and more focused work",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Brightline",
+            "Kestrel",
+            "Halcyon",
+            "Meridian",
+            "Ostara",
+            "Pinecrest",
+            "Quartz",
+            "Solace",
+            "Tidewater",
+            "Vantage"
+          ]
+        },
+        "cells": 5
+      },
+      "motion": {
+        "pattern": "season-logo-cycle",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.use-cases",
+      "content": {
+        "headline": "Built for how enterprises operate",
+        "action": {
+          "label": "View all",
+          "href": "#"
+        },
+        "cards": [
+          {
+            "lines": [
+              "Marketing",
+              "operations"
+            ],
+            "body": "Everything stays connected. Forecasts improve when every input lives in the same connected.",
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Lumen"
+            },
+            "metric": "Structured data makes it easy to."
+          },
+          {
+            "lines": [
+              "Product",
+              "delivery"
+            ],
+            "body": "Customize fields, layouts and rules to match how you operate. Search across records, files and comments to find answers quickly.",
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Vantage"
+            },
+            "metric": "Small teams can start simple and add."
+          },
+          {
+            "lines": [
+              "Finance",
+              "and planning"
+            ],
+            "body": "Turn repeatable processes into reliable systems that scale with you. Plans turn into progress. Turn.",
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Juniper"
+            },
+            "metric": "Give every team a shared foundation."
+          },
+          {
+            "lines": [
+              "Field",
+              "operations"
+            ],
+            "body": "Keep every stakeholder on track. Bring scattered requests into one place.",
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Halcyon"
+            },
+            "metric": "Templates help new projects launch."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.ai-foundation",
+      "content": {
+        "lines": [
+          "A trusted foundation for",
+          "AI at scale"
+        ],
+        "cells": [
+          {
+            "title": "Grounded in data",
+            "body": "Dashboards refresh on their own. Everyone sees the same source of truth at once. Launch faster with building."
+          },
+          {
+            "title": "Built for review",
+            "body": "Dashboards refresh on their own. Keep every stakeholder on track. Search across records, files and comments to."
+          },
+          {
+            "title": "Ready for agents",
+            "body": "Build once and reuse it everywhere. Capture ideas, assign owners and track progress in a single.",
+            "stack": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-ai-foundation-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.org-accordion",
+      "content": {
+        "lines": [
+          "Designed for all",
+          "teams, from day",
+          "one onward"
+        ],
+        "items": [
+          {
+            "title": "Business teams",
+            "checks": [
+              "Set up structured workflows without writing any code.",
+              "Customize fields, layouts and rules to match how you operate.",
+              "Connect the tools your teams already rely on. Every change is logged."
+            ]
+          },
+          {
+            "title": "IT and admins",
+            "checks": [
+              "Give every team a shared foundation to build on.",
+              "Connect the tools your teams already rely on. Work flows naturally.",
+              "Set up structured workflows without writing any code."
+            ]
+          },
+          {
+            "title": "Executives",
+            "checks": [
+              "Your data model grows alongside your organization without painful migrations.",
+              "Connect the tools your teams already rely on. Every update stays visible.",
+              "Everyone sees the same source of truth at once."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-org-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hac",
+      "content": {
+        "headline": "Humans and agents collaborate on the same work with clear oversight",
+        "checks": [
+          "Teams move faster together. From intake to delivery, every step is tracked.",
+          "Reports update automatically as the underlying records change across the business. Structured."
+        ],
+        "action": {
+          "label": "See how it works",
+          "href": "#"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "b",
+      "content": {
+        "lines": [
+          "Connect the systems you",
+          "already depend on"
+        ],
+        "sub": "Keep every stakeholder on track. Your data model grows alongside your organization without painful migrations. Capture ideas, assign owners and track progress in.",
+        "action": {
+          "label": "Explore all integrations",
+          "href": "/integrations"
+        },
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 6
+        }
+      },
+      "motion": {
+        "pattern": "season-css-strips-28s",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.stories",
+      "content": {
+        "stories": [
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Tidewater"
+            },
+            "quote": "Reports update automatically as the underlying records change across the business. Teams move faster together. Clear ownership means fewer meetings and faster.",
+            "name": "Dana Brooks",
+            "role": "Keep every stakeholder on track"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Vantage"
+            },
+            "quote": "Small teams can start simple and add structure as their needs grow over time. Forecasts improve when every input lives in the same connected system. Work.",
+            "name": "Leo Martins",
+            "role": "Dashboards refresh on their own"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Juniper"
+            },
+            "quote": "Start in minutes. Context travels with the work. Decisions happen with full context. Context travels with the work. Every update stays visible. Teams move.",
+            "name": "Ana Silva",
+            "role": "Context travels with the work"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Copperleaf"
+            },
+            "quote": "Dashboards refresh on their own. Automate the handoffs that slow work down. Leaders get a clear picture of what is moving and what is stuck. Clear ownership.",
+            "name": "Ken Ito",
+            "role": "Keep every stakeholder on track"
+          }
+        ],
+        "fill": "#E8F36F",
+        "borderColor": "#333333",
+        "cta": {
+          "label": "Read the story",
+          "href": "/customer-stories"
+        }
+      },
+      "motion": {
+        "pattern": "season-stories-autoplay",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "b-green",
+      "content": {
+        "lines": [
+          "Bring every team onto",
+          "one trusted platform"
+        ],
+        "actions": [
+          {
+            "label": "Get a demo",
+            "href": "/contact-sales"
+          },
+          {
+            "label": "Contact sales",
+            "href": "/contact-sales"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "e",
+      "content": {
+        "headline": "Frequently asked questions",
+        "items": [
+          {
+            "q": "How is our information protected and who can access it?",
+            "a": [
+              "Launch faster with building blocks designed for real business processes. Small teams can start simple and add structure as their needs grow over time. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Decisions happen with full context."
+            ]
+          },
+          {
+            "q": "How do admins manage access, policies and usage across a large organization?",
+            "a": [
+              "Feedback lands in the right queue and reaches the right owner automatically. Leaders get a clear picture of what is moving and what is stuck. Capture ideas, assign owners and track progress in a single workspace."
+            ]
+          },
+          {
+            "q": "What happens to existing workflows when we add new automations later?",
+            "a": [
+              "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Everything stays connected."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

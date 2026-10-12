@@ -1,0 +1,131 @@
+{
+  "id": "bk.cta-row",
+  "system": "bk",
+  "category": "cta",
+  "purpose": "Borderless CTA band: heading cols 1-8 + one primary button (max 200) right-aligned.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/BkCtaRow.jsx:7",
+      "anchor": "export default function BkCtaRow("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "callout",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Guides.jsx:45",
+          "anchor": "bg=\"#F0F6FF\""
+        }
+      ]
+    },
+    {
+      "id": "default",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Integrations.jsx:45",
+          "anchor": "<BkCtaRow as=\"h1\" title="
+        }
+      ]
+    },
+    {
+      "id": "white",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Solutions.jsx:58",
+          "anchor": "<BkCtaRow color=\"#333840\" bg=\"#FFFFFF\""
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 4,
+    "observedRoutes": [
+      "/customer-stories",
+      "/guides",
+      "/integrations",
+      "/solutions"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.cta-row",
+    "copyBudgets": {
+      "button.label": {
+        "maxWords": 3,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/customer-stories",
+          "/guides",
+          "/integrations",
+          "/solutions"
+        ]
+      },
+      "title": {
+        "maxWords": 7,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/customer-stories",
+          "/guides",
+          "/integrations",
+          "/solutions"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustPrecedeFooter": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-cta-row-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "button colours .2s linear",
+        "evidence": [
+          {
+            "ref": "src/bk/BkCtaRow.css:94",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "callout",
+          "default",
+          "white"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "stack-columns",
+        "full-width-buttons",
+        "type-scale-down"
+      ],
+      "detail": "h2 24/31.2, button full width below",
+      "evidence": [
+        {
+          "ref": "src/bk/BkCtaRow.jsx:6",
+          "anchor": "width min(fill, 200) on desktop, full width on mobile"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.card-grid-load-more",
+      "bk.filter-listing",
+      "bk.media-text-row",
+      "bk.sidebar-nav-grid"
+    ],
+    "observedBefore": [
+      "shell.footer"
+    ]
+  }
+}

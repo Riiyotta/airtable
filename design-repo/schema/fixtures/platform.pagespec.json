@@ -1,0 +1,299 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-platform-landing",
+  "route": "/platform",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.platform-hero",
+      "variant": "default",
+      "content": {
+        "eyebrow": "The Airtable Platform",
+        "lines": [
+          "Humans and agents",
+          "working side by side"
+        ],
+        "sub": "Roll out changes gradually and measure their impact before going wide.",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "b-static",
+      "content": {
+        "heading": "Fewer status meetings and more focused work",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Arcadia",
+            "Brightline",
+            "Kestrel",
+            "Halcyon",
+            "Meridian",
+            "Ostara"
+          ]
+        },
+        "cells": 6
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tab-panels",
+      "content": {
+        "headline": "Every team workflow, running from one place",
+        "tabs": [
+          {
+            "label": "Shared data",
+            "bg": "#7A015C",
+            "title": "Better forecasts from connected data across every team",
+            "body": "Teams move faster together. Customize fields, layouts and rules to match how you operate. Everything stays connected. Assistants summarize long threads so."
+          },
+          {
+            "label": "Durable workflows",
+            "bg": "#47008F",
+            "title": "Track every initiative from first idea to final delivery",
+            "body": "Connect the tools your teams already rely on. Share live progress with partners without exposing internal details. Clear ownership means fewer meetings and faster follow-through. Work flows naturally. Start in minutes."
+          },
+          {
+            "label": "Open surfaces",
+            "bg": "#004157",
+            "title": "Build custom apps around the way you already work and overview",
+            "body": "Set up structured workflows without writing any code. Connect the tools your teams already rely on. Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Give every team a shared foundation to build on. Plans turn into progress.",
+            "video": true
+          },
+          {
+            "label": "Governance",
+            "bg": "#7F1414",
+            "title": "Connect your existing tools in a few clicks",
+            "body": "Give every team a shared foundation to build on. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Turn repeatable processes into reliable systems that scale with you. Dashboards refresh on their own."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tabpanels-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "b",
+      "content": {
+        "lines": [
+          "Sync your CRM.",
+          "Message your channels.",
+          "Update every tracker."
+        ],
+        "sub": "Everyone sees the same source of truth at once. Connect the tools your teams already rely on.",
+        "action": {
+          "label": "Explore integrations",
+          "href": "/integrations"
+        },
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 6
+        }
+      },
+      "motion": {
+        "pattern": "season-css-strips-28s",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "bento",
+      "content": {
+        "headline": "A dependable foundation for AI at work",
+        "cards": [
+          {
+            "title": "Agents",
+            "body": "Everyone sees the same source of truth at once.",
+            "href": "/platform/ai-agents"
+          },
+          {
+            "title": "App building",
+            "body": "Agents handle the busywork in the background.",
+            "href": "/platform/app-building"
+          },
+          {
+            "title": "Data",
+            "body": "Roll out changes gradually and measure their impact before going wide.",
+            "href": "/platform/connected-data"
+          },
+          {
+            "title": "Governance",
+            "body": "Turn repeatable processes into reliable systems that scale with you.",
+            "href": "/platform/governance"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-bento-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.stories",
+      "content": {
+        "stories": [
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Pinecrest"
+            },
+            "quote": "Approvals move without email chains. Customize fields, layouts and rules to match how you operate.",
+            "name": "Alex Rivera",
+            "role": "Work flows naturally. Every update stays visible. Keep every"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Quartz"
+            },
+            "quote": "Spend less time chasing status updates. Context travels with the work. Teams move faster together.",
+            "name": "Sam Chen",
+            "role": "Changes sync across every view instantly. Everything stays"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Solace"
+            },
+            "quote": "Feedback lands in the right queue and reaches the right owner automatically. From intake to delivery.",
+            "name": "Priya Nair",
+            "role": "Bring scattered requests into one place. Agents handle the"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Tidewater"
+            },
+            "quote": "Workflows stay consistent across regions, teams and time zones. Launch faster with building blocks.",
+            "name": "Jordan Lee",
+            "role": "Admins can review usage, manage access and apply policies"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Vantage"
+            },
+            "quote": "Share live progress with partners without exposing internal details. Dashboards refresh on their own.",
+            "name": "Maya Okafor",
+            "role": "Dashboards refresh on their own. Feedback lands in the right"
+          },
+          {
+            "brand": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Juniper"
+            },
+            "quote": "Everyone sees the same source of truth at once. Start in minutes. Flexible views let each person see.",
+            "name": "Chris Novak",
+            "role": "Clear ownership means fewer meetings and faster follow-through"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-stories-autoplay",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.read-next",
+      "variant": "b",
+      "content": {
+        "headline": "Easy ways to start with agents",
+        "cards": [
+          {
+            "eyebrow": "QUICK READ",
+            "color": "#F797EF",
+            "title": "Approvals that move at the speed of work and overview"
+          },
+          {
+            "eyebrow": "AIRTABLE TEMPLATES",
+            "color": "#FFCD05",
+            "title": "A shared workspace for planning and delivery"
+          },
+          {
+            "eyebrow": "WEBINAR",
+            "color": "#35CBFD",
+            "title": "Better forecasts from connected data across every team"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "b-navy",
+      "content": {
+        "lines": [
+          "Join 500,000 teams",
+          "building today"
+        ],
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

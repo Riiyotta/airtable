@@ -1,0 +1,21 @@
+{
+  "id": "season-card",
+  "layer": "component",
+  "purpose": "Season feature card: optional icon square, title, body, text link, 448/300 media.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/CardGrid.jsx:46",
+      "anchor": "<li key={i} className=\"ss-card\">"
+    }
+  ],
+  "composes": [
+    "season-text-link",
+    "placeholder-media"
+  ],
+  "variants": [
+    "icon",
+    "media",
+    "link"
+  ],
+  "tokens": []
+}

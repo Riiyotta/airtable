@@ -1,0 +1,32 @@
+{
+  "component": "card.resource",
+  "tokens": {
+    "radius": {
+      "$value": "{radius.card}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:476",
+          "anchor": "radius 16, flex column"
+        }
+      ]
+    },
+    "bg": {
+      "$value": "{color.surface.subtle}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:476",
+          "anchor": "card div with bg `#F8FAFC`"
+        }
+      ]
+    },
+    "border": {
+      "$value": "{color.surface.strong}",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:476",
+          "anchor": "border 1px `#E0E2E6`, radius 16"
+        }
+      ]
+    }
+  }
+}

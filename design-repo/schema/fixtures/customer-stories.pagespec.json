@@ -1,0 +1,326 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.bk-story-index",
+  "route": "/customer-stories",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Customer Stories"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.hero-carousel-centered",
+      "content": {
+        "eyebrow": "Customer stories",
+        "title": "Inspiring teams doing their best work",
+        "slides": [
+          {
+            "label": "Featured story 1",
+            "href": "#",
+            "kind": "Customer story",
+            "title": "How a regional retailer halved its reporting",
+            "cta": "Read now"
+          },
+          {
+            "label": "Featured story 2",
+            "href": "#",
+            "kind": "Video",
+            "title": "A studio brings every client project into view",
+            "cta": "Watch now"
+          },
+          {
+            "label": "Featured story 3",
+            "href": "#",
+            "kind": "Customer story",
+            "title": "A nonprofit moves off its old spreadsheets",
+            "cta": "Read now"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hcc-autoplay-centermode",
+        "trigger": "timer",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.logo-strip",
+      "content": {
+        "heading": "Relied on by growing organizations",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Northpeak",
+            "Lumora",
+            "Brightfold",
+            "Kestrel"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "bk-logo-strip-mobile-marquee",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "bk.card-grid-load-more",
+      "content": {
+        "items": [
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Northpeak"
+            },
+            "title": "How a regional retailer cut weekly reporting time in half",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Lumora"
+            },
+            "title": "A design studio keeps every client project on one timeline",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Kestrel"
+            },
+            "title": "How one media team publishes faster with fewer handoffs",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Saltmarsh"
+            },
+            "title": "A hospitality group standardizes every new opening across thirty busy locations",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Harborline"
+            },
+            "title": "A logistics company gives every site the same live data",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Brightfold"
+            },
+            "title": "Inside a nonprofit's move from spreadsheets to shared workflows",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Quillstone"
+            },
+            "title": "Why a growing startup built its launch process from scratch",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Ridgeway"
+            },
+            "title": "How a university team tracks hundreds of research grants",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Corewright"
+            },
+            "title": "How a hardware maker shortened its product review cycle",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Arcwell"
+            },
+            "title": "A software company aligns roadmaps across five product groups",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Fernhall"
+            },
+            "title": "An agency connects creative requests to billing in one place",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Ledgerly"
+            },
+            "title": "How a finance team closes the month with fewer surprises",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Galleria"
+            },
+            "title": "How a museum catalogs its collection with a small team",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Orchard & Co"
+            },
+            "title": "A food brand plans seasonal launches without missed deadlines",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Fieldhouse"
+            },
+            "title": "How a sports league coordinates schedules across many venues",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Mendwell"
+            },
+            "title": "A health network tracks equipment requests from every clinic",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Pagewright"
+            },
+            "title": "How a publisher manages hundreds of titles each season",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Steelbeam"
+            },
+            "title": "A construction firm keeps project documents organized on site",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Convene"
+            },
+            "title": "How an events team runs registration for global conferences",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Threadline"
+            },
+            "title": "A fashion label connects design, sourcing and production calendars",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Civica"
+            },
+            "title": "How a city office answers resident requests more quickly",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Helixa"
+            },
+            "title": "A biotech lab organizes experiments with consistent shared records",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Wayfarer"
+            },
+            "title": "How a travel company updates itineraries for thousands of guests",
+            "href": "#"
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Talentry"
+            },
+            "title": "A recruiting team shortens time to hire with clearer stages",
+            "href": "#"
+          }
+        ],
+        "pageSize": 12
+      },
+      "motion": {
+        "pattern": "bk-load-more-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "not-implemented"
+      }
+    },
+    {
+      "section": "bk.cta-row",
+      "variant": "callout",
+      "content": {
+        "title": "See what your team could build next",
+        "button": {
+          "label": "Start for free",
+          "href": "/signup"
+        }
+      },
+      "motion": {
+        "pattern": "bk-cta-row-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

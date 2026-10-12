@@ -1,0 +1,22 @@
+{
+  "id": "season-text-link",
+  "layer": "primitive",
+  "purpose": "Season inline text link with arrow (optionally inverse).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:78",
+      "anchor": "export function TextLink({ label, href = '#', inverse })"
+    }
+  ],
+  "variants": [
+    "default",
+    "inverse"
+  ],
+  "tokens": [
+    "color.link.primary"
+  ],
+  "states": [
+    "hover"
+  ],
+  "a11y": "arrow svg aria-hidden"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "bk-section-header",
+  "layer": "component",
+  "purpose": "h5 Haas Groot Disp 18/24.3 + 2px rule header used above listing grids/filters.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/BkSectionHeader.jsx:3",
+      "anchor": "export default function BkSectionHeader("
+    }
+  ],
+  "composes": [],
+  "variants": [
+    "rule-subtle",
+    "rule-separator"
+  ],
+  "tokens": [
+    "color.surface.subtle",
+    "color.border.alpha-12"
+  ]
+}

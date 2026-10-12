@@ -1,0 +1,79 @@
+{
+  "id": "season.org-accordion",
+  "system": "season",
+  "category": "feature-tabs",
+  "purpose": "E-5 one-open accordion of audiences with check lists.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:212",
+      "anchor": "export function OrgAccordion({ lines, items })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/solutions/enterprise"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.org-accordion",
+    "copyBudgets": {
+      "items[].checks[]": {
+        "maxWords": 12,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "items[].title": {
+        "maxWords": 3,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "lines[]": {
+        "maxWords": 3,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-org-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "grid-rows .4s ease-in-out, inner opacity .35s, title colour .2s; exactly one open",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1136",
+            "anchor": "| E-5 OrgAccordion | click | grid-template-rows"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.ai-foundation"
+    ],
+    "observedBefore": [
+      "season.hac"
+    ]
+  }
+}

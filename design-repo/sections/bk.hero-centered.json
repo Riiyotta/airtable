@@ -1,0 +1,184 @@
+{
+  "id": "bk.hero-centered",
+  "system": "bk",
+  "category": "hero",
+  "purpose": "Centered h1 + sub + two BkButtons; with the autoplay product video on the homepage, text-only on /solutions.",
+  "implementedBy": [
+    {
+      "ref": "src/components/Hero.jsx:12",
+      "anchor": "export default function Hero({"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "no-video",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Solutions.jsx:33",
+          "anchor": "video={false}"
+        }
+      ]
+    },
+    {
+      "id": "video",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:323",
+          "anchor": "## 2. Hero — `section.coreHeroImageCentered`"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 2,
+    "observedRoutes": [
+      "/",
+      "/solutions"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.hero-centered",
+    "copyBudgets": {
+      "primary.label": {
+        "maxWords": 4,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/",
+          "/solutions"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Hero.jsx:9",
+            "anchor": "const DEFAULT_PRIMARY",
+            "observedWords": 4
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "secondary.label": {
+        "maxWords": 2,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/",
+          "/solutions"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Hero.jsx:10",
+            "anchor": "const DEFAULT_SECONDARY",
+            "observedWords": 2
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "sub": {
+        "maxWords": 19,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/",
+          "/solutions"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Hero.jsx:7-8",
+            "anchor": "const DEFAULT_SUB",
+            "observedWords": 19
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "title": {
+        "maxWords": 9,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/",
+          "/solutions"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Hero.jsx:6",
+            "anchor": "const DEFAULT_TITLE",
+            "observedWords": 9
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "hero-video-autoplay",
+        "trigger": "load",
+        "reducedMotionFallback": "user-pause-control",
+        "timing": "autoplay muted loop; pause button bg .15s cubic-bezier(.4,0,.2,1)",
+        "evidence": [
+          {
+            "ref": "src/components/Hero.jsx:71",
+            "anchor": "autoPlay"
+          },
+          {
+            "ref": "CLONE_SPEC.md:561",
+            "anchor": "| Hero video pause button | Hover"
+          }
+        ],
+        "usedByVariants": [
+          "video"
+        ]
+      },
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "no-video"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "type-scale-down",
+        "full-width-buttons"
+      ],
+      "detail": "h1 32/40; CTAs stack full width (gap 12)",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:342",
+          "anchor": "CTAs stack full-width (342×56 each, gap 12)."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "home.product-video"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "bk.breadcrumb",
+      "shell.header"
+    ],
+    "observedBefore": [
+      "bk.icon-card-grid",
+      "bk.logo-marquee"
+    ]
+  }
+}

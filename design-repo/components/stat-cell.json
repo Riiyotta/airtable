@@ -1,0 +1,14 @@
+{
+  "id": "stat-cell",
+  "layer": "component",
+  "purpose": "Static stat value + label cell (A10).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:13",
+      "anchor": "<li key={i} className=\"ss-stats__cell\">"
+    }
+  ],
+  "composes": [],
+  "variants": [],
+  "tokens": []
+}

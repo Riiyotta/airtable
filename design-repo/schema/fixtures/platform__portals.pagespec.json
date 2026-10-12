@@ -1,0 +1,371 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-feature-stack",
+  "route": "/platform/portals",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "Portals"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Share the right data with people outside your company",
+        "sub": "Structured data makes it easy to spot trends and act on them early.",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1280/853"
+        },
+        "pattern": true
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "a2",
+      "content": {
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Quartz",
+            "Solace",
+            "Tidewater",
+            "Vantage",
+            "Juniper"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-a2",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Guardrails that keep everyone aligned",
+        "body": "Small teams can start simple and add structure as their needs grow over time. Plans turn into progress.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/444"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Smarter reviews with built-in assistants",
+        "body": "Feedback lands in the right queue and reaches the right owner automatically. Start in minutes.",
+        "bullets": [
+          "Bring scattered requests into one place. Feedback lands in the right queue and reaches.",
+          "Small teams can start simple and add structure as their.",
+          "Work flows naturally. Everything stays connected. Nothing falls through the cracks. Connect the."
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/444"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Turn requests into tracked work",
+        "body": "Admins can review usage, manage access and apply policies from one central console. Clear ownership means fewer.",
+        "bullets": [
+          "Everyone sees the same source of truth at once. Keep every stakeholder.",
+          "Turn repeatable processes into reliable systems that scale with."
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/444"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels-bar",
+      "content": {
+        "headline": "Simple tools for complex operations",
+        "sub": "Search across records, files and comments to find answers quickly. Set up structured workflows without writing any code. Forecasts improve.",
+        "tabs": [
+          {
+            "label": "Client portals",
+            "subhead": "Faster handoffs",
+            "groups": [
+              {
+                "strong": "From intake to delivery, every step is tracked in one place. Connect the tools your teams already rely on. Data stays trusted. Small teams can start simple."
+              }
+            ],
+            "action": {
+              "label": "View template",
+              "href": "/templates"
+            }
+          },
+          {
+            "label": "Vendor management",
+            "subhead": "Secure sharing",
+            "groups": [
+              {
+                "strong": "Your data model grows alongside your organization without painful migrations. Dashboards refresh on their own. Decisions happen with full context. Customize."
+              }
+            ],
+            "action": {
+              "label": "View template",
+              "href": "/templates"
+            }
+          },
+          {
+            "label": "Customer support",
+            "subhead": "Shared data",
+            "groups": [
+              {
+                "strong": "Feedback lands in the right queue and reaches the right owner automatically. Context travels with the work. Every change is logged. Dashboards refresh on their."
+              }
+            ],
+            "action": {
+              "label": "View template",
+              "href": "/templates"
+            }
+          },
+          {
+            "label": "Partner relationship management",
+            "subhead": "Plan faster",
+            "groups": [
+              {
+                "strong": "Structured data makes it easy to spot trends and act on them early. Nothing falls through the cracks. Spend less time chasing status updates. Workflows stay."
+              }
+            ],
+            "action": {
+              "label": "View template",
+              "href": "/templates"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "bottom",
+        "headline": "Keep projects moving without the chaos",
+        "body": "Build once and reuse it everywhere. Spend less time chasing status updates. Forecasts improve when every input lives in the same connected system.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1262/540"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "a",
+      "content": {
+        "headline": "Scale processes across every team",
+        "sub": "Workflows stay consistent across regions, teams and time zones. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Approvals move without email chains.",
+        "action": {
+          "label": "View all integrations",
+          "href": "/integrations"
+        },
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 5
+        }
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Keep projects moving without the chaos",
+        "items": [
+          {
+            "q": "How do permissions work across teams?",
+            "a": [
+              "Templates help new projects launch with proven structure from the very first day. Clear ownership means fewer meetings and faster follow-through. Give every team a shared foundation to build on. Launch faster with building blocks designed for real business processes.",
+              "Templates help new projects launch with proven structure from the very first day. Customize."
+            ]
+          },
+          {
+            "q": "Can I connect the tools we already use?",
+            "a": [
+              "Connect the tools your teams already rely on. Workflows stay consistent across regions, teams and time zones. Roll out changes gradually and measure their impact before going wide. Reports update automatically as the underlying records change across the business. Turn repeatable processes into reliable systems that scale with you. Structured data makes it easy to spot trends and act on them early. Set up structured workflows without writing any code. Everything stays connected."
+            ]
+          },
+          {
+            "q": "Can I import existing data?",
+            "a": [
+              "Turn repeatable processes into reliable systems that scale with you. Set up structured workflows without writing any code.",
+              "Every change is logged."
+            ]
+          },
+          {
+            "q": "Can assistants work with the data already in my workspace?",
+            "a": [
+              "Feedback lands in the right queue and reaches the right owner automatically. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Set up structured workflows without writing any code. Feedback lands in the right queue and reaches the right owner automatically. Workflows stay consistent across regions, teams and time zones."
+            ]
+          },
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Clear ownership means fewer meetings and faster follow-through. Permissions keep sensitive records visible only to the people who need them. Everyone sees the same source of truth at once. Teams move faster together.",
+              "Your data model grows alongside your organization without painful migrations. Templates help new projects launch with proven structure from the very first day. Data stays trusted. Everything stays connected."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Feedback lands in the right queue and reaches the right owner automatically. Roll out changes gradually and measure their impact before going wide. Everyone sees the same source of truth at once. Launch faster with building blocks designed for real business processes. Every change is logged."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Give partners and clients a secure window into your work",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.read-next",
+      "variant": "a",
+      "content": {
+        "headline": "Keep exploring portals",
+        "cards": [
+          {
+            "title": "Flexible views for every role"
+          },
+          {
+            "title": "Keep projects moving without the chaos"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

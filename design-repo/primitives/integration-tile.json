@@ -1,0 +1,20 @@
+{
+  "id": "integration-tile",
+  "layer": "primitive",
+  "purpose": "Abstract integration tile (assetRole placeholder.integration-tile).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:149",
+      "anchor": "export const Tile = ({ i = 0 }) => ("
+    }
+  ],
+  "variants": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "tokens": [],
+  "states": [],
+  "a11y": "aria-hidden"
+}

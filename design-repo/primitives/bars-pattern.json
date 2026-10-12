@@ -1,0 +1,22 @@
+{
+  "id": "bars-pattern",
+  "layer": "primitive",
+  "purpose": "CSS stand-in for the live Lottie bar layers (CTA backgrounds, hero patterns).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:177",
+      "anchor": "export function Bars({ cols = 4, rows = 12, color = '#AC59FF', h = 14, anim = true })"
+    }
+  ],
+  "variants": [
+    "animated",
+    "static"
+  ],
+  "tokens": [
+    "color.brand-season.purple-500"
+  ],
+  "states": [
+    "paused"
+  ],
+  "a11y": "aria-hidden"
+}

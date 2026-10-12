@@ -1,0 +1,16 @@
+{
+  "id": "filter-group",
+  "layer": "component",
+  "purpose": "Collapsible checkbox filter group (OR within group).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/FilterListing.jsx:57",
+      "anchor": "<div className=\"fl-group\">"
+    }
+  ],
+  "composes": [],
+  "variants": [],
+  "tokens": [
+    "color.gray.400"
+  ]
+}

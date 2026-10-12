@@ -1,0 +1,333 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-feature-stack",
+  "route": "/platform/connected-data",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "Connected Data"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Connected data at the core",
+        "sub": "Connect the tools your teams already rely on. Everything stays connected.",
+        "actions": [
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "primary"
+          },
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "badge": "NEW",
+        "headline": "Keep projects moving without the chaos",
+        "body": "Give every team a shared foundation to build on. Structured data makes it easy to spot trends and act on them early. Approvals move without email chains.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Turn requests into tracked work",
+        "body": "Clear ownership means fewer meetings and faster follow-through. Set up structured workflows without writing any code. Nothing falls through the cracks.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Simple tools for complex operations",
+        "body": "Leaders get a clear picture of what is moving and what is stuck. Connect the tools your teams already rely on. Everything stays connected.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Keep projects moving without the chaos",
+        "body": "Small teams can start simple and add structure as their needs grow over time. Set up structured workflows without writing any code.",
+        "actions": [
+          {
+            "label": "Explore integrations",
+            "href": "/integrations",
+            "variant": "primary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels-bar",
+      "content": {
+        "headline": "A shared workspace for planning and delivery",
+        "sub": "Set up structured workflows without writing any code.",
+        "tabs": [
+          {
+            "label": "Create one shared roadmap for teams",
+            "subhead": "Simple tools for complex operations",
+            "groups": [
+              {
+                "strong": "Customize fields, layouts and rules to match how you operate. Dashboards refresh on their own. Share live progress with partners."
+              }
+            ],
+            "action": {
+              "label": "Watch the webinar",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Track team goals and OKRs",
+            "subhead": "Guardrails that keep everyone aligned",
+            "groups": [
+              {
+                "strong": "Clear ownership means fewer meetings and faster follow-through. Automate the handoffs that slow work down. Launch faster with."
+              }
+            ],
+            "action": {
+              "label": "Watch the webinar",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Collect and sort all feedback",
+            "subhead": "Simple tools for complex operations",
+            "groups": [
+              {
+                "strong": "Keep every stakeholder on track. Every update stays visible. Bring scattered requests into one place. Everything stays connected."
+              }
+            ],
+            "action": {
+              "label": "Watch the webinar",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Manage creative assets in one shared media library",
+            "subhead": "Guardrails that keep everyone aligned",
+            "groups": [
+              {
+                "strong": "Roll out changes gradually and measure their impact before going wide. Integrations pull data in from the apps you use, so nothing."
+              }
+            ],
+            "action": {
+              "label": "Watch the webinar",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Share assets with every team",
+            "subhead": "Simple tools for complex operations",
+            "groups": [
+              {
+                "strong": "Structured data makes it easy to spot trends and act on them early. Reports update automatically as the underlying records change."
+              }
+            ],
+            "action": {
+              "label": "Watch the webinar",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Keep launch dates and owners aligned",
+            "subhead": "Guardrails that keep everyone aligned",
+            "groups": [
+              {
+                "strong": "Templates help new projects launch with proven structure from the very first day. Built-in guardrails keep experimentation safe."
+              }
+            ],
+            "action": {
+              "label": "Watch the webinar",
+              "href": "#"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "badge": "Go beyond",
+        "headline": "Automate the busywork away",
+        "sub": "Give every team a shared foundation to build on.",
+        "cards": [
+          {
+            "icon": true,
+            "title": "Turn requests into tracked work",
+            "body": "Workflows stay consistent across regions, teams and time zones.",
+            "link": {
+              "label": "Explore Platform",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Keep projects moving without the chaos",
+            "body": "Set up structured workflows without writing any code.",
+            "link": {
+              "label": "Explore Build",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Keep projects moving without the chaos",
+            "body": "Workflows stay consistent across regions, teams and time zones.",
+            "link": {
+              "label": "Explore AI",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Keep projects moving without the chaos",
+            "body": "Connect the tools your teams already rely on.",
+            "link": {
+              "label": "Explore Governance",
+              "href": "#"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Bring every team onto one connected data foundation that grows with you over the years",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

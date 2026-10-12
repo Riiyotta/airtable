@@ -1,0 +1,188 @@
+{
+  "id": "season.integrations",
+  "system": "season",
+  "category": "integrations",
+  "purpose": "A9/S-7 (a: JS marquee + pause) or B4/E-7 (b: CSS strips) integrations split with placeholder tiles.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/Integrations.jsx:23",
+      "anchor": "export default function Integrations("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "a",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:87",
+          "anchor": "export const integrations = (key, h2Words, subWords)"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:30",
+          "anchor": "variant: 'b',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 9,
+    "observedRoutes": [
+      "/about",
+      "/platform",
+      "/platform/app-building",
+      "/platform/governance",
+      "/platform/portals",
+      "/solutions/enterprise",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.integrations",
+    "copyBudgets": {
+      "action.label": {
+        "maxWords": 3,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/platform",
+          "/platform/app-building",
+          "/platform/governance",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 6,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/about",
+          "/platform/app-building",
+          "/platform/governance",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "lines[]": {
+        "maxWords": 4,
+        "observedInstances": 5,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "sub": {
+        "maxWords": 28,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/app-building",
+          "/platform/governance",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped",
+        "timing": "rAF: half-track per 28s linear; drag 1:1 after 5px, momentum x0.95/frame; pause button",
+        "evidence": [
+          {
+            "ref": "src/season/components/useMarquee.js:4",
+            "anchor": "pos += (halfTrack / 28000) * dtMs"
+          },
+          {
+            "ref": "src/season/components/atoms.jsx:209",
+            "anchor": "return [paused || reduced, () => setPaused((p) => !p), reduced]"
+          }
+        ],
+        "usedByVariants": [
+          "a"
+        ]
+      },
+      {
+        "pattern": "season-css-strips-28s",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed",
+        "timing": "translateY 0<->-50% 28s linear infinite, alternating strips",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:1420",
+            "anchor": ".ss-int--b .ss-int__strip:nth-child(odd) .ss-int__track { animation: ssIntUp 28s linear infinite; }"
+          },
+          {
+            "ref": "src/season/season.css:1423",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "b"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "reflow-grid",
+        "marquee-axis-change"
+      ],
+      "detail": "variant a: 3 vertical strips become 1 horizontal strip; variant b: 4 strips become 2 and run horizontally",
+      "evidence": [
+        {
+          "ref": "src/season/components/Integrations.jsx:76",
+          "anchor": "<Strip key=\"m\" count={tiles * 3} offset={0} dir=\"start\" axis=\"x\""
+        },
+        {
+          "ref": "src/season/components/Integrations.jsx:28",
+          "anchor": "const strips = desk ? 4 : 2"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "placeholder.integration-tile"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.hac",
+      "season.side-by-side",
+      "season.tab-panels",
+      "season.tabber",
+      "season.templates"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.cta",
+      "season.faq",
+      "season.side-by-side",
+      "season.stories",
+      "season.tabber"
+    ]
+  }
+}

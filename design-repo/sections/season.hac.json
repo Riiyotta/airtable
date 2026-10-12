@@ -1,0 +1,83 @@
+{
+  "id": "season.hac",
+  "system": "season",
+  "category": "media-text",
+  "purpose": "E-6 dark copy + #57003E visual split (humans-and-agents).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:256",
+      "anchor": "export function HacSplit({ headline, checks, action })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/solutions/enterprise"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.hac",
+    "copyBudgets": {
+      "action.label": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "checks[]": {
+        "maxWords": 12,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "headline": {
+        "maxWords": 11,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.org-accordion"
+    ],
+    "observedBefore": [
+      "season.integrations"
+    ]
+  }
+}

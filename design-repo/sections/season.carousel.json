@@ -1,0 +1,128 @@
+{
+  "id": "season.carousel",
+  "system": "season",
+  "category": "carousel",
+  "purpose": "A5 feature carousel: marquee of badge article cards with drag + pause.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/FeatureCarousel.jsx:6",
+      "anchor": "export default function FeatureCarousel("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 4,
+    "observedRoutes": [
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/governance"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.carousel",
+    "copyBudgets": {
+      "actions[].label": {
+        "maxWords": 3,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/governance"
+        ]
+      },
+      "cards[].badge": {
+        "maxWords": 3,
+        "observedInstances": 20,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/governance"
+        ]
+      },
+      "cards[].body": {
+        "maxWords": 31,
+        "observedInstances": 20,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/governance"
+        ]
+      },
+      "cards[].title": {
+        "maxWords": 13,
+        "observedInstances": 20,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/governance"
+        ]
+      },
+      "headline": {
+        "maxWords": 9,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/governance"
+        ]
+      },
+      "sub": {
+        "maxWords": 16,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/app-building",
+          "/platform/governance"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped",
+        "timing": "rAF: half-track per 28s linear; drag 1:1 after 5px, momentum x0.95/frame; pause button",
+        "evidence": [
+          {
+            "ref": "src/season/components/useMarquee.js:4",
+            "anchor": "pos += (halfTrack / 28000) * dtMs"
+          },
+          {
+            "ref": "src/season/components/atoms.jsx:209",
+            "anchor": "return [paused || reduced, () => setPaused((p) => !p), reduced]"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.scroll-tabber",
+      "season.side-by-side"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.faq",
+      "season.side-by-side"
+    ]
+  }
+}

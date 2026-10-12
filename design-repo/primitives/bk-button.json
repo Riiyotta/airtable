@@ -1,0 +1,28 @@
+{
+  "id": "bk-button",
+  "layer": "primitive",
+  "purpose": "BkButton: 56px, radius 12, 16/24 padding, Haas 500 16/21.6; primary / outline / white.",
+  "implementedBy": [
+    {
+      "ref": "src/components/buttonStyles.js:3",
+      "anchor": "export const bkButton ="
+    }
+  ],
+  "variants": [
+    "primary",
+    "outline",
+    "white"
+  ],
+  "tokens": [
+    "button.bk.*",
+    "radius.btn",
+    "elevation.btn-primary",
+    "elevation.btn-secondary"
+  ],
+  "states": [
+    "hover",
+    "active",
+    "focus"
+  ],
+  "a11y": "native <a>/<button>; focus ring 0 0 0 4px rgba(153,160,174,.16), 0 0 0 2px #fff"
+}

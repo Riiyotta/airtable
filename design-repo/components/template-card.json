@@ -1,0 +1,27 @@
+{
+  "id": "template-card",
+  "layer": "component",
+  "purpose": "Gallery template card: gradient frame holding the .tpl-mock window, filled edge-to-edge by an original <MockMedia bare> scene (kind picked from the template title), title, description, optional AI flag.",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/templates/Templates.jsx:100",
+      "anchor": "function TemplateCard({ card })"
+    }
+  ],
+  "composes": [
+    "mock-media"
+  ],
+  "variants": [
+    "default",
+    "ai"
+  ],
+  "tokens": [
+    "color.tpl.palettes.*"
+  ],
+  "evidence": [
+    {
+      "ref": "src/standalone/templates/Templates.jsx:29",
+      "anchor": "<MockMedia hint={title} seed={seed} bare />"
+    }
+  ]
+}

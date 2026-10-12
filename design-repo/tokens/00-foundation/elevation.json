@@ -1,0 +1,67 @@
+{
+  "$description": "Only shadows actually applied by the clone. The Season low/medium/high shadow tokens exist on the live :root but are unused by every measured section (specs/SECTION_TYPES_platform.md 0.3) and are deliberately NOT included.",
+  "elevation": {
+    "header": {
+      "$type": "shadow",
+      "$value": "0 0 20px 0 rgba(15,48,106,0.05)",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:88",
+          "anchor": "header: '0 0 20px 0 rgba(15,48,106,0.05)'"
+        }
+      ]
+    },
+    "btn-primary": {
+      "$type": "shadow",
+      "$value": "0 0 1px 0 rgba(0,0,0,.32), 0 0 2px 0 rgba(0,0,0,.08), 0 1px 3px 0 rgba(45,127,249,.28), inset 0 0 0 .5px rgba(0,0,0,.06)",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:90",
+          "anchor": "'btn-primary':"
+        },
+        {
+          "ref": "CLONE_SPEC.md:113",
+          "anchor": "**Hero / CTA primary shadow**"
+        }
+      ]
+    },
+    "btn-secondary": {
+      "$type": "shadow",
+      "$value": "0 0 1px 0 rgba(0,0,0,.32), 0 0 2px 0 rgba(0,0,0,.08), 0 1px 3px 0 rgba(0,0,0,.08), inset 0 0 0 1px rgba(1,20,53,.12)",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:92",
+          "anchor": "'btn-secondary':"
+        },
+        {
+          "ref": "CLONE_SPEC.md:115",
+          "anchor": "**Hero secondary shadow**"
+        }
+      ]
+    },
+    "breadcrumb-inset": {
+      "$type": "shadow",
+      "$value": "inset 0 7px 20px -7px rgba(15,48,106,0.05)",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:526",
+          "anchor": "box-shadow: inset 0 7px 20px -7px rgba(15, 48, 106, 0.05);"
+        },
+        {
+          "ref": "src/bk/BreadcrumbBar.jsx:9",
+          "anchor": "shadow-[inset_0_7px_20px_-7px_rgba(15,48,106,0.05)]"
+        }
+      ]
+    },
+    "drawer-edge": {
+      "$type": "shadow",
+      "$value": "inset 15px 0 15px -15px #0f306a0d",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:89",
+          "anchor": "'drawer-edge':"
+        }
+      ]
+    }
+  }
+}

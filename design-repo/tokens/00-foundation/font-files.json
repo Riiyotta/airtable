@@ -1,0 +1,107 @@
+{
+  "files": [
+    {
+      "file": "public/fonts/NeueHaasGrotTextRound-55Roman-Web.woff2",
+      "family": "Haas",
+      "weight": 400,
+      "license": "commercial (Neue Haas Grotesk) -- local reference only, not redistributable",
+      "evidence": [
+        {
+          "ref": "src/index.css:6",
+          "anchor": "NeueHaasGrotTextRound-55Roman-Web.woff2"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/NeueHaasGrotTextRound-65Medium-Web.woff2",
+      "family": "Haas",
+      "weight": 500,
+      "license": "commercial",
+      "evidence": [
+        {
+          "ref": "src/index.css:13",
+          "anchor": "NeueHaasGrotTextRound-65Medium-Web.woff2"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/NeueHaasGrotTextRound-75Bold-Web.woff2",
+      "family": "Haas",
+      "weight": 700,
+      "license": "commercial",
+      "evidence": [
+        {
+          "ref": "src/index.css:20",
+          "anchor": "NeueHaasGrotTextRound-75Bold-Web.woff2"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/Haas-Grot-Disp-R-55-Roman.woff2",
+      "family": "Haas Groot Disp",
+      "weight": 500,
+      "license": "commercial",
+      "evidence": [
+        {
+          "ref": "src/index.css:27",
+          "anchor": "Haas-Grot-Disp-R-55-Roman.woff2"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/Haas-Grot-Text-R-65-Medium.woff2",
+      "family": "Haas Groot Disp",
+      "weight": 600,
+      "license": "commercial",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:12",
+          "anchor": "Haas-Grot-Text-R-65-Medium.woff2"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/Haas-Grot-Text-R-75-Bold.woff2",
+      "family": "Haas Groot Disp",
+      "weight": 700,
+      "license": "commercial",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:19",
+          "anchor": "Haas-Grot-Text-R-75-Bold.woff2"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/ATSeasonSansVF.woff2",
+      "family": "ATSeasonSans",
+      "weight": "100 900",
+      "license": "commercial (Airtable proprietary typeface) -- local reference only",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:8",
+          "anchor": "src: url(/fonts/ATSeasonSansVF.woff2)"
+        }
+      ]
+    },
+    {
+      "file": "public/fonts/InterVariable.woff2",
+      "family": "Inter Display",
+      "weight": "100 900",
+      "license": "SIL Open Font License 1.1 (public/fonts/Inter-LICENSE.txt)",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:6",
+          "anchor": "src: url(/fonts/InterVariable.woff2)"
+        }
+      ]
+    }
+  ],
+  "unreferencedInSrc": [
+    "public/fonts/NeueHaasGrotTextRound-56Italic-Web.woff2",
+    "public/fonts/NeueHaasGrotTextRound-66MediumItalic-Web.woff2",
+    "public/fonts/NeueHaasGrotTextRound-76BoldItalic-Web.woff2",
+    "public/fonts/Haas-Grot-Disp-R-95-Black.woff2"
+  ],
+  "unreferencedNote": "Present in public/fonts but no @font-face in src references them (CLONE_SPEC lists them as live faces). Not tokens."
+}

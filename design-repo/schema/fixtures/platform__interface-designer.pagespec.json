@@ -1,0 +1,312 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-feature-stack",
+  "route": "/platform/interface-designer",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "Interface Designer"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Design interfaces that your whole team uses daily",
+        "sub": "Capture ideas, assign owners and track progress in a single workspace.",
+        "actions": [
+          {
+            "label": "Watch demo",
+            "href": "#",
+            "variant": "primary"
+          },
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1280/548"
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "bottom",
+        "headline": "Guardrails that keep everyone aligned",
+        "body": "Share live progress with partners without exposing internal details. Everyone sees the same source of truth at once.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1280/548"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Keep projects moving without the chaos",
+        "body": "Work flows naturally. Keep every stakeholder on track. Roll out changes gradually and measure.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Drag, drop, done",
+        "body": "Small teams can start simple and add structure as their needs grow over time. Nothing falls through the cracks.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Give every team a single source of truth",
+        "body": "Admins can review usage, manage access and apply policies from one central console. Everything stays connected.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Visibility for leaders",
+        "body": "Customize fields, layouts and rules to match how you operate. Start in minutes. Start in minutes.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.templates",
+      "content": {
+        "headline": "Guardrails that keep everyone aligned",
+        "sub": "Start in minutes. Data stays trusted.",
+        "slides": [
+          {
+            "title": "Clear ownership means fewer meetings and faster follow-through. Data stays trusted."
+          },
+          {
+            "title": "Roll out changes gradually and measure their impact before going wide."
+          },
+          {
+            "title": "Clear ownership means fewer meetings and faster follow-through. Data stays trusted."
+          },
+          {
+            "title": "Forecasts improve when every input lives in the same connected system."
+          },
+          {
+            "title": "Clear ownership means fewer meetings and faster follow-through. Data stays trusted."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-crossfade-click",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "Smarter reviews with built-in assistants",
+        "sub": "Roll out changes gradually and measure their impact before going wide. Everything stays connected.",
+        "cards": [
+          {
+            "icon": true,
+            "title": "Connected team workflows",
+            "link": {
+              "label": "Watch videos",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Guardrails that keep everyone aligned",
+            "link": {
+              "label": "Read more",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Give every team",
+            "link": {
+              "label": "Contact Support",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Track every initiative from first idea to final delivery",
+            "link": {
+              "label": "Join the community",
+              "href": "#"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Reports that refresh automatically",
+        "items": [
+          {
+            "q": "How do permissions work across teams?",
+            "a": [
+              "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Data stays trusted."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Workflows stay consistent across regions, teams and time zones. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Share live progress with partners without exposing internal details. Roll out changes gradually and measure their impact before going wide. Search across records, files and comments to find answers quickly."
+            ]
+          },
+          {
+            "q": "Can I import existing data?",
+            "a": [
+              "Structured data makes it easy to spot trends and act on them early. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Clear ownership means fewer meetings and faster follow-through. Keep every stakeholder on track."
+            ]
+          },
+          {
+            "q": "Can I connect the tools we already use?",
+            "a": [
+              "Permissions keep sensitive records visible only to the people who need them. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Your data model grows alongside your organization without painful migrations."
+            ]
+          },
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Launch faster with building blocks designed for real business processes. Everyone sees the same source of truth at once. Structured data makes it easy to spot trends and act on them early."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Build a polished interface for any workflow in an afternoon",
+        "actions": [
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "primary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

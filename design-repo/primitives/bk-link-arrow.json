@@ -1,0 +1,23 @@
+{
+  "id": "bk-link-arrow",
+  "layer": "primitive",
+  "purpose": "Standalone arrow link (sm 14px #0768F8 / lg 20px #1B61C9) with 4px hover nudge.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/BkLink.jsx:4",
+      "anchor": "export default function BkLink({ href, children, size = 'sm' })"
+    }
+  ],
+  "variants": [
+    "sm",
+    "lg"
+  ],
+  "tokens": [
+    "color.link.primary",
+    "color.link.secondary"
+  ],
+  "states": [
+    "hover"
+  ],
+  "a11y": "arrow svg aria-hidden"
+}

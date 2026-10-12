@@ -1,0 +1,199 @@
+{
+  "system": "season",
+  "tokens": {
+    "$description": "SEASON / PLATFORM families: /platform*, /solutions/{marketing,product,operations,enterprise}, /about (ATSeasonSans).",
+    "text.primary": {
+      "$value": "{color.ink.900}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:121",
+          "anchor": "--ink: #181d26;"
+        }
+      ]
+    },
+    "text.secondary": {
+      "$value": "{color.ink.alpha-69}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:122",
+          "anchor": "--ink2: #040e20b0;"
+        }
+      ]
+    },
+    "text.primary-e": {
+      "$value": "{color.ink.e}",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_solutions.md:84",
+          "anchor": "Ink `#161616`"
+        }
+      ],
+      "note": "skin e (/solutions/enterprise) and /platform B modules"
+    },
+    "border.keyline": {
+      "$value": "{color.border.keyline-warm}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:123",
+          "anchor": "--key: #e0dcdb;"
+        }
+      ]
+    },
+    "border.shell-side": {
+      "$value": "{color.border.keyline-warm}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:124",
+          "anchor": "--side: #e0dcdb;"
+        }
+      ]
+    },
+    "border.shell-side-e": {
+      "$value": "{color.border.e-side}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:152",
+          "anchor": "--side: #333333;"
+        }
+      ]
+    },
+    "border.keyline-dark": {
+      "$value": "{color.border.keyline-dark}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:125",
+          "anchor": "--dkey: #90959d38;"
+        }
+      ]
+    },
+    "surface.placeholder-a": {
+      "$value": "{color.surface.warm-100}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:126",
+          "anchor": "--ph: #f8f6f6;"
+        }
+      ],
+      "note": "skin a placeholder fill"
+    },
+    "surface.placeholder-season": {
+      "$value": "{color.surface.strong}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:145",
+          "anchor": "--ph: #e0e2e6; /* pages_solutions placeholder fill */"
+        }
+      ],
+      "note": "skins season + e"
+    },
+    "surface.placeholder-dark": {
+      "$value": "{color.surface.placeholder-dark}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:128",
+          "anchor": "--phd: #2a2f38;"
+        }
+      ]
+    },
+    "surface.cta": {
+      "$value": "{color.brand-season.blue-800}",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:92",
+          "anchor": "blue-800 | `#012978`"
+        }
+      ]
+    },
+    "surface.cta-green": {
+      "$value": "{color.brand-season.green-900}",
+      "evidence": [
+        {
+          "ref": "src/season/components/blocks.jsx:112",
+          "anchor": "#004801"
+        }
+      ]
+    },
+    "accent.scroll-marker": {
+      "$value": "{color.brand-season.brand-subtle-2}",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:784",
+          "anchor": "active tab marker → `#CADCFF`"
+        }
+      ]
+    },
+    "accent.stories-fill": {
+      "$value": "{color.brand-season.pink-400}",
+      "evidence": [
+        {
+          "ref": "src/season/components/platformB.jsx:58",
+          "anchor": "fill = '#F884EE'"
+        }
+      ]
+    },
+    "weight.regular": {
+      "$value": "{typography.fontWeight.500}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:119",
+          "anchor": "--wr: 500;"
+        }
+      ],
+      "note": "skin a/season; 550 when data-heavy (/platform) or skin e"
+    },
+    "weight.strong": {
+      "$value": "{typography.fontWeight.600}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:120",
+          "anchor": "--ws: 600;"
+        }
+      ],
+      "note": "650 when data-heavy (/platform) or skin e"
+    },
+    "weight.regular-heavy": {
+      "$value": "{typography.fontWeight.550}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:140",
+          "anchor": "--wr: 550;"
+        }
+      ]
+    },
+    "weight.strong-heavy": {
+      "$value": "{typography.fontWeight.650}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:141",
+          "anchor": "--ws: 650;"
+        }
+      ]
+    },
+    "type.hero-h1": {
+      "$value": {
+        "family": "{typography.fontFamily.at-season-sans}",
+        "class": ".ss-hh"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/season.css:462",
+          "anchor": ".ss-hh"
+        }
+      ]
+    },
+    "type.feature-h2": {
+      "$value": {
+        "family": "{typography.fontFamily.at-season-sans}",
+        "size": "48px",
+        "lineHeight": "1.25",
+        "weight": "var(--wr)"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/season.css:1020",
+          "anchor": ".ss-h48 {"
+        }
+      ]
+    }
+  }
+}

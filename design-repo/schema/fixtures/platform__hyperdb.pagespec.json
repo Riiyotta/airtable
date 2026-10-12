@@ -1,0 +1,297 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-feature-stack",
+  "route": "/platform/hyperdb",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "HyperDB"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Enterprise-scale data, ready for every team",
+        "sub": "From intake to delivery, every step is tracked in one place. Permissions keep sensitive records visible only to the people who need them. Every update stays visible.",
+        "actions": [
+          {
+            "label": "Book now",
+            "href": "/contact-sales",
+            "variant": "primary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1280/1223"
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "a2",
+      "content": {
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Kestrel",
+            "Halcyon",
+            "Meridian",
+            "Ostara",
+            "Pinecrest"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-a2",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "body": "Clear ownership means fewer meetings and faster follow-through. Forecasts improve when every input lives in the same connected system. Permissions keep sensitive records visible only to the people who need them. Permissions keep sensitive records visible only to the people who need them. Data stays trusted.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/444"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Turn requests into tracked work",
+        "body": "Search across records, files and comments to find answers quickly. Teams move faster together. Everything stays connected.",
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "headline": "Give every team a single source of truth",
+        "body": "Data stays trusted. Search across records, files and comments to find answers quickly. Set up structured workflows without writing any code. Data stays trusted. Everyone sees the same source of truth at once. Changes sync across every view instantly.",
+        "actions": [
+          {
+            "label": "Learn more",
+            "href": "#",
+            "variant": "primary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "591/426"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "headline": "Simple tools for complex operations",
+        "body": "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Turn repeatable processes into reliable systems that scale with you.",
+        "actions": [
+          {
+            "label": "Learn more",
+            "href": "#",
+            "variant": "primary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels-bar",
+      "content": {
+        "headline": "A shared workspace for planning and delivery",
+        "sub": "Roll out changes gradually and measure their impact before going wide.",
+        "tabs": [
+          {
+            "label": "Massive record volumes",
+            "subhead": "Connected team workflows",
+            "groups": [
+              {
+                "strong": "Forecasts improve when every input lives in the same connected system. Plans turn into progress."
+              }
+            ],
+            "action": {
+              "label": "Learn more",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Fast query performance",
+            "subhead": "Visibility for leaders",
+            "groups": [
+              {
+                "strong": "Roll out changes gradually and measure their impact before going wide. Teams move faster together."
+              }
+            ],
+            "action": {
+              "label": "Learn more",
+              "href": "#"
+            }
+          },
+          {
+            "label": "Secure data sync",
+            "subhead": "Insights in minutes",
+            "groups": [
+              {
+                "strong": "Connect the tools your teams already rely on. Agents handle the busywork in the background."
+              }
+            ],
+            "action": {
+              "label": "Learn more",
+              "href": "#"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Keep projects moving without the chaos",
+        "items": [
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Set up structured workflows without writing any code. Connect the tools your teams already rely on. Connect the tools your teams already rely on. Turn repeatable processes into reliable systems that scale with you.",
+              "Admins can review usage, manage access and apply policies from one central console. Data stays trusted. From intake to delivery, every."
+            ]
+          },
+          {
+            "q": "Can I import existing data?",
+            "a": [
+              "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Give every team a shared foundation to build on."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Search across records, files and comments to find answers quickly. Clear ownership means fewer meetings and faster follow-through.",
+              "Templates help new projects launch with proven structure from the very first day. Work flows naturally."
+            ]
+          },
+          {
+            "q": "How do permissions work across teams?",
+            "a": [
+              "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Reports update automatically as the underlying records change across the business. Start in minutes."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Scale data without slowing down",
+        "actions": [
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "primary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "component": "breadcrumb",
+  "tokens": {
+    "height": {
+      "$value": "42.2px",
+      "evidence": [
+        {
+          "ref": "src/bk/BreadcrumbBar.jsx:9",
+          "anchor": "h-[42.2px]"
+        },
+        {
+          "ref": "src/season/season.css:525",
+          "anchor": "height: 42.2px;"
+        }
+      ]
+    },
+    "bg": {
+      "$value": "{color.surface.subtle}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:517",
+          "anchor": "background: #f8fafc;"
+        }
+      ]
+    },
+    "shadow": {
+      "$value": "{elevation.breadcrumb-inset}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:526",
+          "anchor": "box-shadow: inset 0 7px 20px -7px"
+        }
+      ]
+    },
+    "sticky-top.bk": {
+      "$value": "calc(var(--mainNavHeight) - 1px)",
+      "evidence": [
+        {
+          "ref": "src/bk/BreadcrumbBar.jsx:9",
+          "anchor": "top-[calc(var(--mainNavHeight,143.7px)-1px)]"
+        }
+      ]
+    },
+    "sticky-top.season": {
+      "$value": "var(--mainNavHeight)",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:523",
+          "anchor": "top: var(--mainNavHeight);"
+        }
+      ]
+    }
+  }
+}

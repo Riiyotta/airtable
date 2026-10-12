@@ -1,0 +1,105 @@
+{
+  "id": "bk.sidebar-nav-grid",
+  "system": "bk",
+  "category": "listing",
+  "purpose": "Topics sidebar (cols 1-3) + Browse grid of meta-eyebrow ResourceCards (cols 4-12).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/SidebarNavGrid.jsx:13",
+      "anchor": "export default function SidebarNavGrid("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/guides"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.sidebar-nav-grid",
+    "copyBudgets": {
+      "cards[].desc": {
+        "maxWords": 22,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/guides"
+        ]
+      },
+      "cards[].meta[]": {
+        "maxWords": 2,
+        "observedInstances": 16,
+        "observedRoutes": [
+          "/guides"
+        ]
+      },
+      "cards[].title": {
+        "maxWords": 5,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/guides"
+        ]
+      },
+      "topics[].label": {
+        "maxWords": 5,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/guides"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "sidebar-to-dropdown",
+        "single-column"
+      ],
+      "detail": "no sidebar; Topics pill dropdown above the cards",
+      "evidence": [
+        {
+          "ref": "src/bk/SidebarNavGrid.jsx:10",
+          "anchor": "// Below 1024 (live 390): no sidebar list"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.guides-banner"
+    ],
+    "observedBefore": [
+      "bk.cta-row"
+    ]
+  }
+}

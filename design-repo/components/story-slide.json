@@ -1,0 +1,23 @@
+{
+  "id": "story-slide",
+  "layer": "component",
+  "purpose": "Customer story slide: wordmark, quote, fictional name/role, optional CTA, dark media slot with an original 'story'-kind illustration.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:86",
+      "anchor": "<div key={k} className=\"ss-story\" data-active={k === i} aria-hidden={k !== i}>"
+    }
+  ],
+  "composes": [
+    "wordmark-placeholder",
+    "placeholder-media",
+    "season-button"
+  ],
+  "variants": [
+    "b6",
+    "e8"
+  ],
+  "tokens": [
+    "color.brand-season.pink-400"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "id": "season.use-cases",
+  "system": "season",
+  "category": "feature-grid",
+  "purpose": "E-3 enterprise use-case cards with accent bar, metric and wordmark.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:126",
+      "anchor": "export function UseCaseCards({ headline, action, cards })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/solutions/enterprise"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.use-cases",
+    "copyBudgets": {
+      "action.label": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "cards[].body": {
+        "maxWords": 20,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "cards[].brand.name": {
+        "maxWords": 1,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "cards[].lines[]": {
+        "maxWords": 2,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "cards[].metric": {
+        "maxWords": 7,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "headline": {
+        "maxWords": 5,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.logos"
+    ],
+    "observedBefore": [
+      "season.ai-foundation"
+    ]
+  }
+}

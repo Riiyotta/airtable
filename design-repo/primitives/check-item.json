@@ -1,0 +1,18 @@
+{
+  "id": "check-item",
+  "layer": "primitive",
+  "purpose": "Check icon + text list item (E-5 light / E-6 dark).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:43",
+      "anchor": "export const CheckIcon = ({ dark }) =>"
+    }
+  ],
+  "variants": [
+    "light",
+    "dark"
+  ],
+  "tokens": [],
+  "states": [],
+  "a11y": "icon alt=\"\""
+}

@@ -1,0 +1,78 @@
+{
+  "component": "button.bk",
+  "tokens": {
+    "$description": "BkButton (homepage + BK pages)",
+    "padding": {
+      "$value": "16px 24px",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:4",
+          "anchor": "px-[24px] py-[16px]"
+        }
+      ]
+    },
+    "radius": {
+      "$value": "{radius.btn}",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:4",
+          "anchor": "rounded-btn"
+        }
+      ]
+    },
+    "height": {
+      "$value": "56px",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:538",
+          "anchor": "Height 56; `transition: all .2s linear`"
+        }
+      ]
+    },
+    "transition": {
+      "$value": "all 200ms linear",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:4",
+          "anchor": "duration-200 ease-linear"
+        }
+      ]
+    },
+    "primary.bg": {
+      "$value": "{color.ink.900}",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:17",
+          "anchor": "export const bkPrimary"
+        }
+      ]
+    },
+    "primary.bg-hover": {
+      "$value": "{color.ink.alpha-69}",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:17",
+          "anchor": "export const bkPrimary"
+        }
+      ]
+    },
+    "outline.fg": {
+      "$value": "{color.ink.900}",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:18",
+          "anchor": "export const bkOutline"
+        }
+      ]
+    },
+    "white.bg-hover": {
+      "$value": "{color.surface.tertiary}",
+      "evidence": [
+        {
+          "ref": "src/components/buttonStyles.js:20",
+          "anchor": "hover:bg-white-hover"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "season.faq",
+  "system": "season",
+  "category": "faq",
+  "purpose": "A14/S-10 (skin a) or E-10 (skin e) FAQ accordion, first item open.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:158",
+      "anchor": "export function Faq({ skin = 'a', headline, items })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "a",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:71",
+          "anchor": "export const faqItems"
+        }
+      ]
+    },
+    {
+      "id": "e",
+      "evidence": [
+        {
+          "ref": "src/season/pages/enterprise.js:73",
+          "anchor": "skin: 'e',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 10,
+    "observedRoutes": [
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/solutions/enterprise",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.faq",
+    "copyBudgets": {
+      "headline": {
+        "maxWords": 6,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "items[].a[]": {
+        "maxWords": 73,
+        "observedInstances": 64,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "items[].q": {
+        "maxWords": 14,
+        "observedInstances": 56,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "answer grid-rows .4s cubic-bezier(.76,0,.24,1); chevron rotate .4s cubic-bezier(0,0,.2,1); first item open",
+        "evidence": [
+          {
+            "ref": "src/season/components/blocks.jsx:156",
+            "anchor": "// First item open; items toggle independently."
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1132",
+            "anchor": "| S-10 SeasonFaq | click | grid-template-rows"
+          }
+        ],
+        "usedByVariants": [
+          "a",
+          "e"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.carousel",
+      "season.cta",
+      "season.integrations",
+      "season.tabber"
+    ],
+    "observedBefore": [
+      "season.cta",
+      "shell.footer"
+    ]
+  }
+}

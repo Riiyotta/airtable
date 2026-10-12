@@ -1,0 +1,142 @@
+{
+  "id": "shell.footer",
+  "system": "shell",
+  "category": "shell",
+  "purpose": "Global footer: primary links, five link columns with See-more toggles, utility bar; rendered once per route by Layout.",
+  "implementedBy": [
+    {
+      "ref": "src/layout/Layout.jsx:46",
+      "anchor": "<Footer variant={FOOTER_VARIANT[route]} />"
+    },
+    {
+      "ref": "src/components/Footer.jsx:183",
+      "anchor": "export default function Footer({ variant })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "haas",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:506",
+          "anchor": "## 9. Footer"
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "evidence": [
+        {
+          "ref": "src/layout/Layout.jsx:11",
+          "anchor": "const FOOTER_VARIANT = { '/pricing': 'pricing' }"
+        }
+      ]
+    },
+    {
+      "id": "season",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:26",
+          "anchor": "[data-font='season'] .ft,"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 25,
+    "observedRoutes": [
+      "/",
+      "/about",
+      "/ai-plays",
+      "/contact-sales",
+      "/customer-stories",
+      "/guides",
+      "/integrations",
+      "/platform",
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/automations",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/platform/reporting",
+      "/pricing",
+      "/solutions",
+      "/solutions/enterprise",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product",
+      "/templates"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.shell.footer",
+    "copyBudgets": {}
+  },
+  "constraints": {
+    "mustBeLast": true,
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": ".15s ease-in",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:560",
+            "anchor": "| Footer \"See more\" | Click"
+          },
+          {
+            "ref": "src/components/Footer.css:442",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "haas",
+          "pricing",
+          "season"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "accordion",
+        "stack-columns"
+      ],
+      "detail": "link columns become accordions; primary links stack",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:532",
+          "anchor": "Link columns become accordions: full-width buttons 342×54"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.contact-sales-split",
+      "bk.cta-box",
+      "bk.cta-row",
+      "bk.filter-listing",
+      "pricing.faq",
+      "season.cta",
+      "season.faq",
+      "season.read-next",
+      "season.side-by-side",
+      "tpl.gallery"
+    ],
+    "observedBefore": []
+  }
+}

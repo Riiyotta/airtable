@@ -1,0 +1,225 @@
+{
+  "id": "season.cards",
+  "system": "season",
+  "category": "feature-grid",
+  "purpose": "A3/S-3 card grid (3 or 4 columns, optional icon/link/media) or B5 capabilities bento.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/CardGrid.jsx:5",
+      "anchor": "export default function CardGrid("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "bento",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:38",
+          "anchor": "variant: 'bento',"
+        }
+      ]
+    },
+    {
+      "id": "cards",
+      "evidence": [
+        {
+          "ref": "src/season/components/CardGrid.jsx:36",
+          "anchor": "const cols = cards.length === 4 ? 4 : 3"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 14,
+    "observedRoutes": [
+      "/about",
+      "/platform",
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/interface-designer",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.cards",
+    "copyBudgets": {
+      "actions[].label": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/platform/ai"
+        ]
+      },
+      "badge": {
+        "maxWords": 2,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform/connected-data",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "cards[].body": {
+        "maxWords": 26,
+        "observedInstances": 42,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "cards[].link.label": {
+        "maxWords": 3,
+        "observedInstances": 16,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/interface-designer"
+        ]
+      },
+      "cards[].title": {
+        "maxWords": 9,
+        "observedInstances": 47,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/interface-designer",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 8,
+        "observedInstances": 14,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/interface-designer",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "sub": {
+        "maxWords": 31,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/interface-designer",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 3
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "cards"
+        ]
+      },
+      {
+        "pattern": "season-bento-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "card bg #FFF -> #F8F6F6 .15s",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:791",
+            "anchor": "| B5 cards | hover | bg `#FFF` → `#F8F6F6`"
+          }
+        ],
+        "usedByVariants": [
+          "bento"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "single-column"
+      ],
+      "detail": "grid collapses to 1 column with side keylines",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:861",
+          "anchor": ".ss-cards-body { padding-inline: 16px; }"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "generated.ui-illustration"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.carousel",
+      "season.integrations",
+      "season.logos",
+      "season.side-by-side",
+      "season.tabber",
+      "season.templates"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.carousel",
+      "season.cta",
+      "season.faq",
+      "season.read-next",
+      "season.side-by-side",
+      "season.stories",
+      "season.tabber"
+    ]
+  }
+}

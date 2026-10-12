@@ -1,0 +1,33 @@
+{
+  "id": "resource-card",
+  "layer": "component",
+  "purpose": "Card with media (top/bottom), optional eyebrow, title, description; homepage lift hover or listing 'flat' hover. Without `img` the 16:9 placeholderBg box is filled by <MockMedia> (kind = mediaKind prop, else picked from the title); the homepage always passes a real img (home.product-screenshot).",
+  "implementedBy": [
+    {
+      "ref": "src/components/ResourceCard.jsx:11",
+      "anchor": "export default function ResourceCard({"
+    }
+  ],
+  "composes": [
+    "mock-media",
+    "card-eyebrow"
+  ],
+  "variants": [
+    "imageTop",
+    "imageBottom",
+    "flat"
+  ],
+  "tokens": [
+    "card.resource.*"
+  ],
+  "evidence": [
+    {
+      "ref": "src/components/ResourceCard.jsx:7",
+      "anchor": "//   mediaKind: MockMedia kind for the placeholder art (default: picked from the title)"
+    },
+    {
+      "ref": "src/components/ResourceCard.jsx:28",
+      "anchor": "<MockMedia kind={mediaKind} hint={title} seed={title} />"
+    }
+  ]
+}

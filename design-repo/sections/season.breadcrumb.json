@@ -1,0 +1,102 @@
+{
+  "id": "season.breadcrumb",
+  "system": "season",
+  "category": "nav",
+  "purpose": "Sticky Season breadcrumb (Home > Platform|Solutions > page) that hides on scroll-down.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/heroes.jsx:5",
+      "anchor": "export function Breadcrumb({ items, sticky })"
+    },
+    {
+      "ref": "src/season/SeasonPage.jsx:49",
+      "anchor": "{breadcrumb && <Breadcrumb {...breadcrumb} />}"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 13,
+    "observedRoutes": [
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/automations",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/platform/reporting",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.breadcrumb",
+    "copyBudgets": {
+      "items[].label": {
+        "maxWords": 2,
+        "observedInstances": 39,
+        "observedRoutes": [
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/platform/reporting",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "hide on scroll-down past 120px: opacity 0 / translateY(-12px) .25s ease-in; show on any upward scroll",
+        "evidence": [
+          {
+            "ref": "src/season/components/heroes.jsx:17",
+            "anchor": "if (d > 0 && y > 120) setScrolling(true)"
+          },
+          {
+            "ref": "src/season/season.css:528",
+            "anchor": ".ss-crumbs--sticky.is-scrolling {"
+          },
+          {
+            "ref": "src/season/season.css:2170",
+            "anchor": "transition-duration: 0s !important;"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "shell.header"
+    ],
+    "observedBefore": [
+      "season.hero"
+    ]
+  }
+}

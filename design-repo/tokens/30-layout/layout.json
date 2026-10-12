@@ -1,0 +1,136 @@
+{
+  "tokens": {
+    "page.max-width": {
+      "$value": "1440px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:103",
+          "anchor": "page: '1440px'"
+        },
+        {
+          "ref": "CLONE_SPEC.md:20",
+          "anchor": "**`max-width:1440px`, margin 0**"
+        }
+      ]
+    },
+    "grid.bk.max-width": {
+      "$value": "1536px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:104",
+          "anchor": "grid: '1536px'"
+        }
+      ]
+    },
+    "grid.bk.columns": {
+      "$value": {
+        "desktop": 12,
+        "mobile": 6
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:27",
+          "anchor": "Inside is a **12-column CSS grid**"
+        }
+      ]
+    },
+    "grid.bk.gap": {
+      "$value": {
+        "desktop": "32px",
+        "mobile": "24px"
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:27",
+          "anchor": "**32px column gap**"
+        }
+      ]
+    },
+    "grid.bk.gutter": {
+      "$value": {
+        "desktop": "32px",
+        "mobile": "24px"
+      },
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:26",
+          "anchor": "`margin: 0 32px` (≥768) / `0 24px` (<768)"
+        }
+      ]
+    },
+    "shell.season.max-width": {
+      "$value": "1344px",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:173",
+          "anchor": "max-width: 1344px;"
+        }
+      ]
+    },
+    "shell.season.keyline": {
+      "$value": "1px solid var(--key)",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:175",
+          "anchor": "border-bottom: 1px solid var(--key);"
+        }
+      ]
+    },
+    "shell.season.side-borders-from": {
+      "$value": "{breakpoint.md2}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:179",
+          "anchor": "@media (min-width: 900px) {"
+        }
+      ]
+    },
+    "main.padding-bottom": {
+      "$value": {
+        "default": "64px",
+        "/pricing": "0",
+        "/templates": "0"
+      },
+      "evidence": [
+        {
+          "ref": "src/layout/Layout.jsx:10",
+          "anchor": "const NO_MAIN_PAD = new Set(['/pricing', '/templates'])"
+        }
+      ]
+    },
+    "pricing.column.max-width": {
+      "$value": "1250px",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:22",
+          "anchor": "max-width: 1250px;"
+        }
+      ]
+    },
+    "tpl.max-width": {
+      "$value": "1152px",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:29",
+          "anchor": "max-width: 1152px;"
+        }
+      ]
+    },
+    "header.height": {
+      "$value": {
+        "desktop": "120.98px",
+        "mobile": "144px"
+      },
+      "evidence": [
+        {
+          "ref": "src/index.css:44",
+          "anchor": "--mainNavHeight: 120.98px;"
+        },
+        {
+          "ref": "src/index.css:40",
+          "anchor": "--mainNavHeight: 144px;"
+        }
+      ]
+    }
+  }
+}

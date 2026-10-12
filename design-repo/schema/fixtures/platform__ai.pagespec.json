@@ -1,0 +1,421 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-ai-product",
+  "route": "/platform/ai",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "AI"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Assistants that understand your data and the way you work",
+        "sub": "Give every team a shared foundation to build on. Work flows naturally. Data stays trusted.",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "892/383",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "a2",
+      "content": {
+        "heading": "Your data model grows alongside your organization without painful migrations.",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Northwind",
+            "Lumen",
+            "Arcadia",
+            "Brightline"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-a2",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "Connect your existing tools in a few clicks",
+        "sub": "From intake to delivery, every step is tracked in one place.",
+        "cards": [
+          {
+            "icon": true,
+            "title": "Flexible views for every role",
+            "body": "Clear ownership means fewer meetings and faster follow-through. Everything stays connected."
+          },
+          {
+            "icon": true,
+            "title": "Keep projects moving without the chaos",
+            "body": "Launch faster with building blocks designed for real business processes. Spend less time chasing status updates."
+          },
+          {
+            "icon": true,
+            "title": "Smarter reviews with built-in assistants",
+            "body": "Approvals move without email chains. Set up structured workflows without writing any code. Forecasts improve when every input."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "left",
+        "badge": "Omni",
+        "headline": "Keep projects moving without the chaos",
+        "body": "Clear ownership means fewer meetings and faster follow-through. Launch faster with building blocks designed for real business processes. Search across records, files and comments to find answers quickly.",
+        "bullets": [
+          "Start in minutes. Everything stays connected.",
+          "Everyone sees the same source of truth at once.",
+          "Connect the tools your teams already rely on. Start in minutes."
+        ],
+        "actions": [
+          {
+            "label": "Explore app building",
+            "href": "/platform/app-building",
+            "variant": "primary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.side-by-side",
+      "variant": "display",
+      "content": {
+        "position": "right",
+        "badge": "Field Agents",
+        "headline": "Keep projects moving without the chaos",
+        "body": "Customize fields, layouts and rules to match how you operate. Automate the handoffs that slow work down. Search across records, files and comments to find answers quickly.",
+        "bullets": [
+          "Approvals move without email chains.",
+          "Every update stays visible. Everything stays connected.",
+          "Share live progress with partners without exposing internal details."
+        ],
+        "actions": [
+          {
+            "label": "Explore AI agents",
+            "href": "/platform/ai-agents",
+            "variant": "primary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "4/3"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "A clearer picture of progress across the business",
+        "sub": "Connect the tools your teams already rely on. Forecasts improve when every input lives in the same connected system.",
+        "actions": [
+          {
+            "label": "Explore AI Plays",
+            "href": "/ai-plays",
+            "variant": "primary"
+          }
+        ],
+        "cards": [
+          {
+            "icon": true,
+            "title": "Guardrails that keep everyone aligned",
+            "body": "Context travels with the work. Every update stays visible. Automate the handoffs that slow work down. Admins can review usage, manage access and apply.",
+            "link": {
+              "label": "Try the play",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "A clearer picture of progress across the business",
+            "body": "Workflows stay consistent across regions, teams and time zones. Feedback lands in the right queue and reaches the right owner automatically.",
+            "link": {
+              "label": "Try the play",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Keep projects moving without the chaos",
+            "body": "Give every team a shared foundation to build on. Give every team a shared foundation to build on.",
+            "link": {
+              "label": "Try the play",
+              "href": "#"
+            }
+          },
+          {
+            "icon": true,
+            "title": "Smarter reviews with built-in assistants",
+            "body": "Roll out changes gradually and measure their impact before going wide. Nothing falls through the cracks. Give every team a shared.",
+            "link": {
+              "label": "Try the play",
+              "href": "#"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "Simple tools for complex operations",
+        "cards": [
+          {
+            "icon": true,
+            "title": "Private by design",
+            "body": "Structured data makes it easy to spot trends and act on them early. Feedback lands in the right queue and reaches the."
+          },
+          {
+            "icon": true,
+            "title": "Clear controls for admins",
+            "body": "Small teams can start simple and add structure as their needs grow over time. Share live progress with."
+          },
+          {
+            "icon": true,
+            "title": "Answers grounded in records",
+            "body": "Decisions happen with full context. Data stays trusted. Workflows stay consistent across regions, teams and time zones. Small teams can start simple and add structure as."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.carousel",
+      "content": {
+        "headline": "Scale processes across every team",
+        "sub": "Give every team a shared foundation to build on. Everything stays connected.",
+        "actions": [
+          {
+            "label": "Explore AI Plays",
+            "href": "/ai-plays",
+            "variant": "primary"
+          }
+        ],
+        "cards": [
+          {
+            "badge": "BLOG",
+            "tone": "cyan",
+            "title": "Insights in minutes",
+            "body": "From intake to delivery, every step is tracked in one place. Context travels with the work. Teams move."
+          },
+          {
+            "badge": "SALES",
+            "tone": "orange",
+            "title": "Guardrails that keep everyone aligned and give every team",
+            "body": "Bring scattered requests into one place. Workflows stay consistent across regions, teams and time zones. Templates help."
+          },
+          {
+            "badge": "MARKETING",
+            "tone": "pink",
+            "title": "Flexible views for every role",
+            "body": "Forecasts improve when every input lives in the same connected system. Everything stays connected. Integrations."
+          },
+          {
+            "badge": "BLOG",
+            "tone": "cyan",
+            "title": "Flexible views for every role",
+            "body": "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Approvals move without email chains."
+          },
+          {
+            "badge": "OPERATIONS",
+            "tone": "orange",
+            "title": "Shared data and scale processes across every team and approvals",
+            "body": "Share live progress with partners without exposing internal details. Approvals move without email chains. Set up structured workflows without writing any code. Nothing."
+          },
+          {
+            "badge": "MARKETING",
+            "tone": "pink",
+            "title": "Track every initiative from first idea to final delivery",
+            "body": "Teams move faster together. Dashboards refresh on their own. Flexible views let each person see the work in the format that suits them best. Context travels with the work. Bring scattered."
+          },
+          {
+            "badge": "PRODUCT",
+            "tone": "cyan",
+            "title": "Automate the busywork away",
+            "body": "Approvals move without email chains. Share live progress with partners without exposing internal details. Dashboards refresh on their own. Your data model grows alongside your organization without painful migrations. Templates."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Keep projects moving without the chaos",
+        "items": [
+          {
+            "q": "Who owns setup?",
+            "a": [
+              "Clear ownership means fewer meetings and faster follow-through. Structured data makes it easy to spot trends and act on them early. Everything stays connected."
+            ]
+          },
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Clear ownership means fewer meetings and faster follow-through. Feedback lands in the right queue and reaches the right owner automatically."
+            ]
+          },
+          {
+            "q": "Can different teams customize their own views without affecting others?",
+            "a": [
+              "Set up structured workflows without writing any code. Turn repeatable processes into reliable systems that scale with you. Permissions keep sensitive records visible only to the people who need them."
+            ]
+          },
+          {
+            "q": "Can I import existing data?",
+            "a": [
+              "Give every team a shared foundation to build on. Workflows stay consistent across regions, teams and time zones. Teams move faster together."
+            ]
+          },
+          {
+            "q": "Can I connect the tools we already use?",
+            "a": [
+              "Templates help new projects launch with proven structure from the very first day. Set up structured workflows without writing any code. Nothing falls through the cracks."
+            ]
+          },
+          {
+            "q": "How do permissions work across teams?",
+            "a": [
+              "Feedback lands in the right queue and reaches the right owner automatically. Capture ideas, assign owners and track progress in a single workspace. Dashboards refresh on their own."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Put dependable AI to work across all of your teams",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

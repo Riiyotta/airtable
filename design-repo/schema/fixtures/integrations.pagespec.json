@@ -1,0 +1,417 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.bk-filter-listing",
+  "route": "/integrations",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Integrations"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.page-hero-split",
+      "variant": "light",
+      "content": {
+        "title": "Connect your data",
+        "description": "Link the tools your teams already rely on to keep important records in sync and build connected apps without copying data between them."
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.filter-listing",
+      "variant": "image-top",
+      "content": {
+        "featuredTitle": "Featured Integrations",
+        "featured": [
+          {
+            "title": "Sync files from your cloud storage app",
+            "category": "File Management",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "File Management"
+            }
+          },
+          {
+            "title": "Send updates to your chat workspace",
+            "category": "Communication",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Communication"
+            }
+          },
+          {
+            "title": "Pull fresh leads in from your CRM tool",
+            "category": "CRM",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "CRM"
+            }
+          }
+        ],
+        "gridTitle": "All Integrations",
+        "items": [
+          {
+            "title": "Atlas Sync",
+            "category": "Analytics",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Analytics"
+            }
+          },
+          {
+            "title": "Beacon",
+            "category": "Calendar",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Calendar"
+            }
+          },
+          {
+            "title": "Cobalt Mail",
+            "category": "Communication",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Communication"
+            }
+          },
+          {
+            "title": "Driftwood",
+            "category": "CRM",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "CRM"
+            }
+          },
+          {
+            "title": "Ember Docs",
+            "category": "Design",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Design"
+            }
+          },
+          {
+            "title": "Fieldnote",
+            "category": "Developer Tools",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Developer Tools"
+            }
+          },
+          {
+            "title": "Granite CRM",
+            "category": "Email",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Email"
+            }
+          },
+          {
+            "title": "Harbor Chat",
+            "category": "File Management",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "File Management"
+            }
+          },
+          {
+            "title": "Inkwell",
+            "category": "Finance",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Finance"
+            }
+          },
+          {
+            "title": "Juniper",
+            "category": "Marketing",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Marketing"
+            }
+          },
+          {
+            "title": "Keystone",
+            "category": "Productivity",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Productivity"
+            }
+          },
+          {
+            "title": "Lumen Analytics",
+            "category": "Project Management",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Project Management"
+            }
+          },
+          {
+            "title": "Meridian",
+            "category": "Support",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Support"
+            }
+          },
+          {
+            "title": "Nimbus Files",
+            "category": "Analytics",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Analytics"
+            }
+          },
+          {
+            "title": "Orbit Calendar",
+            "category": "Calendar",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Calendar"
+            }
+          },
+          {
+            "title": "Pinecone",
+            "category": "Communication",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Communication"
+            }
+          },
+          {
+            "title": "Quarry",
+            "category": "CRM",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "CRM"
+            }
+          },
+          {
+            "title": "Relay Desk",
+            "category": "Design",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Design"
+            }
+          },
+          {
+            "title": "Sable Pay",
+            "category": "Developer Tools",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Developer Tools"
+            }
+          },
+          {
+            "title": "Tidewater",
+            "category": "Email",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Email"
+            }
+          },
+          {
+            "title": "Umbra Design",
+            "category": "File Management",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "File Management"
+            }
+          },
+          {
+            "title": "Vantage",
+            "category": "Finance",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Finance"
+            }
+          },
+          {
+            "title": "Willow Forms",
+            "category": "Marketing",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Marketing"
+            }
+          },
+          {
+            "title": "Xenon Dev",
+            "category": "Productivity",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Productivity"
+            }
+          },
+          {
+            "title": "Yardstick",
+            "category": "Project Management",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Project Management"
+            }
+          },
+          {
+            "title": "Zephyr Mail",
+            "category": "Support",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Support"
+            }
+          },
+          {
+            "title": "Bramble",
+            "category": "Analytics",
+            "href": "#",
+            "pill": {
+              "bg": "#E0E2E6",
+              "color": "#444444",
+              "label": "Analytics"
+            }
+          }
+        ],
+        "groups": [
+          {
+            "key": "category",
+            "title": "Category",
+            "options": [
+              "Analytics",
+              "Calendar",
+              "Communication",
+              "CRM",
+              "Design",
+              "Developer Tools",
+              "Email",
+              "File Management",
+              "Finance",
+              "Marketing",
+              "Productivity",
+              "Project Management",
+              "Support"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "bk-filter-chevron",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.cta-row",
+      "variant": "default",
+      "content": {
+        "title": "See how your tools fit together.",
+        "button": {
+          "label": "Get started",
+          "href": "/signup"
+        }
+      },
+      "motion": {
+        "pattern": "bk-cta-row-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

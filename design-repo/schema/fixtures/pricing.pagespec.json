@@ -1,0 +1,1328 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.pricing",
+  "route": "/pricing",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "pricing.title",
+      "content": {
+        "title": "Pick the plan that fits your team"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "pricing.plan-cards",
+      "content": {
+        "plans": [
+          {
+            "id": "starter",
+            "name": "Starter",
+            "description": "For individuals or small teams just getting started.",
+            "price": {
+              "kind": "text",
+              "label": "Free"
+            },
+            "cta": {
+              "label": "Try for free",
+              "href": "#",
+              "filled": false
+            },
+            "lead": "Starter includes:",
+            "features": [
+              "Unlimited bases",
+              "Up to 5 editors",
+              "1,000 records per base",
+              "Grid, board, and list views",
+              "Basic automations for everyday tasks",
+              "1 GB of attachments per base",
+              "Two weeks of revision history"
+            ]
+          },
+          {
+            "id": "team",
+            "name": "Team",
+            "description": "For growing teams that need shared workflows and views.",
+            "price": {
+              "kind": "amount",
+              "amount": "$18"
+            },
+            "cta": {
+              "label": "Try for free",
+              "href": "#",
+              "filled": true
+            },
+            "lead": "Everything in Starter, plus:",
+            "features": [
+              "50,000 records per base",
+              "25,000 automation runs",
+              "20 GB of attachments per base",
+              "Calendar, gallery, and timeline views",
+              "Standard sync between bases",
+              "Branded form pages",
+              "Six months of revision history",
+              {
+                "text": "Assistant credits included",
+                "link": "learn more"
+              }
+            ],
+            "highlight": true,
+            "monthly": "$22",
+            "secondary": {
+              "label": "purchase now",
+              "href": "#"
+            },
+            "addOns": [
+              "Extra assistant credits in flexible monthly packs"
+            ]
+          },
+          {
+            "id": "business",
+            "name": "Business",
+            "description": "For departments coordinating several teams with admin controls and deeper reporting.",
+            "price": {
+              "kind": "amount",
+              "amount": "$42"
+            },
+            "cta": {
+              "label": "Purchase now",
+              "href": "#",
+              "filled": false
+            },
+            "lead": "Everything in Team, plus:",
+            "features": [
+              "125,000 records per base",
+              "100,000 automation runs",
+              "100 GB of attachments per base",
+              "Verified data fields",
+              "Two-way sync between bases",
+              "Admin dashboard with workspace insights",
+              "Single sign-on",
+              "Interface page permissions",
+              "Scheduled report exports",
+              "One year of revision history",
+              "Custom field validation rules",
+              {
+                "text": "Expanded assistant credits",
+                "link": "learn more"
+              }
+            ],
+            "monthly": "$50",
+            "secondary": {
+              "label": "contact sales",
+              "href": "/contact-sales"
+            },
+            "addOns": [
+              "Extra assistant credits and private workspace storage"
+            ]
+          },
+          {
+            "id": "enterprise",
+            "name": "Enterprise",
+            "description": "For organizations that need scale, governance, and dedicated support across every workspace.",
+            "price": {
+              "kind": "custom",
+              "label": "Custom pricing"
+            },
+            "cta": {
+              "label": "Contact Sales",
+              "href": "/contact-sales",
+              "filled": false
+            },
+            "lead": "Everything in Business, plus:",
+            "features": [
+              "500,000 records per base with room to grow across every workspace",
+              "500,000 automation runs",
+              "1,000 GB of attachments per base",
+              "Organization-wide admin console",
+              "Audit trail and usage insights",
+              "Data retention policies",
+              "Enterprise key management",
+              "Sandbox environments",
+              "Advanced sharing restrictions",
+              "Three years of revision history",
+              "Dedicated success contact",
+              "Dedicated onboarding and migration support",
+              {
+                "text": "Unlimited assistant credits",
+                "link": "learn more"
+              }
+            ],
+            "addOns": [
+              "Sandbox environments"
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "pricing-pill-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "pricing.see-all-link",
+      "content": {
+        "label": "See every feature and compare plans",
+        "href": "#compare"
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "pricing.logo-strip",
+      "content": {
+        "eyebrow": "Chosen by forward-thinking teams in every industry",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Northwind",
+            "Lumen & Co",
+            "BRIGHTLINE",
+            "Oakridge",
+            "Parallax",
+            "Tidewater",
+            "Kestrel"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "pricing.comparison-table",
+      "content": {
+        "groups": [
+          {
+            "title": "Fundamentals",
+            "rows": [
+              {
+                "name": "Records per base",
+                "cells": [
+                  "1,000",
+                  "50,000",
+                  "125,000",
+                  "500,000"
+                ]
+              },
+              {
+                "name": "Workspaces and bases",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Grid and list views",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Rich field types",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Comments and mentions",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Revision history",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Shared view links",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Form submissions",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Mobile and desktop apps",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Basic filtering and sorting",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Views",
+            "rows": [
+              {
+                "name": "Calendar view",
+                "cells": [
+                  "check",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Board view",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Gallery view",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Timeline view",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Gantt view",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Hierarchy view",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Personal views",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Locked views",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "View sections",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Custom row height",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Field types",
+            "rows": [
+              {
+                "name": "Linked records",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Lookups and rollups",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Formula fields",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Credit packs",
+                "cells": [
+                  "",
+                  {
+                    "t": "5k, 10k, 25k, 50k, 100k credits",
+                    "m": "y"
+                  },
+                  {
+                    "t": "5k, 10k, 25k, 50k, 100k credits",
+                    "m": "y"
+                  },
+                  "Contact Sales"
+                ]
+              },
+              {
+                "name": "Pack pricing",
+                "cells": [
+                  "",
+                  {
+                    "t": "Starts at $15/month for 5k AI credits",
+                    "m": "b"
+                  },
+                  {
+                    "t": "Starts at $15/month for 5k AI credits",
+                    "m": "b"
+                  },
+                  {
+                    "t": "Contact Sales",
+                    "m": "b"
+                  }
+                ]
+              },
+              {
+                "name": "Field dependencies",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Collaboration",
+            "rows": [
+              {
+                "name": "Real-time co-editing",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Guest commenters",
+                "cells": [
+                  "",
+                  "check",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Shared workspaces",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Activity feed",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Notification rules",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Automations",
+            "rows": [
+              {
+                "name": "Scheduled triggers",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Conditional actions",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Run history",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Script actions",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Outgoing webhooks",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Multi-step workflows",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Interfaces",
+            "rows": [
+              {
+                "name": "Dashboard layouts",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Record review pages",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Custom page elements",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Interface permissions",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Forms",
+            "rows": [
+              {
+                "name": "Conditional form fields",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Branded form pages",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Reporting",
+            "rows": [
+              {
+                "name": "Summary charts",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Pivot tables",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Scheduled reports",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Report exports",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Goal tracking",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Integrations",
+            "rows": [
+              {
+                "name": "Calendar connectors",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Chat app alerts",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Email inbox sync",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Cloud file storage",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Developer API access",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Embedded widgets",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Connector library",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Data sync",
+            "rows": [
+              {
+                "name": "One-way table sync",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Connection packs",
+                "cells": [
+                  "",
+                  {
+                    "t": "5, 10, 25, 50, 100 connections",
+                    "m": "y"
+                  },
+                  {
+                    "t": "5, 10, 25, 50, 100 connections",
+                    "m": "y"
+                  },
+                  "Contact Sales"
+                ]
+              },
+              {
+                "name": "Connection pricing",
+                "cells": [
+                  "",
+                  {
+                    "t": "Starts at $90/month for 5 sync connections",
+                    "m": "b"
+                  },
+                  {
+                    "t": "Starts at $110/month for 5 sync connections",
+                    "m": "b"
+                  },
+                  {
+                    "t": "Contact Sales",
+                    "m": "b"
+                  }
+                ]
+              },
+              {
+                "name": "Faster sync refresh",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Cross-workspace sync",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Assistant",
+            "rows": [
+              {
+                "name": "Text summaries",
+                "cells": [
+                  "",
+                  "",
+                  "check",
+                  "check"
+                ]
+              },
+              {
+                "name": "Field suggestions",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Auto-categorize records",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Draft generation",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Translation helper",
+                "cells": [
+                  "",
+                  "",
+                  "plus",
+                  "check"
+                ]
+              },
+              {
+                "name": "Prompt library",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Storage",
+            "rows": [
+              {
+                "name": "Attachment space per base",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Snapshot retention",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Trash recovery window",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Admin controls",
+            "rows": [
+              {
+                "name": "Admin dashboard",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "User provisioning",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Seat management",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Workspace creation rules",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Base ownership transfer",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Audit trail",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Usage insights",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Bulk user actions",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Custom roles",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Org-wide settings",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Security",
+            "rows": [
+              {
+                "name": "Two-factor sign-in",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Single sign-on",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Session controls",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Password policies",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "IP allow lists",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Data encryption keys",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Sharing restrictions",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Domain verification",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Device approvals",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Export controls",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Compliance",
+            "rows": [
+              {
+                "name": "Data residency options",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Retention policies",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Legal hold",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Compliance reports",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Support",
+            "rows": [
+              {
+                "name": "Help center",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Email support",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Priority support",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Dedicated success contact",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              },
+              {
+                "name": "Onboarding sessions",
+                "cells": [
+                  "",
+                  "",
+                  "",
+                  "check"
+                ]
+              }
+            ]
+          }
+        ],
+        "footnotes": [
+          "Seat prices shown are per editor and exclude any taxes that may apply in your region.",
+          "Record and attachment limits apply per base; usage beyond a limit pauses new additions until space is freed.",
+          "Automation runs reset at the start of each billing cycle and do not carry over between cycles or between workspaces in the same organization.",
+          "Assistant credits are shared across a workspace and are consumed at different rates depending on the size of each request.",
+          "Add-ons are billed separately and can be changed at any time."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "pricing.help-links",
+      "content": {
+        "title": "Do you have more questions?",
+        "links": [
+          {
+            "eyebrow": "Billing / pricing",
+            "label": "Billing FAQ",
+            "href": "#"
+          },
+          {
+            "eyebrow": "Plan changes",
+            "label": "Switching plans",
+            "href": "#"
+          },
+          {
+            "eyebrow": "Talk to us",
+            "label": "Contact sales",
+            "href": "/contact-sales"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "pricing.faq",
+      "content": {
+        "title": "Frequently asked questions",
+        "items": [
+          {
+            "q": "Can I change plans at any time?",
+            "a": [
+              "Yes. You can move to a larger plan whenever you like, and the difference is prorated for the rest of your current billing cycle.",
+              "Moving to a smaller plan takes effect at the start of your next cycle so nobody loses access mid-project."
+            ]
+          },
+          {
+            "q": "How is a seat counted on the Team and Business plans?",
+            "a": [
+              "Each person with edit or creator access to a workspace counts as one seat. Read-only viewers and form respondents are always free."
+            ]
+          },
+          {
+            "q": "What happens when I reach a limit?",
+            "a": [
+              "You will see a notice inside the workspace when you approach a limit.",
+              "Existing data stays fully available; only new records or attachments are paused until you free up space or upgrade.",
+              "Admins also receive an email summary so they can plan ahead."
+            ]
+          },
+          {
+            "q": "Do you offer discounts for nonprofits?",
+            "a": [
+              "Registered nonprofits and accredited schools can apply for a reduced rate on the Team and Business plans. Approval usually takes a few business days."
+            ]
+          },
+          {
+            "q": "Which payment methods work?",
+            "a": [
+              "Paid plans can be purchased with all major credit cards. Annual Business and Enterprise plans can also be paid by invoice."
+            ]
+          },
+          {
+            "q": "Can I switch between monthly and annual billing?",
+            "a": [
+              "New workspaces start with a two-week trial of the Team plan.",
+              "At the end of the trial you can pick a paid plan or continue on Starter with no action required."
+            ]
+          },
+          {
+            "q": "I signed up under an older plan before these changes. How do the new plans apply to my account?",
+            "a": [
+              "Workspace owners can cancel from the billing settings page at any time.",
+              "Your plan stays active until the end of the period you already paid for.",
+              "After that the workspace returns to Starter, and any data above the Starter limits becomes read-only.",
+              "You can export everything before or after cancelling.",
+              "If you change your mind, upgrading again restores full access immediately."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "pricing-faq-chevron",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "pricing",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "season.hero",
+  "system": "season",
+  "category": "hero",
+  "purpose": "A1 HeroVertical / S-1 SeasonHero: centered badge, h1, sub, two 4px buttons, optional media band.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/heroes.jsx:48",
+      "anchor": "export function Hero({ badge, headline, sub, actions, media, pattern })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 14,
+    "observedRoutes": [
+      "/about",
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/automations",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/platform/reporting",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.hero",
+    "copyBudgets": {
+      "actions[].label": {
+        "maxWords": 3,
+        "observedInstances": 27,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/platform/reporting",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "badge": {
+        "maxWords": 4,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/about",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 10,
+        "observedInstances": 14,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/platform/reporting",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "sub": {
+        "maxWords": 48,
+        "observedInstances": 13,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/automations",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/platform/reporting",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown",
+        "timing": "copy opacity .5s ease-out delay .27s; media opacity+translateY(200px) 1.15s ease-out delay 1.22s; pattern 2.6s",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:604",
+            "anchor": ".ss-anim-fade { animation: ssHeroFade 0.5s ease-out 0.27s both; }"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:777",
+            "anchor": "| A1 hero copy | load | opacity 0→1"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [
+    "generated.ui-illustration"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.breadcrumb",
+      "shell.header"
+    ],
+    "observedBefore": [
+      "season.logos",
+      "season.scroll-tabber",
+      "season.side-by-side",
+      "season.stats"
+    ]
+  }
+}

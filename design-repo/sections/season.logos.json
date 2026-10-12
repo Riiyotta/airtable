@@ -1,0 +1,205 @@
+{
+  "id": "season.logos",
+  "system": "season",
+  "category": "logos",
+  "purpose": "Logo cells of fictional wordmarks (A2/S-2/B2/E-2) with flip/cycle/static behaviour.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/LogoCells.jsx:43",
+      "anchor": "export default function LogoCells("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "a2",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:84",
+          "anchor": "export const logos = (n, opts = {})"
+        }
+      ]
+    },
+    {
+      "id": "b-cycle",
+      "evidence": [
+        {
+          "ref": "src/season/pages/enterprise.js:19",
+          "anchor": "motion: 'cycle'"
+        }
+      ]
+    },
+    {
+      "id": "b-static",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:17",
+          "anchor": "motion: 'none'"
+        }
+      ]
+    },
+    {
+      "id": "season",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:110",
+          "anchor": "{ type: 'logos', heading: 'Trusted by', logos: brands(6, p.logoOffset || 0), motion: 'season' }"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 9,
+    "observedRoutes": [
+      "/about",
+      "/platform",
+      "/platform/ai",
+      "/platform/hyperdb",
+      "/platform/portals",
+      "/solutions/enterprise",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.logos",
+    "copyBudgets": {
+      "heading": {
+        "maxWords": 10,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/ai",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "logos.names[]": {
+        "maxWords": 1,
+        "observedInstances": 54,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/ai",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-logo-flip-a2",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped",
+        "timing": "first flip at [1,3,1.5,5,3,5.5]s per cell then every 8s; transform .8s cubic-bezier(.76,0,.24,1)",
+        "evidence": [
+          {
+            "ref": "src/season/components/LogoCells.jsx:13",
+            "anchor": "const DELAYS = [1, 3, 1.5, 5, 3, 5.5]"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:781",
+            "anchor": "| A2 logos | timer"
+          }
+        ],
+        "usedByVariants": [
+          "a2"
+        ]
+      },
+      {
+        "pattern": "season-logo-flip-season",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped",
+        "timing": "A2 schedule (S-2 interval not measured), transition 800ms ease",
+        "evidence": [
+          {
+            "ref": "src/season/components/LogoCells.jsx:9",
+            "anchor": "'season' S-2 — same schedule (interval not measured), transition 800ms ease."
+          }
+        ],
+        "usedByVariants": [
+          "season"
+        ]
+      },
+      {
+        "pattern": "season-logo-cycle",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped",
+        "timing": "one random cell swaps every ~0.7-1.5s (sampled), 800ms ease",
+        "evidence": [
+          {
+            "ref": "src/season/components/LogoCells.jsx:10",
+            "anchor": "'cycle'  E-2 — one random cell swaps every ~0.7–1.5s, 800ms ease."
+          }
+        ],
+        "usedByVariants": [
+          "b-cycle"
+        ]
+      },
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "b-static"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "reflow-grid"
+      ],
+      "detail": "skin a: 6/3/2 cells at >=1024/>=768/<768; b-static shows only 2 cells <768",
+      "evidence": [
+        {
+          "ref": "src/season/components/LogoCells.jsx:5",
+          "anchor": "// skin 'a'  : A2/S-2 — 88px cells, round-robin into 6/3/2 cells"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.hero",
+      "season.platform-hero",
+      "season.side-by-side"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.side-by-side",
+      "season.tab-panels",
+      "season.use-cases"
+    ]
+  }
+}

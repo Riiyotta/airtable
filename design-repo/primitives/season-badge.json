@@ -1,0 +1,24 @@
+{
+  "id": "season-badge",
+  "layer": "primitive",
+  "purpose": "Season badge pill; tones pink/yellow/cyan/orange/inverse.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:76",
+      "anchor": "export const Badge = ({ label, tone })"
+    }
+  ],
+  "variants": [
+    "default",
+    "pink",
+    "yellow",
+    "cyan",
+    "orange",
+    "inverse"
+  ],
+  "tokens": [
+    "color.badge.*"
+  ],
+  "states": [],
+  "a11y": "text only"
+}

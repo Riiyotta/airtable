@@ -1,0 +1,696 @@
+{
+  "$description": "Citation ledger for decisions that are not a single token/section value: confirmed facts, corrected pre-investigation claims, spec-vs-code conflicts (CURRENT CODE WINS -- it was audited against the live site later than the specs) and unmeasured items. Refs are project-relative (path:line[-line]) with an anchor string that must appear inside the range; refs prefixed design-repo/ point inside this package and are always checked. External refs need the sibling clone source; without it verify_all WARNS (never fails).",
+  "snapshotDate": "2026-10-12",
+  "entries": [
+    {
+      "id": "stack",
+      "status": "confirmed",
+      "claim": "React 18 + react-dom 18 + react-router-dom 6 + Vite 5 + Tailwind CSS 3.",
+      "evidence": [
+        {
+          "ref": "package.json:12",
+          "anchor": "\"react\": \"^18.3.1\""
+        },
+        {
+          "ref": "package.json:14",
+          "anchor": "\"react-router-dom\": \"^6.28.0\""
+        },
+        {
+          "ref": "package.json:21",
+          "anchor": "\"vite\": \"^5.4.10\""
+        },
+        {
+          "ref": "package.json:20",
+          "anchor": "\"tailwindcss\": \"^3.4.14\""
+        }
+      ],
+      "value": {
+        "react": "^18.3.1",
+        "react-router-dom": "^6.28.0",
+        "vite": "^5.4.10",
+        "tailwindcss": "^3.4.14"
+      }
+    },
+    {
+      "id": "shared-shell",
+      "status": "confirmed",
+      "claim": "Layout renders Header + <main> + Footer once for every route; NO_MAIN_PAD for /pricing and /templates; Footer variant 'pricing' on /pricing.",
+      "evidence": [
+        {
+          "ref": "src/layout/Layout.jsx:10",
+          "anchor": "const NO_MAIN_PAD = new Set(['/pricing', '/templates'])"
+        },
+        {
+          "ref": "src/layout/Layout.jsx:11",
+          "anchor": "const FOOTER_VARIANT = { '/pricing': 'pricing' }"
+        },
+        {
+          "ref": "src/layout/Layout.jsx:41",
+          "anchor": "<Header />"
+        }
+      ]
+    },
+    {
+      "id": "route-registries",
+      "status": "confirmed",
+      "claim": "App merges src/routes/{season,bk,standalone}.jsx; '/' is the index route; anything else renders StubPage.",
+      "evidence": [
+        {
+          "ref": "src/App.jsx:10",
+          "anchor": "const pageRoutes = [...seasonRoutes, ...bkRoutes, ...standaloneRoutes]"
+        },
+        {
+          "ref": "src/App.jsx:20",
+          "anchor": "<Route path=\"*\" element={<StubPage />} />"
+        }
+      ]
+    },
+    {
+      "id": "route-count",
+      "status": "corrected",
+      "claim": "Pre-investigation said 26 built routes. The registries contain 16 Season + 6 BK + 2 standalone + the '/' index = 25.",
+      "evidence": [
+        {
+          "ref": "src/routes/season.jsx:22",
+          "anchor": "const pages = {"
+        },
+        {
+          "ref": "src/routes/bk.jsx:10",
+          "anchor": "const routes = ["
+        },
+        {
+          "ref": "src/routes/standalone.jsx:6",
+          "anchor": "const routes = ["
+        }
+      ],
+      "value": 25,
+      "resolution": "templates/routes.json has 25 routes; verify_all ROUTE_COVERAGE re-derives the set from the live registries when the source is present."
+    },
+    {
+      "id": "route-comment-x",
+      "status": "confirmed",
+      "claim": "The '/x' in the route-registry header comments is an example path in a comment, not a route (verify_all strips comment lines before parsing).",
+      "evidence": [
+        {
+          "ref": "src/routes/bk.jsx:1",
+          "anchor": "Each entry: { path: '/x', element: <Page /> }"
+        }
+      ]
+    },
+    {
+      "id": "asset-count",
+      "status": "corrected",
+      "claim": "Pre-investigation said 117 files under public/assets. `find public/assets -type f | wc -l` = 104 on 2026-10-12 (dirs: public/assets, inline-svg/, solutions/). public/fonts has 13 files (12 woff2 + Inter-LICENSE.txt).",
+      "evidence": [],
+      "value": {
+        "publicAssetsFiles": 104,
+        "publicFontsFiles": 13
+      }
+    },
+    {
+      "id": "ab-variant",
+      "status": "confirmed",
+      "claim": "The homepage reproduces ONE of two live A/B variants: h1 'All your teams, all their workflows—connected in one workspace' (Haas). The other variant (ATSeasonSans) is not specified.",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:7",
+          "anchor": "> **A/B variant.**"
+        },
+        {
+          "ref": "src/components/Hero.jsx:6",
+          "anchor": "const DEFAULT_TITLE"
+        }
+      ]
+    },
+    {
+      "id": "hevc-only-video",
+      "status": "confirmed",
+      "claim": "Hero, card-2 and customer-story videos are HEVC-only .mp4 with no H.264/WebM fallback and no poster; browsers without HEVC decode show an empty box. Known media limitation.",
+      "evidence": [
+        {
+          "ref": "src/components/Hero.jsx:66",
+          "anchor": "{/* HEVC source only; no H.264/webm fallback or poster exists in ASSET_MANIFEST. */}"
+        },
+        {
+          "ref": "CLONE_SPEC.md:589",
+          "anchor": "headless Chromium can't decode the HEVC hero and story videos"
+        }
+      ]
+    },
+    {
+      "id": "contact-form-visual-only",
+      "status": "confirmed",
+      "claim": "The /contact-sales form is visual-only: onSubmit = preventDefault, no network. Encoded as form.submission enum ['visual-only'] in the schema.",
+      "evidence": [
+        {
+          "ref": "src/bk/ContactSalesSplit.jsx:82",
+          "anchor": "onSubmit={(e) => e.preventDefault()}"
+        },
+        {
+          "ref": "src/bk/pages/ContactSales.jsx:3",
+          "anchor": "The form is visual only (no submission)."
+        }
+      ]
+    },
+    {
+      "id": "no-outbound-links",
+      "status": "confirmed",
+      "claim": "Every href in src is a local route or '#'. `grep -rnoE 'https?://' src` returned 0 matches on 2026-10-12; header/footer prefix W = ''. Encoded as rule NO_OUTBOUND_LINKS + schema definitions.href.",
+      "evidence": [
+        {
+          "ref": "src/components/Header.jsx:7",
+          "anchor": "const W = ''"
+        },
+        {
+          "ref": "src/components/Footer.jsx:4",
+          "anchor": "const W = ''"
+        },
+        {
+          "ref": "src/layout/Layout.jsx:29",
+          "anchor": "if (href === '#') { e.preventDefault(); return }"
+        }
+      ]
+    },
+    {
+      "id": "stub-routes",
+      "status": "confirmed",
+      "claim": "Only the 25 key routes are built; every other path (incl. /signup, /login) renders the shared StubPage. No template is defined for stub paths.",
+      "evidence": [
+        {
+          "ref": "src/pages/StubPage.jsx:4",
+          "anchor": "// Shared placeholder for routes that aren't built out yet."
+        }
+      ]
+    },
+    {
+      "id": "stub-uses-real-cta-copy",
+      "status": "confirmed",
+      "claim": "StubPage renders <CtaBox /> with its defaults, i.e. the real homepage CTA copy appears on every stub route. bk.cta-box therefore keeps the real-copy word budget; generated pages must use original copy (VERBATIM_REAL_COPY).",
+      "evidence": [
+        {
+          "ref": "src/pages/StubPage.jsx:26",
+          "anchor": "<CtaBox />"
+        },
+        {
+          "ref": "src/components/CtaBox.jsx:4",
+          "anchor": "const DEFAULT_TITLE"
+        }
+      ]
+    },
+    {
+      "id": "real-vs-placeholder-content",
+      "status": "confirmed",
+      "claim": "The homepage uses the user's saved real Airtable copy, logos, screenshots and videos (local reference only); all 24 other built routes use the clone's own placeholder copy (copy.js generator, invented wordmarks) and, since the md- illustration pass, ORIGINAL generated UI illustrations (<MockMedia>) inside the measured placeholder media boxes (assetRole generated.ui-illustration).",
+      "evidence": [
+        {
+          "ref": "src/season/copy.js:1",
+          "anchor": "// Placeholder copy generator. Our own neutral product-marketing text"
+        },
+        {
+          "ref": "src/season/copy.js:238",
+          "anchor": "// Neutral fictional wordmarks for logo placeholders"
+        },
+        {
+          "ref": "specs/SECTION_TYPES_solutions.md:18",
+          "anchor": "**Content rule.** The clone uses its own placeholder copy and imagery."
+        },
+        {
+          "ref": "src/season/components/atoms.jsx:133",
+          "anchor": "<MockMedia kind={kind} hint={text} seed={`${pathname}|${text}|${seed}`} theme={dark ? 'dark' : 'light'} ratio={ratio} />"
+        }
+      ]
+    },
+    {
+      "id": "font-licensing",
+      "status": "confirmed",
+      "claim": "Neue Haas Grotesk / Haas Groot Disp / ATSeasonSans files are commercial typefaces copied for local reference; Inter is SIL OFL 1.1. See tokens/00-foundation/font-files.json.",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:34",
+          "anchor": "### Fonts — `@font-face` (files in `/public/fonts/`)"
+        },
+        {
+          "ref": "src/standalone/pricing/pricing.css:6",
+          "anchor": "src: url(/fonts/InterVariable.woff2)"
+        }
+      ]
+    },
+    {
+      "id": "pricing-group-gap",
+      "status": "confirmed",
+      "claim": "Pricing comparison table groups are separated by 64px (padding-top on every group title after the first).",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:448",
+          "anchor": ".pr-group + .pr-group .pr-group__title { padding-top: 64px; }"
+        }
+      ]
+    },
+    {
+      "id": "templates-font-mapping",
+      "status": "confirmed",
+      "claim": "/templates maps 'Haas Groot Disp' 600 -> Haas-Grot-Text-R-65-Medium and 700 -> Haas-Grot-Text-R-75-Bold (else 600/700 were faux-bolded from the 500 face).",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:12",
+          "anchor": "src: url(/fonts/Haas-Grot-Text-R-65-Medium.woff2) format('woff2');"
+        },
+        {
+          "ref": "src/standalone/templates/templates.css:19",
+          "anchor": "src: url(/fonts/Haas-Grot-Text-R-75-Bold.woff2) format('woff2');"
+        }
+      ]
+    },
+    {
+      "id": "season-weights",
+      "status": "conflict-resolved",
+      "claim": "Spec (platform 0.2) chose Haas 500/600 for families A/B. Current, audited code renders ATSeasonSans: skin a 500/600; data-heavy (only /platform) 550/650; skin e (/solutions/enterprise) 550/650.",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:35",
+          "anchor": "### 0.2 Font decision (Haas)"
+        },
+        {
+          "ref": "src/season/season.css:136",
+          "anchor": ".ss[data-skin='a'] {"
+        },
+        {
+          "ref": "src/season/season.css:139",
+          "anchor": ".ss[data-heavy='true'] {"
+        },
+        {
+          "ref": "src/season/season.css:148",
+          "anchor": ".ss[data-skin='e'] {"
+        },
+        {
+          "ref": "src/season/pages/platform.js:8",
+          "anchor": "heavy: true,"
+        }
+      ],
+      "resolution": "CODE WINS: tokens/10-semantic/season.json weight.* + template renderOptions (heavy only on template.season-platform-landing; skin e on template.season-enterprise)."
+    },
+    {
+      "id": "season-shell-font",
+      "status": "conflict-resolved",
+      "claim": "Spec (platform 0.1) said keep the Haas header/footer on A/B pages. Code swaps header/footer to ATSeasonSans on all 16 Season routes (SeasonPage default font='season' sets html[data-font]).",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:25",
+          "anchor": "Per the user's Haas decision, keep the Haas versions."
+        },
+        {
+          "ref": "src/season/SeasonPage.jsx:39",
+          "anchor": "const { skin = 'a', font = 'season', heavy = false, breadcrumb, sections } = config"
+        },
+        {
+          "ref": "src/season/season.css:14",
+          "anchor": "[data-font='season'] header,"
+        }
+      ],
+      "resolution": "CODE WINS: shell.header/shell.footer variant 'season' is required by every Season template."
+    },
+    {
+      "id": "breadcrumb-two-implementations",
+      "status": "conflict-resolved",
+      "claim": "Pre-investigation said 'breadcrumb sticky at top calc(var(--mainNavHeight) - 1px), hide-on-scroll-down'. Only half reproduces per system: BK BreadcrumbBar = calc(var(--mainNavHeight) - 1px) and NO scroll-hide; Season Breadcrumb = top var(--mainNavHeight) (no -1px) WITH scroll-hide past 120px.",
+      "evidence": [
+        {
+          "ref": "src/bk/BreadcrumbBar.jsx:9",
+          "anchor": "top-[calc(var(--mainNavHeight,143.7px)-1px)]"
+        },
+        {
+          "ref": "src/bk/BreadcrumbBar.jsx:4",
+          "anchor": "// Motion NOT implemented here"
+        },
+        {
+          "ref": "src/season/season.css:523",
+          "anchor": "top: var(--mainNavHeight);"
+        },
+        {
+          "ref": "src/season/components/heroes.jsx:17",
+          "anchor": "if (d > 0 && y > 120) setScrolling(true)"
+        }
+      ],
+      "resolution": "Two contracts: bk.breadcrumb (motion none) and season.breadcrumb (season-crumbs-scroll-hide); component tokens breadcrumb.sticky-top.bk / .season."
+    },
+    {
+      "id": "side-by-side-inset",
+      "status": "not-reproduced",
+      "claim": "Pre-investigation said side-by-side media inset 64px and 32px heading gap. Current season.css: .ss-mb__media padding 40px, frame margin-block 24px, .ss-h48 margin-bottom 8px (16px >=1024); the 32px value is the .ss-title gap between the title stack and its actions.",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:1011-1012",
+          "anchor": ".ss-mb__media {"
+        },
+        {
+          "ref": "src/season/season.css:1017",
+          "anchor": ".ss-mb__frame { position: relative; width: 100%; margin-block: 24px; }"
+        },
+        {
+          "ref": "src/season/season.css:1030",
+          "anchor": "  .ss-h48 { margin-bottom: 16px; }"
+        },
+        {
+          "ref": "src/season/season.css:440-443",
+          "anchor": ".ss-title {"
+        }
+      ],
+      "resolution": "Recorded the current code values; no 64px inset is asserted anywhere in this repo. Re-checked against the file immediately before packaging."
+    },
+    {
+      "id": "cta-row-and-logo-strip",
+      "status": "conflict-resolved",
+      "claim": "Spec pages_solutions asks for `CtaBox variant=\"row\"` on /solutions and `LogoBar variant=\"static\"` on /customer-stories. Code renders BkCtaRow and BkLogoStrip instead; the CtaBox row and LogoBar static variants exist but are never rendered (dead variants).",
+      "evidence": [
+        {
+          "ref": "specs/pages_solutions.md:35",
+          "anchor": "**`CtaBox variant=\"row\"`**, bg `#FFFFFF`"
+        },
+        {
+          "ref": "src/bk/pages/Solutions.jsx:58",
+          "anchor": "<BkCtaRow color=\"#333840\" bg=\"#FFFFFF\""
+        },
+        {
+          "ref": "src/bk/pages/CustomerStories.jsx:49",
+          "anchor": "<BkLogoStrip heading="
+        },
+        {
+          "ref": "src/components/CtaBox.jsx:9",
+          "anchor": "if (variant === 'row') {"
+        },
+        {
+          "ref": "src/components/LogoBar.jsx:31",
+          "anchor": "if (variant === 'static') return <StaticLogoBar heading={heading} logos={logos} />"
+        }
+      ],
+      "resolution": "CODE WINS: contracts bk.cta-row and bk.logo-strip; the dead variants are not exposed as section variants."
+    },
+    {
+      "id": "s2-logo-timer",
+      "status": "conflict-resolved",
+      "claim": "Spec motion summary: S-2 logo cells animate on mobile only. Code (LogoCells motion 'season') runs the flip schedule at every width unless reduced motion.",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_solutions.md:1125",
+          "anchor": "| S-2 / E-2 logo cells | timer (S-2 mobile only; E-2 always)"
+        },
+        {
+          "ref": "src/season/components/LogoCells.jsx:59",
+          "anchor": "if (reduced || motion === 'none') return"
+        }
+      ],
+      "resolution": "CODE WINS for the contract (season-logo-flip-season); flagged as not re-verified against live."
+    },
+    {
+      "id": "e8-autoplay-unmeasured",
+      "status": "unmeasured",
+      "claim": "E-8 (enterprise stories) autoplay timing was not measured live; code reuses the B6 10s schedule.",
+      "evidence": [
+        {
+          "ref": "src/season/components/platformB.jsx:56",
+          "anchor": "// (E-8 autoplay timing was not measured; it uses the B6 timing.)"
+        }
+      ]
+    },
+    {
+      "id": "hcc-tween-unmeasured",
+      "status": "unmeasured",
+      "claim": "BK-6 slide tween 500ms ease is slick's default `speed`, not a measured value.",
+      "evidence": [
+        {
+          "ref": "src/bk/HeroCarouselCentered.jsx:14",
+          "anchor": "// Slide-change tween is not measured"
+        }
+      ]
+    },
+    {
+      "id": "physical-product-pill",
+      "status": "unmeasured",
+      "claim": "AI Plays 'Physical Product' pill colours were not read live; a neutral #E0E2E6/#444444 pill is used.",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/AiPlays.jsx:10",
+          "anchor": "// \"Physical Product\" colors were not measured"
+        }
+      ]
+    },
+    {
+      "id": "lottie-approximation",
+      "status": "unmeasured",
+      "claim": "Live CTA / hero pattern backgrounds are Lottie animations that were not extracted; the clone uses a CSS bar stand-in (bars-pattern primitive).",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:802",
+          "anchor": "- **Lottie JSON** (CTA background, hero pattern) was not extracted"
+        },
+        {
+          "ref": "src/season/components/atoms.jsx:175",
+          "anchor": "// Stand-in for the Lottie bar layers"
+        }
+      ]
+    },
+    {
+      "id": "mid-widths-unmeasured",
+      "status": "unmeasured",
+      "claim": "900-1023px (BK) and widths between 390 and 1440 (Season/PLATFORM-E/TPL) were not measured live; responsive entries cite code/media queries only.",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:591",
+          "anchor": "- **900–1023 widths** weren't measured."
+        },
+        {
+          "ref": "specs/SECTION_TYPES_solutions.md:1171",
+          "anchor": "- **Responsive widths between 390 and 1440**"
+        }
+      ]
+    },
+    {
+      "id": "season-shadows-excluded",
+      "status": "confirmed",
+      "claim": "The live Season :root defines low/medium/high shadows but no measured section uses them; they are not tokens here.",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:105",
+          "anchor": "  - None of these are used by the measured sections."
+        }
+      ]
+    },
+    {
+      "id": "reduced-motion-gaps",
+      "status": "confirmed",
+      "claim": "Known clone gaps (reducedMotionFallback 'not-implemented', validator warns MOTION_FALLBACK_GAP): homepage logo marquee, workflows fan spring, customer-story background video, BK load-more button transition. BK-6 autoplay keeps advancing under reduce (tween removed).",
+      "evidence": [
+        {
+          "ref": "src/index.css:286",
+          "anchor": "animation: marquee var(--marquee-duration, 128s) linear infinite;"
+        },
+        {
+          "ref": "src/components/Workflows.css:542",
+          "anchor": "@media (prefers-reduced-motion: reduce) {"
+        },
+        {
+          "ref": "src/bk/HeroCarouselCentered.jsx:13",
+          "anchor": "const AUTOPLAY_MS = 4000"
+        }
+      ]
+    },
+    {
+      "id": "home-copy-not-reproduced",
+      "status": "confirmed",
+      "claim": "This repo stores no real homepage copy: budgets keep word counts only, and compatibility/real-copy-denylist.json stores SHA-256 hashes of the real sentences. The '/' fixture uses original placeholder copy within those budgets.",
+      "evidence": [
+        {
+          "ref": "design-repo/compatibility/real-copy-denylist.json:2",
+          "anchor": "$description"
+        },
+        {
+          "ref": "design-repo/schema/fixtures/home.pagespec.json:2",
+          "anchor": "pageSpecVersion"
+        }
+      ]
+    },
+    {
+      "id": "media-illustration-system",
+      "status": "confirmed",
+      "claim": "src/media/ (MockMedia.jsx, scenes.jsx, palette.js, pickKind.js, rng.js, media.css) renders original, deterministic (seeded mulberry32), static inline-SVG scenes from a closed set of 15 kinds (grid, kanban, calendar, gallery, timeline, dashboard, form, interface, automation, ai, hub, gradient, bars, story, glyph) and 2 themes (light, dark), md- CSS prefix, absolutely positioned inside the existing placeholder boxes (no layout change). Season Ph and BK PlaceholderBlock take kind/hint; ResourceCard falls back to it (mediaKind prop) when no img; /templates Mock renders it bare. Labels in scenes.jsx are generic (e.g. 'Weekly report'); no real company/product/person names, no logos, no raster images. Not rendered on '/' (homepage ResourceCards always pass a real img). Contracted as primitive mock-media + assetRole generated.ui-illustration (replaces retired placeholder.media). kind is derived from slot copy, not a PageSpec field.",
+      "evidence": [
+        {
+          "ref": "src/media/MockMedia.jsx:8",
+          "anchor": "// <MockMedia kind seed theme hint ratio bare />"
+        },
+        {
+          "ref": "src/media/scenes.jsx:1153",
+          "anchor": "export const SCENES = { grid, kanban, calendar, gallery, timeline, dashboard, form, interface: iface, automation, ai, hub, gradient, bars, story, glyph }"
+        },
+        {
+          "ref": "src/media/rng.js:1",
+          "anchor": "// Deterministic pseudo-random helpers: same seed -> same scene (no Math.random at render)."
+        },
+        {
+          "ref": "src/media/media.css:1",
+          "anchor": "/* md- illustration layer (src/media/MockMedia.jsx). Fills its positioned parent without affecting"
+        },
+        {
+          "ref": "src/components/Resources.jsx:33",
+          "anchor": "<ResourceCard key={c.title} title={c.title} desc={c.desc} href={c.href} img={c.img} />"
+        },
+        {
+          "ref": "design-repo/assets/asset-roles.json:56",
+          "anchor": "\"kindSelection\": \"kind is NOT a PageSpec field."
+        },
+        {
+          "ref": "design-repo/primitives/mock-media.json:2",
+          "anchor": "\"id\": \"mock-media\","
+        }
+      ],
+      "value": {
+        "kinds": 15,
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "cssPrefix": "md-",
+        "assetRole": "generated.ui-illustration",
+        "retiredRole": "placeholder.media"
+      }
+    },
+    {
+      "id": "video-placeholder-sweep-removed",
+      "status": "corrected",
+      "claim": "The 1.0.0 contract had season.side-by-side video media animate with 'season-placeholder-video-sweep' (ssSweep 4s). Ph no longer renders .ss-ph__win (0 JSX/JS references), so the .ss-ph--video .ss-ph__win::after sweep in season.css no longer matches any element: video slots are static. The CSS rule text itself is still present in season.css (dead code, not removed). The pattern was removed from the side-by-side contract, schema enum + branch, allowlist, graph continuousMotionPatterns/observedMotionLoad (/platform/automations and /platform/reporting 1 -> 0), the validator's video<->sweep coupling, and the two fixtures (now 'none'). Season video slots still render a PauseButton with nothing to pause.",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:236",
+          "anchor": "/* \"video\" placeholders: a gentle sweep that the pause button stops */"
+        },
+        {
+          "ref": "src/season/components/SideBySide.jsx:44",
+          "anchor": "{media.video && <PauseButton paused={paused} onToggle={toggle} />}"
+        },
+        {
+          "ref": "src/season/components/atoms.jsx:129",
+          "anchor": "className={`ss-ph${dark ? ' ss-ph--dark' : ''}${video ? ' ss-ph--video' : ''} ${className}`}"
+        }
+      ],
+      "value": {
+        "motionPatterns": "38 -> 37",
+        "retiredPattern": "season-placeholder-video-sweep"
+      }
+    },
+    {
+      "id": "ia-cross-reference",
+      "status": "confirmed",
+      "claim": "ia/ia.json (sibling IA, ia-builder) lists 84 routes in 23 templates: the 25 built routes in 22 templates + 59 linked-but-unbuilt routes in template.stub (rendered by src/pages/StubPage.jsx). The IA splits Season pages by exact section composition (feature-stack -> 6 IA templates, ai-product -> 3, solution -> 2); this design-repo groups by recipe (14 templates). It intentionally covers only the 25 built routes; stub routes are out of scope and no stub template exists here. verify_all IA_ROUTES checks design-repo routes == IA non-stub routes (WARN when ia.json is absent).",
+      "evidence": [
+        {
+          "ref": "ia/ia.json:7",
+          "anchor": "\"totalRoutes\": 84,"
+        },
+        {
+          "ref": "ia/ia.json:8",
+          "anchor": "\"totalTemplates\": 23,"
+        },
+        {
+          "ref": "ia/ia.json:869",
+          "anchor": "\"id\": \"template.stub\","
+        },
+        {
+          "ref": "src/App.jsx:20",
+          "anchor": "<Route path=\"*\" element={<StubPage />} />"
+        }
+      ],
+      "value": {
+        "iaRoutes": 84,
+        "iaBuiltRoutes": 25,
+        "iaStubRoutes": 59,
+        "iaTemplates": 23,
+        "designRepoTemplates": 14,
+        "templateMap": {
+          "template.home": [
+            "template.home"
+          ],
+          "template.bk-solutions-hub": [
+            "template.bk-solutions-hub"
+          ],
+          "template.bk-filter-listing": [
+            "template.bk-filter-listing"
+          ],
+          "template.bk-story-index": [
+            "template.bk-customer-stories"
+          ],
+          "template.bk-guides-hub": [
+            "template.bk-guides"
+          ],
+          "template.bk-contact-sales": [
+            "template.bk-contact-sales"
+          ],
+          "template.season-feature-stack": [
+            "template.feature-stack-rows",
+            "template.feature-stack-connected-data",
+            "template.feature-stack-governance",
+            "template.feature-stack-hyperdb",
+            "template.feature-stack-interface-designer",
+            "template.feature-stack-portals"
+          ],
+          "template.season-ai-product": [
+            "template.platform-ai",
+            "template.platform-ai-agents",
+            "template.platform-app-building"
+          ],
+          "template.season-solution": [
+            "template.team-solution",
+            "template.team-solution-no-templates"
+          ],
+          "template.season-platform-landing": [
+            "template.platform-landing"
+          ],
+          "template.season-enterprise": [
+            "template.enterprise"
+          ],
+          "template.season-about": [
+            "template.about"
+          ],
+          "template.pricing": [
+            "template.pricing"
+          ],
+          "template.templates-gallery": [
+            "template.templates-gallery"
+          ]
+        }
+      }
+    },
+    {
+      "id": "platform-tabpanels-headline",
+      "status": "corrected",
+      "claim": "A concurrent source edit (src/season/pages/platform.js, 18:26 on 2026-10-12, after this update pass began) changed the /platform tabPanels headline from a 9-word to a 7-word string. Snapshot regenerated, /platform fixture updated, and season.tab-panels copyBudgets.headline.maxWords 9 -> 7 (single observed instance = observed max).",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:20",
+          "anchor": "headline: 'Every team workflow, running from one place',"
+        },
+        {
+          "ref": "design-repo/sections/season.tab-panels.json:25",
+          "anchor": "\"maxWords\": 7,"
+        }
+      ],
+      "value": {
+        "maxWords": "9 -> 7"
+      }
+    },
+    {
+      "id": "histograms-refresh-1.1.0",
+      "status": "confirmed",
+      "claim": "extraction/histograms.json regenerated: filesScanned 91 -> 97 (src/media/*); only colour counts changed (fontSize/fontWeight/borderRadius/cssDuration unchanged). 15 foundation colour tokens' literalUsageCount updated by the exact per-value delta (e.g. #FFFFFF 102 -> 118, #254FAD 5 -> 12, #2A2F38 4 -> 8); the new media palette literals are internal to mock-media and are not tokens.",
+      "evidence": [
+        {
+          "ref": "design-repo/extraction/histograms.json:4",
+          "anchor": "\"filesScanned\": 97,"
+        }
+      ],
+      "value": {
+        "filesScanned": "91 -> 97",
+        "tokensUpdated": 15
+      }
+    }
+  ]
+}

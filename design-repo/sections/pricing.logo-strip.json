@@ -1,0 +1,78 @@
+{
+  "id": "pricing.logo-strip",
+  "system": "pricing",
+  "category": "logos",
+  "purpose": "C4 eyebrow + fictional wordmark strip.",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/pricing/Pricing.jsx:354",
+      "anchor": "{/* C4 */}"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/pricing"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.pricing.logo-strip",
+    "copyBudgets": {
+      "eyebrow": {
+        "maxWords": 7,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      },
+      "logos.names[]": {
+        "maxWords": 3,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/pricing"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "pricing.see-all-link"
+    ],
+    "observedBefore": [
+      "pricing.comparison-table"
+    ]
+  }
+}

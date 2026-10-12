@@ -1,0 +1,386 @@
+{
+  "$description": "SHA-256 of normalised (lowercase, punctuation->space, collapsed whitespace) sentences of the REAL Airtable homepage copy in the clone. Used by VERBATIM_REAL_COPY. Only hashes + word counts + source citations are stored; the copy itself is deliberately not reproduced here.",
+  "normalisation": "lower(); replace em/en dash with space; [^a-z0-9 ]+ -> space; collapse whitespace; strip",
+  "entries": [
+    {
+      "sha256": "097697461deff51cb2c180f89374f16685a0c7d3b4a8a33bf6df4de045ca3c68",
+      "words": 10,
+      "section": "bk.hero-centered",
+      "field": "title",
+      "evidence": [
+        {
+          "ref": "src/components/Hero.jsx:6",
+          "anchor": "const DEFAULT_TITLE"
+        }
+      ]
+    },
+    {
+      "sha256": "edfa1e210e0fdafa4842e769df81ffae89a48f4775a1aad0a4af6758a5bfa4ac",
+      "words": 18,
+      "section": "bk.hero-centered",
+      "field": "sub",
+      "evidence": [
+        {
+          "ref": "src/components/Hero.jsx:7-8",
+          "anchor": "const DEFAULT_SUB"
+        }
+      ]
+    },
+    {
+      "sha256": "ba8e2ecad23b040a3baf8e739bff1f74948d152e5adfe87d9f077b692cf15664",
+      "words": 21,
+      "section": "bk.hero-centered",
+      "field": "sub",
+      "evidence": [
+        {
+          "ref": "src/components/Hero.jsx:7-8",
+          "anchor": "const DEFAULT_SUB"
+        }
+      ]
+    },
+    {
+      "sha256": "faf651364f6cd1fe731e7f2f541184794f8236493ce2356587a00de4320a4ba4",
+      "words": 6,
+      "section": "bk.logo-marquee",
+      "field": "heading",
+      "evidence": [
+        {
+          "ref": "src/components/LogoBar.jsx:26",
+          "anchor": "const DEFAULT_HEADING"
+        }
+      ]
+    },
+    {
+      "sha256": "0aa14c7cde3c1600292f06e8188278e86b9be601ca68a9c67a2c893e12aff589",
+      "words": 6,
+      "section": "home.workflows",
+      "field": "headline",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:218",
+          "anchor": "Sophisticated workflows in minutes, not months"
+        }
+      ]
+    },
+    {
+      "sha256": "4e1f15bb07943856a65bcdbbe089add9103e6f4c47ef574356112d860febeaa0",
+      "words": 5,
+      "section": "home.workflows",
+      "field": "cards[].title",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:251",
+          "anchor": "Production apps at prototype speed"
+        }
+      ]
+    },
+    {
+      "sha256": "c58bf3e6dfe24d797bd24388d534f1ac62d7421c1761c71e1db571803e7e3655",
+      "words": 5,
+      "section": "home.workflows",
+      "field": "cards[].title",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:294",
+          "anchor": "Don't just ask AI. Deploy it."
+        }
+      ]
+    },
+    {
+      "sha256": "ad02295a9a145e48fa8861bf1047ffc7c220d29e0394df1111c1d340140db2a9",
+      "words": 7,
+      "section": "home.workflows",
+      "field": "cards[].title",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:294",
+          "anchor": "Don't just ask AI. Deploy it."
+        }
+      ]
+    },
+    {
+      "sha256": "8bc4c13c77fcc12ef6946282d1698649f41e404410e113badc18788e43a088c3",
+      "words": 12,
+      "section": "home.workflows",
+      "field": "cards[].title",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:345",
+          "anchor": "The power of AI with the industrial-grade platform your business demands"
+        }
+      ]
+    },
+    {
+      "sha256": "a6f2a03910f6e9949330e80ad4eba19f3285c1f437d3ca454fc6c44d1c226ddb",
+      "words": 15,
+      "section": "home.workflows",
+      "field": "cards[].body",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:254-255",
+          "anchor": "Streamline your team's critical data through conversational building."
+        }
+      ]
+    },
+    {
+      "sha256": "0647a86188770f7c65a49ac7c1180dac54d2fadd62fc64f27fd346ebfa83879f",
+      "words": 9,
+      "section": "home.workflows",
+      "field": "cards[].body",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:254-255",
+          "anchor": "Streamline your team's critical data through conversational building."
+        }
+      ]
+    },
+    {
+      "sha256": "b8f82de68419f81a9fb76634df24fc4990f6ff76ce173024feb661055aec5045",
+      "words": 24,
+      "section": "home.workflows",
+      "field": "cards[].body",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:254-255",
+          "anchor": "Streamline your team's critical data through conversational building."
+        }
+      ]
+    },
+    {
+      "sha256": "ff6a2e13f3dcd40ed01fad53467520727fa05823998a1e974130bb5fc579c754",
+      "words": 20,
+      "section": "home.workflows",
+      "field": "cards[].body",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:297-298",
+          "anchor": "Embed intelligence into every workflow"
+        }
+      ]
+    },
+    {
+      "sha256": "1f71764244b2c206708e3db6e6a95e1b43cea0139b20e7c52b24ea5453351c47",
+      "words": 11,
+      "section": "home.workflows",
+      "field": "cards[].body",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:324",
+          "anchor": "Use it to build any enterprise-grade applications with your data."
+        }
+      ]
+    },
+    {
+      "sha256": "e215c7156d890ec05604076f16c7519ea8c3d9a111fecb39d9dd93593cddcc38",
+      "words": 15,
+      "section": "home.workflows",
+      "field": "cards[].body",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:324",
+          "anchor": "Use it to build any enterprise-grade applications with your data."
+        }
+      ]
+    },
+    {
+      "sha256": "560692969b65bbb8ff39ad438d16a71141f9bbf14bb645bf1d1e9a191591d072",
+      "words": 12,
+      "section": "home.workflows",
+      "field": "cards[].groups[].items[]",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:25",
+          "anchor": "'Use AI models from leading providers"
+        }
+      ]
+    },
+    {
+      "sha256": "6f19f187cb254687245b90a66f001775b995275972174ac47b71922312aa8574",
+      "words": 10,
+      "section": "home.workflows",
+      "field": "cards[].groups[].items[]",
+      "evidence": [
+        {
+          "ref": "src/components/Workflows.jsx:41",
+          "anchor": "'No customer data retained or used to train AI models'"
+        }
+      ]
+    },
+    {
+      "sha256": "827f65a0d1c375c2d18c32eb5109b557dd99d6b8d892b8a074f11eab162a9d1e",
+      "words": 9,
+      "section": "home.ai-plays-bento",
+      "field": "headline",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:39",
+          "anchor": "The path to 10x every person in your organization"
+        }
+      ]
+    },
+    {
+      "sha256": "2bddc61fa921df8b4cf721d5fb610503df0e76987e97cdd1e081c04696ecd2a6",
+      "words": 10,
+      "section": "home.ai-plays-bento",
+      "field": "sub",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:40",
+          "anchor": "Use cases and templates to activate AI in your workflows"
+        }
+      ]
+    },
+    {
+      "sha256": "e1bd232f0f52e1a41163921aa50b7f475e528883c36644a4bf36ca9dffcdebd3",
+      "words": 12,
+      "section": "home.ai-plays-bento",
+      "field": "cards[].prompt",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:9",
+          "anchor": "prompt: 'Read this brief"
+        }
+      ]
+    },
+    {
+      "sha256": "1d3924ae35ac84b8146f718a73285f278b899e86c66e7bf3ff57938d4b38313f",
+      "words": 11,
+      "section": "home.ai-plays-bento",
+      "field": "cards[].prompt",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:16",
+          "anchor": "prompt: 'Gather intel"
+        }
+      ]
+    },
+    {
+      "sha256": "584ace17e4490b3bc92db098c3b1674843baf07c7c3d73f5c37f180631a92ba2",
+      "words": 13,
+      "section": "home.ai-plays-bento",
+      "field": "cards[].prompt",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:23",
+          "anchor": "prompt: 'What are customers saying"
+        }
+      ]
+    },
+    {
+      "sha256": "f7447770f73723f83cd1a513fedb44fd3dabcbbd13fe382598199652e34e2ff0",
+      "words": 12,
+      "section": "home.ai-plays-bento",
+      "field": "cards[].prompt",
+      "evidence": [
+        {
+          "ref": "src/components/AIPlays.jsx:30",
+          "anchor": "prompt: 'Run language translation"
+        }
+      ]
+    },
+    {
+      "sha256": "d2042cf1bd4fea03fd5aad2e814aced6b20ff857635ce5c4d3a1f477fd55c1eb",
+      "words": 6,
+      "section": "home.resources",
+      "field": "cards[].title",
+      "evidence": [
+        {
+          "ref": "src/components/Resources.jsx:12",
+          "anchor": "title: 'The 2026 AI guide for marketers'"
+        }
+      ]
+    },
+    {
+      "sha256": "8b8ac313c2e0960963d1a2ae976b8b06ad31bd1d03b77227069c1bc7f88802cc",
+      "words": 23,
+      "section": "home.resources",
+      "field": "cards[].desc",
+      "evidence": [
+        {
+          "ref": "src/components/Resources.jsx:7",
+          "anchor": "desc: 'Hear from top product leaders"
+        }
+      ]
+    },
+    {
+      "sha256": "f7cfa9a8c59fabbb2cce10e9cd59ff2987989999b1d17667ab267331555aef19",
+      "words": 19,
+      "section": "home.resources",
+      "field": "cards[].desc",
+      "evidence": [
+        {
+          "ref": "src/components/Resources.jsx:13",
+          "anchor": "desc: 'Learn how to prep"
+        }
+      ]
+    },
+    {
+      "sha256": "6f2460d2040e4fe6a79a20be81b3d64f136584dcd33143cb1fa3e3edd2eb4ab9",
+      "words": 24,
+      "section": "home.resources",
+      "field": "cards[].desc",
+      "evidence": [
+        {
+          "ref": "src/components/Resources.jsx:19",
+          "anchor": "desc: 'See how Airtable ProductCentral"
+        }
+      ]
+    },
+    {
+      "sha256": "ddd0d291ab38e65a4a47557a8ec21e2ec6beff2b78ad3617aa6c46c088b23466",
+      "words": 16,
+      "section": "home.customer-story",
+      "field": "quote",
+      "evidence": [
+        {
+          "ref": "src/components/CustomerStory.jsx:20",
+          "anchor": "Airtable makes it easy to deliver AI insights"
+        }
+      ]
+    },
+    {
+      "sha256": "7e9dd9a76e1fbd83e82018f0275921b52759f9b0b5f7deeac0fad70966b9498a",
+      "words": 2,
+      "section": "home.customer-story",
+      "field": "name",
+      "evidence": [
+        {
+          "ref": "src/components/CustomerStory.jsx:32",
+          "anchor": "Angela Yanes"
+        }
+      ]
+    },
+    {
+      "sha256": "cb93e5b82637b664402759622fcf8e512888e97efcf29d0a41d8718917f4a542",
+      "words": 12,
+      "section": "bk.cta-box",
+      "field": "text",
+      "evidence": [
+        {
+          "ref": "src/components/CtaBox.jsx:5",
+          "anchor": "const DEFAULT_TEXT"
+        }
+      ]
+    },
+    {
+      "sha256": "636b180dc48f9bfa3a4a253910f1cf67e5f9333cf46da3fb6749a2bc02ddbeac",
+      "words": 14,
+      "section": "bk.cta-box",
+      "field": "text",
+      "evidence": [
+        {
+          "ref": "src/components/CtaBox.jsx:5",
+          "anchor": "const DEFAULT_TEXT"
+        }
+      ]
+    },
+    {
+      "sha256": "27658a4636450b727b289c2787688c29e04987312d3c05f4a01bcf91bb78e230",
+      "words": 9,
+      "section": "*",
+      "field": "*",
+      "canary": true,
+      "evidence": []
+    }
+  ]
+}

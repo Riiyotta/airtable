@@ -1,0 +1,115 @@
+{
+  "spacing": {
+    "xs": {
+      "$type": "dimension",
+      "$value": "4px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "sm": {
+      "$type": "dimension",
+      "$value": "8px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "sm-md": {
+      "$type": "dimension",
+      "$value": "12px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "md": {
+      "$type": "dimension",
+      "$value": "16px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "24px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "xl": {
+      "$type": "dimension",
+      "$value": "32px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": "40px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "3xl": {
+      "$type": "dimension",
+      "$value": "48px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "4xl": {
+      "$type": "dimension",
+      "$value": "64px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "5xl": {
+      "$type": "dimension",
+      "$value": "96px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "6xl": {
+      "$type": "dimension",
+      "$value": "128px",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:99",
+          "anchor": "**Spacing scale:** xs 4"
+        }
+      ]
+    },
+    "$note": "Shared scale read from :root on the live Season pages (specs/SECTION_TYPES_platform.md 0.3); the BK grid/section paddings (24/32/40/48/64/96) are a subset."
+  }
+}

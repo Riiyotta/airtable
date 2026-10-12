@@ -1,0 +1,1084 @@
+{
+  "$description": "Foundation colours. Every value appears in the clone source (see evidence); literalUsageCount = raw literal occurrences in src/** from extraction/histograms.json (null = defined once and referenced via a CSS variable/config). color.content.* are hex values that page DATA (not CSS) carries and that the PageSpec schema exposes as closed enums.",
+  "color": {
+    "ink": {
+      "900": {
+        "$type": "color",
+        "$value": "#181D26",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:31",
+            "anchor": "ink: '#181D26'"
+          },
+          {
+            "ref": "CLONE_SPEC.md:94",
+            "anchor": "strong / primary: `#181D26`"
+          }
+        ],
+        "literalUsageCount": 92
+      },
+      "800": {
+        "$type": "color",
+        "$value": "#333840",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:32",
+            "anchor": "text: '#333840'"
+          },
+          {
+            "ref": "CLONE_SPEC.md:95",
+            "anchor": "default: `#333840`"
+          }
+        ],
+        "literalUsageCount": 23
+      },
+      "700": {
+        "$type": "color",
+        "$value": "#41454D",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:33",
+            "anchor": "secondary: '#41454D'"
+          }
+        ],
+        "literalUsageCount": 5
+      },
+      "alpha-69": {
+        "$type": "color",
+        "$value": "rgba(4,14,32,0.69)",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:34",
+            "anchor": "weak: 'rgba(4,14,32,0.69)'"
+          },
+          {
+            "ref": "CLONE_SPEC.md:97",
+            "anchor": "weak: `#040E20B0`"
+          }
+        ],
+        "literalUsageCount": 36,
+        "note": "#040E20B0"
+      },
+      "base": {
+        "$type": "color",
+        "$value": "#040E20",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:36",
+            "anchor": "'weak-base': '#040E20'"
+          }
+        ],
+        "literalUsageCount": 1
+      },
+      "e": {
+        "$type": "color",
+        "$value": "#161616",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:84",
+            "anchor": "Ink `#161616`"
+          },
+          {
+            "ref": "src/season/season.css:343",
+            "anchor": "#161616"
+          }
+        ],
+        "literalUsageCount": 33,
+        "note": "PLATFORM-E ink (/solutions/enterprise, /platform B modules)"
+      },
+      "pricing": {
+        "$type": "color",
+        "$value": "#1D1F25",
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:15",
+            "anchor": "color: #1d1f25;"
+          }
+        ],
+        "literalUsageCount": 8
+      }
+    },
+    "gray": {
+      "333": {
+        "$type": "color",
+        "$value": "#333333",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:38",
+            "anchor": "'footer-heading': '#333333'"
+          }
+        ],
+        "literalUsageCount": 26
+      },
+      "500": {
+        "$type": "color",
+        "$value": "#9297A0",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:84",
+            "anchor": "gray-brand (FAQ chevron) | `#9297A0`"
+          }
+        ],
+        "literalUsageCount": 9
+      },
+      "400": {
+        "$type": "color",
+        "$value": "#C4C7CD",
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:105",
+            "anchor": "border-left: 1px solid #c4c7cd;"
+          }
+        ],
+        "literalUsageCount": 9
+      },
+      "chevron": {
+        "$type": "color",
+        "$value": "#949494",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:50",
+            "anchor": "chevron: '#949494'"
+          }
+        ],
+        "literalUsageCount": 0
+      }
+    },
+    "white": {
+      "$type": "color",
+      "$value": "#FFFFFF",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:101",
+          "anchor": "page: `#FFFFFF`"
+        }
+      ],
+      "literalUsageCount": 118
+    },
+    "surface": {
+      "subtle": {
+        "$type": "color",
+        "$value": "#F8FAFC",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:41",
+            "anchor": "subtle: '#F8FAFC'"
+          }
+        ],
+        "literalUsageCount": 17
+      },
+      "strong": {
+        "$type": "color",
+        "$value": "#E0E2E6",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:42",
+            "anchor": "strong: '#E0E2E6'"
+          },
+          {
+            "ref": "src/bk/Placeholder.jsx:5",
+            "anchor": "PH_LIGHT = '#E0E2E6'"
+          }
+        ],
+        "literalUsageCount": 13
+      },
+      "promo": {
+        "$type": "color",
+        "$value": "#F0F6FF",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:43",
+            "anchor": "promo: '#F0F6FF'"
+          }
+        ],
+        "literalUsageCount": 6
+      },
+      "warm-100": {
+        "$type": "color",
+        "$value": "#F8F6F6",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:126",
+            "anchor": "--ph: #f8f6f6;"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:63",
+            "anchor": "secondary | `#F8F6F6` (warm-gray-100)"
+          }
+        ],
+        "literalUsageCount": 15
+      },
+      "placeholder-dark": {
+        "$type": "color",
+        "$value": "#2A2F38",
+        "evidence": [
+          {
+            "ref": "src/bk/Placeholder.jsx:6",
+            "anchor": "PH_DARK = '#2A2F38'"
+          },
+          {
+            "ref": "src/season/season.css:128",
+            "anchor": "--phd: #2a2f38;"
+          }
+        ],
+        "literalUsageCount": 8
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "#F2F4F7EB",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:64",
+            "anchor": "tertiary | `#F2F4F7EB`"
+          }
+        ],
+        "literalUsageCount": 8
+      },
+      "quaternary": {
+        "$type": "color",
+        "$value": "#E1E4EADB",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:65",
+            "anchor": "quaternary | `#E1E4EADB`"
+          }
+        ],
+        "literalUsageCount": 4
+      },
+      "hero-dark": {
+        "$type": "color",
+        "$value": "#1F0C3B",
+        "evidence": [
+          {
+            "ref": "src/bk/PageHeroSplit.jsx:6",
+            "anchor": "dark: { bg: '#1F0C3B'"
+          }
+        ],
+        "literalUsageCount": 1
+      }
+    },
+    "border": {
+      "keyline-warm": {
+        "$type": "color",
+        "$value": "#E0DCDB",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:123",
+            "anchor": "--key: #e0dcdb;"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:81",
+            "anchor": "**`#E0DCDB`** (warm-gray-300)"
+          }
+        ],
+        "literalUsageCount": 2,
+        "note": "defined once as --key, referenced 47x via var(--key) in season.css"
+      },
+      "keyline-dark": {
+        "$type": "color",
+        "$value": "#90959D38",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:125",
+            "anchor": "--dkey: #90959d38;"
+          }
+        ],
+        "literalUsageCount": 14
+      },
+      "alpha-12": {
+        "$type": "color",
+        "$value": "rgba(1,20,53,0.12)",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:46",
+            "anchor": "'keyline-strong': 'rgba(1,20,53,0.12)'"
+          }
+        ],
+        "literalUsageCount": 13
+      },
+      "secondary-warm": {
+        "$type": "color",
+        "$value": "#F5F1F0",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:80",
+            "anchor": "secondary | `#F5F1F0` (warm-gray-200)"
+          }
+        ],
+        "literalUsageCount": 4
+      },
+      "e-side": {
+        "$type": "color",
+        "$value": "#333333",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:152",
+            "anchor": "--side: #333333;"
+          }
+        ],
+        "note": "PLATFORM-E shell side borders"
+      }
+    },
+    "link": {
+      "bk": {
+        "$type": "color",
+        "$value": "#254FAD",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:37",
+            "anchor": "link: '#254FAD'"
+          }
+        ],
+        "literalUsageCount": 12
+      },
+      "primary": {
+        "$type": "color",
+        "$value": "#0768F8",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:76",
+            "anchor": "link-primary | `#0768F8`"
+          }
+        ],
+        "literalUsageCount": 6
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "#1B61C9",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:77",
+            "anchor": "link-secondary (hover) | `#1B61C9`"
+          }
+        ],
+        "literalUsageCount": 3
+      },
+      "pricing": {
+        "$type": "color",
+        "$value": "#166EE1",
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:228",
+            "anchor": ".pr .pr-inline-link { color: #166ee1; }"
+          }
+        ],
+        "literalUsageCount": 3
+      }
+    },
+    "brand-season": {
+      "blue-800": {
+        "$type": "color",
+        "$value": "#012978",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:92",
+            "anchor": "blue-800 | `#012978`"
+          }
+        ],
+        "literalUsageCount": 6,
+        "note": "S-9/A13/B8 CTA background"
+      },
+      "purple-500": {
+        "$type": "color",
+        "$value": "#AC59FF",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:91",
+            "anchor": "purple-500 | `#AC59FF`"
+          }
+        ],
+        "literalUsageCount": 8,
+        "note": "CTA bar layer"
+      },
+      "pink-400": {
+        "$type": "color",
+        "$value": "#F884EE",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:90",
+            "anchor": "pink-400 | `#F884EE`"
+          }
+        ],
+        "literalUsageCount": 2,
+        "note": "B6 stories progress fill"
+      },
+      "pink-300": {
+        "$type": "color",
+        "$value": "#FFB0FA",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:89",
+            "anchor": "pink-300 | `#FFB0FA`"
+          }
+        ],
+        "literalUsageCount": 1
+      },
+      "brand-subtle-2": {
+        "$type": "color",
+        "$value": "#CADCFF",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:784",
+            "anchor": "active tab marker → `#CADCFF`"
+          }
+        ],
+        "literalUsageCount": 1,
+        "note": "A7 scroll-tabber active marker"
+      },
+      "green-900": {
+        "$type": "color",
+        "$value": "#004801",
+        "evidence": [
+          {
+            "ref": "src/season/components/blocks.jsx:112",
+            "anchor": "#004801"
+          }
+        ],
+        "literalUsageCount": 2,
+        "note": "E-9 CTA green background"
+      },
+      "plum-900": {
+        "$type": "color",
+        "$value": "#57003E",
+        "evidence": [
+          {
+            "ref": "src/season/components/platformB.jsx:255",
+            "anchor": "#57003E"
+          }
+        ],
+        "literalUsageCount": 2,
+        "note": "E-6 HAC visual"
+      },
+      "lime-300": {
+        "$type": "color",
+        "$value": "#E8F36F",
+        "evidence": [
+          {
+            "ref": "src/season/pages/enterprise.js:65",
+            "anchor": "fill: '#E8F36F'"
+          }
+        ],
+        "literalUsageCount": 1,
+        "note": "E-8 progress fill"
+      }
+    },
+    "badge": {
+      "pink": {
+        "bg": {
+          "$type": "color",
+          "$value": "#FDD5FF",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:85",
+              "anchor": "pink | `#FDD5FF` / `#AB0A83`"
+            }
+          ]
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "#AB0A83",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:85",
+              "anchor": "pink | `#FDD5FF` / `#AB0A83`"
+            }
+          ]
+        }
+      },
+      "yellow": {
+        "bg": {
+          "$type": "color",
+          "$value": "#FFF0B6",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:86",
+              "anchor": "yellow | `#FFF0B6` / `#B27D00`"
+            }
+          ]
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "#B27D00",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:86",
+              "anchor": "yellow | `#FFF0B6` / `#B27D00`"
+            }
+          ]
+        }
+      },
+      "cyan": {
+        "bg": {
+          "$type": "color",
+          "$value": "#B8F3FF",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:87",
+              "anchor": "cyan | `#B8F3FF` / `#007399`"
+            }
+          ]
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "#007399",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:87",
+              "anchor": "cyan | `#B8F3FF` / `#007399`"
+            }
+          ]
+        }
+      },
+      "orange": {
+        "bg": {
+          "$type": "color",
+          "$value": "#FFDDB6",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:88",
+              "anchor": "orange | `#FFDDB6` / `#AF6102`"
+            }
+          ]
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "#AF6102",
+          "evidence": [
+            {
+              "ref": "specs/SECTION_TYPES_platform.md:88",
+              "anchor": "orange | `#FFDDB6` / `#AF6102`"
+            }
+          ]
+        }
+      }
+    },
+    "home": {
+      "tab-1": {
+        "$type": "color",
+        "$value": "#912E1F",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:57",
+            "anchor": "'tab-1': '#912E1F'"
+          }
+        ],
+        "literalUsageCount": 3
+      },
+      "tab-4": {
+        "$type": "color",
+        "$value": "#FAF5E8",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:59",
+            "anchor": "'tab-4': '#FAF5E8'"
+          }
+        ],
+        "literalUsageCount": 4
+      },
+      "tab-4-heading": {
+        "$type": "color",
+        "$value": "#214224",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:60",
+            "anchor": "'tab-4-heading': '#214224'"
+          }
+        ],
+        "literalUsageCount": 4
+      },
+      "tab-ind-2": {
+        "$type": "color",
+        "$value": "#B6E995",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:62",
+            "anchor": "'tab-ind-2': '#B6E995'"
+          }
+        ],
+        "literalUsageCount": 6
+      },
+      "tab-ind-3": {
+        "$type": "color",
+        "$value": "#002D98",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:63",
+            "anchor": "'tab-ind-3': '#002D98'"
+          }
+        ],
+        "literalUsageCount": 1
+      },
+      "bento-1-bg": {
+        "$type": "color",
+        "$value": "#FCAB79",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:66",
+            "anchor": "'bento-1': { bg: '#FCAB79'"
+          }
+        ]
+      },
+      "bento-1-fg": {
+        "$type": "color",
+        "$value": "#AA2D00",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:66",
+            "anchor": "'bento-1': { bg: '#FCAB79', fg: '#AA2D00'"
+          }
+        ]
+      },
+      "bento-2-bg": {
+        "$type": "color",
+        "$value": "#C7E5F2",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:67",
+            "anchor": "'bento-2': { bg: '#C7E5F2'"
+          }
+        ]
+      },
+      "bento-2-fg": {
+        "$type": "color",
+        "$value": "#0A2E0E",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:67",
+            "anchor": "'bento-2': { bg: '#C7E5F2', fg: '#0A2E0E'"
+          }
+        ]
+      },
+      "bento-3-bg": {
+        "$type": "color",
+        "$value": "#254FAD",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:68",
+            "anchor": "'bento-3': { bg: '#254FAD'"
+          }
+        ]
+      },
+      "bento-3-fg": {
+        "$type": "color",
+        "$value": "#FA91E0",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:68",
+            "anchor": "'bento-3': { bg: '#254FAD', fg: '#FA91E0'"
+          }
+        ]
+      },
+      "bento-4-bg": {
+        "$type": "color",
+        "$value": "#0A2E0E",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:69",
+            "anchor": "'bento-4': { bg: '#0A2E0E'"
+          }
+        ]
+      },
+      "bento-4-fg": {
+        "$type": "color",
+        "$value": "#FCB42A",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:69",
+            "anchor": "'bento-4': { bg: '#0A2E0E', fg: '#FCB42A'"
+          }
+        ]
+      },
+      "story-pane": {
+        "$type": "color",
+        "$value": "#CCCCCC",
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:71",
+            "anchor": "'story-pane': '#CCCCCC'"
+          }
+        ]
+      }
+    },
+    "pricing": {
+      "highlight": {
+        "$type": "color",
+        "$value": "#0D52AC",
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:72",
+            "anchor": "background: #0d52ac;"
+          }
+        ],
+        "literalUsageCount": 8
+      },
+      "pill-hover-bg": {
+        "$type": "color",
+        "$value": "#F2F4F8",
+        "evidence": [
+          {
+            "ref": "src/standalone/pricing/pricing.css:63",
+            "anchor": "background: #f2f4f8;"
+          }
+        ],
+        "literalUsageCount": 1
+      }
+    },
+    "tpl": {
+      "gray-900": {
+        "$type": "color",
+        "$value": "#101828",
+        "evidence": [
+          {
+            "ref": "src/standalone/templates/templates.css:22",
+            "anchor": "--g900: #101828;"
+          }
+        ]
+      },
+      "gray-500": {
+        "$type": "color",
+        "$value": "#6A7282",
+        "evidence": [
+          {
+            "ref": "src/standalone/templates/templates.css:23",
+            "anchor": "--g500: #6a7282;"
+          }
+        ]
+      },
+      "gray-400": {
+        "$type": "color",
+        "$value": "#9CA3AF",
+        "evidence": [
+          {
+            "ref": "src/standalone/templates/templates.css:24",
+            "anchor": "--g400: #9ca3af;"
+          }
+        ]
+      },
+      "gray-200": {
+        "$type": "color",
+        "$value": "#E5E7EB",
+        "evidence": [
+          {
+            "ref": "src/standalone/templates/templates.css:25",
+            "anchor": "--g200: #e5e7eb;"
+          }
+        ],
+        "note": "spec names the Tailwind-v4 token without a hex; nearest hex used in code"
+      },
+      "gray-100": {
+        "$type": "color",
+        "$value": "#F3F4F6",
+        "evidence": [
+          {
+            "ref": "src/standalone/templates/templates.css:26",
+            "anchor": "--g100: #f3f4f6;"
+          }
+        ]
+      },
+      "palettes": {
+        "p1": {
+          "pastel-from": {
+            "$type": "color",
+            "$value": "#FAF5FF",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:20",
+                "anchor": "pastel: ['#FAF5FF'"
+              }
+            ]
+          },
+          "pastel-to": {
+            "$type": "color",
+            "$value": "#EDE9FE",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:20",
+                "anchor": "'#EDE9FE'], deep"
+              }
+            ]
+          },
+          "deep-from": {
+            "$type": "color",
+            "$value": "#C084FC",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:20",
+                "anchor": "deep: ['#C084FC'"
+              }
+            ]
+          },
+          "deep-to": {
+            "$type": "color",
+            "$value": "#9333EA",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:20",
+                "anchor": "'#9333EA'] }"
+              }
+            ]
+          }
+        },
+        "p2": {
+          "pastel-from": {
+            "$type": "color",
+            "$value": "#FFF1F2",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:21",
+                "anchor": "pastel: ['#FFF1F2'"
+              }
+            ]
+          },
+          "pastel-to": {
+            "$type": "color",
+            "$value": "#FEE2E2",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:21",
+                "anchor": "'#FEE2E2'], deep"
+              }
+            ]
+          },
+          "deep-from": {
+            "$type": "color",
+            "$value": "#FB7185",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:21",
+                "anchor": "deep: ['#FB7185'"
+              }
+            ]
+          },
+          "deep-to": {
+            "$type": "color",
+            "$value": "#E11D48",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:21",
+                "anchor": "'#E11D48'] }"
+              }
+            ]
+          }
+        },
+        "p3": {
+          "pastel-from": {
+            "$type": "color",
+            "$value": "#ECFEFF",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:22",
+                "anchor": "pastel: ['#ECFEFF'"
+              }
+            ]
+          },
+          "pastel-to": {
+            "$type": "color",
+            "$value": "#CCFBF1",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:22",
+                "anchor": "'#CCFBF1'], deep"
+              }
+            ]
+          },
+          "deep-from": {
+            "$type": "color",
+            "$value": "#22D3EE",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:22",
+                "anchor": "deep: ['#22D3EE'"
+              }
+            ]
+          },
+          "deep-to": {
+            "$type": "color",
+            "$value": "#0E7490",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:22",
+                "anchor": "'#0E7490'] }"
+              }
+            ]
+          }
+        },
+        "p4": {
+          "pastel-from": {
+            "$type": "color",
+            "$value": "#EFF6FF",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:23",
+                "anchor": "pastel: ['#EFF6FF'"
+              }
+            ]
+          },
+          "pastel-to": {
+            "$type": "color",
+            "$value": "#DBEAFE",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:23",
+                "anchor": "'#DBEAFE'], deep"
+              }
+            ]
+          },
+          "deep-from": {
+            "$type": "color",
+            "$value": "#60A5FA",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:23",
+                "anchor": "deep: ['#60A5FA'"
+              }
+            ]
+          },
+          "deep-to": {
+            "$type": "color",
+            "$value": "#2563EB",
+            "evidence": [
+              {
+                "ref": "src/standalone/templates/templatesData.js:23",
+                "anchor": "'#2563EB'] }"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "content": {
+      "004157": {
+        "$type": "color",
+        "$value": "#004157",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:24",
+            "anchor": "#004157"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "0076A8": {
+        "$type": "color",
+        "$value": "#0076A8",
+        "evidence": [
+          {
+            "ref": "src/bk/pages/AiPlays.jsx:9",
+            "anchor": "#0076A8"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "35CBFD": {
+        "$type": "color",
+        "$value": "#35CBFD",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:58",
+            "anchor": "#35CBFD"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "444444": {
+        "$type": "color",
+        "$value": "#444444",
+        "evidence": [
+          {
+            "ref": "src/bk/pages/AiPlays.jsx:11",
+            "anchor": "#444444"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "47008F": {
+        "$type": "color",
+        "$value": "#47008F",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:23",
+            "anchor": "#47008F"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "7A015C": {
+        "$type": "color",
+        "$value": "#7A015C",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:22",
+            "anchor": "#7A015C"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "7F1414": {
+        "$type": "color",
+        "$value": "#7F1414",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:25",
+            "anchor": "#7F1414"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "AF3803": {
+        "$type": "color",
+        "$value": "#AF3803",
+        "evidence": [
+          {
+            "ref": "src/bk/pages/AiPlays.jsx:7",
+            "anchor": "#AF3803"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "F797EF": {
+        "$type": "color",
+        "$value": "#F797EF",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:56",
+            "anchor": "#F797EF"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "FCCCF0": {
+        "$type": "color",
+        "$value": "#FCCCF0",
+        "evidence": [
+          {
+            "ref": "src/bk/pages/AiPlays.jsx:8",
+            "anchor": "#FCCCF0"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "FFCD05": {
+        "$type": "color",
+        "$value": "#FFCD05",
+        "evidence": [
+          {
+            "ref": "src/season/pages/platform.js:57",
+            "anchor": "#FFCD05"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      },
+      "FFE0CC": {
+        "$type": "color",
+        "$value": "#FFE0CC",
+        "evidence": [
+          {
+            "ref": "src/bk/pages/AiPlays.jsx:7",
+            "anchor": "#FFE0CC"
+          }
+        ],
+        "note": "content-level colour carried by page data (pill/panel/eyebrow/fill); closed enum in the PageSpec schema"
+      }
+    }
+  }
+}

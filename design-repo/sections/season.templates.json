@@ -1,0 +1,105 @@
+{
+  "id": "season.templates",
+  "system": "season",
+  "category": "carousel",
+  "purpose": "A11/S-6 dark templates carousel, click-only crossfade.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:27",
+      "anchor": "export function TemplatesCarousel("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 3,
+    "observedRoutes": [
+      "/platform/interface-designer",
+      "/solutions/marketing",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.templates",
+    "copyBudgets": {
+      "badge": {
+        "maxWords": 4,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/solutions/marketing",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 7,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/platform/interface-designer",
+          "/solutions/marketing",
+          "/solutions/product"
+        ]
+      },
+      "slides[].link.label": {
+        "maxWords": 1,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/solutions/marketing",
+          "/solutions/product"
+        ]
+      },
+      "slides[].title": {
+        "maxWords": 11,
+        "observedInstances": 15,
+        "observedRoutes": [
+          "/platform/interface-designer",
+          "/solutions/marketing",
+          "/solutions/product"
+        ]
+      },
+      "sub": {
+        "maxWords": 14,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/platform/interface-designer",
+          "/solutions/marketing",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-crossfade-click",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": "slide opacity/visibility crossfade .4s, click only, no autoplay",
+        "evidence": [
+          {
+            "ref": "src/season/components/blocks.jsx:25",
+            "anchor": "// A11 TemplatesCarousel / S-6 SeasonCarousel — dark, click-only crossfade (.4s), no autoplay."
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.side-by-side",
+      "season.tabber"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.integrations"
+    ]
+  }
+}

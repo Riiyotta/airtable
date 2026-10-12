@@ -1,0 +1,26 @@
+{
+  "id": "plan-card",
+  "layer": "component",
+  "purpose": "Pricing plan column/card: name, description, price (text/amount/custom), CTA pill, feature list, add-ons.",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/pricing/Pricing.jsx:162",
+      "anchor": "function MobileCard({ plan, index })"
+    },
+    {
+      "ref": "src/standalone/pricing/Pricing.jsx:92",
+      "anchor": "function Price({ plan })"
+    }
+  ],
+  "composes": [
+    "check-item"
+  ],
+  "variants": [
+    "default",
+    "highlight"
+  ],
+  "tokens": [
+    "color.pricing.highlight",
+    "color.link.pricing"
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "season.cta",
+  "system": "season",
+  "category": "cta",
+  "purpose": "A13/S-9 blocked CTA (navy + bars + pause), B8 (64px lines), E-9 (green static).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:113",
+      "anchor": "export function CtaBanner({ variant = 'a', headline, lines, actions, bg = 'navy' })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "a",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:78",
+          "anchor": "export const cta = (headline, actions = [TRY, DEMO])"
+        }
+      ]
+    },
+    {
+      "id": "b-green",
+      "evidence": [
+        {
+          "ref": "src/season/pages/enterprise.js:70",
+          "anchor": "bg: 'green'"
+        }
+      ]
+    },
+    {
+      "id": "b-navy",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:61",
+          "anchor": "{ type: 'cta', variant: 'b',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 14,
+    "observedRoutes": [
+      "/about",
+      "/platform",
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/solutions/enterprise",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.cta",
+    "copyBudgets": {
+      "actions[].label": {
+        "maxWords": 4,
+        "observedInstances": 25,
+        "observedRoutes": [
+          "/about",
+          "/platform",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/solutions/enterprise",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 16,
+        "observedInstances": 12,
+        "observedRoutes": [
+          "/about",
+          "/platform/ai",
+          "/platform/ai-agents",
+          "/platform/app-building",
+          "/platform/connected-data",
+          "/platform/governance",
+          "/platform/hyperdb",
+          "/platform/interface-designer",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "lines[]": {
+        "maxWords": 4,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed",
+        "timing": "CSS stand-in for the live Lottie bars: scaleX ease-in-out alternate 6-9s; variant a has a pause button",
+        "evidence": [
+          {
+            "ref": "src/season/components/atoms.jsx:175",
+            "anchor": "// Stand-in for the Lottie bar layers"
+          },
+          {
+            "ref": "src/season/season.css:643",
+            "anchor": "animation: ssBar var(--d, 7s) ease-in-out var(--delay, 0s) infinite alternate;"
+          }
+        ],
+        "usedByVariants": [
+          "a",
+          "b-navy"
+        ]
+      },
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "b-green"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.faq",
+      "season.integrations",
+      "season.read-next",
+      "season.stories"
+    ],
+    "observedBefore": [
+      "season.faq",
+      "season.read-next",
+      "shell.footer"
+    ]
+  }
+}

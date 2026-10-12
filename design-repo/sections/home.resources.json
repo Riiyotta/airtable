@@ -1,0 +1,143 @@
+{
+  "id": "home.resources",
+  "system": "bk",
+  "category": "resources",
+  "purpose": "'Resources to inspire' title + three ResourceCards (image top).",
+  "implementedBy": [
+    {
+      "ref": "src/components/Resources.jsx:25",
+      "anchor": "export default function Resources()"
+    }
+  ],
+  "homeOnly": true,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.home.resources",
+    "copyBudgets": {
+      "cards[].desc": {
+        "maxWords": 24,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Resources.jsx:7",
+            "anchor": "desc: 'Hear from top product leaders",
+            "observedWords": 22
+          },
+          {
+            "ref": "src/components/Resources.jsx:13",
+            "anchor": "desc: 'Learn how to prep",
+            "observedWords": 19
+          },
+          {
+            "ref": "src/components/Resources.jsx:19",
+            "anchor": "desc: 'See how Airtable ProductCentral",
+            "observedWords": 24
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].title": {
+        "maxWords": 6,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Resources.jsx:6",
+            "anchor": "title: 'Builders & Breakthroughs'",
+            "observedWords": 3
+          },
+          {
+            "ref": "src/components/Resources.jsx:12",
+            "anchor": "title: 'The 2026 AI guide for marketers'",
+            "observedWords": 6
+          },
+          {
+            "ref": "src/components/Resources.jsx:18",
+            "anchor": "title: 'In action: Airtable ProductCentral'",
+            "observedWords": 4
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "title": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Resources.jsx:30",
+            "anchor": "Resources to inspire",
+            "observedWords": 3
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "resource-title-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "title colour #181D26 -> #040E20B0",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:479",
+            "anchor": "**Hover:** title color `#181D26` → `#040E20B0`"
+          },
+          {
+            "ref": "src/components/Resources.css:123",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "single-column"
+      ],
+      "detail": "1 column, gap 48",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:582",
+          "anchor": "Resources: 1 column."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "home.product-screenshot"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "home.ai-plays-bento"
+    ],
+    "observedBefore": [
+      "home.customer-story"
+    ]
+  }
+}

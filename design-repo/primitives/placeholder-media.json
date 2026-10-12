@@ -1,0 +1,48 @@
+{
+  "id": "placeholder-media",
+  "layer": "primitive",
+  "purpose": "Measured placeholder media box (season Ph / BK PlaceholderBlock): keeps the slot's ratio, radius and fill and is covered by an original <MockMedia> scene (assetRole generated.ui-illustration). 'video' adds NO motion since 1.1.0: the former .ss-ph--video sweep targets .ss-ph__win, which no longer renders; Season video slots still show a PauseButton with nothing to pause.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:124",
+      "anchor": "export function Ph({ ratio, dark, video, style, className = '', seed = 0, kind, hint })"
+    },
+    {
+      "ref": "src/bk/Placeholder.jsx:8",
+      "anchor": "export function PlaceholderBlock({ className = '', dark = false, style, kind, seed = 0, hint })"
+    }
+  ],
+  "variants": [
+    "light",
+    "dark",
+    "video"
+  ],
+  "tokens": [
+    "color.surface.strong",
+    "color.surface.warm-100",
+    "color.surface.placeholder-dark"
+  ],
+  "states": [],
+  "a11y": "aria-hidden",
+  "composes": [
+    "mock-media"
+  ],
+  "evidence": [
+    {
+      "ref": "src/season/components/atoms.jsx:133",
+      "anchor": "<MockMedia kind={kind} hint={text} seed={`${pathname}|${text}|${seed}`} theme={dark ? 'dark' : 'light'} ratio={ratio} />"
+    },
+    {
+      "ref": "src/bk/Placeholder.jsx:15",
+      "anchor": "<MockMedia kind={kind} seed={seed} hint={hint} theme={dark ? 'dark' : 'light'} />"
+    },
+    {
+      "ref": "src/season/components/SideBySide.jsx:44",
+      "anchor": "{media.video && <PauseButton paused={paused} onToggle={toggle} />}"
+    },
+    {
+      "ref": "src/season/season.css:236",
+      "anchor": "/* \"video\" placeholders: a gentle sweep that the pause button stops */"
+    }
+  ]
+}

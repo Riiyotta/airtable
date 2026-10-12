@@ -1,0 +1,262 @@
+{
+  "$description": "Durations/easings measured on the live site and implemented in the clone; literalUsageCount from extraction/histograms.json cssDuration.",
+  "motion": {
+    "duration": {
+      "instant-75": {
+        "$type": "duration",
+        "$value": "75ms",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:556",
+            "anchor": "**stagger 75ms**"
+          }
+        ],
+        "literalUsageCount": 7,
+        "note": "mega-menu stagger"
+      },
+      "fast-150": {
+        "$type": "duration",
+        "$value": "150ms",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:554",
+            "anchor": "| Nav links, toggles, Book Demo | Hover"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:106",
+            "anchor": "**Default transition** (buttons, tabs, links)"
+          }
+        ],
+        "literalUsageCount": 44
+      },
+      "btn-200": {
+        "$type": "duration",
+        "$value": "200ms",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:553",
+            "anchor": "| Buttons (BkButton) | Hover"
+          }
+        ],
+        "literalUsageCount": 15
+      },
+      "drawer-250": {
+        "$type": "duration",
+        "$value": "250ms",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:556",
+            "anchor": "| Mega-menu open | Click toggle"
+          }
+        ],
+        "literalUsageCount": 28
+      },
+      "crumbs-250": {
+        "$type": "duration",
+        "$value": "250ms",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1122",
+            "anchor": "| BreadcrumbBar | scroll |"
+          }
+        ],
+        "literalUsageCount": 6
+      },
+      "panel-400": {
+        "$type": "duration",
+        "$value": "400ms",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:786",
+            "anchor": "| A8 mobile accordion / A14 FAQ answer | click"
+          }
+        ],
+        "literalUsageCount": 11
+      },
+      "bento-600": {
+        "$type": "duration",
+        "$value": "600ms",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:552",
+            "anchor": "| Bento cards | Hover / focus-within"
+          }
+        ],
+        "literalUsageCount": 3
+      },
+      "stories-crossfade-900": {
+        "$type": "duration",
+        "$value": "900ms",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:790",
+            "anchor": "**10s per slide**"
+          }
+        ],
+        "literalUsageCount": 2
+      },
+      "marquee-half-track-28s": {
+        "$type": "duration",
+        "$value": "28s",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:782",
+            "anchor": "half-track per **28s** linear"
+          }
+        ],
+        "literalUsageCount": 2
+      },
+      "stories-slide-10s": {
+        "$type": "duration",
+        "$value": "10s",
+        "evidence": [
+          {
+            "ref": "src/season/components/platformB.jsx:70",
+            "anchor": "/ 10000"
+          }
+        ]
+      },
+      "hcc-autoplay-4s": {
+        "$type": "duration",
+        "$value": "4000ms",
+        "evidence": [
+          {
+            "ref": "src/bk/HeroCarouselCentered.jsx:13",
+            "anchor": "const AUTOPLAY_MS = 4000"
+          }
+        ]
+      }
+    },
+    "easing": {
+      "out-sine": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.61,
+          1,
+          0.88,
+          1
+        ],
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:107",
+            "anchor": "'out-sine': 'cubic-bezier(0.61, 1, 0.88, 1)'"
+          }
+        ],
+        "note": "anime.js easeOutSine (drawers)"
+      },
+      "standard": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.4,
+          0,
+          0.2,
+          1
+        ],
+        "evidence": [
+          {
+            "ref": "tailwind.config.js:108",
+            "anchor": "standard: 'cubic-bezier(.4,0,.2,1)'"
+          },
+          {
+            "ref": "src/season/season.css:129",
+            "anchor": "--ease: cubic-bezier(0.4, 0, 0.2, 1);"
+          }
+        ]
+      },
+      "in-out-strong": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.76,
+          0,
+          0.24,
+          1
+        ],
+        "evidence": [
+          {
+            "ref": "src/season/season.css:130",
+            "anchor": "--ease-io: cubic-bezier(0.76, 0, 0.24, 1);"
+          }
+        ],
+        "note": "Season accordions / logo flip"
+      },
+      "decelerate": {
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          0.2,
+          1
+        ],
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:787",
+            "anchor": "| A14 chevron | click | rotate 180°"
+          }
+        ]
+      },
+      "ease-in": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.42,
+          0,
+          1,
+          1
+        ],
+        "evidence": [
+          {
+            "ref": "src/index.css:302",
+            "anchor": "transition-timing-function: ease-in;"
+          }
+        ],
+        "note": "CSS keyword ease-in (header/nav)"
+      },
+      "linear": {
+        "$type": "cubicBezier",
+        "$value": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:176",
+            "anchor": "`.2s linear`"
+          }
+        ]
+      }
+    },
+    "rate": {
+      "logo-marquee": {
+        "$type": "number",
+        "$value": "25px/s",
+        "evidence": [
+          {
+            "ref": "src/components/LogoBar.jsx:24",
+            "anchor": "const PX_PER_SECOND = 25"
+          },
+          {
+            "ref": "CLONE_SPEC.md:548",
+            "anchor": "**25 px/s**"
+          }
+        ]
+      }
+    },
+    "spring": {
+      "workflows-fan": {
+        "$type": "spring",
+        "$value": {
+          "stiffness": 400,
+          "damping": 150,
+          "mass": 1
+        },
+        "evidence": [
+          {
+            "ref": "src/components/Workflows.jsx:88-90",
+            "anchor": "const STIFFNESS = 400"
+          }
+        ]
+      }
+    }
+  }
+}

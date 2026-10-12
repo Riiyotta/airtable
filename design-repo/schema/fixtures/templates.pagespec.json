@@ -1,0 +1,906 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.templates-gallery",
+  "route": "/templates",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "tpl.gallery",
+      "content": {
+        "hero": {
+          "title": "Templates",
+          "subtitle": "Start faster with a ready-made base for any kind of work."
+        },
+        "navGroups": [
+          {
+            "title": "By Use Case",
+            "links": [
+              "Project management",
+              "Campaign planning",
+              "Content calendar",
+              "Product roadmap",
+              "Event planning",
+              "Hiring pipeline",
+              "Inventory tracking",
+              "Bug tracking",
+              "Asset library"
+            ]
+          },
+          {
+            "title": "By Industry",
+            "links": [
+              "Education",
+              "Nonprofit",
+              "Real estate",
+              "Media",
+              "Retail",
+              "Healthcare"
+            ]
+          },
+          {
+            "title": "By Feature",
+            "links": [
+              "Interfaces",
+              "Automations",
+              "Forms",
+              "AI fields"
+            ]
+          }
+        ],
+        "asideFooter": {
+          "label": "Browse gallery",
+          "caption": "Templates from makers"
+        },
+        "tiles": [
+          "Project management",
+          "Marketing",
+          "Product",
+          "Operations",
+          "AI workflows"
+        ],
+        "featured": [
+          "Launch plan workspace",
+          "Weekly team check-in",
+          "Client onboarding hub",
+          "Editorial calendar starter"
+        ],
+        "sections": [
+          {
+            "heading": "New templates",
+            "cards": [
+              {
+                "title": "Team retro board",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Studio booking and equipment schedule",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Volunteer shift planner",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": true
+              },
+              {
+                "title": "Research interview log",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Office move checklist",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Partner directory and meeting notes",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Project planning and delivery templates",
+            "cards": [
+              {
+                "title": "Project progress tracker",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Project planning board",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": true
+              },
+              {
+                "title": "Weekly project review log",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Quarterly project roadmap overview",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Shared project calendar view",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Annual project planning and review",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Marketing templates",
+            "cards": [
+              {
+                "title": "Campaign progress tracker",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": true
+              },
+              {
+                "title": "Campaign planning board",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Campaign planning, tracking and reporting workspace for teams",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Campaign intake, review and approval workflow for every team",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Shared campaign calendar view",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Quarterly campaign roadmap overview",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": true
+              }
+            ]
+          },
+          {
+            "heading": "Product management templates",
+            "cards": [
+              {
+                "title": "Feature progress tracker",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Quarterly feature roadmap overview",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Weekly feature review log",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Annual feature planning and review",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Shared feature calendar view",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": true
+              },
+              {
+                "title": "Feature checklist",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Operations templates",
+            "cards": [
+              {
+                "title": "Vendor progress tracker",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Vendor planning board",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Weekly vendor review log",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Vendor request intake form",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": true
+              },
+              {
+                "title": "Shared vendor calendar view",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Quarterly vendor roadmap and priorities",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Sales pipeline templates",
+            "cards": [
+              {
+                "title": "Quarterly pipeline roadmap overview",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Pipeline planning board",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Weekly pipeline review log",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": true
+              },
+              {
+                "title": "Pipeline request intake form",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Shared pipeline calendar view",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Annual pipeline planning and review",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Recruiting templates",
+            "cards": [
+              {
+                "title": "Quarterly candidate roadmap overview",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Candidate planning board",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": true
+              },
+              {
+                "title": "Annual candidate planning and review",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Candidate request intake form",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Shared candidate calendar view",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Candidate checklist",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Event planning templates",
+            "cards": [
+              {
+                "title": "Event progress tracker",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": true
+              },
+              {
+                "title": "Event planning board",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Weekly event review log",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Event request intake form",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Shared event calendar view",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Quarterly event roadmap and priorities",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": true
+              }
+            ]
+          },
+          {
+            "heading": "Content templates",
+            "cards": [
+              {
+                "title": "Quarterly content roadmap overview",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Content planning board",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Annual content planning and review",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Content request intake form",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Shared content calendar view",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": true
+              },
+              {
+                "title": "Content checklist",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Finance and accounting templates",
+            "cards": [
+              {
+                "title": "Budget progress tracker",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Budget planning board",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Weekly budget review log",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Budget request intake form",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": true
+              },
+              {
+                "title": "Shared budget calendar view",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Quarterly budget roadmap and priorities",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Design and creative studio templates",
+            "cards": [
+              {
+                "title": "Asset progress tracker",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Asset planning board",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Quarterly asset roadmap and priorities",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": true
+              },
+              {
+                "title": "Asset request intake form",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Shared asset calendar view",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Asset checklist",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Engineering templates",
+            "cards": [
+              {
+                "title": "Release planning, tracking and reporting workspace for teams",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Quarterly release roadmap overview",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": true
+              },
+              {
+                "title": "Weekly release review log",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Annual release planning and review",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Shared release goals and milestones",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Cross-team release status summary",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Education and classroom templates",
+            "cards": [
+              {
+                "title": "Course progress tracker",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p1",
+                "ai": true
+              },
+              {
+                "title": "Course planning board",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Weekly course review log",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Quarterly course roadmap and priorities",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Annual course planning and review",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Course checklist",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": true
+              }
+            ]
+          },
+          {
+            "heading": "Nonprofit templates",
+            "cards": [
+              {
+                "title": "Donor progress tracker",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Donor planning board",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Weekly donor review log",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Quarterly donor roadmap and priorities",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Shared donor calendar view",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": true
+              },
+              {
+                "title": "Donor checklist",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Real estate templates",
+            "cards": [
+              {
+                "title": "Listing progress tracker",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Listing planning board",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Weekly listing review log",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Listing request intake form",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": true
+              },
+              {
+                "title": "Shared listing calendar view",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Quarterly listing roadmap overview",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Customer support templates",
+            "cards": [
+              {
+                "title": "Ticket progress tracker",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Ticket planning board",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Weekly ticket review log",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": true
+              },
+              {
+                "title": "Ticket request intake form",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Quarterly ticket roadmap and priorities",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Ticket checklist",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Research templates",
+            "cards": [
+              {
+                "title": "Study progress tracker",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Study planning board",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p2",
+                "ai": true
+              },
+              {
+                "title": "Weekly study review log",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Study request intake form",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Shared study calendar view",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Quarterly study roadmap and priorities",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Home templates",
+            "cards": [
+              {
+                "title": "Habit progress tracker",
+                "description": "A simple space for tracking daily habits and the small routines that add up over time.",
+                "palette": "p2",
+                "ai": true
+              },
+              {
+                "title": "Habit planning board",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Weekly habit review log",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Habit request intake form",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Shared habit calendar view",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Inventory templates",
+            "cards": [
+              {
+                "title": "Stock progress tracker",
+                "description": "Keep every request, owner, and deadline in one shared base so the whole group can see what is moving and what is stuck. Linked tables, simple status fields, and a ready-made dashboard help you get started in minutes instead of days.",
+                "palette": "p3",
+                "ai": false
+              },
+              {
+                "title": "Stock planning board",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Weekly stock review log",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Quarterly stock roadmap and priorities",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              },
+              {
+                "title": "Shared stock calendar view",
+                "description": "Bring every stakeholder into one place with tidy tables for people, tasks, and milestones. Grouped views make weekly reviews quick, attachments keep reference files close at hand, and a printable report summarizes progress for anyone who prefers a single page.",
+                "palette": "p3",
+                "ai": true
+              },
+              {
+                "title": "Stock checklist",
+                "description": "Organize a growing library of items with rich previews, tags, and owners so nothing gets lost. Search and filters surface the right record quickly, and a simple intake form helps new entries arrive complete, consistent, and ready for review by the right person.",
+                "palette": "p4",
+                "ai": false
+              }
+            ]
+          },
+          {
+            "heading": "Client templates",
+            "cards": [
+              {
+                "title": "Quarterly client roadmap and priorities",
+                "description": "A lightweight structure for collecting ideas, ranking them by impact, and turning the best ones into scheduled work. Filtered views give each teammate a focused list, while a summary page shows leaders the overall picture at a glance every Monday.",
+                "palette": "p4",
+                "ai": false
+              },
+              {
+                "title": "Client planning board",
+                "description": "Plan recurring work with a calendar, a kanban board, and a timeline that all read from the same records. Automated reminders nudge owners before due dates, and comments keep decisions attached to the item they relate to for later reference.",
+                "palette": "p1",
+                "ai": false
+              },
+              {
+                "title": "Weekly client review log",
+                "description": "Track budgets, vendors, and approvals side by side without juggling separate spreadsheets. Rollup fields total spending by category, color-coded statuses flag anything waiting on review, and a shared form makes it easy for anyone to submit a new request in seconds.",
+                "palette": "p2",
+                "ai": false
+              }
+            ]
+          }
+        ],
+        "cta": {
+          "lines": [
+            "Not seeing the right template?",
+            "Start from a blank base."
+          ],
+          "action": {
+            "label": "Try it for free",
+            "href": "/signup"
+          }
+        }
+      },
+      "motion": {
+        "pattern": "tpl-featured-scale",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

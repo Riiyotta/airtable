@@ -1,0 +1,89 @@
+{
+  "id": "bk.card-grid-load-more",
+  "system": "bk",
+  "category": "listing",
+  "purpose": "3-column grid of logo-eyebrow ResourceCards with a Load more button (pageSize 12).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/CardGridLoadMore.jsx:10",
+      "anchor": "export default function CardGridLoadMore("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/customer-stories"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.card-grid-load-more",
+    "copyBudgets": {
+      "items[].logo.name": {
+        "maxWords": 3,
+        "observedInstances": 24,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      },
+      "items[].title": {
+        "maxWords": 11,
+        "observedInstances": 24,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-load-more-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "not-implemented",
+        "timing": "BkButton outline hover .2s linear (no reduce rule on buttonStyles)",
+        "gapNote": "buttonStyles.js has no motion-reduce variant; a 200ms colour transition remains.",
+        "evidence": [
+          {
+            "ref": "src/components/buttonStyles.js:4",
+            "anchor": "transition-all duration-200 ease-linear"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "single-column"
+      ],
+      "detail": "1 column, gap 48",
+      "evidence": [
+        {
+          "ref": "src/bk/CardGridLoadMore.jsx:14",
+          "anchor": "grid grid-cols-1 gap-[48px] lg:grid-cols-3"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "bk.logo-strip"
+    ],
+    "observedBefore": [
+      "bk.cta-row"
+    ]
+  }
+}

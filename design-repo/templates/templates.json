@@ -1,0 +1,1331 @@
+{
+  "$description": "One template per distinct page shape. nodes are structured objects. zone 'ordered' = must appear in this order (non-required may be skipped, repeatable may repeat within min/maxCount); a contiguous run of zone 'body' nodes forms an UNORDERED region whose members may appear in any order within their min/maxCount. variants restrict the node's variant. Enforced by schema/semantic_validate.py (TEMPLATE_NODE_SEQUENCE).",
+  "templates": {
+    "template.home": {
+      "system": "bk",
+      "purpose": "Homepage (A/B variant: h1 'All your teams...' Haas variant).",
+      "routes": [
+        "/"
+      ],
+      "acceptsNewRoutes": false,
+      "homeRouteOnly": true,
+      "renderOptions": {
+        "mainPaddingBottom": "64px",
+        "font": "haas"
+      },
+      "evidence": [
+        {
+          "ref": "src/pages/Home.jsx:9",
+          "anchor": "// Page order per CLONE_SPEC §1–§9."
+        },
+        {
+          "ref": "CLONE_SPEC.md:7",
+          "anchor": "> **A/B variant.**"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "bk.hero-centered",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "video"
+          ]
+        },
+        {
+          "section": "bk.logo-marquee",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "home.workflows",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "home.ai-plays-bento",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "home.resources",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "home.customer-story",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.cta-box",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    },
+    "template.bk-solutions-hub": {
+      "system": "bk",
+      "purpose": "Solutions hub: centered text hero, team icon-card grid, alternating media-text rows, CTA row.",
+      "routes": [
+        "/solutions"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "mainPaddingBottom": "64px",
+        "font": "haas"
+      },
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Solutions.jsx:28",
+          "anchor": "export default function Solutions()"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "bk.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.hero-centered",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "no-video"
+          ]
+        },
+        {
+          "section": "bk.icon-card-grid",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.media-text-row",
+          "required": true,
+          "repeatable": true,
+          "zone": "ordered",
+          "minCount": 1,
+          "maxCount": 6
+        },
+        {
+          "section": "bk.cta-row",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "white"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    },
+    "template.bk-filter-listing": {
+      "system": "bk",
+      "purpose": "Filterable directory: split hero + featured row + sidebar filters + card grid, optional CTA row.",
+      "routes": [
+        "/integrations",
+        "/ai-plays"
+      ],
+      "acceptsNewRoutes": true,
+      "newRoutePattern": "^/[a-z0-9-]+$",
+      "renderOptions": {
+        "mainPaddingBottom": "64px",
+        "font": "haas"
+      },
+      "evidence": [
+        {
+          "ref": "src/bk/FilterListing.jsx:6",
+          "anchor": "// BK-4 FilterListing — SECTION_TYPES_solutions §3 BK-4. Shared by /integrations and /ai-plays."
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "bk.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.page-hero-split",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "light",
+            "dark"
+          ]
+        },
+        {
+          "section": "bk.filter-listing",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "image-top",
+            "image-bottom-spacious"
+          ]
+        },
+        {
+          "section": "bk.cta-row",
+          "required": false,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    },
+    "template.bk-story-index": {
+      "system": "bk",
+      "purpose": "Customer-story index: centred autoplay carousel hero, wordmark strip, load-more grid, callout CTA.",
+      "routes": [
+        "/customer-stories"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "mainPaddingBottom": "64px",
+        "font": "haas"
+      },
+      "evidence": [
+        {
+          "ref": "src/bk/pages/CustomerStories.jsx:36",
+          "anchor": "export default function CustomerStories()"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "bk.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.hero-carousel-centered",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.logo-strip",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.card-grid-load-more",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.cta-row",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "callout"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    },
+    "template.bk-guides-hub": {
+      "system": "bk",
+      "purpose": "Guides hub: expanding-strip banner, topics sidebar + browse grid, callout CTA.",
+      "routes": [
+        "/guides"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "mainPaddingBottom": "64px",
+        "font": "haas"
+      },
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Guides.jsx:26",
+          "anchor": "export default function Guides()"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "bk.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.guides-banner",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.sidebar-nav-grid",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "bk.cta-row",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "callout"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    },
+    "template.bk-contact-sales": {
+      "system": "bk",
+      "purpose": "Contact-sales split page with a visual-only form; no breadcrumb.",
+      "routes": [
+        "/contact-sales"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "mainPaddingBottom": "64px",
+        "font": "haas"
+      },
+      "evidence": [
+        {
+          "ref": "src/bk/pages/ContactSales.jsx:3",
+          "anchor": "// /contact-sales — specs/pages_solutions.md §11. No breadcrumb."
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "bk.contact-sales-split",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    },
+    "template.season-feature-stack": {
+      "system": "season",
+      "purpose": "Platform feature page ('feature stack' recipe): breadcrumb + A1 hero, then 4-5 alternating side-by-side rows mixed with optional stats/tabber/integrations/carousel/templates/cards/faq/cta/read-next.",
+      "routes": [
+        "/platform/automations",
+        "/platform/connected-data",
+        "/platform/governance",
+        "/platform/hyperdb",
+        "/platform/interface-designer",
+        "/platform/portals",
+        "/platform/reporting"
+      ],
+      "acceptsNewRoutes": true,
+      "newRoutePattern": "^/platform/[a-z0-9-]+$",
+      "renderOptions": {
+        "skin": "a",
+        "font": "season",
+        "heavy": false,
+        "mainPaddingBottom": "64px"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/pages/automations.js:1",
+          "anchor": "family A, \"feature stack\" recipe"
+        },
+        {
+          "ref": "specs/pages_platform.md:218",
+          "anchor": "## Template sharing summary"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.hero",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.logos",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a2"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.stats",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.side-by-side",
+          "required": true,
+          "repeatable": true,
+          "zone": "body",
+          "variants": [
+            "display"
+          ],
+          "minCount": 4,
+          "maxCount": 5
+        },
+        {
+          "section": "season.tabber",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "labels-bar"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.integrations",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.carousel",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.templates",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.cards",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "cards"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.faq",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.cta",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.read-next",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        }
+      ]
+    },
+    "template.season-ai-product": {
+      "system": "season",
+      "purpose": "AI / product page ('AI/product' recipe): breadcrumb + A1 video hero, logos or scroll-tabber, cards, feature carousel, trust trio, CTA + FAQ.",
+      "routes": [
+        "/platform/ai",
+        "/platform/ai-agents",
+        "/platform/app-building"
+      ],
+      "acceptsNewRoutes": true,
+      "newRoutePattern": "^/platform/[a-z0-9-]+$",
+      "renderOptions": {
+        "skin": "a",
+        "font": "season",
+        "heavy": false,
+        "mainPaddingBottom": "64px"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/pages/ai.js:1",
+          "anchor": "family A, \"AI / product\" recipe"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.hero",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.logos",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a2"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.scroll-tabber",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.cards",
+          "required": true,
+          "repeatable": true,
+          "zone": "body",
+          "variants": [
+            "cards"
+          ],
+          "minCount": 1,
+          "maxCount": 3
+        },
+        {
+          "section": "season.side-by-side",
+          "required": false,
+          "repeatable": true,
+          "zone": "body",
+          "variants": [
+            "display"
+          ],
+          "minCount": 0,
+          "maxCount": 2
+        },
+        {
+          "section": "season.carousel",
+          "required": true,
+          "repeatable": false,
+          "zone": "body",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "section": "season.integrations",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.read-next",
+          "required": false,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 0,
+          "maxCount": 1
+        },
+        {
+          "section": "season.cta",
+          "required": true,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "section": "season.faq",
+          "required": true,
+          "repeatable": false,
+          "zone": "body",
+          "variants": [
+            "a"
+          ],
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        }
+      ]
+    },
+    "template.season-solution": {
+      "system": "season",
+      "purpose": "Team solution page (seasonSolution recipe): S-1..S-10 in fixed order; S-6 templates carousel optional.",
+      "routes": [
+        "/solutions/marketing",
+        "/solutions/product",
+        "/solutions/operations"
+      ],
+      "acceptsNewRoutes": true,
+      "newRoutePattern": "^/solutions/[a-z0-9-]+$",
+      "renderOptions": {
+        "skin": "season",
+        "font": "season",
+        "heavy": false,
+        "mainPaddingBottom": "64px"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:97",
+          "anchor": "export function seasonSolution(key, p) {"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.breadcrumb",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.hero",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.logos",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.cards",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "cards"
+          ]
+        },
+        {
+          "section": "season.tabber",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "labels"
+          ]
+        },
+        {
+          "section": "season.templates",
+          "required": false,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.integrations",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "a"
+          ]
+        },
+        {
+          "section": "season.tabber",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "logos"
+          ]
+        },
+        {
+          "section": "season.read-next",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "a"
+          ]
+        },
+        {
+          "section": "season.cta",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "a"
+          ]
+        },
+        {
+          "section": "season.faq",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "a"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        }
+      ]
+    },
+    "template.season-platform-landing": {
+      "system": "season",
+      "purpose": "/platform landing (family B): bespoke B1-B8 modules, heavy weights 550/650, no breadcrumb.",
+      "routes": [
+        "/platform"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "skin": "a",
+        "font": "season",
+        "heavy": true,
+        "mainPaddingBottom": "64px"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:1",
+          "anchor": "// /platform — family B landing"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.platform-hero",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "season.logos",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b-static"
+          ]
+        },
+        {
+          "section": "season.tab-panels",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.integrations",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b"
+          ]
+        },
+        {
+          "section": "season.cards",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "bento"
+          ]
+        },
+        {
+          "section": "season.stories",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.read-next",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b"
+          ]
+        },
+        {
+          "section": "season.cta",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b-navy"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        }
+      ]
+    },
+    "template.season-enterprise": {
+      "system": "season",
+      "purpose": "/solutions/enterprise (PLATFORM-E): copy-above-video hero, cycling logos, enterprise-only E-3..E-6, stories, green CTA, skin-e FAQ.",
+      "routes": [
+        "/solutions/enterprise"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "skin": "e",
+        "font": "season",
+        "heavy": false,
+        "mainPaddingBottom": "64px"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/pages/enterprise.js:1",
+          "anchor": "// /solutions/enterprise — PLATFORM-E"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.platform-hero",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "copy-above-video"
+          ]
+        },
+        {
+          "section": "season.logos",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b-cycle"
+          ]
+        },
+        {
+          "section": "season.use-cases",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.ai-foundation",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.org-accordion",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.hac",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.integrations",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b"
+          ]
+        },
+        {
+          "section": "season.stories",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.cta",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "b-green"
+          ]
+        },
+        {
+          "section": "season.faq",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "e"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        }
+      ]
+    },
+    "template.season-about": {
+      "system": "season",
+      "purpose": "/about: Season blocks in a bespoke order (no breadcrumb, no FAQ).",
+      "routes": [
+        "/about"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "skin": "season",
+        "font": "season",
+        "heavy": false,
+        "mainPaddingBottom": "64px"
+      },
+      "evidence": [
+        {
+          "ref": "src/season/pages/about.js:1",
+          "anchor": "// /about — SEASON blocks in a different order (no breadcrumb, no FAQ)"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.hero",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "season.side-by-side",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "section"
+          ]
+        },
+        {
+          "section": "season.logos",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        },
+        {
+          "section": "season.cards",
+          "required": true,
+          "repeatable": true,
+          "zone": "ordered",
+          "variants": [
+            "cards"
+          ],
+          "minCount": 2,
+          "maxCount": 2
+        },
+        {
+          "section": "season.tabber",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "labels"
+          ]
+        },
+        {
+          "section": "season.integrations",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "a"
+          ]
+        },
+        {
+          "section": "season.cta",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "a"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "season"
+          ]
+        }
+      ]
+    },
+    "template.pricing": {
+      "system": "pricing",
+      "purpose": "/pricing (family C): title, plan cards, see-all link, wordmark strip, comparison table, help links, FAQ; own footer variant; no main padding.",
+      "routes": [
+        "/pricing"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "mainPaddingBottom": "0",
+        "font": "inter-display"
+      },
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/Pricing.jsx:330",
+          "anchor": "export default function Pricing()"
+        },
+        {
+          "ref": "src/layout/Layout.jsx:10",
+          "anchor": "const NO_MAIN_PAD = new Set(['/pricing', '/templates'])"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "pricing.title",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "pricing.plan-cards",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "pricing.see-all-link",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "pricing.logo-strip",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "pricing.comparison-table",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "pricing.help-links",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "pricing.faq",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "pricing"
+          ]
+        }
+      ]
+    },
+    "template.templates-gallery": {
+      "system": "tpl",
+      "purpose": "/templates gallery (T-1, one page-level section); no main padding.",
+      "routes": [
+        "/templates"
+      ],
+      "acceptsNewRoutes": false,
+      "renderOptions": {
+        "mainPaddingBottom": "0",
+        "font": "haas-groot-disp"
+      },
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/Templates.jsx:123",
+          "anchor": "export default function Templates()"
+        }
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        },
+        {
+          "section": "tpl.gallery",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered"
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "zone": "ordered",
+          "variants": [
+            "haas"
+          ]
+        }
+      ]
+    }
+  }
+}

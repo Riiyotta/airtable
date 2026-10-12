@@ -1,0 +1,1030 @@
+{
+  "allowlistVersion": "1.1.0",
+  "$description": "Closed set an AI may instantiate. sections: every settable property of a PageSpec node (content top-level fields, variant enum, motion patterns, asset roles). verify_all.py checks parity with the contract files and with schema/pagespec.schema.json.",
+  "pageSpecTopLevel": [
+    "pageSpecVersion",
+    "template",
+    "route",
+    "contentPolicy",
+    "nodes"
+  ],
+  "nodeProperties": [
+    "section",
+    "variant",
+    "content",
+    "motion"
+  ],
+  "sections": {
+    "shell.header": {
+      "contract": "sections/shell.header.json",
+      "variants": [
+        "haas",
+        "season"
+      ],
+      "settableContentFields": [],
+      "motionPatterns": [
+        "header-drawer-stagger"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "shell.footer": {
+      "contract": "sections/shell.footer.json",
+      "variants": [
+        "haas",
+        "pricing",
+        "season"
+      ],
+      "settableContentFields": [],
+      "motionPatterns": [
+        "footer-see-more-expand"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.hero-centered": {
+      "contract": "sections/bk.hero-centered.json",
+      "variants": [
+        "no-video",
+        "video"
+      ],
+      "settableContentFields": [
+        "media",
+        "primary",
+        "secondary",
+        "sub",
+        "title"
+      ],
+      "motionPatterns": [
+        "hero-video-autoplay",
+        "none"
+      ],
+      "assetRoles": [
+        "home.product-video"
+      ],
+      "homeOnly": false
+    },
+    "bk.logo-marquee": {
+      "contract": "sections/bk.logo-marquee.json",
+      "variants": [],
+      "settableContentFields": [
+        "heading",
+        "logos"
+      ],
+      "motionPatterns": [
+        "logo-marquee-25pxps"
+      ],
+      "assetRoles": [
+        "home.customer-logo"
+      ],
+      "homeOnly": true
+    },
+    "home.workflows": {
+      "contract": "sections/home.workflows.json",
+      "variants": [],
+      "settableContentFields": [
+        "cards",
+        "headline"
+      ],
+      "motionPatterns": [
+        "workflows-scrollspy-fan"
+      ],
+      "assetRoles": [
+        "home.brand-illustration",
+        "home.product-screenshot",
+        "home.product-video"
+      ],
+      "homeOnly": true
+    },
+    "home.ai-plays-bento": {
+      "contract": "sections/home.ai-plays-bento.json",
+      "variants": [],
+      "settableContentFields": [
+        "action",
+        "cards",
+        "headline",
+        "sub"
+      ],
+      "motionPatterns": [
+        "bento-hover-reveal"
+      ],
+      "assetRoles": [
+        "home.product-screenshot"
+      ],
+      "homeOnly": true
+    },
+    "home.resources": {
+      "contract": "sections/home.resources.json",
+      "variants": [],
+      "settableContentFields": [
+        "cards",
+        "title"
+      ],
+      "motionPatterns": [
+        "resource-title-hover"
+      ],
+      "assetRoles": [
+        "home.product-screenshot"
+      ],
+      "homeOnly": true
+    },
+    "home.customer-story": {
+      "contract": "sections/home.customer-story.json",
+      "variants": [],
+      "settableContentFields": [
+        "action",
+        "logo",
+        "media",
+        "name",
+        "quote",
+        "role"
+      ],
+      "motionPatterns": [
+        "story-video-background"
+      ],
+      "assetRoles": [
+        "home.customer-logo",
+        "home.customer-video"
+      ],
+      "homeOnly": true
+    },
+    "bk.cta-box": {
+      "contract": "sections/bk.cta-box.json",
+      "variants": [],
+      "settableContentFields": [
+        "button",
+        "text",
+        "title"
+      ],
+      "motionPatterns": [
+        "bk-button-hover"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.breadcrumb": {
+      "contract": "sections/bk.breadcrumb.json",
+      "variants": [],
+      "settableContentFields": [
+        "items"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.page-hero-split": {
+      "contract": "sections/bk.page-hero-split.json",
+      "variants": [
+        "dark",
+        "light"
+      ],
+      "settableContentFields": [
+        "description",
+        "title"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.icon-card-grid": {
+      "contract": "sections/bk.icon-card-grid.json",
+      "variants": [],
+      "settableContentFields": [
+        "cards",
+        "description",
+        "eyebrow",
+        "title"
+      ],
+      "motionPatterns": [
+        "bk-link-arrow-nudge"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.media-text-row": {
+      "contract": "sections/bk.media-text-row.json",
+      "variants": [],
+      "settableContentFields": [
+        "body",
+        "link",
+        "media",
+        "reverse",
+        "title"
+      ],
+      "motionPatterns": [
+        "bk-link-arrow-nudge"
+      ],
+      "assetRoles": [
+        "generated.ui-illustration"
+      ],
+      "homeOnly": false
+    },
+    "bk.filter-listing": {
+      "contract": "sections/bk.filter-listing.json",
+      "variants": [
+        "image-bottom-spacious",
+        "image-top"
+      ],
+      "settableContentFields": [
+        "featured",
+        "featuredTitle",
+        "gridTitle",
+        "groups",
+        "items"
+      ],
+      "motionPatterns": [
+        "bk-filter-chevron"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.card-grid-load-more": {
+      "contract": "sections/bk.card-grid-load-more.json",
+      "variants": [],
+      "settableContentFields": [
+        "items",
+        "pageSize"
+      ],
+      "motionPatterns": [
+        "bk-load-more-hover"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "bk.hero-carousel-centered": {
+      "contract": "sections/bk.hero-carousel-centered.json",
+      "variants": [],
+      "settableContentFields": [
+        "eyebrow",
+        "slides",
+        "title"
+      ],
+      "motionPatterns": [
+        "hcc-autoplay-centermode"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.logo-strip": {
+      "contract": "sections/bk.logo-strip.json",
+      "variants": [],
+      "settableContentFields": [
+        "heading",
+        "logos"
+      ],
+      "motionPatterns": [
+        "bk-logo-strip-mobile-marquee"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "bk.guides-banner": {
+      "contract": "sections/bk.guides-banner.json",
+      "variants": [],
+      "settableContentFields": [
+        "items",
+        "subtitle",
+        "title",
+        "topics"
+      ],
+      "motionPatterns": [
+        "guides-expanding-strip"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.sidebar-nav-grid": {
+      "contract": "sections/bk.sidebar-nav-grid.json",
+      "variants": [],
+      "settableContentFields": [
+        "cards",
+        "topics"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "bk.contact-sales-split": {
+      "contract": "sections/bk.contact-sales-split.json",
+      "variants": [],
+      "settableContentFields": [
+        "form",
+        "left"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "bk.cta-row": {
+      "contract": "sections/bk.cta-row.json",
+      "variants": [
+        "callout",
+        "default",
+        "white"
+      ],
+      "settableContentFields": [
+        "button",
+        "title"
+      ],
+      "motionPatterns": [
+        "bk-cta-row-button-hover"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.breadcrumb": {
+      "contract": "sections/season.breadcrumb.json",
+      "variants": [],
+      "settableContentFields": [
+        "items",
+        "sticky"
+      ],
+      "motionPatterns": [
+        "season-crumbs-scroll-hide"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.hero": {
+      "contract": "sections/season.hero.json",
+      "variants": [],
+      "settableContentFields": [
+        "actions",
+        "badge",
+        "headline",
+        "media",
+        "pattern",
+        "sub"
+      ],
+      "motionPatterns": [
+        "season-hero-fade-rise"
+      ],
+      "assetRoles": [
+        "generated.ui-illustration"
+      ],
+      "homeOnly": false
+    },
+    "season.platform-hero": {
+      "contract": "sections/season.platform-hero.json",
+      "variants": [
+        "copy-above-video",
+        "default"
+      ],
+      "settableContentFields": [
+        "actions",
+        "eyebrow",
+        "lines",
+        "sub"
+      ],
+      "motionPatterns": [
+        "season-hero-fade-rise"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.logos": {
+      "contract": "sections/season.logos.json",
+      "variants": [
+        "a2",
+        "b-cycle",
+        "b-static",
+        "season"
+      ],
+      "settableContentFields": [
+        "cells",
+        "heading",
+        "logos"
+      ],
+      "motionPatterns": [
+        "season-logo-flip-a2",
+        "season-logo-flip-season",
+        "season-logo-cycle",
+        "none"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "season.cards": {
+      "contract": "sections/season.cards.json",
+      "variants": [
+        "bento",
+        "cards"
+      ],
+      "settableContentFields": [
+        "actions",
+        "badge",
+        "cards",
+        "headline",
+        "sub"
+      ],
+      "motionPatterns": [
+        "none",
+        "season-bento-hover"
+      ],
+      "assetRoles": [
+        "generated.ui-illustration"
+      ],
+      "homeOnly": false
+    },
+    "season.side-by-side": {
+      "contract": "sections/season.side-by-side.json",
+      "variants": [
+        "display",
+        "section"
+      ],
+      "settableContentFields": [
+        "actions",
+        "badge",
+        "body",
+        "bullets",
+        "headline",
+        "media",
+        "position"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [
+        "generated.ui-illustration"
+      ],
+      "homeOnly": false
+    },
+    "season.carousel": {
+      "contract": "sections/season.carousel.json",
+      "variants": [],
+      "settableContentFields": [
+        "actions",
+        "cards",
+        "headline",
+        "sub"
+      ],
+      "motionPatterns": [
+        "season-marquee-28s-drag"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.scroll-tabber": {
+      "contract": "sections/season.scroll-tabber.json",
+      "variants": [],
+      "settableContentFields": [
+        "headline",
+        "panels"
+      ],
+      "motionPatterns": [
+        "season-scroll-spy"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.tabber": {
+      "contract": "sections/season.tabber.json",
+      "variants": [
+        "labels",
+        "labels-bar",
+        "logos"
+      ],
+      "settableContentFields": [
+        "badge",
+        "headline",
+        "sub",
+        "tabs"
+      ],
+      "motionPatterns": [
+        "season-tab-swap"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "season.integrations": {
+      "contract": "sections/season.integrations.json",
+      "variants": [
+        "a",
+        "b"
+      ],
+      "settableContentFields": [
+        "action",
+        "headline",
+        "lines",
+        "sub",
+        "tiles"
+      ],
+      "motionPatterns": [
+        "season-marquee-28s-drag",
+        "season-css-strips-28s"
+      ],
+      "assetRoles": [
+        "placeholder.integration-tile"
+      ],
+      "homeOnly": false
+    },
+    "season.stats": {
+      "contract": "sections/season.stats.json",
+      "variants": [],
+      "settableContentFields": [
+        "headline",
+        "stats"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.templates": {
+      "contract": "sections/season.templates.json",
+      "variants": [],
+      "settableContentFields": [
+        "badge",
+        "headline",
+        "slides",
+        "sub"
+      ],
+      "motionPatterns": [
+        "season-crossfade-click"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.read-next": {
+      "contract": "sections/season.read-next.json",
+      "variants": [
+        "a",
+        "b"
+      ],
+      "settableContentFields": [
+        "cards",
+        "headline"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.cta": {
+      "contract": "sections/season.cta.json",
+      "variants": [
+        "a",
+        "b-green",
+        "b-navy"
+      ],
+      "settableContentFields": [
+        "actions",
+        "headline",
+        "lines"
+      ],
+      "motionPatterns": [
+        "season-cta-bars",
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.faq": {
+      "contract": "sections/season.faq.json",
+      "variants": [
+        "a",
+        "e"
+      ],
+      "settableContentFields": [
+        "headline",
+        "items"
+      ],
+      "motionPatterns": [
+        "season-faq-accordion"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.tab-panels": {
+      "contract": "sections/season.tab-panels.json",
+      "variants": [],
+      "settableContentFields": [
+        "headline",
+        "tabs"
+      ],
+      "motionPatterns": [
+        "season-tabpanels-expand"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.stories": {
+      "contract": "sections/season.stories.json",
+      "variants": [],
+      "settableContentFields": [
+        "borderColor",
+        "cta",
+        "fill",
+        "stories"
+      ],
+      "motionPatterns": [
+        "season-stories-autoplay"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "season.use-cases": {
+      "contract": "sections/season.use-cases.json",
+      "variants": [],
+      "settableContentFields": [
+        "action",
+        "cards",
+        "headline"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "season.ai-foundation": {
+      "contract": "sections/season.ai-foundation.json",
+      "variants": [],
+      "settableContentFields": [
+        "cells",
+        "lines"
+      ],
+      "motionPatterns": [
+        "season-ai-foundation-rise"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.org-accordion": {
+      "contract": "sections/season.org-accordion.json",
+      "variants": [],
+      "settableContentFields": [
+        "items",
+        "lines"
+      ],
+      "motionPatterns": [
+        "season-org-accordion"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "season.hac": {
+      "contract": "sections/season.hac.json",
+      "variants": [],
+      "settableContentFields": [
+        "action",
+        "checks",
+        "headline"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "pricing.title": {
+      "contract": "sections/pricing.title.json",
+      "variants": [],
+      "settableContentFields": [
+        "title"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "pricing.plan-cards": {
+      "contract": "sections/pricing.plan-cards.json",
+      "variants": [],
+      "settableContentFields": [
+        "plans"
+      ],
+      "motionPatterns": [
+        "pricing-pill-hover"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "pricing.see-all-link": {
+      "contract": "sections/pricing.see-all-link.json",
+      "variants": [],
+      "settableContentFields": [
+        "href",
+        "label"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "pricing.logo-strip": {
+      "contract": "sections/pricing.logo-strip.json",
+      "variants": [],
+      "settableContentFields": [
+        "eyebrow",
+        "logos"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [
+        "placeholder.wordmark"
+      ],
+      "homeOnly": false
+    },
+    "pricing.comparison-table": {
+      "contract": "sections/pricing.comparison-table.json",
+      "variants": [],
+      "settableContentFields": [
+        "footnotes",
+        "groups"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "pricing.help-links": {
+      "contract": "sections/pricing.help-links.json",
+      "variants": [],
+      "settableContentFields": [
+        "links",
+        "title"
+      ],
+      "motionPatterns": [
+        "none"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "pricing.faq": {
+      "contract": "sections/pricing.faq.json",
+      "variants": [],
+      "settableContentFields": [
+        "items",
+        "title"
+      ],
+      "motionPatterns": [
+        "pricing-faq-chevron"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    },
+    "tpl.gallery": {
+      "contract": "sections/tpl.gallery.json",
+      "variants": [],
+      "settableContentFields": [
+        "asideFooter",
+        "cta",
+        "featured",
+        "hero",
+        "navGroups",
+        "sections",
+        "tiles"
+      ],
+      "motionPatterns": [
+        "tpl-featured-scale"
+      ],
+      "assetRoles": [],
+      "homeOnly": false
+    }
+  },
+  "primitives": {
+    "bk-button": {
+      "contract": "primitives/bk-button.json",
+      "variants": [
+        "primary",
+        "outline",
+        "white"
+      ]
+    },
+    "season-button": {
+      "contract": "primitives/season-button.json",
+      "variants": [
+        "primary",
+        "secondary",
+        "primaryInverse",
+        "secondaryInverse",
+        "bprimary",
+        "bsecondary",
+        "boutline",
+        "bwhite"
+      ]
+    },
+    "bk-link-arrow": {
+      "contract": "primitives/bk-link-arrow.json",
+      "variants": [
+        "sm",
+        "lg"
+      ]
+    },
+    "season-text-link": {
+      "contract": "primitives/season-text-link.json",
+      "variants": [
+        "default",
+        "inverse"
+      ]
+    },
+    "season-badge": {
+      "contract": "primitives/season-badge.json",
+      "variants": [
+        "default",
+        "pink",
+        "yellow",
+        "cyan",
+        "orange",
+        "inverse"
+      ]
+    },
+    "card-eyebrow": {
+      "contract": "primitives/card-eyebrow.json",
+      "variants": [
+        "pill",
+        "logo",
+        "meta"
+      ]
+    },
+    "pause-button": {
+      "contract": "primitives/pause-button.json",
+      "variants": [
+        "bk",
+        "season"
+      ]
+    },
+    "arrow-button": {
+      "contract": "primitives/arrow-button.json",
+      "variants": [
+        "darkSecondary",
+        "b",
+        "bk-circle"
+      ]
+    },
+    "placeholder-media": {
+      "contract": "primitives/placeholder-media.json",
+      "variants": [
+        "light",
+        "dark",
+        "video"
+      ]
+    },
+    "mock-media": {
+      "contract": "primitives/mock-media.json",
+      "variants": [
+        "grid",
+        "kanban",
+        "calendar",
+        "gallery",
+        "timeline",
+        "dashboard",
+        "form",
+        "interface",
+        "automation",
+        "ai",
+        "hub",
+        "gradient",
+        "bars",
+        "story",
+        "glyph"
+      ]
+    },
+    "wordmark-placeholder": {
+      "contract": "primitives/wordmark-placeholder.json",
+      "variants": [
+        "mark-rounded",
+        "mark-circle",
+        "mark-diamond",
+        "text-only"
+      ]
+    },
+    "integration-tile": {
+      "contract": "primitives/integration-tile.json",
+      "variants": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "check-item": {
+      "contract": "primitives/check-item.json",
+      "variants": [
+        "light",
+        "dark"
+      ]
+    },
+    "bars-pattern": {
+      "contract": "primitives/bars-pattern.json",
+      "variants": [
+        "animated",
+        "static"
+      ]
+    }
+  },
+  "components": {
+    "resource-card": {
+      "contract": "components/resource-card.json",
+      "variants": [
+        "imageTop",
+        "imageBottom",
+        "flat"
+      ]
+    },
+    "bk-section-header": {
+      "contract": "components/bk-section-header.json",
+      "variants": [
+        "rule-subtle",
+        "rule-separator"
+      ]
+    },
+    "season-title-module": {
+      "contract": "components/season-title-module.json",
+      "variants": [
+        "center",
+        "left",
+        "band"
+      ]
+    },
+    "season-card": {
+      "contract": "components/season-card.json",
+      "variants": [
+        "icon",
+        "media",
+        "link"
+      ]
+    },
+    "faq-item": {
+      "contract": "components/faq-item.json",
+      "variants": [
+        "a",
+        "e"
+      ]
+    },
+    "stat-cell": {
+      "contract": "components/stat-cell.json",
+      "variants": []
+    },
+    "story-slide": {
+      "contract": "components/story-slide.json",
+      "variants": [
+        "b6",
+        "e8"
+      ]
+    },
+    "filter-group": {
+      "contract": "components/filter-group.json",
+      "variants": []
+    },
+    "form-field": {
+      "contract": "components/form-field.json",
+      "variants": [
+        "text",
+        "select",
+        "textarea",
+        "phone"
+      ]
+    },
+    "plan-card": {
+      "contract": "components/plan-card.json",
+      "variants": [
+        "default",
+        "highlight"
+      ]
+    },
+    "template-card": {
+      "contract": "components/template-card.json",
+      "variants": [
+        "default",
+        "ai"
+      ]
+    },
+    "marquee-track": {
+      "contract": "components/marquee-track.json",
+      "variants": [
+        "x",
+        "y"
+      ]
+    }
+  }
+}

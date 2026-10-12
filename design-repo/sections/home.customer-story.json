@@ -1,0 +1,141 @@
+{
+  "id": "home.customer-story",
+  "system": "bk",
+  "category": "testimonial",
+  "purpose": "Single customer quote over a background video pane with a white button to /customer-stories.",
+  "implementedBy": [
+    {
+      "ref": "src/components/CustomerStory.jsx:3",
+      "anchor": "export default function CustomerStory()"
+    }
+  ],
+  "homeOnly": true,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.home.customer-story",
+    "copyBudgets": {
+      "action.label": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CustomerStory.jsx:38",
+            "anchor": "Explore all customer stories",
+            "observedWords": 4
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "name": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CustomerStory.jsx:32",
+            "anchor": "Angela Yanes",
+            "observedWords": 2
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "quote": {
+        "maxWords": 16,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CustomerStory.jsx:20",
+            "anchor": "Airtable makes it easy to deliver AI insights",
+            "observedWords": 16
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "role": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CustomerStory.jsx:33",
+            "anchor": "Director of Product Operations",
+            "observedWords": 4
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "story-video-background",
+        "trigger": "load",
+        "reducedMotionFallback": "not-implemented",
+        "timing": "autoplay muted loop background video, no pause control",
+        "gapNote": "only the button transition is removed under reduce; the HEVC background video keeps playing and has no pause control.",
+        "evidence": [
+          {
+            "ref": "src/components/CustomerStory.jsx:11",
+            "anchor": "autoPlay"
+          },
+          {
+            "ref": "src/components/CustomerStory.css:182",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "stack-columns",
+        "type-scale-down"
+      ],
+      "detail": "padding 32, quote 24px, button stacks below",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:583",
+          "anchor": "Story: padding 32, quote 24px."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "home.customer-logo",
+    "home.customer-video"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "home.resources"
+    ],
+    "observedBefore": [
+      "bk.cta-box"
+    ]
+  }
+}

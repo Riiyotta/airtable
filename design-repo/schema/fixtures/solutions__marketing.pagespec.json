@@ -1,0 +1,484 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-solution",
+  "route": "/solutions/marketing",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Solutions",
+            "href": "/solutions"
+          },
+          {
+            "label": "Marketing"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "badge": "For marketing teams",
+        "headline": "Turn great marketing ideas into campaigns at scale",
+        "sub": "Everything stays connected. Reports update automatically as the underlying records change across the business. Clear ownership means fewer meetings.",
+        "actions": [
+          {
+            "label": "Get started free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "16/9",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "season",
+      "content": {
+        "heading": "Trusted by",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Northwind",
+            "Lumen",
+            "Arcadia",
+            "Brightline",
+            "Kestrel",
+            "Halcyon"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-season",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "badge": "Campaign planning",
+        "headline": "Plan, launch and learn",
+        "sub": "Give every team a shared foundation to build on. From intake to delivery, every step is tracked in one place. Everything stays connected.",
+        "cards": [
+          {
+            "title": "Launch with confidence",
+            "body": "Data stays trusted. Integrations pull data in from the apps you use, so nothing needs to be copied by hand. Every change is logged.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          },
+          {
+            "title": "Reports that refresh automatically",
+            "body": "Plans turn into progress. Customize fields, layouts and rules to match how you operate. Admins can review.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          },
+          {
+            "title": "Visibility for leaders",
+            "body": "Clear ownership means fewer meetings and faster follow-through. Every update stays visible. Give every team a shared foundation.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels",
+      "content": {
+        "badge": "Campaign lifecycle",
+        "headline": "Every campaign stage, managed in one shared place",
+        "sub": "From intake to delivery, every step is tracked in one place. Customize fields, layouts and rules to match how you operate. Everyone sees the same source of truth at once. Every update stays visible.",
+        "tabs": [
+          {
+            "label": "Campaign planning",
+            "subhead": "Reports that refresh automatically",
+            "groups": [
+              {
+                "strong": "Flexible views for every role",
+                "text": "Everything stays connected. Capture ideas, assign owners and track progress in a."
+              },
+              {
+                "strong": "Automate the busywork away",
+                "text": "Clear ownership means fewer meetings and faster follow-through. Changes sync across every view instantly."
+              },
+              {
+                "strong": "Flexible views for every role",
+                "text": "Share live progress with partners without exposing internal details. Data stays trusted. Flexible views let each."
+              }
+            ],
+            "action": {
+              "label": "Start a campaign",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Drafting",
+            "subhead": "Reliable data at scale",
+            "groups": [
+              {
+                "strong": "Flexible views for every role",
+                "text": "Keep every stakeholder on track. Spend less time chasing status updates. Your data."
+              },
+              {
+                "strong": "Automate the busywork away",
+                "text": "Work flows naturally. Changes sync across every view instantly. Small teams can start simple and add structure."
+              },
+              {
+                "strong": "Flexible views for every role",
+                "text": "Capture ideas, assign owners and track progress in a single workspace. Decisions happen with full context. Admins."
+              }
+            ],
+            "action": {
+              "label": "Start a campaign",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Launching",
+            "subhead": "Automate the busywork away",
+            "groups": [
+              {
+                "strong": "Flexible views for every role",
+                "text": "Admins can review usage, manage access and apply policies from one central console."
+              },
+              {
+                "strong": "Automate the busywork away",
+                "text": "Agents handle the busywork in the background. Integrations pull data in from the apps you use, so nothing."
+              },
+              {
+                "strong": "Flexible views for every role",
+                "text": "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Workflows stay consistent."
+              }
+            ],
+            "action": {
+              "label": "Start a campaign",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Measurement",
+            "subhead": "One place for everything",
+            "groups": [
+              {
+                "strong": "Flexible views for every role",
+                "text": "Small teams can start simple and add structure as their needs grow over time."
+              },
+              {
+                "strong": "Automate the busywork away",
+                "text": "Spend less time chasing status updates. Dashboards refresh on their own. Search across records, files and."
+              },
+              {
+                "strong": "Flexible views for every role",
+                "text": "Spend less time chasing status updates. Small teams can start simple and add structure as their needs grow over time."
+              }
+            ],
+            "action": {
+              "label": "Start a campaign",
+              "href": "/signup"
+            },
+            "video": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.templates",
+      "content": {
+        "badge": "Templates for marketing teams",
+        "headline": "Start faster with ready-made templates for marketers",
+        "sub": "Turn repeatable processes into reliable systems that scale with you. Every change is logged.",
+        "slides": [
+          {
+            "title": "Automate the busywork away",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Reliable data at scale",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Reports that refresh automatically",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "One place for everything",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          },
+          {
+            "title": "Automate the busywork away",
+            "link": {
+              "label": "Explore",
+              "href": "/templates"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-crossfade-click",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "a",
+      "content": {
+        "headline": "Works with the tools you use",
+        "sub": "Roll out changes gradually and measure their impact before going wide. Search across records, files and comments to find answers quickly.",
+        "action": {
+          "label": "Explore all integrations",
+          "href": "/integrations"
+        },
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 4
+        }
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "logos",
+      "content": {
+        "headline": "See how marketing teams move faster",
+        "tabs": [
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Meridian"
+            },
+            "quote": "Keep every stakeholder on track. Nothing falls through the cracks. Automate the handoffs that slow work down. Launch faster with.",
+            "attribution": "Every change is logged. Plans turn into progress. Templates help new projects launch.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Ostara"
+            },
+            "quote": "Automate the handoffs that slow work down. Forecasts improve when every input lives in the same connected system. Launch faster with.",
+            "attribution": "Leaders get a clear picture of what is moving and what is stuck. Roll out changes gradually.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Pinecrest"
+            },
+            "quote": "Bring scattered requests into one place. Plans turn into progress. Set up structured workflows without writing any code. Small teams.",
+            "attribution": "Capture ideas, assign owners and track progress in a single workspace. Templates help.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.read-next",
+      "variant": "a",
+      "content": {
+        "headline": "More resources to explore next",
+        "cards": [
+          {
+            "title": "Flexible views for every role and build custom apps around"
+          },
+          {
+            "title": "Build custom apps around the way you already work"
+          },
+          {
+            "title": "Simple tools for complex operations and better forecasts from connected"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Launch your next campaign with confidence",
+        "actions": [
+          {
+            "label": "Start building free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Contact sales",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Frequently asked questions",
+        "items": [
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Permissions keep sensitive records visible only to the people who need them. Give every team a shared foundation to build on. Forecasts improve when every input lives in the same connected system. Work flows naturally.",
+              "Forecasts improve when every input lives in the same connected system. Search across records, files and comments to find answers quickly. Search across records, files and comments to find answers quickly. Share live progress with partners without exposing internal details. Start in minutes."
+            ]
+          },
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Turn repeatable processes into reliable systems that scale with you. Share live progress with partners without exposing internal details. Connect the tools your teams already rely on. Work flows naturally."
+            ]
+          },
+          {
+            "q": "How do admins manage access, policies and usage across a large organization?",
+            "a": [
+              "Roll out changes gradually and measure their impact before going wide. Workflows stay consistent across regions, teams and time zones. Clear ownership means fewer meetings and faster follow-through."
+            ]
+          },
+          {
+            "q": "Can different teams customize their own views without affecting others?",
+            "a": [
+              "Search across records, files and comments to find answers quickly. Small teams can start simple and add structure as their needs grow over time. Feedback lands in the right queue and reaches the right owner automatically. Every change is logged."
+            ]
+          },
+          {
+            "q": "How do we migrate several years of project history without losing structure or context?",
+            "a": [
+              "Clear ownership means fewer meetings and faster follow-through. Feedback lands in the right queue and reaches the right owner automatically. Work flows naturally. Everything stays connected."
+            ]
+          },
+          {
+            "q": "How long does it take to get started?",
+            "a": [
+              "Feedback lands in the right queue and reaches the right owner automatically. Launch faster with building blocks designed for real business processes. From intake to delivery, every step is tracked in one place."
+            ]
+          },
+          {
+            "q": "Can we share progress with external partners without exposing internal records?",
+            "a": [
+              "Set up structured workflows without writing any code. Share live progress with partners without exposing internal details. Automate the handoffs that slow work down."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

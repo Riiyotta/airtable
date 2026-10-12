@@ -1,0 +1,176 @@
+{
+  "id": "bk.contact-sales-split",
+  "system": "bk",
+  "category": "form",
+  "purpose": "Contact page split: pitch + bullets + trust wordmarks on the left, a VISUAL-ONLY sales form card on the right.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/ContactSalesSplit.jsx:48",
+      "anchor": "export default function ContactSalesSplit("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/contact-sales"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.contact-sales-split",
+    "copyBudgets": {
+      "form.consent.after": {
+        "maxWords": 11,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "form.consent.before": {
+        "maxWords": 28,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "form.consent.link.label": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "form.countries[]": {
+        "maxWords": 2,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "form.helpOptions[]": {
+        "maxWords": 2,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "form.submitLabel": {
+        "maxWords": 1,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "form.title": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.bullets[]": {
+        "maxWords": 9,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.intro": {
+        "maxWords": 36,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.logos.names[]": {
+        "maxWords": 1,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.support.after": {
+        "maxWords": 1,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.support.before": {
+        "maxWords": 7,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.support.link.label": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.title": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      },
+      "left.trustLine": {
+        "maxWords": 7,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/contact-sales"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "shell.header"
+    ],
+    "observedBefore": [
+      "shell.footer"
+    ]
+  },
+  "notes": "Form is non-functional: onSubmit only calls preventDefault (no network, no validation side effects).",
+  "noteEvidence": [
+    {
+      "ref": "src/bk/ContactSalesSplit.jsx:82",
+      "anchor": "onSubmit={(e) => e.preventDefault()}"
+    }
+  ]
+}

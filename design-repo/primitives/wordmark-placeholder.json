@@ -1,0 +1,26 @@
+{
+  "id": "wordmark-placeholder",
+  "layer": "primitive",
+  "purpose": "Fictional wordmark (assetRole placeholder.wordmark).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:139",
+      "anchor": "export function Logo({ name, i = 0, style })"
+    },
+    {
+      "ref": "src/bk/BkLogoStrip.jsx:12",
+      "anchor": "className=\"bkls-logo\""
+    }
+  ],
+  "variants": [
+    "mark-rounded",
+    "mark-circle",
+    "mark-diamond",
+    "text-only"
+  ],
+  "tokens": [
+    "typography.fontFamily.haas"
+  ],
+  "states": [],
+  "a11y": "aria-label = name"
+}

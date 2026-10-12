@@ -1,0 +1,140 @@
+{
+  "theme": "light",
+  "$description": "The only theme: the clone has no dark mode (no prefers-color-scheme rule in src). Every semantic + component token resolved to its foundation value.",
+  "resolved": {
+    "bk.text.strong": "#181D26",
+    "bk.text.default": "#333840",
+    "bk.text.secondary": "#41454D",
+    "bk.text.weak": "rgba(4,14,32,0.69)",
+    "bk.text.link": "#254FAD",
+    "bk.text.link-arrow": "#0768F8",
+    "bk.text.link-arrow-lg": "#1B61C9",
+    "bk.surface.page": "#FFFFFF",
+    "bk.surface.subtle": "#F8FAFC",
+    "bk.surface.callout": "#F0F6FF",
+    "bk.surface.hero-dark": "#1F0C3B",
+    "bk.surface.placeholder": "#E0E2E6",
+    "bk.surface.placeholder-dark": "#2A2F38",
+    "bk.border.card": "#E0E2E6",
+    "bk.border.separator": "rgba(1,20,53,0.12)",
+    "bk.type.hero-h1": {
+      "family": [
+        "Haas",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "sans-serif"
+      ],
+      "size": "40px",
+      "lineHeight": "48px",
+      "weight": 400,
+      "mobile": "32px/40px"
+    },
+    "bk.type.section-h2": {
+      "family": [
+        "Haas Groot Disp",
+        "Haas",
+        "sans-serif"
+      ],
+      "size": "32px",
+      "lineHeight": "40px",
+      "weight": 400,
+      "mobile": "24px/30px"
+    },
+    "bk.type.body": {
+      "family": [
+        "Haas",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "sans-serif"
+      ],
+      "size": "16px",
+      "lineHeight": "21.6px",
+      "weight": 400,
+      "letterSpacing": "0.16px",
+      "mobile": "14px/18.9px"
+    },
+    "bk.type.button": {
+      "family": [
+        "Haas",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "sans-serif"
+      ],
+      "size": "16px",
+      "lineHeight": "21.6px",
+      "weight": 500,
+      "letterSpacing": "0.16px"
+    },
+    "season.text.primary": "#181D26",
+    "season.text.secondary": "rgba(4,14,32,0.69)",
+    "season.text.primary-e": "#161616",
+    "season.border.keyline": "#E0DCDB",
+    "season.border.shell-side": "#E0DCDB",
+    "season.border.shell-side-e": "#333333",
+    "season.border.keyline-dark": "#90959D38",
+    "season.surface.placeholder-a": "#F8F6F6",
+    "season.surface.placeholder-season": "#E0E2E6",
+    "season.surface.placeholder-dark": "#2A2F38",
+    "season.surface.cta": "#012978",
+    "season.surface.cta-green": "#004801",
+    "season.accent.scroll-marker": "#CADCFF",
+    "season.accent.stories-fill": "#F884EE",
+    "season.weight.regular": 500,
+    "season.weight.strong": 600,
+    "season.weight.regular-heavy": 550,
+    "season.weight.strong-heavy": 650,
+    "season.type.hero-h1": {
+      "family": [
+        "ATSeasonSans",
+        "Haas",
+        "sans-serif"
+      ],
+      "class": ".ss-hh"
+    },
+    "season.type.feature-h2": {
+      "family": [
+        "ATSeasonSans",
+        "Haas",
+        "sans-serif"
+      ],
+      "size": "48px",
+      "lineHeight": "1.25",
+      "weight": "var(--wr)"
+    },
+    "pricing.text.primary": "#1D1F25",
+    "pricing.text.link": "#166EE1",
+    "pricing.accent.highlight": "#0D52AC",
+    "pricing.border.cell": "#C4C7CD",
+    "tpl.text.primary": "#101828",
+    "tpl.text.secondary": "#6A7282",
+    "tpl.border.default": "#E5E7EB",
+    "tpl.surface.muted": "#F3F4F6",
+    "button.bk.padding": "16px 24px",
+    "button.bk.radius": "12px",
+    "button.bk.height": "56px",
+    "button.bk.transition": "all 200ms linear",
+    "button.bk.primary.bg": "#181D26",
+    "button.bk.primary.bg-hover": "rgba(4,14,32,0.69)",
+    "button.bk.outline.fg": "#181D26",
+    "button.bk.white.bg-hover": "#F2F4F7EB",
+    "button.season.padding": "12px 24px",
+    "button.season.radius": "4px",
+    "button.season.weight": "var(--ws)",
+    "button.season.transition": "background-color, border-color, color, box-shadow 150ms standard",
+    "button.season.focus-ring": "0 0 0 2px #0768f8",
+    "card.resource.radius": "16px",
+    "card.resource.bg": "#F8FAFC",
+    "card.resource.border": "#E0E2E6",
+    "breadcrumb.height": "42.2px",
+    "breadcrumb.bg": "#F8FAFC",
+    "breadcrumb.shadow": "inset 0 7px 20px -7px rgba(15,48,106,0.05)",
+    "breadcrumb.sticky-top.bk": "calc(var(--mainNavHeight) - 1px)",
+    "breadcrumb.sticky-top.season": "var(--mainNavHeight)"
+  }
+}

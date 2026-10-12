@@ -1,0 +1,309 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-ai-product",
+  "route": "/platform/ai-agents",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Platform",
+            "href": "/platform"
+          },
+          {
+            "label": "AI Agents"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "headline": "Agents that take routine work off a plate",
+        "sub": "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Permissions keep sensitive records visible only to the people who need them.",
+        "actions": [
+          {
+            "label": "Try it now",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "892/383",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.scroll-tabber",
+      "content": {
+        "headline": "Put agents to work at scale",
+        "panels": [
+          {
+            "label": "01 Document review agents",
+            "title": "Automate the busywork away and approvals that move at the speed",
+            "body": "Dashboards refresh on their own. Integrations pull data in from the apps you use, so nothing needs to be copied by hand. From intake.",
+            "action": {
+              "label": "Try it now",
+              "href": "/signup"
+            }
+          },
+          {
+            "label": "02 Research agents",
+            "title": "Guardrails that keep everyone aligned",
+            "body": "Turn repeatable processes into reliable systems that scale with you. Structured data makes it easy to spot trends and act on them early. Automate the handoffs that.",
+            "action": {
+              "label": "Learn more",
+              "href": "#"
+            }
+          },
+          {
+            "label": "03 Content drafting agents",
+            "title": "A shared workspace for planning and delivery and connect",
+            "body": "Keep every stakeholder on track. Bring scattered requests into one place. Feedback lands in the right queue and reaches the right owner automatically. Set up structured workflows without.",
+            "action": {
+              "label": "Explore AI Plays",
+              "href": "/ai-plays"
+            }
+          },
+          {
+            "label": "04 Triage agents",
+            "title": "A shared workspace for planning and delivery",
+            "body": "Agents handle the busywork in the background. Start in minutes. Templates help new projects.",
+            "action": {
+              "label": "Try it now",
+              "href": "/signup"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-scroll-spy",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.carousel",
+      "content": {
+        "headline": "Build custom apps around the way you already work",
+        "actions": [
+          {
+            "label": "Explore AI Plays",
+            "href": "/ai-plays",
+            "variant": "primary"
+          }
+        ],
+        "cards": [
+          {
+            "badge": "Marketing & creative",
+            "tone": "pink",
+            "title": "Guardrails that keep everyone aligned",
+            "body": "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Permissions keep sensitive records."
+          },
+          {
+            "badge": "Operations",
+            "tone": "orange",
+            "title": "Keep projects moving without the chaos",
+            "body": "Integrations pull data in from the apps you use, so nothing needs to be copied by hand. Built-in guardrails."
+          },
+          {
+            "badge": "Marketing & creative",
+            "tone": "pink",
+            "title": "Give every team a single source of truth",
+            "body": "Your data model grows alongside your organization without painful migrations. Build once."
+          },
+          {
+            "badge": "Operations",
+            "tone": "orange",
+            "title": "Build custom apps around the way you already work",
+            "body": "Spend less time chasing status updates. Built-in guardrails keep experimentation safe while giving."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "headline": "Better forecasts from connected data across every team",
+        "cards": [
+          {
+            "icon": true,
+            "title": "Private by design",
+            "body": "Structured data makes it easy to spot trends and act on them early. Feedback lands in the right queue and reaches the."
+          },
+          {
+            "icon": true,
+            "title": "Clear controls for admins",
+            "body": "Small teams can start simple and add structure as their needs grow over time. Share live progress with."
+          },
+          {
+            "icon": true,
+            "title": "Answers grounded in records",
+            "body": "Decisions happen with full context. Data stays trusted. Workflows stay consistent across regions, teams and time zones. Small teams can start simple and add structure as."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.read-next",
+      "variant": "a",
+      "content": {
+        "headline": "Flexible views for every role",
+        "cards": [
+          {
+            "title": "Insights in minutes"
+          },
+          {
+            "title": "Flexible views for every role"
+          },
+          {
+            "title": "Fewer status meetings and more focused work"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Give every team an agent that handles the repetitive steps for them and keeps work moving",
+        "actions": [
+          {
+            "label": "Sign up for free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Try it out",
+            "href": "/signup",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Keep projects moving without the chaos",
+        "items": [
+          {
+            "q": "What is a workspace?",
+            "a": [
+              "Connect the tools your teams already rely on. Small teams can start simple and add structure as their needs grow over time."
+            ]
+          },
+          {
+            "q": "How does the platform handle very large data sets and many users?",
+            "a": [
+              "Connect the tools your teams already rely on. Share live progress with partners without exposing internal details."
+            ]
+          },
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Everyone sees the same source of truth at once. Small teams can start simple and add structure as their needs grow over time. Feedback lands in the right queue and reaches the right owner automatically."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Admins can review usage, manage access and apply policies from one central console. From intake to delivery, every step is tracked in one place. Teams move faster together."
+            ]
+          },
+          {
+            "q": "Can I import existing data?",
+            "a": [
+              "Give every team a shared foundation to build on. Search across records, files and comments to find answers quickly. Dashboards refresh on their own."
+            ]
+          },
+          {
+            "q": "Can different teams customize their own views without affecting others?",
+            "a": [
+              "Built-in guardrails keep experimentation safe while giving teams room to explore new ideas. Customize fields, layouts and rules to match how you operate. Every change is logged. Work flows naturally."
+            ]
+          },
+          {
+            "q": "Is there a free plan available?",
+            "a": [
+              "From intake to delivery, every step is tracked in one place. Share live progress with partners without exposing internal details."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

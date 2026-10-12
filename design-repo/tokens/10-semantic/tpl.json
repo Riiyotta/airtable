@@ -1,0 +1,42 @@
+{
+  "system": "tpl",
+  "tokens": {
+    "$description": "/templates gallery (Haas Groot Disp 500/600/700).",
+    "text.primary": {
+      "$value": "{color.tpl.gray-900}",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:22",
+          "anchor": "--g900: #101828;"
+        }
+      ]
+    },
+    "text.secondary": {
+      "$value": "{color.tpl.gray-500}",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:23",
+          "anchor": "--g500: #6a7282;"
+        }
+      ]
+    },
+    "border.default": {
+      "$value": "{color.tpl.gray-200}",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:25",
+          "anchor": "--g200: #e5e7eb;"
+        }
+      ]
+    },
+    "surface.muted": {
+      "$value": "{color.tpl.gray-100}",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/templates.css:26",
+          "anchor": "--g100: #f3f4f6;"
+        }
+      ]
+    }
+  }
+}

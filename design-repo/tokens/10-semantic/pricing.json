@@ -1,0 +1,42 @@
+{
+  "system": "pricing",
+  "tokens": {
+    "$description": "/pricing (Inter Display, OFL).",
+    "text.primary": {
+      "$value": "{color.ink.pricing}",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:15",
+          "anchor": "color: #1d1f25;"
+        }
+      ]
+    },
+    "text.link": {
+      "$value": "{color.link.pricing}",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:228",
+          "anchor": ".pr .pr-inline-link { color: #166ee1; }"
+        }
+      ]
+    },
+    "accent.highlight": {
+      "$value": "{color.pricing.highlight}",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:110",
+          "anchor": "border-color: #0d52ac;"
+        }
+      ]
+    },
+    "border.cell": {
+      "$value": "{color.gray.400}",
+      "evidence": [
+        {
+          "ref": "src/standalone/pricing/pricing.css:105",
+          "anchor": "border-left: 1px solid #c4c7cd;"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$description": "min-width breakpoints (tailwind.config.js screens).",
+  "breakpoint": {
+    "md": {
+      "$type": "dimension",
+      "$value": "768px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:23",
+          "anchor": "md: '768px'"
+        },
+        {
+          "ref": "CLONE_SPEC.md:31",
+          "anchor": "Breakpoints used by the CSS: **768, 900, 1024, 1664**"
+        }
+      ]
+    },
+    "md2": {
+      "$type": "dimension",
+      "$value": "900px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:24",
+          "anchor": "md2: '900px'"
+        },
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:107",
+          "anchor": "900 is the main layout switch for A/B"
+        }
+      ],
+      "note": "Season keyline frame / tabber switch"
+    },
+    "lg": {
+      "$type": "dimension",
+      "$value": "1024px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:25",
+          "anchor": "lg: '1024px'"
+        }
+      ],
+      "note": "header hamburger switch, bento hover"
+    },
+    "2xl": {
+      "$type": "dimension",
+      "$value": "1664px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:26",
+          "anchor": "'2xl': '1664px'"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "id": "mock-media",
+  "layer": "primitive",
+  "purpose": "Original illustration layer (src/media/): <MockMedia kind seed theme hint ratio bare />. Fills 100% of its positioned parent with a deterministic, static inline-SVG product-UI scene; the parent keeps its measured size, radius and background (no layout change). assetRole generated.ui-illustration.",
+  "implementedBy": [
+    {
+      "ref": "src/media/MockMedia.jsx:8",
+      "anchor": "// <MockMedia kind seed theme hint ratio bare />"
+    },
+    {
+      "ref": "src/media/MockMedia.jsx:40",
+      "anchor": "export default function MockMedia({ kind, seed = 0, theme = 'light', hint, ratio, bare = false, className = '' })"
+    }
+  ],
+  "variants": [
+    "grid",
+    "kanban",
+    "calendar",
+    "gallery",
+    "timeline",
+    "dashboard",
+    "form",
+    "interface",
+    "automation",
+    "ai",
+    "hub",
+    "gradient",
+    "bars",
+    "story",
+    "glyph"
+  ],
+  "kinds": {
+    "enum": [
+      "grid",
+      "kanban",
+      "calendar",
+      "gallery",
+      "timeline",
+      "dashboard",
+      "form",
+      "interface",
+      "automation",
+      "ai",
+      "hub",
+      "gradient",
+      "bars",
+      "story",
+      "glyph"
+    ],
+    "evidence": [
+      {
+        "ref": "src/media/scenes.jsx:1153",
+        "anchor": "export const SCENES = { grid, kanban, calendar, gallery, timeline, dashboard, form, interface: iface, automation, ai, hub, gradient, bars, story, glyph }"
+      }
+    ]
+  },
+  "themes": {
+    "enum": [
+      "light",
+      "dark"
+    ],
+    "evidence": [
+      {
+        "ref": "src/media/MockMedia.jsx:15",
+        "anchor": "//   theme: 'light' | 'dark'"
+      },
+      {
+        "ref": "src/media/palette.js:44",
+        "anchor": "export const THEMES = {"
+      }
+    ]
+  },
+  "props": {
+    "kind": "closed enum `kinds` (15); omitted -> picked from `hint`",
+    "seed": "number | string; same seed -> same scene (mulberry32 over an FNV-1a hash)",
+    "theme": "light | dark",
+    "hint": "slot copy used by pickKind when kind is omitted",
+    "ratio": "initial aspect before the box is measured (ResizeObserver)",
+    "bare": "product window fills the box edge-to-edge (used by /templates cards)"
+  },
+  "kindSelection": {
+    "ruleOrder": [
+      "automation",
+      "ai",
+      "hub",
+      "dashboard",
+      "form",
+      "interface",
+      "calendar",
+      "timeline",
+      "gallery",
+      "kanban",
+      "grid"
+    ],
+    "fallbackRotation": [
+      "grid",
+      "kanban",
+      "dashboard",
+      "gallery",
+      "timeline",
+      "calendar",
+      "interface",
+      "form"
+    ],
+    "note": "First matching keyword rule wins; otherwise hashSeed(hint|seed) indexes the UI-kind rotation.",
+    "evidence": [
+      {
+        "ref": "src/media/MockMedia.jsx:66",
+        "anchor": "const k = SCENES[kind] ? kind : pickKind(hint, seed)"
+      },
+      {
+        "ref": "src/media/pickKind.js:7-18",
+        "anchor": "const RULES = ["
+      },
+      {
+        "ref": "src/media/pickKind.js:5",
+        "anchor": "export const UI_KINDS = ['grid', 'kanban', 'dashboard', 'gallery', 'timeline', 'calendar', 'interface', 'form']"
+      }
+    ]
+  },
+  "deterministic": {
+    "evidence": [
+      {
+        "ref": "src/media/rng.js:1",
+        "anchor": "// Deterministic pseudo-random helpers: same seed -> same scene (no Math.random at render)."
+      }
+    ]
+  },
+  "layout": {
+    "value": "absolute, inset 0, overflow hidden, pointer-events none, border-radius inherit; .md-host adds position:relative to static slots",
+    "evidence": [
+      {
+        "ref": "src/media/MockMedia.jsx:10",
+        "anchor": "// own measured size, radius and background; this layer is absolutely positioned so it never"
+      },
+      {
+        "ref": "src/media/media.css:1",
+        "anchor": "/* md- illustration layer (src/media/MockMedia.jsx). Fills its positioned parent without affecting"
+      }
+    ]
+  },
+  "cssPrefix": "md-",
+  "motion": {
+    "pattern": "none",
+    "note": "static artwork; prefers-reduced-motion needs nothing",
+    "evidence": [
+      {
+        "ref": "src/media/MockMedia.jsx:19",
+        "anchor": "// Static: no animation, so prefers-reduced-motion needs nothing extra."
+      }
+    ]
+  },
+  "palette": {
+    "note": "internal to the primitive (inks/navy/purple/pastel pills from tailwind.config.js + season.css values); not settable from a PageSpec",
+    "evidence": [
+      {
+        "ref": "src/media/palette.js:44",
+        "anchor": "export const THEMES = {"
+      }
+    ]
+  },
+  "assetRole": "generated.ui-illustration",
+  "tokens": [],
+  "states": [],
+  "a11y": "aria-hidden; svg focusable=false"
+}

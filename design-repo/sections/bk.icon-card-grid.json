@@ -1,0 +1,118 @@
+{
+  "id": "bk.icon-card-grid",
+  "system": "bk",
+  "category": "feature-grid",
+  "purpose": "Centered eyebrow pill + h2 + p, then a 3-column grid of icon cards each with an arrow link.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/IconCardGrid.jsx:6",
+      "anchor": "export default function IconCardGrid("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/solutions"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.icon-card-grid",
+    "copyBudgets": {
+      "cards[].description": {
+        "maxWords": 20,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "cards[].link.label": {
+        "maxWords": 3,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "cards[].title": {
+        "maxWords": 3,
+        "observedInstances": 8,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "description": {
+        "maxWords": 15,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "eyebrow": {
+        "maxWords": 1,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      },
+      "title": {
+        "maxWords": 10,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/solutions"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "arrow translateX(4px) .15s ease-in",
+        "evidence": [
+          {
+            "ref": "src/bk/BkLink.jsx:18",
+            "anchor": "group-hover:translate-x-[4px] motion-reduce:transition-none"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1145",
+            "anchor": "| BK-2 / BK-3 links | hover"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "single-column"
+      ],
+      "detail": "cards 1 column, gap 24",
+      "evidence": [
+        {
+          "ref": "src/bk/IconCardGrid.jsx:22",
+          "anchor": "grid grid-cols-1 gap-[24px] lg:grid-cols-3 lg:gap-[32px]"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.hero-centered"
+    ],
+    "observedBefore": [
+      "bk.media-text-row"
+    ]
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "id": "season.platform-hero",
+  "system": "season",
+  "category": "hero",
+  "purpose": "B1/E-1 PlatformHero: eyebrow + multi-line h1 + sub + B buttons; media right (default) or 16:9 video band below (copyAboveVideo).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/heroes.jsx:77",
+      "anchor": "export function PlatformHero({ eyebrow, lines, sub, actions, variant = 'default', media })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "copy-above-video",
+      "evidence": [
+        {
+          "ref": "src/season/pages/enterprise.js:13",
+          "anchor": "variant: 'copyAboveVideo',"
+        }
+      ]
+    },
+    {
+      "id": "default",
+      "evidence": [
+        {
+          "ref": "src/season/pages/platform.js:11",
+          "anchor": "type: 'platformHero',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 2,
+    "observedRoutes": [
+      "/platform",
+      "/solutions/enterprise"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.platform-hero",
+    "copyBudgets": {
+      "actions[].label": {
+        "maxWords": 3,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "eyebrow": {
+        "maxWords": 3,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "lines[]": {
+        "maxWords": 5,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      },
+      "sub": {
+        "maxWords": 20,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/platform",
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown",
+        "timing": "copy opacity .5s ease-out delay .27s; media opacity+translateY(200px) 1.15s ease-out delay 1.22s; pattern 2.6s",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:604",
+            "anchor": ".ss-anim-fade { animation: ssHeroFade 0.5s ease-out 0.27s both; }"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:777",
+            "anchor": "| A1 hero copy | load | opacity 0→1"
+          }
+        ],
+        "usedByVariants": [
+          "copy-above-video",
+          "default"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "shell.header"
+    ],
+    "observedBefore": [
+      "season.logos"
+    ]
+  }
+}

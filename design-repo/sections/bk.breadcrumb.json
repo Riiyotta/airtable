@@ -1,0 +1,82 @@
+{
+  "id": "bk.breadcrumb",
+  "system": "bk",
+  "category": "nav",
+  "purpose": "Sticky 42.2px breadcrumb bar under the header on BK sub-pages (no scroll-hide in the clone).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/BreadcrumbBar.jsx:5",
+      "anchor": "export default function BreadcrumbBar({ crumbs })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 5,
+    "observedRoutes": [
+      "/ai-plays",
+      "/customer-stories",
+      "/guides",
+      "/integrations",
+      "/solutions"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.breadcrumb",
+    "copyBudgets": {
+      "items[].label": {
+        "maxWords": 2,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/ai-plays",
+          "/customer-stories",
+          "/guides",
+          "/integrations",
+          "/solutions"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "shell.header"
+    ],
+    "observedBefore": [
+      "bk.guides-banner",
+      "bk.hero-carousel-centered",
+      "bk.hero-centered",
+      "bk.page-hero-split"
+    ]
+  },
+  "notes": "Spec BreadcrumbBar motion (scroll-hide .25s) is NOT implemented in the BK component: see src/bk/BreadcrumbBar.jsx header comment."
+}

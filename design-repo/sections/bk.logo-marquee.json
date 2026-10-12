@@ -1,0 +1,94 @@
+{
+  "id": "bk.logo-marquee",
+  "system": "bk",
+  "category": "logos",
+  "purpose": "Homepage social proof: eyebrow + 16 real customer logos in a 25px/s marquee.",
+  "implementedBy": [
+    {
+      "ref": "src/components/LogoBar.jsx:84",
+      "anchor": "function MarqueeLogoBar({ heading })"
+    }
+  ],
+  "homeOnly": true,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.logo-marquee",
+    "copyBudgets": {
+      "heading": {
+        "maxWords": 5,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/LogoBar.jsx:26",
+            "anchor": "const DEFAULT_HEADING",
+            "observedWords": 5
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "logo-marquee-25pxps",
+        "trigger": "continuous",
+        "reducedMotionFallback": "not-implemented",
+        "timing": "translateX one logo set at 25px/s, linear, no hover pause",
+        "gapNote": "index.css declares the marquee inside @layer components with no reduced-motion guard.",
+        "evidence": [
+          {
+            "ref": "src/components/LogoBar.jsx:24",
+            "anchor": "const PX_PER_SECOND = 25"
+          },
+          {
+            "ref": "src/index.css:286",
+            "anchor": "animation: marquee var(--marquee-duration, 128s) linear infinite;"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": ">=1664",
+      "changes": [
+        "padding-change"
+      ],
+      "detail": "li padding 24 (16 below)",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:571",
+          "anchor": "**≥1664:** marquee `li` padding 24"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "home.customer-logo"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "bk.hero-centered"
+    ],
+    "observedBefore": [
+      "home.workflows"
+    ]
+  }
+}

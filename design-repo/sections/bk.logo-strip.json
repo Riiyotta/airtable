@@ -1,0 +1,92 @@
+{
+  "id": "bk.logo-strip",
+  "system": "bk",
+  "category": "logos",
+  "purpose": "Centered small heading + 4 fictional wordmark cells (static >=768, marquee <768).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/BkLogoStrip.jsx:9",
+      "anchor": "export default function BkLogoStrip("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/customer-stories"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.logo-strip",
+    "copyBudgets": {
+      "heading": {
+        "maxWords": 5,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      },
+      "logos.names[]": {
+        "maxWords": 1,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/customer-stories"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-logo-strip-mobile-marquee",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed",
+        "timing": "<768 only: 200px step ~25px/s, 32s per 4-logo loop",
+        "evidence": [
+          {
+            "ref": "src/bk/BkLogoStrip.jsx:6",
+            "anchor": "the cells become a continuous marquee"
+          },
+          {
+            "ref": "src/bk/BkLogoStrip.css:87",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "marquee-enabled"
+      ],
+      "detail": "cells become a continuous marquee",
+      "evidence": [
+        {
+          "ref": "src/bk/BkLogoStrip.jsx:6",
+          "anchor": "the cells become a continuous marquee"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "bk.hero-carousel-centered"
+    ],
+    "observedBefore": [
+      "bk.card-grid-load-more"
+    ]
+  }
+}

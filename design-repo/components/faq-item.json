@@ -1,0 +1,19 @@
+{
+  "id": "faq-item",
+  "layer": "component",
+  "purpose": "Accordion question/answer row (Season a/e skins).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:170",
+      "anchor": "<li key={i} className=\"ss-faq__item\" data-open={open[i]}>"
+    }
+  ],
+  "composes": [],
+  "variants": [
+    "a",
+    "e"
+  ],
+  "tokens": [
+    "motion.easing.in-out-strong"
+  ]
+}

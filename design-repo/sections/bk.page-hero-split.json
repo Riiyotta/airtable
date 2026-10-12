@@ -1,0 +1,114 @@
+{
+  "id": "bk.page-hero-split",
+  "system": "bk",
+  "category": "hero",
+  "purpose": "Split hero band: h1 in cols 1-6, description in cols 8-12 (light #F8FAFC or dark #1F0C3B).",
+  "implementedBy": [
+    {
+      "ref": "src/bk/PageHeroSplit.jsx:9",
+      "anchor": "export default function PageHeroSplit("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "dark",
+      "evidence": [
+        {
+          "ref": "src/bk/PageHeroSplit.jsx:6",
+          "anchor": "dark: { bg: '#1F0C3B'"
+        }
+      ]
+    },
+    {
+      "id": "light",
+      "evidence": [
+        {
+          "ref": "src/bk/PageHeroSplit.jsx:5",
+          "anchor": "light: { bg: '#F8FAFC'"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 2,
+    "observedRoutes": [
+      "/ai-plays",
+      "/integrations"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.page-hero-split",
+    "copyBudgets": {
+      "description": {
+        "maxWords": 23,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "title": {
+        "maxWords": 10,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "dark",
+          "light"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<768",
+      "changes": [
+        "stack-columns",
+        "type-scale-down"
+      ],
+      "detail": "h1 32/40, description below (pt 24)",
+      "evidence": [
+        {
+          "ref": "src/bk/PageHeroSplit.jsx:14",
+          "anchor": "mobile row-gap 0 + p padding-top 24"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.breadcrumb"
+    ],
+    "observedBefore": [
+      "bk.filter-listing"
+    ]
+  }
+}

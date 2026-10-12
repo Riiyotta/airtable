@@ -1,0 +1,23 @@
+/* md- illustration layer (src/media/MockMedia.jsx). Fills its positioned parent without affecting
+   layout; the parent keeps its own size, radius and background. Static artwork — no motion. */
+.md-root {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: inherit;
+}
+.md-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  letter-spacing: 0;
+}
+.md-svg text {
+  font-family: inherit;
+}
+/* Positioning context for slots whose original placeholder box was static. */
+.md-host {
+  position: relative;
+}

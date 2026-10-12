@@ -1,0 +1,166 @@
+{
+  "id": "home.ai-plays-bento",
+  "system": "bk",
+  "category": "feature-grid",
+  "purpose": "Heading row + four colour bento cards (8/4/6/6 columns) linking to /ai-plays; image swaps for prompt on hover.",
+  "implementedBy": [
+    {
+      "ref": "src/components/AIPlays.jsx:34",
+      "anchor": "export default function AIPlays()"
+    }
+  ],
+  "homeOnly": true,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.home.ai-plays-bento",
+    "copyBudgets": {
+      "action.label": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/AIPlays.jsx:43",
+            "anchor": "See AI plays",
+            "observedWords": 3
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].prompt": {
+        "maxWords": 13,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/AIPlays.jsx:9",
+            "anchor": "prompt: 'Read this brief",
+            "observedWords": 12
+          },
+          {
+            "ref": "src/components/AIPlays.jsx:16",
+            "anchor": "prompt: 'Gather intel",
+            "observedWords": 11
+          },
+          {
+            "ref": "src/components/AIPlays.jsx:23",
+            "anchor": "prompt: 'What are customers saying",
+            "observedWords": 13
+          },
+          {
+            "ref": "src/components/AIPlays.jsx:30",
+            "anchor": "prompt: 'Run language translation",
+            "observedWords": 12
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "headline": {
+        "maxWords": 9,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/AIPlays.jsx:39",
+            "anchor": "The path to 10x every person in your organization",
+            "observedWords": 9
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "sub": {
+        "maxWords": 10,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/AIPlays.jsx:40",
+            "anchor": "Use cases and templates to activate AI in your workflows",
+            "observedWords": 10
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bento-hover-reveal",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "image opacity 1->0, prompt+pill 0->1, .6s cubic-bezier(.4,0,.2,1), >=1024 only",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:552",
+            "anchor": "| Bento cards | Hover / focus-within (≥1024)"
+          },
+          {
+            "ref": "src/components/AIPlays.css:261",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "image-hidden"
+      ],
+      "detail": "images hidden; prompt + pill always visible",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:466",
+          "anchor": "Images are `opacity:0` (hidden); prompt and pill are always visible"
+        }
+      ]
+    },
+    {
+      "at": "<768",
+      "changes": [
+        "single-column"
+      ],
+      "detail": "single column, 16px gap",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:581",
+          "anchor": "Bento is a single column, 16px gap, text always visible."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "home.product-screenshot"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "home.workflows"
+    ],
+    "observedBefore": [
+      "home.resources"
+    ]
+  }
+}

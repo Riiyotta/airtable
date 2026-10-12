@@ -1,0 +1,97 @@
+{
+  "id": "season.stats",
+  "system": "season",
+  "category": "stats",
+  "purpose": "A10 static stats row (no count-up).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/blocks.jsx:5",
+      "anchor": "export function Stats({ headline, stats })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/platform/governance"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.stats",
+    "copyBudgets": {
+      "headline": {
+        "maxWords": 5,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/platform/governance"
+        ]
+      },
+      "stats[].label": {
+        "maxWords": 8,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/platform/governance"
+        ]
+      },
+      "stats[].value": {
+        "maxWords": 1,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/platform/governance"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable",
+        "timing": null,
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:796",
+            "anchor": "| All other sections | scroll | **none.**"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1150",
+            "anchor": "**No scroll-reveal** (IntersectionObserver fade-ins)"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "stack-columns"
+      ],
+      "detail": "stats list becomes a column, gap 48",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:1479",
+          "anchor": ".ss-stats__list { flex-direction: column; align-items: stretch; gap: 48px; }"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.hero"
+    ],
+    "observedBefore": [
+      "season.side-by-side"
+    ]
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.bk-solutions-hub",
+  "route": "/solutions",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Solutions"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.hero-centered",
+      "variant": "no-video",
+      "content": {
+        "title": "Empower every team to build",
+        "sub": "Shape flexible workflows around the way your people work and refine them as you grow.",
+        "primary": {
+          "label": "Watch the webinar",
+          "href": "#"
+        },
+        "secondary": {
+          "label": "Contact sales",
+          "href": "/contact-sales"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "bk.icon-card-grid",
+      "content": {
+        "eyebrow": "Solutions",
+        "title": "Build the right workflow for any team, at any scale",
+        "description": "Start from a proven foundation, then adapt fields, views and automations to fit your team.",
+        "cards": [
+          {
+            "title": "Marketing teams",
+            "description": "Plan launches and campaigns with every asset in view.",
+            "link": {
+              "label": "Explore Marketing",
+              "href": "/solutions/marketing"
+            }
+          },
+          {
+            "title": "Product teams",
+            "description": "Connect feedback, roadmaps and releases across every product squad.",
+            "link": {
+              "label": "Explore Product",
+              "href": "/solutions/product"
+            }
+          },
+          {
+            "title": "Operations teams",
+            "description": "Keep requests, vendors and inventory moving without manual follow-ups.",
+            "link": {
+              "label": "Explore Operations",
+              "href": "/solutions/operations"
+            }
+          },
+          {
+            "title": "Finance teams",
+            "description": "Track budgets and approvals in one reliable shared record.",
+            "link": {
+              "label": "Explore Finance",
+              "href": "/solutions/finance"
+            }
+          },
+          {
+            "title": "Sales teams",
+            "description": "Organize pipelines and account plans so deals keep progressing.",
+            "link": {
+              "label": "Explore Sales",
+              "href": "/solutions/sales"
+            }
+          },
+          {
+            "title": "People teams",
+            "description": "Run onboarding, reviews and hiring plans from one place.",
+            "link": {
+              "label": "Explore People",
+              "href": "/solutions/people"
+            }
+          },
+          {
+            "title": "IT teams",
+            "description": "Manage assets, access requests and service tickets with clear ownership.",
+            "link": {
+              "label": "Explore IT",
+              "href": "/solutions/it"
+            }
+          },
+          {
+            "title": "Public sector teams",
+            "description": "Connect programs, agencies and partners in secure shared workspaces so every request and approval stays visible from intake to delivery.",
+            "link": {
+              "label": "Explore Public sector",
+              "href": "/solutions/public-sector"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.media-text-row",
+      "content": {
+        "title": "Solutions for marketing teams",
+        "body": "Plan campaigns, track creative requests and report on every campaign result from one shared source of truth.",
+        "link": {
+          "label": "Explore marketing solutions",
+          "href": "/solutions/marketing"
+        },
+        "reverse": false,
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1/1"
+        }
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.media-text-row",
+      "content": {
+        "title": "Solutions for product teams",
+        "body": "Bring roadmaps, feedback and release plans together so product decisions rest on shared context.",
+        "link": {
+          "label": "Explore product solutions",
+          "href": "/solutions/product"
+        },
+        "reverse": true,
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1/1"
+        }
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.media-text-row",
+      "content": {
+        "title": "Solutions for operations teams",
+        "body": "Coordinate vendors, inventory and requests in one place, with automations that keep handoffs moving on time.",
+        "link": {
+          "label": "Explore operations solutions",
+          "href": "/solutions/operations"
+        },
+        "reverse": false,
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1/1"
+        }
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.media-text-row",
+      "content": {
+        "title": "Solutions for finance teams",
+        "body": "Track budgets, approvals and forecasts in records that stay accurate as numbers change throughout the quarter.",
+        "link": {
+          "label": "Explore finance solutions",
+          "href": "/solutions/finance"
+        },
+        "reverse": true,
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1/1"
+        }
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.media-text-row",
+      "content": {
+        "title": "Solutions for sales teams",
+        "body": "Manage pipelines, account plans and every deal review in a workspace that updates itself as conversations move forward.",
+        "link": {
+          "label": "Explore sales solutions",
+          "href": "/solutions/sales"
+        },
+        "reverse": false,
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1/1"
+        }
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.media-text-row",
+      "content": {
+        "title": "Solutions for people teams",
+        "body": "Support onboarding, reviews and hiring plans with clear workflows that help every new teammate settle in.",
+        "link": {
+          "label": "Explore people solutions",
+          "href": "/solutions/people"
+        },
+        "reverse": true,
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "1/1"
+        }
+      },
+      "motion": {
+        "pattern": "bk-link-arrow-nudge",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.cta-row",
+      "variant": "white",
+      "content": {
+        "title": "Start building your next workflow",
+        "button": {
+          "label": "Get started",
+          "href": "/signup"
+        }
+      },
+      "motion": {
+        "pattern": "bk-cta-row-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

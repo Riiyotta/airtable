@@ -1,0 +1,205 @@
+{
+  "id": "bk.filter-listing",
+  "system": "bk",
+  "category": "listing",
+  "purpose": "Featured card row + sidebar checkbox filters (OR within / AND across groups) + filtered card grid.",
+  "implementedBy": [
+    {
+      "ref": "src/bk/FilterListing.jsx:13",
+      "anchor": "export default function FilterListing("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "image-bottom-spacious",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/AiPlays.jsx:71",
+          "anchor": "card={{ layout: 'imageBottom', desc: true, mediaKind: 'ai' }}"
+        }
+      ]
+    },
+    {
+      "id": "image-top",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Integrations.jsx:42",
+          "anchor": "card={{ layout: 'imageTop', desc: false, mediaKind: 'hub' }}"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 2,
+    "observedRoutes": [
+      "/ai-plays",
+      "/integrations"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.filter-listing",
+    "copyBudgets": {
+      "featuredTitle": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/integrations"
+        ]
+      },
+      "featured[].category": {
+        "maxWords": 3,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "featured[].desc": {
+        "maxWords": 21,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/ai-plays"
+        ]
+      },
+      "featured[].feature": {
+        "maxWords": 2,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/ai-plays"
+        ]
+      },
+      "featured[].pill.label": {
+        "maxWords": 3,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "featured[].title": {
+        "maxWords": 8,
+        "observedInstances": 6,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "gridTitle": {
+        "maxWords": 2,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "groups[].options[]": {
+        "maxWords": 3,
+        "observedInstances": 23,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "groups[].title": {
+        "maxWords": 2,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "items[].category": {
+        "maxWords": 3,
+        "observedInstances": 36,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "items[].desc": {
+        "maxWords": 26,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/ai-plays"
+        ]
+      },
+      "items[].feature": {
+        "maxWords": 2,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/ai-plays"
+        ]
+      },
+      "items[].pill.label": {
+        "maxWords": 3,
+        "observedInstances": 36,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      },
+      "items[].title": {
+        "maxWords": 10,
+        "observedInstances": 36,
+        "observedRoutes": [
+          "/ai-plays",
+          "/integrations"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-filter-chevron",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "group chevron rotate 180deg .1s linear; filtering instant",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1146",
+            "anchor": "| BK-4 filter group | click"
+          },
+          {
+            "ref": "src/bk/FilterListing.css:215",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "image-bottom-spacious",
+          "image-top"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "sidebar-to-dropdown"
+      ],
+      "detail": "sidebar replaced by a Filters button + panel",
+      "evidence": [
+        {
+          "ref": "src/bk/FilterListing.jsx:143",
+          "anchor": "className=\"fl-mobile-btn\""
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "bk.page-hero-split"
+    ],
+    "observedBefore": [
+      "bk.cta-row",
+      "shell.footer"
+    ]
+  }
+}

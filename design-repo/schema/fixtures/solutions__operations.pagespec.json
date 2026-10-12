@@ -1,0 +1,410 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.season-solution",
+  "route": "/solutions/operations",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "none"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "season.breadcrumb",
+      "content": {
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Solutions",
+            "href": "/solutions"
+          },
+          {
+            "label": "Operations"
+          }
+        ],
+        "sticky": true
+      },
+      "motion": {
+        "pattern": "season-crumbs-scroll-hide",
+        "trigger": "scroll",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.hero",
+      "content": {
+        "badge": "Built for operations teams",
+        "headline": "Run reliable operations across every team, site and region",
+        "sub": "Turn repeatable processes into reliable systems that scale with you. Set up structured workflows without writing any code. Everything stays connected.",
+        "actions": [
+          {
+            "label": "Get started free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Book demo",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ],
+        "media": {
+          "assetRole": "generated.ui-illustration",
+          "ratio": "16/9",
+          "video": true
+        }
+      },
+      "motion": {
+        "pattern": "season-hero-fade-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown"
+      }
+    },
+    {
+      "section": "season.logos",
+      "variant": "season",
+      "content": {
+        "heading": "Trusted by",
+        "logos": {
+          "assetRole": "placeholder.wordmark",
+          "names": [
+            "Ostara",
+            "Pinecrest",
+            "Quartz",
+            "Solace",
+            "Tidewater",
+            "Vantage"
+          ]
+        }
+      },
+      "motion": {
+        "pattern": "season-logo-flip-season",
+        "trigger": "timer",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.cards",
+      "variant": "cards",
+      "content": {
+        "badge": "Operational excellence",
+        "headline": "Standardize the processes that keep the business running",
+        "sub": "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Set up structured workflows without writing any code. Workflows stay consistent across regions, teams and time zones.",
+        "cards": [
+          {
+            "title": "Shared data",
+            "body": "Customize fields, layouts and rules to match how you operate. Approvals move without email chains.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          },
+          {
+            "title": "Automate the busywork away",
+            "body": "Connect the tools your teams already rely on. Clear ownership means fewer meetings and faster follow-through. Everything stays connected.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          },
+          {
+            "title": "Visibility for leaders",
+            "body": "Small teams can start simple and add structure as their needs grow over time. Everyone sees the same source of truth at once. Every update stays.",
+            "media": {
+              "assetRole": "generated.ui-illustration",
+              "ratio": "448/300"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "labels",
+      "content": {
+        "badge": "Core workflows",
+        "headline": "Keep requests, vendors and assets moving without friction",
+        "sub": "From intake to delivery, every step is tracked in one place. Permissions keep sensitive records visible only to the people who need them. Data stays trusted.",
+        "tabs": [
+          {
+            "label": "Intake requests",
+            "subhead": "Reports that refresh automatically",
+            "groups": [
+              {
+                "strong": "Plan faster",
+                "text": "Templates help new projects launch with proven structure from the very."
+              },
+              {
+                "strong": "Connected team workflows",
+                "text": "Work flows naturally. Reports update automatically as the underlying."
+              },
+              {
+                "strong": "Connected team workflows",
+                "text": "Forecasts improve when every input lives in the same connected system. Launch faster with."
+              }
+            ],
+            "action": {
+              "label": "See it live",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Vendor management",
+            "subhead": "Reliable data at scale",
+            "groups": [
+              {
+                "strong": "Shared data",
+                "text": "Permissions keep sensitive records visible only to the people who need."
+              },
+              {
+                "strong": "One place for everything",
+                "text": "Automate the handoffs that slow work down. Plans turn into progress."
+              },
+              {
+                "strong": "Automate the busywork away",
+                "text": "From intake to delivery, every step is tracked in one place. Structured data makes it easy."
+              }
+            ],
+            "action": {
+              "label": "See it live",
+              "href": "/signup"
+            },
+            "video": true
+          },
+          {
+            "label": "Asset tracking",
+            "subhead": "Automate the busywork away",
+            "groups": [
+              {
+                "strong": "Plan faster",
+                "text": "Roll out changes gradually and measure their impact before going wide."
+              },
+              {
+                "strong": "Connected team workflows",
+                "text": "Decisions happen with full context. Work flows naturally. Bring scattered."
+              },
+              {
+                "strong": "Automate the busywork away",
+                "text": "Bring scattered requests into one place. Your data model grows alongside your organization."
+              }
+            ],
+            "action": {
+              "label": "See it live",
+              "href": "/signup"
+            },
+            "video": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.integrations",
+      "variant": "a",
+      "content": {
+        "headline": "Plug into your systems",
+        "sub": "Search across records, files and comments to find answers quickly. Leaders get a clear picture of what is moving and what is stuck. Teams move faster together.",
+        "action": {
+          "label": "Explore all integrations",
+          "href": "/integrations"
+        },
+        "tiles": {
+          "assetRole": "placeholder.integration-tile",
+          "count": 4
+        }
+      },
+      "motion": {
+        "pattern": "season-marquee-28s-drag",
+        "trigger": "continuous",
+        "reducedMotionFallback": "autoplay-stopped"
+      }
+    },
+    {
+      "section": "season.tabber",
+      "variant": "logos",
+      "content": {
+        "headline": "How operations teams stay ahead of demand",
+        "tabs": [
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Meridian"
+            },
+            "quote": "Every update stays visible. Roll out changes gradually and measure their impact before going wide. Small teams can start simple and add.",
+            "attribution": "Set up structured workflows without writing any code. Every change is logged.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Ostara"
+            },
+            "quote": "Permissions keep sensitive records visible only to the people who need them. Turn repeatable processes into reliable systems that scale with.",
+            "attribution": "Workflows stay consistent across regions, teams and time zones. Everything stays connected.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          },
+          {
+            "logo": {
+              "assetRole": "placeholder.wordmark",
+              "name": "Pinecrest"
+            },
+            "quote": "Changes sync across every view instantly. Assistants summarize long threads so reviewers can focus on the decisions that matter most.",
+            "attribution": "Workflows stay consistent across regions, teams and time zones. Work flows naturally.",
+            "action": {
+              "label": "Read the story",
+              "href": "/customer-stories"
+            },
+            "video": true
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "season.read-next",
+      "variant": "a",
+      "content": {
+        "headline": "Guides for operations leaders today",
+        "cards": [
+          {
+            "title": "Bring planning, execution and reporting together in one workspace"
+          },
+          {
+            "title": "Build custom apps around the way you already work"
+          },
+          {
+            "title": "Smarter reviews with built-in assistants"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "trigger": "none",
+        "reducedMotionFallback": "not-applicable"
+      }
+    },
+    {
+      "section": "season.cta",
+      "variant": "a",
+      "content": {
+        "headline": "Run smoother operations from this week",
+        "actions": [
+          {
+            "label": "Start building free",
+            "href": "/signup",
+            "variant": "primary"
+          },
+          {
+            "label": "Contact sales",
+            "href": "/contact-sales",
+            "variant": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-cta-bars",
+        "trigger": "continuous",
+        "reducedMotionFallback": "animation-removed"
+      }
+    },
+    {
+      "section": "season.faq",
+      "variant": "a",
+      "content": {
+        "headline": "Frequently asked questions",
+        "items": [
+          {
+            "q": "Do I need technical experience to build an app or automation?",
+            "a": [
+              "Customize fields, layouts and rules to match how you operate. Changes sync across every view instantly. Capture ideas, assign owners and track progress in a single workspace. Decisions happen with full context. Assistants summarize long threads so reviewers can focus on the decisions that matter most. Plans turn into progress. Leaders get a clear picture of what is moving and what is stuck. Search across records, files and comments."
+            ]
+          },
+          {
+            "q": "How long does it take to get started?",
+            "a": [
+              "Everyone sees the same source of truth at once. Your data model grows alongside your organization without painful migrations. Set up structured workflows without writing any code. Data stays trusted."
+            ]
+          },
+          {
+            "q": "How do admins manage access, policies and usage across a large organization?",
+            "a": [
+              "Your data model grows alongside your organization without painful migrations. Feedback lands in the right queue and reaches the right owner automatically. Every update stays visible."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "From intake to delivery, every step is tracked in one place. Feedback lands in the right queue and reaches the right owner automatically. Set up structured workflows without writing any code. Work flows naturally."
+            ]
+          },
+          {
+            "q": "Can admins restrict access to specific fields?",
+            "a": [
+              "Assistants summarize long threads so reviewers can focus on the decisions that matter most. Clear ownership means fewer meetings and faster follow-through. Everything stays connected. Data stays trusted."
+            ]
+          },
+          {
+            "q": "How is our information protected and who can access it?",
+            "a": [
+              "Permissions keep sensitive records visible only to the people who need them. Turn repeatable processes into reliable systems that scale with you."
+            ]
+          },
+          {
+            "q": "What kind of support is included with each plan?",
+            "a": [
+              "Templates help new projects launch with proven structure from the very first day. Set up structured workflows without writing any code. Search across records, files and comments to find answers quickly."
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "season-faq-accordion",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "season",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}

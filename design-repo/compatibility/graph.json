@@ -1,0 +1,797 @@
+{
+  "$description": "Rhythm/compatibility rules. Each rule is implemented in schema/semantic_validate.py under the same id and severity; extraction/verify_all.py fails if the two diverge.",
+  "rules": [
+    {
+      "id": "TEMPLATE_NODE_SEQUENCE",
+      "severity": "error",
+      "description": "The PageSpec's nodes must match the node list of the template it declares (order for zone 'ordered', unordered body regions, required/repeatable, min/maxCount, allowed variants). Cross-references `template` -- never checks nodes in isolation."
+    },
+    {
+      "id": "ROUTE_TEMPLATE_BINDING",
+      "severity": "error",
+      "description": "A real route (templates/routes.json) must use its bound template; a new route is only allowed on a template with acceptsNewRoutes=true and must match its newRoutePattern and not collide with another template's real route."
+    },
+    {
+      "id": "HOME_ROUTE_ONLY",
+      "severity": "error",
+      "description": "template.home is only valid on '/', and '/' is only valid with template.home."
+    },
+    {
+      "id": "SHELL_HEADER_FIRST",
+      "severity": "error",
+      "description": "shell.header is node 0 (Layout renders Header before <main> on every route).",
+      "evidence": [
+        {
+          "ref": "src/layout/Layout.jsx:41",
+          "anchor": "<Header />"
+        }
+      ]
+    },
+    {
+      "id": "SHELL_FOOTER_LAST",
+      "severity": "error",
+      "description": "shell.footer is the last node (Layout renders Footer after <main>).",
+      "evidence": [
+        {
+          "ref": "src/layout/Layout.jsx:46",
+          "anchor": "<Footer variant={FOOTER_VARIANT[route]} />"
+        }
+      ]
+    },
+    {
+      "id": "BREADCRUMB_FOLLOWS_HEADER",
+      "severity": "error",
+      "description": "A breadcrumb section (bk.breadcrumb / season.breadcrumb), when present, is node 1 directly under the header.",
+      "evidence": [
+        {
+          "ref": "src/season/SeasonPage.jsx:49",
+          "anchor": "{breadcrumb && <Breadcrumb {...breadcrumb} />}"
+        }
+      ]
+    },
+    {
+      "id": "ONE_HERO_PER_PAGE",
+      "severity": "error",
+      "description": "At most one hero-category section (bk.guides-banner, bk.hero-carousel-centered, bk.hero-centered, bk.page-hero-split, pricing.title, season.hero, season.platform-hero). Exactly one is required except on the named hero-less templates.",
+      "exceptions": {
+        "heroLessTemplates": [
+          "template.bk-contact-sales",
+          "template.templates-gallery"
+        ]
+      },
+      "evidence": [
+        {
+          "ref": "src/bk/pages/ContactSales.jsx:6",
+          "anchor": "<ContactSalesSplit"
+        }
+      ]
+    },
+    {
+      "id": "MAX_PER_PAGE",
+      "severity": "error",
+      "description": "Per-section count limits from each section contract's constraints (onePerPage -> 1, maxPerPage -> N), keyed on section id (variants of one section count together)."
+    },
+    {
+      "id": "HOME_ONLY_SECTIONS",
+      "severity": "error",
+      "description": "Sections marked homeOnly (real homepage modules) are only valid on template.home."
+    },
+    {
+      "id": "HOME_ASSET_ROLES_ONLY_ON_HOME",
+      "severity": "error",
+      "description": "Asset roles whose allowedOn is template.home (real Airtable/customer media) may only appear on template.home, and contentPolicy.realBrandAssets must be 'home-route-reference-only' exactly when they appear."
+    },
+    {
+      "id": "NO_OUTBOUND_LINKS",
+      "severity": "error",
+      "description": "Every href is a local route ('/x', not '//x') or '#'/'#fragment'. Former external links are '#'.",
+      "evidence": [
+        {
+          "ref": "src/components/Header.jsx:7",
+          "anchor": "const W = ''"
+        },
+        {
+          "ref": "src/components/Footer.jsx:4",
+          "anchor": "const W = ''"
+        },
+        {
+          "ref": "src/layout/Layout.jsx:22",
+          "anchor": "// and swallow '#' placeholders (former external links) so they don't jump to top."
+        }
+      ]
+    },
+    {
+      "id": "VERBATIM_REAL_COPY",
+      "severity": "error",
+      "description": "No copy string (or sentence of one) may equal a sentence of the real Airtable homepage copy (normalised SHA-256 denylist of every real sentence/string of >=5 words plus the real person name, in compatibility/real-copy-denylist.json; text not stored)."
+    },
+    {
+      "id": "COPY_BUDGET_MAX_WORDS",
+      "severity": "error",
+      "description": "Every copy field's word count is <= its section contract copyBudgets[path].maxWords."
+    },
+    {
+      "id": "MOTION_PATTERN_ALLOWED",
+      "severity": "error",
+      "description": "motion.pattern must be one the section contract allows for the node's variant. Media slots are static since 1.1.0 (the season.side-by-side video sweep was removed with the md- illustrations), so video media carries no motion pattern of its own."
+    },
+    {
+      "id": "REDUCED_MOTION_FALLBACK_REQUIRED",
+      "severity": "error",
+      "description": "motion.reducedMotionFallback is present and equals the fallback pinned to the pattern in the section contract."
+    },
+    {
+      "id": "MOTION_FALLBACK_GAP",
+      "severity": "warn",
+      "description": "The chosen motion pattern's reduced-motion fallback is 'not-implemented' in the clone (known gap)."
+    },
+    {
+      "id": "NO_ADJACENT_SAME_SECTION",
+      "severity": "warn",
+      "description": "Two consecutive nodes of the same section id.",
+      "exceptions": {
+        "allowedRepeats": [
+          "season.side-by-side",
+          "bk.media-text-row",
+          "season.cards"
+        ]
+      }
+    },
+    {
+      "id": "SIDE_BY_SIDE_ALTERNATES",
+      "severity": "warn",
+      "description": "Consecutive season.side-by-side rows alternate left/right (bottom resets); consecutive bk.media-text-row rows alternate `reverse`.",
+      "evidence": [
+        {
+          "ref": "src/bk/pages/Solutions.jsx:52",
+          "anchor": "reverse={i % 2 === 1}"
+        }
+      ]
+    },
+    {
+      "id": "LOGOS_DIRECTLY_AFTER_HERO",
+      "severity": "warn",
+      "description": "A logos-category section (bk.logo-marquee, bk.logo-strip, pricing.logo-strip, season.logos) sits directly after the hero.",
+      "exceptions": {
+        "templates": [
+          "template.season-about",
+          "template.pricing"
+        ]
+      }
+    },
+    {
+      "id": "CTA_NEAR_END",
+      "severity": "warn",
+      "description": "A cta-category section (bk.cta-box, bk.cta-row, season.cta) is within the last 3 content nodes (before the footer)."
+    },
+    {
+      "id": "MOTION_BUDGET",
+      "severity": "warn",
+      "description": "At most 3 continuous/timer motion patterns per page (max observed on a real route: /platform).",
+      "exceptions": {
+        "max": 3
+      }
+    },
+    {
+      "id": "BRAND_NAME_IN_COPY",
+      "severity": "warn",
+      "description": "Copy contains the word 'Airtable'. Generated pages should use neutral product wording (the clone itself has 3 such eyebrows on /platform and /solutions/enterprise)."
+    }
+  ],
+  "sections": {
+    "shell.header": {
+      "category": "shell",
+      "observedAfter": [],
+      "observedBefore": [
+        "bk.breadcrumb",
+        "bk.contact-sales-split",
+        "bk.hero-centered",
+        "pricing.title",
+        "season.breadcrumb",
+        "season.hero",
+        "season.platform-hero",
+        "tpl.gallery"
+      ]
+    },
+    "shell.footer": {
+      "category": "shell",
+      "observedAfter": [
+        "bk.contact-sales-split",
+        "bk.cta-box",
+        "bk.cta-row",
+        "bk.filter-listing",
+        "pricing.faq",
+        "season.cta",
+        "season.faq",
+        "season.read-next",
+        "season.side-by-side",
+        "tpl.gallery"
+      ],
+      "observedBefore": []
+    },
+    "bk.hero-centered": {
+      "category": "hero",
+      "observedAfter": [
+        "bk.breadcrumb",
+        "shell.header"
+      ],
+      "observedBefore": [
+        "bk.icon-card-grid",
+        "bk.logo-marquee"
+      ]
+    },
+    "bk.logo-marquee": {
+      "category": "logos",
+      "observedAfter": [
+        "bk.hero-centered"
+      ],
+      "observedBefore": [
+        "home.workflows"
+      ]
+    },
+    "home.workflows": {
+      "category": "feature-tabs",
+      "observedAfter": [
+        "bk.logo-marquee"
+      ],
+      "observedBefore": [
+        "home.ai-plays-bento"
+      ]
+    },
+    "home.ai-plays-bento": {
+      "category": "feature-grid",
+      "observedAfter": [
+        "home.workflows"
+      ],
+      "observedBefore": [
+        "home.resources"
+      ]
+    },
+    "home.resources": {
+      "category": "resources",
+      "observedAfter": [
+        "home.ai-plays-bento"
+      ],
+      "observedBefore": [
+        "home.customer-story"
+      ]
+    },
+    "home.customer-story": {
+      "category": "testimonial",
+      "observedAfter": [
+        "home.resources"
+      ],
+      "observedBefore": [
+        "bk.cta-box"
+      ]
+    },
+    "bk.cta-box": {
+      "category": "cta",
+      "observedAfter": [
+        "home.customer-story"
+      ],
+      "observedBefore": [
+        "shell.footer"
+      ]
+    },
+    "bk.breadcrumb": {
+      "category": "nav",
+      "observedAfter": [
+        "shell.header"
+      ],
+      "observedBefore": [
+        "bk.guides-banner",
+        "bk.hero-carousel-centered",
+        "bk.hero-centered",
+        "bk.page-hero-split"
+      ]
+    },
+    "bk.page-hero-split": {
+      "category": "hero",
+      "observedAfter": [
+        "bk.breadcrumb"
+      ],
+      "observedBefore": [
+        "bk.filter-listing"
+      ]
+    },
+    "bk.icon-card-grid": {
+      "category": "feature-grid",
+      "observedAfter": [
+        "bk.hero-centered"
+      ],
+      "observedBefore": [
+        "bk.media-text-row"
+      ]
+    },
+    "bk.media-text-row": {
+      "category": "media-text",
+      "observedAfter": [
+        "bk.icon-card-grid",
+        "bk.media-text-row"
+      ],
+      "observedBefore": [
+        "bk.cta-row",
+        "bk.media-text-row"
+      ]
+    },
+    "bk.filter-listing": {
+      "category": "listing",
+      "observedAfter": [
+        "bk.page-hero-split"
+      ],
+      "observedBefore": [
+        "bk.cta-row",
+        "shell.footer"
+      ]
+    },
+    "bk.card-grid-load-more": {
+      "category": "listing",
+      "observedAfter": [
+        "bk.logo-strip"
+      ],
+      "observedBefore": [
+        "bk.cta-row"
+      ]
+    },
+    "bk.hero-carousel-centered": {
+      "category": "hero",
+      "observedAfter": [
+        "bk.breadcrumb"
+      ],
+      "observedBefore": [
+        "bk.logo-strip"
+      ]
+    },
+    "bk.logo-strip": {
+      "category": "logos",
+      "observedAfter": [
+        "bk.hero-carousel-centered"
+      ],
+      "observedBefore": [
+        "bk.card-grid-load-more"
+      ]
+    },
+    "bk.guides-banner": {
+      "category": "hero",
+      "observedAfter": [
+        "bk.breadcrumb"
+      ],
+      "observedBefore": [
+        "bk.sidebar-nav-grid"
+      ]
+    },
+    "bk.sidebar-nav-grid": {
+      "category": "listing",
+      "observedAfter": [
+        "bk.guides-banner"
+      ],
+      "observedBefore": [
+        "bk.cta-row"
+      ]
+    },
+    "bk.contact-sales-split": {
+      "category": "form",
+      "observedAfter": [
+        "shell.header"
+      ],
+      "observedBefore": [
+        "shell.footer"
+      ]
+    },
+    "bk.cta-row": {
+      "category": "cta",
+      "observedAfter": [
+        "bk.card-grid-load-more",
+        "bk.filter-listing",
+        "bk.media-text-row",
+        "bk.sidebar-nav-grid"
+      ],
+      "observedBefore": [
+        "shell.footer"
+      ]
+    },
+    "season.breadcrumb": {
+      "category": "nav",
+      "observedAfter": [
+        "shell.header"
+      ],
+      "observedBefore": [
+        "season.hero"
+      ]
+    },
+    "season.hero": {
+      "category": "hero",
+      "observedAfter": [
+        "season.breadcrumb",
+        "shell.header"
+      ],
+      "observedBefore": [
+        "season.logos",
+        "season.scroll-tabber",
+        "season.side-by-side",
+        "season.stats"
+      ]
+    },
+    "season.platform-hero": {
+      "category": "hero",
+      "observedAfter": [
+        "shell.header"
+      ],
+      "observedBefore": [
+        "season.logos"
+      ]
+    },
+    "season.logos": {
+      "category": "logos",
+      "observedAfter": [
+        "season.hero",
+        "season.platform-hero",
+        "season.side-by-side"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.side-by-side",
+        "season.tab-panels",
+        "season.use-cases"
+      ]
+    },
+    "season.cards": {
+      "category": "feature-grid",
+      "observedAfter": [
+        "season.cards",
+        "season.carousel",
+        "season.integrations",
+        "season.logos",
+        "season.side-by-side",
+        "season.tabber",
+        "season.templates"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.carousel",
+        "season.cta",
+        "season.faq",
+        "season.read-next",
+        "season.side-by-side",
+        "season.stories",
+        "season.tabber"
+      ]
+    },
+    "season.side-by-side": {
+      "category": "media-text",
+      "observedAfter": [
+        "season.cards",
+        "season.carousel",
+        "season.hero",
+        "season.integrations",
+        "season.logos",
+        "season.side-by-side",
+        "season.stats",
+        "season.tabber"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.carousel",
+        "season.integrations",
+        "season.logos",
+        "season.side-by-side",
+        "season.tabber",
+        "season.templates",
+        "shell.footer"
+      ]
+    },
+    "season.carousel": {
+      "category": "carousel",
+      "observedAfter": [
+        "season.cards",
+        "season.scroll-tabber",
+        "season.side-by-side"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.faq",
+        "season.side-by-side"
+      ]
+    },
+    "season.scroll-tabber": {
+      "category": "feature-tabs",
+      "observedAfter": [
+        "season.hero"
+      ],
+      "observedBefore": [
+        "season.carousel"
+      ]
+    },
+    "season.tabber": {
+      "category": "feature-tabs",
+      "observedAfter": [
+        "season.cards",
+        "season.integrations",
+        "season.side-by-side"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.faq",
+        "season.integrations",
+        "season.read-next",
+        "season.side-by-side",
+        "season.templates"
+      ]
+    },
+    "season.integrations": {
+      "category": "integrations",
+      "observedAfter": [
+        "season.hac",
+        "season.side-by-side",
+        "season.tab-panels",
+        "season.tabber",
+        "season.templates"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.cta",
+        "season.faq",
+        "season.side-by-side",
+        "season.stories",
+        "season.tabber"
+      ]
+    },
+    "season.stats": {
+      "category": "stats",
+      "observedAfter": [
+        "season.hero"
+      ],
+      "observedBefore": [
+        "season.side-by-side"
+      ]
+    },
+    "season.templates": {
+      "category": "carousel",
+      "observedAfter": [
+        "season.side-by-side",
+        "season.tabber"
+      ],
+      "observedBefore": [
+        "season.cards",
+        "season.integrations"
+      ]
+    },
+    "season.read-next": {
+      "category": "resources",
+      "observedAfter": [
+        "season.cards",
+        "season.cta",
+        "season.stories",
+        "season.tabber"
+      ],
+      "observedBefore": [
+        "season.cta",
+        "shell.footer"
+      ]
+    },
+    "season.cta": {
+      "category": "cta",
+      "observedAfter": [
+        "season.cards",
+        "season.faq",
+        "season.integrations",
+        "season.read-next",
+        "season.stories"
+      ],
+      "observedBefore": [
+        "season.faq",
+        "season.read-next",
+        "shell.footer"
+      ]
+    },
+    "season.faq": {
+      "category": "faq",
+      "observedAfter": [
+        "season.cards",
+        "season.carousel",
+        "season.cta",
+        "season.integrations",
+        "season.tabber"
+      ],
+      "observedBefore": [
+        "season.cta",
+        "shell.footer"
+      ]
+    },
+    "season.tab-panels": {
+      "category": "feature-tabs",
+      "observedAfter": [
+        "season.logos"
+      ],
+      "observedBefore": [
+        "season.integrations"
+      ]
+    },
+    "season.stories": {
+      "category": "testimonial",
+      "observedAfter": [
+        "season.cards",
+        "season.integrations"
+      ],
+      "observedBefore": [
+        "season.cta",
+        "season.read-next"
+      ]
+    },
+    "season.use-cases": {
+      "category": "feature-grid",
+      "observedAfter": [
+        "season.logos"
+      ],
+      "observedBefore": [
+        "season.ai-foundation"
+      ]
+    },
+    "season.ai-foundation": {
+      "category": "feature-grid",
+      "observedAfter": [
+        "season.use-cases"
+      ],
+      "observedBefore": [
+        "season.org-accordion"
+      ]
+    },
+    "season.org-accordion": {
+      "category": "feature-tabs",
+      "observedAfter": [
+        "season.ai-foundation"
+      ],
+      "observedBefore": [
+        "season.hac"
+      ]
+    },
+    "season.hac": {
+      "category": "media-text",
+      "observedAfter": [
+        "season.org-accordion"
+      ],
+      "observedBefore": [
+        "season.integrations"
+      ]
+    },
+    "pricing.title": {
+      "category": "hero",
+      "observedAfter": [
+        "shell.header"
+      ],
+      "observedBefore": [
+        "pricing.plan-cards"
+      ]
+    },
+    "pricing.plan-cards": {
+      "category": "pricing",
+      "observedAfter": [
+        "pricing.title"
+      ],
+      "observedBefore": [
+        "pricing.see-all-link"
+      ]
+    },
+    "pricing.see-all-link": {
+      "category": "nav",
+      "observedAfter": [
+        "pricing.plan-cards"
+      ],
+      "observedBefore": [
+        "pricing.logo-strip"
+      ]
+    },
+    "pricing.logo-strip": {
+      "category": "logos",
+      "observedAfter": [
+        "pricing.see-all-link"
+      ],
+      "observedBefore": [
+        "pricing.comparison-table"
+      ]
+    },
+    "pricing.comparison-table": {
+      "category": "pricing",
+      "observedAfter": [
+        "pricing.logo-strip"
+      ],
+      "observedBefore": [
+        "pricing.help-links"
+      ]
+    },
+    "pricing.help-links": {
+      "category": "nav",
+      "observedAfter": [
+        "pricing.comparison-table"
+      ],
+      "observedBefore": [
+        "pricing.faq"
+      ]
+    },
+    "pricing.faq": {
+      "category": "faq",
+      "observedAfter": [
+        "pricing.help-links"
+      ],
+      "observedBefore": [
+        "shell.footer"
+      ]
+    },
+    "tpl.gallery": {
+      "category": "listing",
+      "observedAfter": [
+        "shell.header"
+      ],
+      "observedBefore": [
+        "shell.footer"
+      ]
+    }
+  },
+  "constraintEnforcement": "Section-contract constraints mustBeFirst/mustBeLast -> SHELL_HEADER_FIRST/SHELL_FOOTER_LAST; onePerPage/maxPerPage -> MAX_PER_PAGE; mustFollowNav (breadcrumbs) -> BREADCRUMB_FOLLOWS_HEADER, (pricing.title, tpl.gallery) -> TEMPLATE_NODE_SEQUENCE; mustPrecedeFooter (bk.cta-row) -> TEMPLATE_NODE_SEQUENCE (every template places it directly before shell.footer).",
+  "categories": {
+    "hero": [
+      "bk.guides-banner",
+      "bk.hero-carousel-centered",
+      "bk.hero-centered",
+      "bk.page-hero-split",
+      "pricing.title",
+      "season.hero",
+      "season.platform-hero"
+    ],
+    "logos": [
+      "bk.logo-marquee",
+      "bk.logo-strip",
+      "pricing.logo-strip",
+      "season.logos"
+    ],
+    "cta": [
+      "bk.cta-box",
+      "bk.cta-row",
+      "season.cta"
+    ],
+    "alternating": [
+      "season.side-by-side",
+      "bk.media-text-row"
+    ]
+  },
+  "continuousMotionPatterns": [
+    "bk-logo-strip-mobile-marquee",
+    "hcc-autoplay-centermode",
+    "logo-marquee-25pxps",
+    "season-css-strips-28s",
+    "season-cta-bars",
+    "season-logo-cycle",
+    "season-logo-flip-a2",
+    "season-logo-flip-season",
+    "season-marquee-28s-drag",
+    "season-stories-autoplay"
+  ],
+  "observedMotionLoad": {
+    "/": 1,
+    "/solutions": 0,
+    "/integrations": 0,
+    "/ai-plays": 0,
+    "/customer-stories": 2,
+    "/guides": 0,
+    "/contact-sales": 0,
+    "/platform": 3,
+    "/platform/ai": 3,
+    "/platform/ai-agents": 2,
+    "/platform/app-building": 3,
+    "/platform/automations": 0,
+    "/platform/connected-data": 1,
+    "/platform/governance": 3,
+    "/platform/hyperdb": 2,
+    "/platform/interface-designer": 1,
+    "/platform/portals": 3,
+    "/platform/reporting": 0,
+    "/solutions/marketing": 3,
+    "/solutions/product": 3,
+    "/solutions/operations": 3,
+    "/solutions/enterprise": 3,
+    "/about": 3,
+    "/pricing": 0,
+    "/templates": 0
+  }
+}

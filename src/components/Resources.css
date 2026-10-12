@@ -1,0 +1,223 @@
+/* §6 Resources — "Resources to inspire" */
+.res-outer,
+.res-inner {
+  margin: 0 24px;
+}
+@media (min-width: 768px) {
+  .res-outer,
+  .res-inner {
+    margin: 0 32px;
+  }
+}
+
+.res-grid {
+  display: grid;
+  row-gap: 40px;
+  max-width: 1344px;
+  padding: 32px 0;
+}
+@media (min-width: 768px) {
+  .res-grid {
+    padding: 48px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .res-grid {
+    padding: 64px 0;
+  }
+}
+
+.res-title {
+  margin: 0;
+  font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  line-height: 32.4px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  color: #181d26;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .res-title {
+    font-size: 32px;
+    line-height: 43.2px;
+    letter-spacing: 0.16px;
+  }
+}
+@media (min-width: 1024px) {
+  .res-title {
+    line-height: 41.6px;
+  }
+}
+
+.res-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+@media (min-width: 768px) {
+  .res-cards {
+    gap: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .res-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+}
+
+.res-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.res-card {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f8fafc;
+  border: 1px solid #e0e2e6;
+  border-radius: 16px;
+}
+
+.res-media {
+  aspect-ratio: 16 / 9;
+}
+.res-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.res-content {
+  padding: 24px;
+  font-family: Haas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.res-card-title {
+  width: fit-content;
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 22.5px;
+  font-weight: 500;
+  color: #181d26;
+}
+@media (min-width: 1024px) {
+  .res-card-title {
+    line-height: 21.6px;
+  }
+}
+.res-card-title {
+  transition: 0.25s ease-in;
+}
+/* Hover (measured): the original's JS tween lifts the card to translateY(-2.5px) over 250ms
+   ease-out (fit: cubic-bezier(0,0,.58,1)), same curve back on leave; title colour fades .25s ease-in. */
+.res-card {
+  transition: transform 0.25s cubic-bezier(0, 0, 0.58, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .res-card-title {
+    transition: none;
+  }
+}
+.res-link:hover .res-card {
+  transform: translateY(-2.5px);
+}
+.res-link:hover .res-card-title {
+  color: #040e20b0;
+}
+
+.res-card-desc {
+  margin: 16px 0 0;
+  font-size: 14px;
+  line-height: 18.9px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  color: #040e20b0;
+}
+
+/* ResourceCard variants (SECTION_TYPES_solutions §2.4) — not used by the homepage card. */
+.res-placeholder {
+  width: 100%;
+  height: 100%;
+}
+.res-link--flat .res-card {
+  min-height: 200px;
+}
+.res-link--flat .res-card-title {
+  transition: none;
+}
+.res-link--flat:hover .res-card {
+  transform: none;
+}
+.res-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+/* BkEyebrowPill (§2.3): radius 999, padding 4/12, height 29, Haas 14/21; optional 20×20 icon, gap 6 */
+.res-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 29px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.res-pill-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: currentColor;
+  opacity: 0.35;
+}
+/* logo eyebrow: 120×36 box, contain, left center */
+.res-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 120px;
+  height: 36px;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #9297a0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* meta eyebrow (live /guides): 20×20 icon, label, 6×7 ellipse divider, label — flex gap 8, row height 20;
+   labels 12/18 weight 500, divider fill = label color */
+.res-eyebrow--meta {
+  width: fit-content;
+  height: 20px;
+  flex-wrap: nowrap;
+}
+.res-meta-item {
+  display: contents;
+}
+.res-meta {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #040e20b0;
+}
+.res-meta-icon,
+.res-meta-dot {
+  display: block;
+  flex: none;
+}
+.res-meta-dot {
+  fill: #040e20b0;
+}

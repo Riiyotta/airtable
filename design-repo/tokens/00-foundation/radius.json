@@ -1,0 +1,119 @@
+{
+  "$description": "Radius scale from extraction/histograms.json borderRadius (all values with >=2 literal uses that map to a role).",
+  "radius": {
+    "season-sm": {
+      "$type": "dimension",
+      "$value": "4px",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:299",
+          "anchor": "border-radius: 4px;"
+        },
+        {
+          "ref": "specs/SECTION_TYPES_platform.md:97",
+          "anchor": "**Radius:** none 0, sm 4"
+        }
+      ],
+      "literalUsageCount": 9,
+      "note": "Season buttons, S-5 media"
+    },
+    "media": {
+      "$type": "dimension",
+      "$value": "8px",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:1018",
+          "anchor": ".ss-mb__media .ss-ph { border-radius: 8px; }"
+        }
+      ],
+      "literalUsageCount": 5,
+      "note": "Season A4 media corners"
+    },
+    "btn": {
+      "$type": "dimension",
+      "$value": "12px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:78",
+          "anchor": "btn: '12px'"
+        },
+        {
+          "ref": "CLONE_SPEC.md:135",
+          "anchor": "**Radii:** buttons 12px"
+        }
+      ],
+      "literalUsageCount": 13,
+      "note": "BK buttons"
+    },
+    "card": {
+      "$type": "dimension",
+      "$value": "16px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:81",
+          "anchor": "card: '16px'"
+        }
+      ],
+      "literalUsageCount": 4,
+      "note": "resource + CTA cards, hero video"
+    },
+    "tab": {
+      "$type": "dimension",
+      "$value": "24px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:79",
+          "anchor": "tab: '24px'"
+        }
+      ],
+      "literalUsageCount": 2,
+      "note": "home tab cards, story pane"
+    },
+    "bento": {
+      "$type": "dimension",
+      "$value": "32px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:80",
+          "anchor": "bento: '32px'"
+        }
+      ],
+      "literalUsageCount": 5,
+      "note": "home bento, tpl cards"
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "999px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:83",
+          "anchor": "pill: '999px'"
+        }
+      ],
+      "literalUsageCount": 11,
+      "note": "999px (BK) / 9999px (Season, pricing)"
+    },
+    "indicator": {
+      "$type": "dimension",
+      "$value": "2px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:84",
+          "anchor": "indicator: '2px'"
+        }
+      ],
+      "literalUsageCount": 7
+    },
+    "bar": {
+      "$type": "dimension",
+      "$value": "6px",
+      "evidence": [
+        {
+          "ref": "tailwind.config.js:85",
+          "anchor": "bar: '6px'"
+        }
+      ],
+      "literalUsageCount": 6
+    }
+  }
+}

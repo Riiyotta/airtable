@@ -1,0 +1,79 @@
+{
+  "id": "season.ai-foundation",
+  "system": "season",
+  "category": "feature-grid",
+  "purpose": "E-4 three-cell AI foundation bento with load rise.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/platformB.jsx:167",
+      "anchor": "export function AiFoundation({ lines, cells })"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/solutions/enterprise"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.ai-foundation",
+    "copyBudgets": {
+      "cells[].body": {
+        "maxWords": 18,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "cells[].title": {
+        "maxWords": 3,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      },
+      "lines[]": {
+        "maxWords": 4,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/solutions/enterprise"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-ai-foundation-rise",
+        "trigger": "load",
+        "reducedMotionFallback": "final-state-shown",
+        "timing": "opacity+translateY(32px) .7s ease-out, delays 120/470/820/1170ms",
+        "evidence": [
+          {
+            "ref": "src/season/season.css:2074",
+            "anchor": ".ss-af__rise { animation: ssAfRise 0.7s ease-out var(--delay, 0ms) both; }"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "season.use-cases"
+    ],
+    "observedBefore": [
+      "season.org-accordion"
+    ]
+  }
+}

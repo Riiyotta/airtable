@@ -1,0 +1,137 @@
+{
+  "id": "shell.header",
+  "system": "shell",
+  "category": "shell",
+  "purpose": "Global sticky header with promo bar and mega-menu drawers; rendered once per route by Layout.",
+  "implementedBy": [
+    {
+      "ref": "src/layout/Layout.jsx:41",
+      "anchor": "<Header />"
+    },
+    {
+      "ref": "src/components/Header.jsx:536",
+      "anchor": "export default function Header()"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "haas",
+      "evidence": [
+        {
+          "ref": "specs/SECTION_TYPES_solutions.md:53",
+          "anchor": "| Nav toggles and links | Haas 16/20.8, weight 500"
+        }
+      ]
+    },
+    {
+      "id": "season",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:14",
+          "anchor": "[data-font='season'] header,"
+        },
+        {
+          "ref": "src/season/SeasonPage.jsx:42",
+          "anchor": "document.documentElement.dataset.font = 'season'"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 25,
+    "observedRoutes": [
+      "/",
+      "/about",
+      "/ai-plays",
+      "/contact-sales",
+      "/customer-stories",
+      "/guides",
+      "/integrations",
+      "/platform",
+      "/platform/ai",
+      "/platform/ai-agents",
+      "/platform/app-building",
+      "/platform/automations",
+      "/platform/connected-data",
+      "/platform/governance",
+      "/platform/hyperdb",
+      "/platform/interface-designer",
+      "/platform/portals",
+      "/platform/reporting",
+      "/pricing",
+      "/solutions",
+      "/solutions/enterprise",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product",
+      "/templates"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.shell.header",
+    "copyBudgets": {}
+  },
+  "constraints": {
+    "mustBeFirst": true,
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "drawer opacity+translateX(-15%->0) 250ms easeOutSine, items stagger 75ms",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:556",
+            "anchor": "| Mega-menu open | Click toggle"
+          },
+          {
+            "ref": "src/index.css:305",
+            "anchor": "/* §11 note: with prefers-reduced-motion: reduce the original drops header transitions. */"
+          }
+        ],
+        "usedByVariants": [
+          "haas",
+          "season"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "hamburger-menu"
+      ],
+      "detail": "desktop toggles become a hamburger + full-height mobile menu; header 144px tall",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:573",
+          "anchor": "**900–1023:** not measured. The CSS switches the nav to the hamburger layout below 1024"
+        },
+        {
+          "ref": "CLONE_SPEC.md:586",
+          "anchor": "Header: 144px (68px promo + 76px row)."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [],
+    "observedBefore": [
+      "bk.breadcrumb",
+      "bk.contact-sales-split",
+      "bk.hero-centered",
+      "pricing.title",
+      "season.breadcrumb",
+      "season.hero",
+      "season.platform-hero",
+      "tpl.gallery"
+    ]
+  }
+}

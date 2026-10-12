@@ -1,0 +1,31 @@
+{
+  "$description": "What is enforced vs convention for token usage.",
+  "overrides": {
+    "pageSpecHasTokenOverrideField": false,
+    "statement": "PageSpecs carry NO per-instance style/token override field. Styling is owned by section/component contracts and the template renderOptions (skin/font/heavy). The only raw colour values a PageSpec can carry are closed content enums (pill/panel/eyebrow/fill colours) and every one of them must exist in tokens/00-foundation/color.json (checked by verify_all.py: CONTENT_HEX_IN_CATALOG)."
+  },
+  "rawValueRestrictions": {
+    "color": "no raw values outside the catalog",
+    "typography": "no raw values outside the catalog",
+    "radius": "no raw values outside the catalog",
+    "spacing": "no raw values outside the catalog",
+    "breakpoint": "no raw values outside the catalog",
+    "elevation": "no raw values outside the catalog",
+    "motion": "no raw values outside the catalog"
+  },
+  "resolutionOrder": [
+    "00-foundation",
+    "themes/light (only theme -- no dark mode exists in src)",
+    "10-semantic",
+    "20-component",
+    "30-layout"
+  ],
+  "enforced": [
+    "CONTENT_HEX_IN_CATALOG",
+    "SEMANTIC_ALIASES_RESOLVE",
+    "THEME_RESOLVES_ALL_SEMANTIC"
+  ],
+  "convention": [
+    "semantic token preferred over foundation in new component code"
+  ]
+}

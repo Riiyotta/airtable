@@ -1,0 +1,246 @@
+{
+  "id": "season.tabber",
+  "system": "season",
+  "category": "feature-tabs",
+  "purpose": "A8/S-4 tabber: label or wordmark tabs swapping a copy+media panel (accordion <900).",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/Tabber.jsx:40",
+      "anchor": "export default function Tabber("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [
+    {
+      "id": "labels",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:120",
+          "anchor": "variant: 'labels',"
+        }
+      ]
+    },
+    {
+      "id": "labels-bar",
+      "evidence": [
+        {
+          "ref": "src/season/pages/connectedData.js:23",
+          "anchor": "bar: true,"
+        }
+      ]
+    },
+    {
+      "id": "logos",
+      "evidence": [
+        {
+          "ref": "src/season/pages/recipes.js:152",
+          "anchor": "variant: 'logos',"
+        }
+      ]
+    }
+  ],
+  "evidenceLevel": {
+    "observedInstances": 10,
+    "observedRoutes": [
+      "/about",
+      "/platform/connected-data",
+      "/platform/hyperdb",
+      "/platform/portals",
+      "/solutions/marketing",
+      "/solutions/operations",
+      "/solutions/product"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.season.tabber",
+    "copyBudgets": {
+      "badge": {
+        "maxWords": 3,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/about",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "headline": {
+        "maxWords": 10,
+        "observedInstances": 10,
+        "observedRoutes": [
+          "/about",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "sub": {
+        "maxWords": 34,
+        "observedInstances": 7,
+        "observedRoutes": [
+          "/about",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].action.label": {
+        "maxWords": 3,
+        "observedInstances": 39,
+        "observedRoutes": [
+          "/about",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].attribution": {
+        "maxWords": 17,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].groups[].strong": {
+        "maxWords": 27,
+        "observedInstances": 54,
+        "observedRoutes": [
+          "/about",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].groups[].text": {
+        "maxWords": 21,
+        "observedInstances": 41,
+        "observedRoutes": [
+          "/about",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].label": {
+        "maxWords": 8,
+        "observedInstances": 30,
+        "observedRoutes": [
+          "/about",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].logo.name": {
+        "maxWords": 1,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].quote": {
+        "maxWords": 29,
+        "observedInstances": 9,
+        "observedRoutes": [
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      },
+      "tabs[].subhead": {
+        "maxWords": 6,
+        "observedInstances": 30,
+        "observedRoutes": [
+          "/about",
+          "/platform/connected-data",
+          "/platform/hyperdb",
+          "/platform/portals",
+          "/solutions/marketing",
+          "/solutions/operations",
+          "/solutions/product"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "maxPerPage": 2
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "season-tab-swap",
+        "trigger": "click",
+        "reducedMotionFallback": "durations-zeroed",
+        "timing": ">=900 instant panel swap, trigger colours .15s; <900 accordion height .4s cubic-bezier(.76,0,.24,1)",
+        "evidence": [
+          {
+            "ref": "src/season/components/Tabber.jsx:5",
+            "anchor": "// >=900: horizontal tab list + instant panel swap"
+          },
+          {
+            "ref": "specs/SECTION_TYPES_platform.md:785",
+            "anchor": "| A8 tabs | click"
+          }
+        ],
+        "usedByVariants": [
+          "labels",
+          "labels-bar",
+          "logos"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<900",
+      "changes": [
+        "accordion"
+      ],
+      "detail": "accordion, one open, scrolls item under the header",
+      "evidence": [
+        {
+          "ref": "src/season/components/Tabber.jsx:6",
+          "anchor": "// <900: accordion, one open at a time"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "placeholder.wordmark"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "season.cards",
+      "season.integrations",
+      "season.side-by-side"
+    ],
+    "observedBefore": [
+      "season.cards",
+      "season.faq",
+      "season.integrations",
+      "season.read-next",
+      "season.side-by-side",
+      "season.templates"
+    ]
+  }
+}

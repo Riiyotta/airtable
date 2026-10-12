@@ -1,0 +1,51 @@
+{
+  "component": "button.season",
+  "tokens": {
+    "$description": ".ss-btn (Season / Platform)",
+    "padding": {
+      "$value": "12px 24px",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:309",
+          "anchor": "padding: 12px 24px;"
+        }
+      ]
+    },
+    "radius": {
+      "$value": "{radius.season-sm}",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:299",
+          "anchor": "border-radius: 4px;"
+        }
+      ]
+    },
+    "weight": {
+      "$value": "var(--ws)",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:313",
+          "anchor": "font-weight: var(--ws);"
+        }
+      ]
+    },
+    "transition": {
+      "$value": "background-color, border-color, color, box-shadow 150ms standard",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:319",
+          "anchor": "transition: background-color 0.15s var(--ease)"
+        }
+      ]
+    },
+    "focus-ring": {
+      "$value": "0 0 0 2px #0768f8",
+      "evidence": [
+        {
+          "ref": "src/season/season.css:324",
+          "anchor": "box-shadow: 0 0 0 2px #0768f8;"
+        }
+      ]
+    }
+  }
+}

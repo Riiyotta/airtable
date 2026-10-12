@@ -1,0 +1,107 @@
+{
+  "id": "bk.cta-box",
+  "system": "bk",
+  "category": "cta",
+  "purpose": "Bordered CTA box: h2 + p + one primary BkButton (homepage, StubPage).",
+  "implementedBy": [
+    {
+      "ref": "src/components/CtaBox.jsx:8",
+      "anchor": "export default function CtaBox("
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.bk.cta-box",
+    "copyBudgets": {
+      "button.label": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CtaBox.jsx:6",
+            "anchor": "const DEFAULT_BUTTON",
+            "observedWords": 4
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "text": {
+        "maxWords": 12,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CtaBox.jsx:5",
+            "anchor": "const DEFAULT_TEXT",
+            "observedWords": 12
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "title": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/CtaBox.jsx:4",
+            "anchor": "const DEFAULT_TITLE",
+            "observedWords": 4
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "bk-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "bg/colour/border/shadow .2s linear",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:553",
+            "anchor": "| Buttons (BkButton) | Hover"
+          },
+          {
+            "ref": "src/components/CtaBox.css:124",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "home.customer-story"
+    ],
+    "observedBefore": [
+      "shell.footer"
+    ]
+  }
+}

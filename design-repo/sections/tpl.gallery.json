@@ -1,0 +1,168 @@
+{
+  "id": "tpl.gallery",
+  "system": "tpl",
+  "category": "listing",
+  "purpose": "T-1 TemplatesGallery: header, nav aside, category tiles, featured cards, category sections of template cards, blank-base CTA.",
+  "implementedBy": [
+    {
+      "ref": "src/standalone/templates/Templates.jsx:123",
+      "anchor": "export default function Templates()"
+    }
+  ],
+  "homeOnly": false,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/templates"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.tpl.gallery",
+    "copyBudgets": {
+      "asideFooter.caption": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "asideFooter.label": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "cta.action.label": {
+        "maxWords": 4,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "cta.lines[]": {
+        "maxWords": 5,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "featured[]": {
+        "maxWords": 3,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "hero.subtitle": {
+        "maxWords": 11,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "hero.title": {
+        "maxWords": 1,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "navGroups[].links[]": {
+        "maxWords": 2,
+        "observedInstances": 19,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "navGroups[].title": {
+        "maxWords": 3,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "sections[].cards[].description": {
+        "maxWords": 43,
+        "observedInstances": 116,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "sections[].cards[].title": {
+        "maxWords": 9,
+        "observedInstances": 116,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "sections[].heading": {
+        "maxWords": 5,
+        "observedInstances": 20,
+        "observedRoutes": [
+          "/templates"
+        ]
+      },
+      "tiles[]": {
+        "maxWords": 2,
+        "observedInstances": 5,
+        "observedRoutes": [
+          "/templates"
+        ]
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustFollowNav": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "tpl-featured-scale",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed",
+        "timing": "featured image scale(1.05) .3s cubic-bezier(.4,0,.2,1)",
+        "evidence": [
+          {
+            "ref": "specs/SECTION_TYPES_solutions.md:1148",
+            "anchor": "| T-1 featured card | hover"
+          },
+          {
+            "ref": "src/standalone/templates/templates.css:475",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "mobile",
+      "changes": [
+        "sidebar-to-dropdown"
+      ],
+      "detail": "nav aside replaced by MobileAside control",
+      "evidence": [
+        {
+          "ref": "src/standalone/templates/Templates.jsx:85",
+          "anchor": "function MobileAside() {"
+        }
+      ]
+    }
+  ],
+  "assetRoles": [],
+  "compatibility": {
+    "observedAfter": [
+      "shell.header"
+    ],
+    "observedBefore": [
+      "shell.footer"
+    ]
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "id": "home.workflows",
+  "system": "bk",
+  "category": "feature-tabs",
+  "purpose": "Sticky tab menu + four scroll-spied feature cards (fan, video, Omni, enterprise list).",
+  "implementedBy": [
+    {
+      "ref": "src/components/Workflows.jsx:4",
+      "anchor": "const ITEMS = ["
+    }
+  ],
+  "homeOnly": true,
+  "variants": [],
+  "evidenceLevel": {
+    "observedInstances": 1,
+    "observedRoutes": [
+      "/"
+    ],
+    "note": "content contract inferred from every real instance: required = present in 100% of instances; enums/item counts = observed range; copy budgets = observed max words"
+  },
+  "content": {
+    "schemaRef": "schema/pagespec.schema.json#/definitions/content.home.workflows",
+    "copyBudgets": {
+      "cards[].action.label": {
+        "maxWords": 2,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:261",
+            "anchor": "Learn more",
+            "observedWords": 2
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].body": {
+        "maxWords": 19,
+        "observedInstances": 3,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:254-255",
+            "anchor": "Streamline your team's critical data through conversational building.",
+            "observedWords": 18
+          },
+          {
+            "ref": "src/components/Workflows.jsx:297-298",
+            "anchor": "Embed intelligence into every workflow",
+            "observedWords": 19
+          },
+          {
+            "ref": "src/components/Workflows.jsx:324",
+            "anchor": "Use it to build any enterprise-grade applications with your data.",
+            "observedWords": 14
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].groups[].items[]": {
+        "maxWords": 12,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:25",
+            "anchor": "'Use AI models from leading providers",
+            "observedWords": 12
+          },
+          {
+            "ref": "src/components/Workflows.jsx:41",
+            "anchor": "'No customer data retained or used to train AI models'",
+            "observedWords": 10
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].groups[].title": {
+        "maxWords": 3,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:38",
+            "anchor": "title: 'Security and compliance'",
+            "observedWords": 3
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].label": {
+        "maxWords": 4,
+        "observedInstances": 2,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:5",
+            "anchor": "label: '01 AI app building'",
+            "observedWords": 4
+          },
+          {
+            "ref": "src/components/Workflows.jsx:8",
+            "anchor": "label: '04 Enterprise capabilities'",
+            "observedWords": 3
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "cards[].title": {
+        "maxWords": 11,
+        "observedInstances": 4,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:251",
+            "anchor": "Production apps at prototype speed",
+            "observedWords": 5
+          },
+          {
+            "ref": "src/components/Workflows.jsx:294",
+            "anchor": "Don't just ask AI. Deploy it.",
+            "observedWords": 6
+          },
+          {
+            "ref": "src/components/Workflows.jsx:321",
+            "anchor": "Say hello to Omni",
+            "observedWords": 4
+          },
+          {
+            "ref": "src/components/Workflows.jsx:345",
+            "anchor": "The power of AI with the industrial-grade platform your business demands",
+            "observedWords": 11
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      },
+      "headline": {
+        "maxWords": 6,
+        "observedInstances": 1,
+        "observedRoutes": [
+          "/"
+        ],
+        "realHomepageEvidence": [
+          {
+            "ref": "src/components/Workflows.jsx:218",
+            "anchor": "Sophisticated workflows in minutes, not months",
+            "observedWords": 6
+          }
+        ],
+        "note": "budget includes the measured real homepage copy length (word count only; the copy itself is not reproduced)"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      {
+        "pattern": "workflows-scrollspy-fan",
+        "trigger": "scroll",
+        "reducedMotionFallback": "not-implemented",
+        "timing": "fan spring 400/150/1 over [60% end,120% end]; menu indicator .2s; click scroll suppressed 1000ms",
+        "gapNote": "Workflows.css removes item/indicator/button transitions only; the JS fan spring and smooth scroll still run under reduce.",
+        "evidence": [
+          {
+            "ref": "CLONE_SPEC.md:549",
+            "anchor": "| Tab card 1 image fan | Scroll-linked"
+          },
+          {
+            "ref": "src/components/Workflows.jsx:88",
+            "anchor": "const STIFFNESS = 400"
+          },
+          {
+            "ref": "src/components/Workflows.css:542",
+            "anchor": "@media (prefers-reduced-motion: reduce) {"
+          }
+        ],
+        "usedByVariants": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "responsive": [
+    {
+      "at": "<1024",
+      "changes": [
+        "horizontal-scroll-tabs",
+        "stack-columns"
+      ],
+      "detail": "tab content stacks; menu is a horizontal row",
+      "evidence": [
+        {
+          "ref": "CLONE_SPEC.md:574",
+          "anchor": "**768–1023:** tab content stacks; the menu is a horizontal row."
+        }
+      ]
+    }
+  ],
+  "assetRoles": [
+    "home.brand-illustration",
+    "home.product-screenshot",
+    "home.product-video"
+  ],
+  "compatibility": {
+    "observedAfter": [
+      "bk.logo-marquee"
+    ],
+    "observedBefore": [
+      "home.ai-plays-bento"
+    ]
+  }
+}

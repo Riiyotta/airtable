@@ -1,0 +1,591 @@
+/* /pricing — family C. Values: specs/SECTION_TYPES_platform.md §C, specs/pages_platform.md /pricing.
+   Font: Inter Display = Inter variable (rsms/inter v4.1, SIL OFL) at opsz 32; exact weights 400/475/575. */
+@font-face {
+  font-family: 'Inter Display';
+  font-display: swap;
+  src: url(/fonts/InterVariable.woff2) format('woff2-variations'), url(/fonts/InterVariable.woff2) format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Page frame */
+.pr {
+  background: #fff;
+  padding: 32px;
+  color: #1d1f25;
+  font-family: 'Inter Display', Haas, sans-serif;
+  font-variation-settings: 'opsz' 32;
+  letter-spacing: -0.16px;
+  font-weight: 400;
+}
+.pr-col {
+  max-width: 1250px;
+  margin: 32px auto 0;
+  padding-top: 32px;
+}
+.pr a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* C1 */
+.pr-title {
+  padding-bottom: 64px;
+  text-align: center;
+}
+.pr-title h1 {
+  font-size: 44.8px;
+  line-height: 56px;
+  font-weight: 475;
+  margin: 0;
+}
+
+/* Pills (C2 row 6, C2m, C5 head) */
+.pr-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 9999px;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 575;
+  text-align: center;
+  white-space: nowrap;
+}
+.pr .pr-pill--outline {
+  background: #fff;
+  border: 2px solid #1d1f25;
+  color: #1d1f25;
+}
+.pr .pr-pill--outline:hover {
+  background: #f2f4f8;
+}
+.pr .pr-pill--filled {
+  background: #166ee1;
+  border: 0;
+  color: #fff;
+  transition: background-color 0.15s cubic-bezier(0.2, 0.1, 0.2, 1);
+}
+.pr .pr-pill--filled:hover {
+  background: #0d52ac;
+}
+.pr-pill--card {
+  width: 100%;
+  margin: 8px 0;
+}
+.pr-pill--table {
+  width: 100%;
+}
+.pr-pill--mobile {
+  width: 150px;
+  align-self: flex-start;
+}
+
+/* ---------- C2 PlanCards (desktop ≥1024) ---------- */
+.pr-cards {
+  display: none;
+  padding-bottom: 64px;
+}
+.pr-cards__row {
+  display: flex;
+}
+.pr-col3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  box-sizing: border-box;
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+}
+.pr-cell {
+  flex: 1;
+  box-sizing: border-box;
+  border-left: 1px solid #c4c7cd;
+  border-right: 1px solid #c4c7cd;
+  padding: 0 24px;
+}
+.pr-cell.is-hl {
+  border-color: #0d52ac;
+  background: rgba(240, 246, 255, 0.5);
+}
+/* row heights (measured at 1440) */
+.pr-r-tab { height: 36px; }
+.pr-r-name .pr-cell {
+  min-height: 68px;
+  padding: 24px 24px 8px;
+  border-top: 1px solid #c4c7cd;
+  border-radius: 12px 12px 0 0;
+}
+.pr-r-name .pr-cell.is-hl {
+  border-top-color: #0d52ac;
+  border-radius: 0;
+}
+.pr-r-desc .pr-cell { min-height: 76px; padding: 0 24px 16px; }
+.pr-r-spacer .pr-cell { min-height: 8px; padding-bottom: 8px; }
+.pr-r-price .pr-cell { min-height: 128px; }
+.pr-r-monthly .pr-cell { min-height: 36px; }
+.pr-r-cta .pr-cell { min-height: 88px; }
+.pr-r-secondary .pr-cell { min-height: 48px; }
+.pr-r-features .pr-cell {
+  min-height: 455px;
+  padding: 0 24px 16px;
+  border-bottom: 1px solid #c4c7cd;
+  border-radius: 0 0 12px 12px;
+}
+.pr-r-features .pr-cell.is-hl { border-bottom-color: #0d52ac; }
+
+.pr-tab {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d52ac;
+  border-radius: 12px 12px 0 0;
+  color: #fff;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 475;
+}
+.pr-name {
+  margin: 0;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 475;
+}
+.pr-desc {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+.pr-price__line {
+  display: flex;
+  align-items: baseline;
+}
+.pr-price__num {
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 475;
+}
+.pr-price__usd {
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 475;
+}
+.pr-price__per {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.pr-price__free {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 475;
+}
+.pr-price__custom {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 575;
+}
+.pr-monthly {
+  font-size: 16px;
+  line-height: 20px;
+}
+.pr-monthly b { font-weight: 575; }
+.pr-secondary {
+  text-align: center;
+  font-size: 13px;
+  line-height: 16.25px;
+}
+.pr-secondary__or { opacity: 0.75; }
+.pr .pr-secondary__link {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 2.24px;
+}
+.pr-lead {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 475;
+  padding-bottom: 12px;
+}
+.pr-feat {
+  display: flex;
+  padding-bottom: 4px;
+}
+.pr-feat__icon {
+  flex: none;
+  display: flex;
+  padding-right: 8px;
+}
+.pr-feat__icon svg { width: 20px; height: 20px; }
+.pr-feat__text {
+  font-size: 13px;
+  line-height: 16.25px;
+  padding-top: 1.875px; /* centres one 16.25 line against the 20px icon */
+}
+.pr .pr-inline-link { color: #166ee1; }
+
+/* ---------- C2m PlanCards mobile (<1024) ---------- */
+.pr-mcard {
+  border: 1px solid #c4c7cd;
+  border-radius: 12px;
+  padding: 32px 32px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+/* live mobile: highlighted plan gets a 36px "Most popular" tab; card border #0D52AC, radius 0 0 12 12, tinted bg */
+.pr-mtab {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 12px 0 0;
+  background: #0d52ac;
+  color: #fff;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 475;
+}
+.pr-mcard-wrap.is-hl .pr-mcard {
+  border-color: #0d52ac;
+  border-radius: 0 0 12px 12px;
+  background: rgba(240, 246, 255, 0.5);
+}
+.pr-mcard__price--icon {
+  display: flex;
+  align-items: flex-start;
+  height: 77px;
+}
+.pr-mcard__price--icon svg { width: 64px; height: 64px; }
+.pr-mcard__name {
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 475;
+}
+.pr-mcard__desc {
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.pr-mcard__pricerow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+.pr-mcard__price {
+  margin-right: 16px;
+  font-size: 44.8px;
+  line-height: 56px;
+  font-weight: 400;
+}
+.pr-mcard__per {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* live: CTA block padding-bottom 8, pill margin 8/0 */
+.pr-mcard__cta {
+  display: flex;
+  padding-bottom: 8px;
+}
+.pr-mcard__cta .pr-pill { margin: 8px 0; }
+.pr-mcard__leadwrap { padding-bottom: 12px; }
+.pr-mcard__lead {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 475;
+}
+.pr-mcard__list { margin-bottom: 16px; }
+.pr-mfeat {
+  display: flex;
+  padding-bottom: 12px;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* live: "All features" row 20 tall + margin-bottom 16; label 11/13.75 475 caps */
+.pr-mcard__toggle {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: 20px;
+  margin-bottom: 16px;
+  border-radius: 9999px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 13.75px;
+  letter-spacing: 1.1px;
+  font-weight: 475;
+  opacity: 0.75;
+}
+.pr-mcard__toggle svg { transition: transform 0.2s; }
+.pr-mcard__toggle.is-open svg { transform: rotate(180deg); }
+.pr-mcard__all { padding-top: 16px; }
+.pr-mcard__gtitle {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 475;
+  padding: 8px 0 12px;
+}
+
+/* ---------- C3 SeeAllFeaturesLink (desktop only) ---------- */
+.pr-see {
+  display: none;
+  min-height: 108px; /* measured block height at 1440 */
+  text-align: center;
+}
+.pr-see__link {
+  /* inline anchor: the 64px vertical padding enlarges the hit area without adding layout height (h 108) */
+  padding: 64px 0;
+  transition: color 0s;
+}
+.pr .pr-see__link:hover { color: rgba(0, 0, 0, 0.5); }
+.pr-see__text {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 475;
+}
+.pr-see__arrow { display: inline-block; }
+.pr-compare-anchor { scroll-margin-top: var(--mainNavHeight); }
+
+/* ---------- C4 LogoStrip ---------- */
+.pr-logos { padding: 128px 0; }
+.pr-logos__eyebrow {
+  font-family: Haas, sans-serif; /* GT Eesti Display 400 → Haas 400 per §0.2 */
+  font-variation-settings: normal;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: 32px;
+}
+/* Placeholder bar for the 1152×57.6 (2001:100) wordmark strip; mobile 326 wide × 1201:226. */
+.pr-logos__strip {
+  max-width: 1152px;
+  margin: 0 auto;
+  aspect-ratio: 1201 / 226;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  column-gap: 12px;
+  color: #9297a0;
+  font-weight: 575;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+.pr-logos__mark { white-space: nowrap; }
+
+/* ---------- C5 ComparisonTable (desktop only) ---------- */
+.pr-table { display: none; }
+.pr-trow {
+  display: flex;
+  margin: 0 -8px;
+}
+.pr-col4,
+.pr-col2 {
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+.pr-col4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+.pr-col2 { flex: 0 0 16.6667%; max-width: 16.6667%; }
+.pr-thead {
+  position: sticky;
+  top: var(--mainNavHeight);
+  z-index: 1;
+  background: #fff;
+  height: 161px;
+}
+.pr-thead__a { height: 73px; }
+.pr-thead__b { height: 88px; }
+.pr-thead__title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 475;
+}
+.pr-thead__plan {
+  padding: 16px 16px 8px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 475;
+}
+.pr-thead__cta { padding: 0 16px 16px; }
+.pr-group__title {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 475;
+}
+.pr-frow {
+  position: relative;
+  min-height: 36px;
+  align-items: stretch;
+}
+.pr-frow__name { min-height: 36px; }
+/* live multi-line cells: 2-line packs text margin 16/0 → row 72; 3-line price text margin 0/0/16 → row 76 */
+.pr-cell-text { text-align: center; }
+.pr-cell-text--y { margin: 16px 0; }
+.pr-cell-text--b { margin: 0 0 16px; }
+/* live: group titles after the first sit 64 lower (title row padding 64/0/8 → 97 tall) */
+.pr-group + .pr-group .pr-group__title { padding-top: 64px; }
+.pr-frow__hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -12px;
+  right: -12px;
+  border-radius: 6px;
+  background: transparent;
+  pointer-events: none;
+}
+.pr-frow:hover .pr-frow__hover { background: rgba(0, 0, 0, 0.05); }
+.pr-frow__name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+.pr-frow__label { border-bottom: 2px dotted #dddddd; }
+.pr-frow__info {
+  display: flex;
+  padding: 6px 0 6px 8px;
+}
+.pr-frow__cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px; /* live: col padding 8 + cell padding 32 → 131px text column */
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+.pr-notes { padding-top: 40px; } /* live: notes start 40 below the last table row */
+.pr-note {
+  margin: 0;
+  font-size: 12.8px;
+  line-height: 16px;
+  padding-bottom: 8px;
+}
+.pr-note:nth-child(3),
+.pr-note:nth-child(4) { padding-bottom: 16px; }
+.pr-note:last-child { padding-bottom: 0; }
+
+/* ---------- C6 HelpLinks ---------- */
+.pr-h2 {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 35px;
+  font-weight: 475;
+}
+.pr-help {
+  max-width: 768px;
+  margin: 64px auto;
+}
+.pr-help__col {
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 24px; /* live: link line box 24 (col pitch 64 on mobile) */
+}
+/* live mobile: the last column's 16px margin does not collapse into the section margin (80 to the FAQ) */
+.pr-help__cols { display: flow-root; }
+.pr-help__eyebrow {
+  font-size: 12.8px;
+  line-height: 16px;
+  font-weight: 475;
+  text-transform: uppercase;
+  letter-spacing: 1.28px;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.pr .pr-help__link {
+  color: #166ee1;
+  font-size: 19.2px;
+  line-height: 24px;
+}
+@media (min-width: 640px) {
+  .pr-help__cols { display: flex; }
+  .pr-help__col { flex: 0 0 33.3333%; }
+}
+
+/* ---------- C7 PricingFaq ---------- */
+.pr-faq__list {
+  max-width: 768px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.pr-faq__item {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 2.24px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.pr-faq__q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+  letter-spacing: inherit;
+}
+.pr-faq__q p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 25.5px;
+  font-weight: 575;
+}
+.pr-faq__chev {
+  flex: none;
+  display: flex;
+  transition: transform 0.2s;
+}
+.pr-faq__chev.is-open { transform: rotate(180deg); }
+.pr-faq__a {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.pr-faq__a p { margin: 0; }
+.pr-faq__a p + p { margin-top: 16px; }
+
+/* Breakpoint: desktop-only blocks ≥1024; mobile cards below. */
+@media (min-width: 1024px) {
+  .pr-cards,
+  .pr-see,
+  .pr-table { display: block; }
+  .pr-mcards { display: none; }
+  .pr-logos__strip { aspect-ratio: 2001 / 100; flex-wrap: nowrap; align-items: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pr *, .pr *::before, .pr *::after { transition: none !important; }
+}

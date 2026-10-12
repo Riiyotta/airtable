@@ -1,0 +1,29 @@
+{
+  "id": "season-button",
+  "layer": "primitive",
+  "purpose": ".ss-btn: 4px radius, 12/24 padding, weight var(--ws); A and B families.",
+  "implementedBy": [
+    {
+      "ref": "src/season/components/atoms.jsx:54",
+      "anchor": "export function Btn({ label, href = '#', variant = 'primary', icon, style })"
+    }
+  ],
+  "variants": [
+    "primary",
+    "secondary",
+    "primaryInverse",
+    "secondaryInverse",
+    "bprimary",
+    "bsecondary",
+    "boutline",
+    "bwhite"
+  ],
+  "tokens": [
+    "button.season.*"
+  ],
+  "states": [
+    "hover",
+    "focus-visible"
+  ],
+  "a11y": "<a>; focus-visible ring 2px #0768F8"
+}

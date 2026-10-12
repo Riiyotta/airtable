@@ -1,0 +1,288 @@
+{
+  "pageSpecVersion": "1.1.0",
+  "template": "template.home",
+  "route": "/",
+  "contentPolicy": {
+    "copy": "original-placeholder",
+    "realBrandAssets": "home-route-reference-only"
+  },
+  "nodes": [
+    {
+      "section": "shell.header",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "header-drawer-stagger",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "bk.hero-centered",
+      "variant": "video",
+      "content": {
+        "title": "Every team and every workflow, together in one place",
+        "sub": "Connect your data, coordinate the handoffs between teams and keep long-running projects on track without writing any code.",
+        "primary": {
+          "label": "Start for free",
+          "href": "/signup"
+        },
+        "secondary": {
+          "label": "Request demo",
+          "href": "/contact-sales"
+        },
+        "media": {
+          "assetRole": "home.product-video",
+          "src": "/assets/16f7e8526058f2d34ce24e5ef3933bc3783cea4b.mp4"
+        }
+      },
+      "motion": {
+        "pattern": "hero-video-autoplay",
+        "trigger": "load",
+        "reducedMotionFallback": "user-pause-control"
+      }
+    },
+    {
+      "section": "bk.logo-marquee",
+      "content": {
+        "heading": "Relied on by teams everywhere",
+        "logos": {
+          "assetRole": "home.customer-logo",
+          "count": 16
+        }
+      },
+      "motion": {
+        "pattern": "logo-marquee-25pxps",
+        "trigger": "continuous",
+        "reducedMotionFallback": "not-implemented"
+      }
+    },
+    {
+      "section": "home.workflows",
+      "content": {
+        "headline": "Capable workflows built in days",
+        "cards": [
+          {
+            "kind": "fan",
+            "label": "01 App building",
+            "title": "Working apps at sketch speed",
+            "body": "Describe what your team needs and assemble it from reusable blocks, with no engineering queue at all.",
+            "action": {
+              "label": "Learn more",
+              "href": "/platform/app-building"
+            },
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          },
+          {
+            "kind": "video",
+            "label": "02 Agents at work",
+            "title": "Put assistants to real work.",
+            "body": "Let agents read thousands of records, draft the next step and route it to the right owner.",
+            "action": {
+              "label": "Learn more",
+              "href": "/platform/ai-agents"
+            },
+            "media": {
+              "assetRole": "home.product-video",
+              "src": "/assets/559eda8e343bd1e27dee54f569b062cb60110afe.mp4"
+            }
+          },
+          {
+            "kind": "feature",
+            "label": "03 Meet the assistant",
+            "title": "Say hi to your assistant",
+            "body": "Ask for the app you need and refine it in plain language until it fits.",
+            "action": {
+              "label": "Learn more",
+              "href": "/platform/app-building"
+            },
+            "media": {
+              "assetRole": "home.brand-illustration"
+            }
+          },
+          {
+            "kind": "list",
+            "label": "04 Enterprise controls",
+            "title": "Dependable AI on a platform built for large organizations",
+            "media": {
+              "assetRole": "home.brand-illustration"
+            },
+            "groups": [
+              {
+                "title": "Scale",
+                "items": [
+                  "Bases that grow to very large record counts",
+                  "Workflows shared across thousands of people",
+                  "Choose from several model providers"
+                ]
+              },
+              {
+                "title": "Administration",
+                "items": [
+                  "Roles, permissions and granular access",
+                  "Controls for enabling AI features",
+                  "Automated provisioning",
+                  "Synced directory groups"
+                ]
+              },
+              {
+                "title": "Security",
+                "items": [
+                  "Independent security certifications",
+                  "Customer data is not used for training",
+                  "Models run in an isolated environment",
+                  "Encryption keys, retention and audit logs",
+                  "Regional data residency options"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "workflows-scrollspy-fan",
+        "trigger": "scroll",
+        "reducedMotionFallback": "not-implemented"
+      }
+    },
+    {
+      "section": "home.ai-plays-bento",
+      "content": {
+        "headline": "Help every person on the team do more",
+        "sub": "Ready-made plays that bring AI into everyday work",
+        "action": {
+          "label": "Browse AI plays",
+          "href": "/ai-plays"
+        },
+        "cards": [
+          {
+            "span": 8,
+            "palette": "bento-1",
+            "prompt": "Turn this brief into ten launch ideas for the spring campaign.",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          },
+          {
+            "span": 4,
+            "palette": "bento-2",
+            "prompt": "Summarize every attendee so outreach feels personal.",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          },
+          {
+            "span": 6,
+            "palette": "bento-3",
+            "prompt": "What do reviews say about alternatives, and where can we stand out?",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          },
+          {
+            "span": 6,
+            "palette": "bento-4",
+            "prompt": "Translate three hundred assets and flag any regional rules that apply.",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "bento-hover-reveal",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "home.resources",
+      "content": {
+        "title": "Ideas to explore",
+        "cards": [
+          {
+            "title": "Conversations with builders",
+            "desc": "Product leaders talk through the decisions, tradeoffs and lessons behind the tools their teams rely on every single day.",
+            "href": "/guides",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          },
+          {
+            "title": "A practical AI guide for teams",
+            "desc": "Prepare your organization for AI and bring it into the workflows that matter most, one careful step at a time.",
+            "href": "/guides",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          },
+          {
+            "title": "Walkthrough: planning in one place",
+            "desc": "See how a connected planning workspace gives leaders a full view of investments and adds assistance at each step of delivery.",
+            "href": "/guides",
+            "media": {
+              "assetRole": "home.product-screenshot"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "resource-title-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "home.customer-story",
+      "content": {
+        "quote": "“Having every request in one shared place lets our teams act on insights quickly and confidently.”",
+        "name": "Jordan Ellis",
+        "role": "Head of Operations Planning",
+        "logo": {
+          "assetRole": "home.customer-logo"
+        },
+        "action": {
+          "label": "Explore all customer stories",
+          "href": "/customer-stories"
+        },
+        "media": {
+          "assetRole": "home.customer-video",
+          "src": "/assets/642f0aab4cecfadb17e538dfb03ec1e47a09d549.mp4"
+        }
+      },
+      "motion": {
+        "pattern": "story-video-background",
+        "trigger": "load",
+        "reducedMotionFallback": "not-implemented"
+      }
+    },
+    {
+      "section": "bk.cta-box",
+      "content": {
+        "title": "Start building with us",
+        "text": "Organizations everywhere run their daily work in one workspace. Start yours.",
+        "button": {
+          "label": "Start for free",
+          "href": "/signup"
+        }
+      },
+      "motion": {
+        "pattern": "bk-button-hover",
+        "trigger": "hover",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    },
+    {
+      "section": "shell.footer",
+      "variant": "haas",
+      "content": {},
+      "motion": {
+        "pattern": "footer-see-more-expand",
+        "trigger": "click",
+        "reducedMotionFallback": "transitions-removed"
+      }
+    }
+  ]
+}
